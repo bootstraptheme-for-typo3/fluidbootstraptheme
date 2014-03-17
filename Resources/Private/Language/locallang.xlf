@@ -3,6 +3,41 @@
 	<file source-language="en" datatype="plaintext" original="messages" product-name="themebootstrap" date="2014-01-06T01:00:11+01:00">
 		<header/>
 		<body>
+
+            <!-- TwoColumn.html -->
+            <trans-unit id="flux.grid2.description">
+                <source>2 Columns (50-50,70-30,30-70)</source>
+            </trans-unit>
+
+            <trans-unit id="flux.grid2">
+                <source>2 Columns Container</source>
+            </trans-unit>
+
+            <trans-unit id="flux.grid2.sheets.2Columns">
+                <source>Column Splitting</source>
+            </trans-unit>
+
+            <trans-unit id="flux.grid2.fields.split">
+                <source>Split Possibilities</source>
+            </trans-unit>
+
+
+            <trans-unit id="flux.grid2.fields.col1width">
+                <source>Bootstrap CSS Class Column 1</source>
+            </trans-unit>
+            <trans-unit id="flux.grid2.fields.col2width">
+                <source>Bootstrap CSS Class Column 2</source>
+            </trans-unit>
+
+
+            <trans-unit id="flux.grid2.fields.col1hide">
+                <source>Column 1 Visibility on Small Device</source>
+            </trans-unit>
+            <trans-unit id="flux.grid2.fields.col2hide">
+                <source>Column 2 Visibility on Small Device</source>
+            </trans-unit>
+            <!-- TwoColumn.html -->
+
 			<trans-unit id="flux.accordion" xml:space="preserve">
 				<source>Bootstrap: Accordion with content elements</source>
 			</trans-unit>
