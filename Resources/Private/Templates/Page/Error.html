@@ -1,0 +1,26 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="ErrorPage" />
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<f:section name="Configuration">
+	<flux:form id="error" label="Error page" enabled="FALSE" />
+</f:section>
+
+<f:section name="Resources">
+	<f:render partial="PageObjects" section="SharedResources" />
+</f:section>
+
+<f:section name="Content">
+	<div class="alert alert-error">
+		<h1>Error while rendering page</h1>
+		<p>There was an error rendering the requested page. If the error persists please contact the web master.</p>
+		<f:for each="{errors}" as="error" iteration="iteration">
+			<p>{iteration.cycle}. {error.message} (code {error.code})</p>
+		</f:for>
+	</div>
+</f:section>
+
+</div>

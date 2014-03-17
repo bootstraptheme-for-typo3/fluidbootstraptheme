@@ -1,0 +1,70 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+<f:layout name="FrontPage" />
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form id="front" label="Front Page" icon="{f:uri.resource(path: 'Icons/FrontPage.png')}">
+		{v:var.typoscript(path: 'plugin.tx_themebootstrap.settings') -> v:var.set(name: 'settings')}
+		<f:if condition="{settings.useTypoScript} < 1">
+			<flux:field.input name="settings.entryLevel" label="Main menu entry level override for this page only"
+			                           eval="int,trim" minimum="0" maximum="6" default="{v:var.typoscript(path: 'lib.menu.main.entryLevel')}">
+			</flux:field.input>
+			<flux:field.input name="settings.lightJumbotronColor" label="Light Jumbotron background color" default="#FFAA00">
+				<flux:wizard.colorPicker hideParent="TRUE" />
+			</flux:field.input>
+			<flux:field.input name="settings.darkJumbotronColor" label="Dark Jumbotron background color" default="#A66F00">
+				<flux:wizard.colorPicker hideParent="TRUE" />
+			</flux:field.input>
+			<flux:field.input name="settings.jumbotronTextColor" label="Jumbotron text color" default="#FFFFFF">
+				<flux:wizard.colorPicker hideParent="TRUE" />
+			</flux:field.input>
+			<flux:field.input name="settings.jumbotronPadding" label="Jumbotron top and bottom padding" default="70"
+			                           minimum="0" maximum="200" eval="int,trim">
+				<flux:Flexform.field.wizard.slider hideParent="TRUE" width="200" />
+			</flux:field.input>
+			<flux:field.input name="settings.headerFontSize" label="Jumbotron header font size" default="80"
+			                           minimum="0" maximum="200" eval="int,trim">
+				<flux:Flexform.field.wizard.slider hideParent="TRUE" width="200" />
+			</flux:field.input>
+			<flux:field.input name="settings.paragraphFontSize" label="Jumbotron paragraph font size" default="24"
+			                           minimum="0" maximum="200" eval="int,trim">
+				<flux:Flexform.field.wizard.slider hideParent="TRUE" width="200" />
+			</flux:field.input>
+			<flux:field.input name="settings.jumbotronMarginBottom" label="Jumbotron bottom margin" default="24"
+			                           minimum="0" maximum="80" eval="int,trim">
+				<flux:Flexform.field.wizard.slider hideParent="TRUE" width="200" />
+			</flux:field.input>
+			<flux:field.checkbox name="settings.enableSearch" label="Enable search field in top navigation bar" default="1" />
+			<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="searchPageUid" label="Page with search form">
+				<flux:wizard.list table="pages" />
+			</flux:field.relation>
+			<flux:field.input name="settings.searchFieldName" label="Name (HTML attribute) of form field, example tx_solr[q]" default="q" />
+		</f:if>
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column colPos="1" name="Jumbotron" />
+			</flux:grid.row>
+			<flux:grid.row>
+				<flux:grid.column colPos="0" name="Main Content" />
+			</flux:grid.row>
+			<flux:grid.row>
+				<flux:grid.column colPos="2" name="Footer Content" />
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
+</f:section>
+
+<f:section name="Resources">
+	<f:render partial="PageObjects" section="SharedResources" />
+</f:section>
+
+<f:section name="Content">
+	<!-- main content output - default rendering -->
+	<v:page.content.render column="0" />
+</f:section>
+
+</div>

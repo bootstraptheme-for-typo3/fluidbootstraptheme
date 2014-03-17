@@ -1,0 +1,52 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	{v:var.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:var.set(name: 'settings')}
+	{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:var.set(name: 'numberOfColumns')}
+	<flux:form wizardTab="Bootstrap" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-row.gif')}">
+		<flux:field.checkbox name="settings.fluid" />
+		<flux:form.section name="columns">
+			<flux:form.object name="column">
+				<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
+				    -> v:iterator.loop(count: numberOfColumns, iteration: 'iteration', minimum: 1)}" label="Columns: numberOfColumns" />
+				<flux:field.checkbox name="addWell" />
+				<flux:field.input name="additionalClass" />
+			</flux:form.object>
+		</flux:form.section>
+		<flux:grid>
+			<flux:grid.row>
+				<f:for each="{columns}" as="sectionObject" iteration="iteration">
+					<v:var.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 4)}" />
+					<v:var.set name="percent" value="{width  -> v:math.division(b: numberOfColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
+					<flux:grid.column style="width: {percent}%">
+						<flux:form.content name="column{iteration.cycle}" label="{percent}%" />
+					</flux:grid.column>
+				</f:for>
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
+</f:section>
+
+<f:section name="Main">
+	<div class="row{f:if(condition: settings.fluid, then: '-fluid')}">
+		<f:for each="{columns}" as="sectionObject" iteration="iteration">
+			<div class="{sectionObject.column.class}">
+				<flux:content.render area="column{iteration.cycle}" />
+			</div>
+		</f:for>
+	</div>
+</f:section>
+
+<f:section name="Preview">
+	<flux:widget.grid />
+</f:section>
+
+<f:section name="Value">col-md-{iteration.cycle}{f:if(condition: iteration.isLast, else: ',')}</f:section>
+
+</div>

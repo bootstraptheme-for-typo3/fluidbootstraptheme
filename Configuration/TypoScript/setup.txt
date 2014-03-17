@@ -1,0 +1,24 @@
+[GLOBAL]
+plugin.tx_themebootstrap.view {
+	templateRootPath = EXT:themebootstrap/Resources/Private/Templates/
+	partialRootPath = EXT:themebootstrap/Resources/Private/Partials/
+	layoutRootPath = EXT:themebootstrap/Resources/Private/Layouts/
+	widget {
+    		Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_themebootstrap.view.templateRootPath
+    		TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_themebootstrap.view.templateRootPath
+    	}
+}
+
+plugin.tx_themebootstrap.settings {
+	gridColumns = {$plugin.tx_themebootstrap.settings.gridColumns}
+}
+
+
+lib.menu {
+	main {
+		entryLevel = 0
+	}
+	sub {
+		entryLevel = 1
+	}
+}

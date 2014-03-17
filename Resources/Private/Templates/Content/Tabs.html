@@ -1,0 +1,88 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="tabs" icon="{v:extension.path.resources(path: 'Icons/icon-tabs.gif')}">
+
+		<flux:form.sheet name="display">
+			<flux:field.select name="mode" items="tab,pill" requestUpdate="TRUE" />
+			<flux:field.checkbox name="stackable" />
+			<flux:field.select name="position" items="default,pull-left,pull-right" />
+		</flux:form.sheet>
+
+		<flux:form.sheet name="tabs">
+			<flux:form.section name="tabs">
+				<flux:form.object name="tab">
+					<flux:field.input name="title" />
+					<flux:field.input name="class" />
+					<flux:field.checkbox name="active" />
+					<flux:field.checkbox name="fade" />
+				</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
+
+		<flux:grid>
+			<flux:grid.row>
+				<f:if condition="{tabs}">
+					<f:for each="{tabs}" as="tab" iteration="iteration">
+						<flux:grid.column style="width: {v:math.division(b: '{tabs -> f:count()}', a: 100)}%">
+							<flux:form.content name="content.{iteration.index}" label="Tab {iteration.cycle}" />
+						</flux:grid.column>
+					</f:for>
+				</f:if>
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<flux:widget.grid />
+</f:section>
+
+<f:section name="Main">
+	<v:var.set name="activeTabIndex" value="0" />
+	<f:if condition="{tabs}">
+		<f:for each="{tabs}" as="tab" iteration="iteration">
+			<f:if condition="{tab.tab.active}">
+				<v:var.set name="activeTabIndex" value="{iteration.index}" />
+			</f:if>
+		</f:for>
+	</f:if>
+
+	<div class="tabbable">
+		<f:render section="Tabs" arguments="{_all}" />
+
+		<div class="tab-content">
+			<f:if condition="{tabs}">
+				<f:for each="{tabs}" as="tab" iteration="iteration">
+					<div class="tab-pane {f:if(condition: tab.tab.fade, then: 'fade')} {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active in')} {f:if(condition: tab.tab.class, then: 'tab-pane-{tab.tab.class}')}" id="tab-{record.uid}-{iteration.index}">
+						<flux:content.render area="content.{iteration.index}" />
+					</div>
+				</f:for>
+			</f:if>
+		</div>
+
+		<f:if condition="{0: tabDirection} == {0: 'below'}">
+			<f:render section="Tabs" arguments="{_all}" />
+		</f:if>
+	</div>
+</f:section>
+
+<f:section name="Tabs">
+	<f:if condition="{tabs}">
+		<ul class="nav nav-{mode}s {f:if(condition: stackable, then: 'nav-stacked')} {position}">
+			<f:for each="{tabs}" as="tab" iteration="iteration">
+				<li class="nav-link {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active')} {f:if(condition: tab.tab.class, then: 'tab-{tab.tab.class}')}">
+					<a href="{v:page.absoluteUrl()}#tab-{record.uid}-{iteration.index}" data-toggle="{mode}">{tab.tab.title}</a>
+				</li>
+			</f:for>
+		</ul>
+	</f:if>
+</f:section>
+
+</div>

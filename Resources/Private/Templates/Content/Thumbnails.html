@@ -1,0 +1,105 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="thumbnails" icon="{v:extension.path.resources(path: 'Icons/icon-thumbnails.gif')}">
+		<flux:form.sheet name="thumbnails">
+			<flux:field.input name="width" default="960" />
+			<flux:field.input name="ratio" default="16/9" />
+			<flux:form.section name="thumbnails">
+				<f:render section="ImageObject" arguments="{_all}" />
+				<f:render section="ContentObject" arguments="{_all}" />
+			</flux:form.section>
+		</flux:form.sheet>
+		<f:if condition="{thumbnails -> f:count()}">
+			<flux:grid>
+				<f:for each="{thumbnails}" as="itemSectionObjects" iteration="iteration">
+					<f:for each="{itemSectionObjects}" as="object" key="objectType">
+						<f:if condition="{0: objectType, 1: object.disabled} == {0: 'content', 1: 0}">
+							<flux:grid.row>
+								<flux:grid.column>
+									<flux:form.content name="contentElements.{object.name}" label="{object.label}" />
+								</flux:grid.column>
+							</flux:grid.row>
+						</f:if>
+					</f:for>
+				</f:for>
+			</flux:grid>
+		</f:if>
+	</flux:form>
+</f:section>
+
+<f:section name="SharedObject">
+	<flux:field.checkbox name="disabled" label="Disable/hide this object" />
+	<flux:field.select name="class" label="Size" items="1,2,3,4,5,6,7,8,9,10,11,12" />
+</f:section>
+
+<f:section name="ImageObject">
+	<flux:form.object name="image">
+		<f:render section="SharedObject" arguments="{_all}" />
+		<flux:field.input name="file" eval="trim">
+			<flux:wizard.link />
+		</flux:field.input>
+		<flux:field.checkbox name="addWell" />
+		<flux:field.select name="scaling" items="{0: {0: 'Disable', 1: ''}, 1: {0: 'Crop', 1: 'c'}, 2: {0: 'Preserve maximums', 1: 'm'}}" />
+		<flux:field.input name="title" />
+		<flux:field.input name="header" />
+		<flux:field.text name="caption" />
+	</flux:form.object>
+</f:section>
+
+<f:section name="ContentObject">
+	<flux:form.object name="content">
+		<f:render section="SharedObject" arguments="{_all}" />
+		<flux:field.input name="name" />
+		<flux:field.input name="label" />
+		<flux:field.custom name="message" label="">
+			Save this content element then insert content elements through page module to fill in this thumbnail.
+		</flux:field.custom>
+	</flux:form.object>
+</f:section>
+
+<f:section name="Preview">
+	<flux:widget.grid />
+</f:section>
+
+<f:section name="Main">
+	<ul class="thumbnails">
+		<f:for each="{thumbnails}" as="itemSectionObjects" iteration="iteration">
+			<f:for each="{itemSectionObjects}" as="object" key="objectType">
+				<f:if condition="{object.disabled} < 1">
+					<li class="span{object.class}">
+						<div class="{f:if(condition: object.addWell, then: 'well')}">
+							<v:switch value="{objectType}">
+								<v:case case="image" break="TRUE">
+									<v:var.set name="imageWidth" value="{width -> v:math.division(b: 12) -> v:math.product(b: object.class)}" />
+									<v:var.set name="imageHeight" value="{ratio -> v:math.division(b: imageWidth)}" />
+									<a href="#" class="img-thumbnail">
+										<f:image src="{object.file}" width="{imageWidth}{object.scaling}" height="{imageHeight}{object.scaling}" alt="{object.title}" />
+									</a>
+									<f:if condition="{0: object.header, 1: object.caption} != {0: '', 1: ''}">
+										<f:if condition="{object.header}">
+											<h4>{object.header}</h4>
+										</f:if>
+										<f:if condition="{object.caption}">
+											<f:format.html>{object.caption}</f:format.html>
+										</f:if>
+									</f:if>
+								</v:case>
+								<v:case case="content" break="TRUE">
+									<flux:content.render area="contentElements.{object.name}" />
+								</v:case>
+							</v:switch>
+						</div>
+					</li>
+				</f:if>
+			</f:for>
+		</f:for>
+	</ul>
+</f:section>
+
+</div>

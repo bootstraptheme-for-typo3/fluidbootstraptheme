@@ -1,0 +1,17 @@
+plugin.tx_themebootstrap.settings.useTypoScript = {$plugin.tx_themebootstrap.settings.useTypoScript}
+plugin.tx_themebootstrap.settings {
+	entryLevel = {$plugin.tx_themebootstrap.settings.entryLevel}
+	enableSearch = {$plugin.tx_themebootstrap.settings.enableSearch}
+	searchFieldName = {$plugin.tx_themebootstrap.settings.searchFieldName}
+	addWell = {$plugin.tx_themebootstrap.settings.addWell}
+	wellSmall = {$plugin.tx_themebootstrap.settings.wellSmall}
+	lightJumbotronColor = {$plugin.tx_themebootstrap.settings.lightJumbotronColor}
+	darkJumbotronColor = {$plugin.tx_themebootstrap.settings.darkJumbotronColor}
+	jumbotronTextColor = {$plugin.tx_themebootstrap.settings.jumbotronTextColor}
+	jumbotronPadding = {$plugin.tx_themebootstrap.settings.jumbotronPadding}
+	headerFontSize = {$plugin.tx_themebootstrap.settings.headerFontSize}
+	paragraphFontSize = {$plugin.tx_themebootstrap.settings.paragraphFontSize}
+	jumbotronMarginBottom = {$plugin.tx_themebootstrap.settings.jumbotronMarginBottom}
+	position = {$plugin.tx_themebootstrap.settings.position}
+	distribution = {$plugin.tx_themebootstrap.settings.distribution}
+}

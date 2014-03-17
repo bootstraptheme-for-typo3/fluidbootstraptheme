@@ -1,0 +1,49 @@
+<f:if condition="{configuration.insertAbove}">
+	<f:render section="paginator" arguments="{pagination: pagination}" />
+</f:if>
+
+<f:renderChildren arguments="{contentArguments}" />
+
+<f:if condition="{configuration.insertBelow}">
+	<f:render section="paginator" arguments="{pagination: pagination}" />
+</f:if>
+
+<f:section name="paginator">
+	<div class="pagination">
+		<ul class="paginator">
+			<li>
+				<f:if condition="{pagination.previousPage} > 1">
+					<f:then><f:widget.link arguments="{currentPage: pagination.previousPage}">←</f:widget.link></f:then>
+					<f:else><a href="javascript:;">←</a></f:else>
+				</f:if>
+			</li>
+			<f:for each="{pagination.pages}" as="page">
+				<f:if condition="{page.isCurrent}">
+					<f:then>
+						<li class="active">
+							<a href="javascript:;">{page.number}</a>
+						</li>
+					</f:then>
+					<f:else>
+						<li>
+							<f:if condition="{page.number} > 1">
+								<f:then>
+									<f:widget.link arguments="{currentPage: page.number}">{page.number}</f:widget.link>
+								</f:then>
+								<f:else>
+									<f:widget.link>{page.number}</f:widget.link>
+								</f:else>
+							</f:if>
+						</li>
+					</f:else>
+				</f:if>
+			</f:for>
+			<li>
+				<f:if condition="{pagination.nextPage}">
+					<f:then><f:widget.link arguments="{currentPage: pagination.nextPage}">→</f:widget.link></f:then>
+					<f:else><a href="javascript:;">→</a></f:else>
+				</f:if>
+			</li>
+		</ul>
+	</div>
+</f:section>

@@ -1,0 +1,183 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="SharedResources">
+	<v:asset.style name="sitemap" group="page">
+		.sitemap .lead,
+			margin-bottom: 0.5em;
+		}
+		.sitemap hr {
+			margin-bottom: 4em;
+		}
+		.sitemap {
+			margin-top: 2em;
+			margin-bottom: 5em;
+		}
+		.sitemap .header {
+			padding-bottom: -20px;
+			margin-bottom: -40px;
+			text-align: center;
+		}
+		.sitemap .header span {
+			background-color: #FFFFFF;
+			padding: 0 1em 0 1em;
+			display: inline-block;
+			color: #DDDDDD;
+			font-weight: normal;
+		}
+	</v:asset.style>
+	<v:asset.style name="fontawesome" group="cdn" path="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" external="TRUE" standalone="TRUE" />
+	<v:asset.style name="bootstrap-css" group="cdn" path="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" external="TRUE" standalone="TRUE" />
+	<v:asset.script name="bootstrap-core" group="cdn" path="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js" external="TRUE" standalone="TRUE" dependencies="jquery" />
+	<v:asset.script name="jquery" group="cdn" path="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" external="TRUE" standalone="TRUE" />
+	<v:asset.script name="jquery-uid" group="cdn" path="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js" external="TRUE" standalone="TRUE" dependencies="jquery" />
+</f:section>
+
+<f:section name="Navigation">
+	<div id="navbar" class="navbar navbar-inverse navbar-static-top">
+		<div class="navbar-inner">
+			<div class="container navbar-static-top">
+				<f:if condition="{settings.enableSearch}">
+					<form class="navbar-search pull-right" method="get" action="{f:uri.page(pageUid: settings.searchPageUid)}">
+						<div class="input-append">
+							<input id="main-search-field" type="text" name="{settings.searchFieldName}" class="input-nav" tabindex="2" placeholder="Search" /><button tabindex="3" type="submit" class="btn btn-inverse"><i class="icon-search"></i></button>
+						</div>
+					</form>
+				</f:if>
+				<a class="brand" href="{v:site.url()}"><v:site.name /></a>
+				<v:page.menu entryLevel="{settings.entryLevel}" useShortcutData="TRUE">
+					<ul class="nav">
+						<f:for each="{menu}" as="mainPage" iteration="iteration">
+							<li class="{mainPage.class}"><a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}" class="{mainPage.class}">{mainPage.title}</a></li>
+						</f:for>
+					</ul>
+				</v:page.menu>
+			</div>
+		</div>
+	</div>
+</f:section>
+
+<f:section name="SubNavigation">
+	<!-- submenu navigation, collapsible -->
+	<v:page.menu entryLevel="{settings.entryLevel -> v:math.ceil() -> v:math.sum(b: 1)}" includeSpacers="TRUE" useShortcutData="TRUE">
+		<f:if condition="{menu}">
+			<div class="container subnav navbar">
+				<div class="navbar-inner">
+					<ul class="nav">
+						<f:for each="{menu}" as="submenuPage" iteration="iteration">
+							<f:if condition="{submenuPage.doktype} == 199">
+								<f:then>
+									<li class="disabled">
+										<f:if condition="{iteration.isFirst}" else="&nbsp;&nbsp;" />
+										<span class="navbar-text">{submenuPage.title}:</span>
+										&nbsp;
+									</li>
+								</f:then>
+								<f:else>
+									<li class="{submenuPage.class}"><a tabindex="{iteration.cycle -> v:math.sum(b: 200)}" href="{submenuPage.link}" class="{submenuPage.class}">{submenuPage.title}</a></li>
+								</f:else>
+							</f:if>
+						</f:for>
+					</ul>
+				</div>
+			</div>
+		</f:if>
+	</v:page.menu>
+</f:section>
+
+<f:section name="TabNavigation">
+	<!-- tabbed, lower submenu navigation, collapsible -->
+	<v:page.menu entryLevel="{settings.entryLevel -> v:math.ceil() -> v:math.sum(b: 2)}" useShortcutData="TRUE">
+		<f:if condition="{menu}">
+			<ul class="nav nav-pills">
+				<f:for each="{menu}" as="submenuPage" iteration="iteration">
+					<li class="{submenuPage.class}"><a tabindex="{iteration.cycle -> v:math.sum(b: 300)}" href="{submenuPage.link}" class="{submenuPage.class}">{submenuPage.title}</a></li>
+				</f:for>
+			</ul>
+		</f:if>
+	</v:page.menu>
+</f:section>
+
+<f:section name="HeroUnit">
+	<!-- hero unit, optional content elements from colPos 1 (one) -->
+	<v:page.content.render column="1" as="heroUnitContentElements">
+		<f:if condition="{heroUnitContentElements}">
+			<div class="hero-unit">
+				<f:for each="{heroUnitContentElements}" as="heroContentElement">
+					<f:format.raw>{heroContentElement}</f:format.raw>
+				</f:for>
+			</div>
+		</f:if>
+	</v:page.content.render>
+</f:section>
+
+<f:section name="Jumbotron">
+	<!-- jumbotron with background image, optional content elements from colPos 1 (one) -->
+	<v:page.content.render column="1" as="jumbotronContentElements">
+		<f:if condition="{jumbotronContentElements}">
+			<v:asset.style name="jumbotron" path="{f:uri.resource(path: 'Stylesheets/Jumbotron.css', extensionName: 'FluidpagesBootstrap')}"
+					fluid="TRUE" arguments="{light: settings.lightJumbotronColor, dark: settings.darkJumbotronColor,
+						padding: settings.jumbotronPadding, text: settings.jumbotronTextColor,
+						headerSize: settings.headerFontSize, paragraphSize: settings.paragraphFontSize, marginBottom: settings.jumbotronMarginBottom}" />
+			<div class="jumbotron masthead">
+				<div class="container">
+					<f:for each="{jumbotronContentElements}" as="jumbotronContentElement">
+						<f:format.raw>{jumbotronContentElement}</f:format.raw>
+					</f:for>
+				</div>
+			</div>
+		</f:if>
+	</v:page.content.render>
+</f:section>
+
+<f:section name="Footer">
+	<!-- footer, optional content elements from colPos 2 (two) -->
+	<v:page.content.render column="2" as="footerContentElements">
+		<f:if condition="{footerContentElements}">
+			<div class="footer">
+				<div class="right">
+					<f:for each="{footerContentElements}" as="footerContentElement">
+						<f:format.raw>{footerContentElement}</f:format.raw>
+					</f:for>
+				</div>
+			</div>
+		</f:if>
+	</v:page.content.render>
+	<div class="sitemap">
+		<h3 class="header">
+			<span>Site Map</span>
+		</h3>
+		<hr />
+		<div class="row-fluid">
+			<v:page.menu useShortcutData="TRUE" entryLevel="{settings.entryLevel}">
+				<f:for each="{menu}" as="subPage">
+					<v:page.menu useShortcutData="TRUE" pageUid="{subPage.uid}">
+						<div class="span2">
+							<div class="lead muted">
+								<f:link.page pageUid="{subPage.uid}" class="muted">{subPage.title}</f:link.page>
+							</div>
+							<ul class="unstyled">
+								<f:for each="{menu}" as="submenuPage">
+									<li>
+										<f:link.page pageUid="{submenuPage.uid}" class="muted">{submenuPage.title}</f:link.page>
+									</li>
+								</f:for>
+							</ul>
+						</div>
+					</v:page.menu>
+				</f:for>
+			</v:page.menu>
+		</div>
+	</div>
+</f:section>
+
+<f:section name="Sidebar">
+	<div class="sidebar{f:if(condition: settings.addWell, then: ' well')}{f:if(condition: settings.wellSmall, then: ' well-small')}">
+		<v:page.content.render column="3" />
+	</div>
+</f:section>
+
+</div>

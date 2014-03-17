@@ -1,0 +1,30 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="well" icon="{v:extension.path.resources(path: 'Icons/icon-well.gif')}">
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column>
+					<flux:form.content name="content" />
+				</flux:grid.column>
+			</flux:grid.row>
+		</flux:grid>
+		<flux:field.select name="wellStyle" label="Optional Well Style Class"
+			items="small, normal, large" default="normal" />
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<flux:widget.grid />
+</f:section>
+
+<f:section name="Main">
+	<div class="well{f:if(condition: '{0: wellStyle} != {0: \'normal\'}', then: ' well-{wellStyle}')}">
+		<flux:content.render area="content" />
+	</div>
+</f:section>
+</div>

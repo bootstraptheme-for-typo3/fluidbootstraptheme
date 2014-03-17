@@ -1,0 +1,41 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="alert" icon="{v:extension.path.resources(path: 'Icons/icon-alert.gif')}">
+		<flux:field.input name="header" />
+		<flux:field.input name="closeLinkText" />
+		<flux:field.select name="class" items="info,success,warning,danger" default="info" />
+		<flux:field.checkbox name="isBlock" />
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column>
+					<flux:form.content name="content" />
+				</flux:grid.column>
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<flux:widget.grid />
+</f:section>
+
+<f:section name="Main">
+	<div class="alert alert-{class} {f:if(condition: isBlock, then: 'alert-block')}">
+		<f:if condition="{closeLinkText}">
+			<a class="close" data-dismiss="alert"><f:format.raw>{closeLinkText}</f:format.raw></a>
+		</f:if>
+		<f:if condition="{header}">
+			<h1 class="alert-heading">{header}</h1>
+		</f:if>
+		<flux:content.render area="content" />
+	</div>
+</f:section>
+
+</div>

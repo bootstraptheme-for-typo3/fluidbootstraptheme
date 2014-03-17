@@ -1,0 +1,64 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="accordion" icon="{v:extension.path.resources(path: 'Icons/icon-accordion.gif')}">
+		<flux:form.sheet name="panels">
+			<flux:form.section name="panels">
+				<flux:form.object name="panel">
+					<flux:field.input name="title" />
+					<flux:field.checkbox name="active" />
+				</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
+		<flux:grid>
+			<f:for each="{panels}" as="panel" iteration="iteration">
+				<flux:grid.row>
+					<flux:grid.column>
+						<flux:form.content name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel {iteration.cycle}')}" />
+					</flux:grid.column>
+				</flux:grid.row>
+			</f:for>
+		</flux:grid>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<flux:widget.grid />
+</f:section>
+
+<f:section name="Main">
+
+	<v:var.set name="activeTabIndex" value="0" />
+	<f:for each="{panels}" as="panel" iteration="iteration">
+		<f:if condition="{panel.panel.active}"><v:var.set name="activeTabIndex" value="{iteration.index}" /></f:if>
+	</f:for>
+
+	<div class="panel-group" id="accordion-{record.uid}">
+		<f:for each="{panels}" as="panel" iteration="iteration">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-{record.uid}"
+						   href="#panel-{record.uid}-{iteration.index}">
+							{panel.panel.title}
+						</a>
+					</h4>
+				</div>
+				<div id="panel-{record.uid}-{iteration.index}" class="panel-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
+					<div class="panel-body">
+						<flux:content.render area="content.{iteration.index}" />
+					</div>
+				</div>
+			</div>
+		</f:for>
+	</div>
+
+</f:section>
+
+</div>

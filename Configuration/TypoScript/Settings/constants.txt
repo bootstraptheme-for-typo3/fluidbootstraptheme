@@ -1,0 +1,32 @@
+# cat=FLUIDPAGESBOOTSTRAP/settings; type=boolean; label=Use TypoScript settings instead of FlexForm values
+plugin.tx_themebootstrap.settings.useTypoScript = 1
+plugin.tx_themebootstrap.settings {
+	# cat=BOOTSTRAPTHEME/settings; type=int+; label=main menu entry level - other menus calculated based on this
+	entryLevel = 0
+	# cat=BOOTSTRAPTHEME/settings; type=boolean; label=enable the top right corner search field
+	enableSearch = 1
+	# cat=BOOTSTRAPTHEME/settings; type=small; label=name attribute of search field
+	searchFieldName = q
+	# cat=BOOTSTRAPTHEME/settings; type=boolean; label=enables a "well" class on the side bar of templates using side bar
+	addWell = 0
+	# cat=BOOTSTRAPTHEME/settings; type=boolean; label=make the well's padding smaller than standard
+	wellSmall = 0
+	# cat=BOOTSTRAPTHEME/settings; type=color; label=Jumbotron light background color
+	lightJumbotronColor =
+	# cat=BOOTSTRAPTHEME/settings; type=color; label=Jumbotron dark background color
+	darkJumbotronColor =
+	# cat=BOOTSTRAPTHEME/settings; type=color; label=Jumbotron text color
+	jumbotronTextColor =
+	# cat=BOOTSTRAPTHEME/settings; type=int+; label=Jumbotron general padding
+	jumbotronPadding = 50
+	# cat=BOOTSTRAPTHEME/settings; type=int+; label=Jumbotron header font size
+	headerFontSize = 48
+	# cat=BOOTSTRAPTHEME/settings; type=int+; label=Jumbotron paragraph font size
+	paragraphFontSize = 22
+	# cat=BOOTSTRAPTHEME/settings; type=int+; label=Jumbotron margin bottom
+	jumbotronMarginBottom = 40
+	# cat=BOOTSTRAPTHEME/settings; type=options[left,right]; label=Placement of sidebar
+	position = left
+	# cat=BOOTSTRAPTHEME/settings; type=int+; label=Width of sidebar (what remains of a 12-column total is used by main content)
+	distribution = 4
+}

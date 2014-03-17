@@ -1,0 +1,80 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="buttonlink" icon="{v:extension.path.resources(path: 'Icons/icon-buttonlink.gif')}">
+		<flux:field.input name="target">
+			<flux:wizard.link />
+		</flux:field.input>
+		<flux:field.input name="text" />
+		<flux:field.checkbox name="tooltip" />
+		<flux:field.input name="title" />
+		<flux:field.input name="iconClass" />
+		<flux:field.select name="iconPlacement" items="left,right" />
+		<flux:field.select name="size" items="default,mini,small,large" size="1" maxItems="1" />
+		<flux:field.checkbox name="block" />
+		<flux:field.select name="class" items="default,primary,success,warning,danger,info,inverse" size="1" maxItems="1" />
+		<flux:field.input name="additionalClassNames" />
+		<flux:field.select name="wrapTag" items="none,span,p,div,dt,dd,fieldset" />
+		<flux:form.sheet name="addons">
+			<flux:form.section name="addons">
+				<flux:form.object name="popover">
+					<flux:field.input name="title" />
+					<flux:field.input name="content" />
+				</flux:form.object>
+				<flux:form.object name="modal">
+					<flux:field.input name="title" />
+					<flux:field.relation name="content" table="tt_content">
+						<flux:wizard.add table="tt_content" />
+						<flux:wizard.edit />
+					</flux:field.relation>
+				</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	Twitter Button: {text}, size: {size}, class: {class}
+</f:section>
+
+<f:section name="Main">
+	<f:if condition="{0: wrapTag} != {0: 'none'}">
+		<f:then>
+			<{wrapTag} class="button-wrap">
+				<f:render section="Button" arguments="{_all}" />
+			</{wrapTag}>
+		</f:then>
+		<f:else>
+			<f:render section="Button" arguments="{_all}" />
+		</f:else>
+	</f:if>
+</f:section>
+
+<f:section name="Button">
+	<f:if condition="{target -> v:math.round()} > 0">
+		<f:then>
+			<f:link.page pageUid="{target}" class="btn btn-{size} btn-{class} {additionalClassNames}{f:if(condition: block, then: ' btn-block')}" rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">
+				<f:render section="Text" arguments="{_all}" />
+			</f:link.page>
+		</f:then>
+		<f:else>
+			<a href="{target}" class="btn btn-{size} btn-{class} {additionalClassNames}" rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">
+				<f:render section="Text" arguments="{_all}" />
+			</a>
+		</f:else>
+	</f:if>
+</f:section>
+
+<f:section name="Text">
+	<f:if condition="{iconClass}"><f:if condition="{iconPlacement}"><f:else><i class="icon icon-{iconClass}"></i></f:else></f:if></f:if>
+	{text}
+	<f:if condition="{iconClass}"><f:if condition="{iconPlacement}"><f:then><i class="icon icon-{iconClass}"></i></f:then></f:if></f:if>
+</f:section>
+
+</div>

@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" product-name="themebootstrap" date="2014-01-06T01:00:11+01:00">
+		<header/>
+		<body>
+			<trans-unit id="flux.accordion" xml:space="preserve">
+				<source>Bootstrap: Accordion with content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.description" xml:space="preserve">
+				<source>Accordion element container</source>
+			</trans-unit>
+			<trans-unit id="flux.alert" xml:space="preserve">
+				<source>Bootstrap: Alert (inline)</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.description" xml:space="preserve">
+				<source>Alert box (not popup) inline in page</source>
+			</trans-unit>
+			<trans-unit id="flux.buttongroup" xml:space="preserve">
+				<source>Bootstrap: Button Group</source>
+			</trans-unit>
+			<trans-unit id="flux.buttongroup.description" xml:space="preserve">
+				<source>Renders Twitter Bootstrap button elements added as child content elements in a button grouping wrapper which closely aligns the buttons/links.</source>
+			</trans-unit>
+			<trans-unit id="flux.buttongroup.areas.content" xml:space="preserve">
+				<source>Buttons</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink" xml:space="preserve">
+				<source>Bootstrap: Button Link</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.description" xml:space="preserve">
+				<source>Default Twitter Bootstrap button-styled link to a page, file or custom URL.</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel" xml:space="preserve">
+				<source>Bootstrap: Element Carousel</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.description" xml:space="preserve">
+				<source>Content elements, images or simple texts (each type supporting captions) in a carousel matrix with JS based slide change.</source>
+			</trans-unit>
+			<trans-unit id="flux.jumbotron" xml:space="preserve">
+				<source>Bootstrap: Jumbotron</source>
+			</trans-unit>
+			<trans-unit id="flux.jumbotron.description" xml:space="preserve">
+				<source>A very large header-type element into which you can insert other content elements.</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist" xml:space="preserve">
+				<source>Bootstrap: Navigation List</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.description" xml:space="preserve">
+				<source>Configurable navigation list of links to various resources.</source>
+			</trans-unit>
+			<trans-unit id="flux.pageheader" xml:space="preserve">
+				<source>Bootstrap: Page Header</source>
+			</trans-unit>
+			<trans-unit id="flux.pageheader.description" xml:space="preserve">
+				<source>An underlined page header element with optional small caption.</source>
+			</trans-unit>
+			<trans-unit id="flux.row" xml:space="preserve">
+				<source>Bootstrap: Column Row</source>
+			</trans-unit>
+			<trans-unit id="flux.row.description" xml:space="preserve">
+				<source>Adds a wrapper element that lets you define columns of varying widths</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs" xml:space="preserve">
+				<source>Bootstrap: Tabs/pills with content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.description" xml:space="preserve">
+				<source>Places child content elements in tabs.</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails" xml:space="preserve">
+				<source>Bootstrap: Thumbnail Grid</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.areas.content" xml:space="preserve">
+				<source>Content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.description" xml:space="preserve">
+				<source>Responsive grid of highly configurable thumbnails configurable with lightbox-style opening of content</source>
+			</trans-unit>
+			<trans-unit id="flux.well" xml:space="preserve">
+				<source>Bootstrap: Content well</source>
+			</trans-unit>
+			<trans-unit id="flux.well.description" xml:space="preserve">
+				<source>Visual well for other content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.sheets.panels" xml:space="preserve">
+				<source>Panels</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.sections.panels" xml:space="preserve">
+				<source>Panels</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.objects.panel" xml:space="preserve">
+				<source>Panel</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.objects.panel.title" xml:space="preserve">
+				<source>Panel header/title</source>
+			</trans-unit>
+			<trans-unit id="flux.accordion.objects.panel.active" xml:space="preserve">
+				<source>Panel is active?</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.header" xml:space="preserve">
+				<source>Alert header</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.closeLinkText" xml:space="preserve">
+				<source>Close link text (for example: a single x or &amp;times;)</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.class" xml:space="preserve">
+				<source>Alert box class</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.fields.isBlock" xml:space="preserve">
+				<source>Add additional padding</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.target" xml:space="preserve">
+				<source>Link target</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.text" xml:space="preserve">
+				<source>Link text</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.tooltip" xml:space="preserve">
+				<source>Display title as tooltip</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.title" xml:space="preserve">
+				<source>Optional title, appears as tooltip if tooltip is enabled</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.iconClass" xml:space="preserve">
+				<source>Optional icon class name, example 'envelope' or 'exclamation-sign'</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.iconPlacement" xml:space="preserve">
+				<source>Icon placement - left or right</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.size" xml:space="preserve">
+				<source>LinkButton size</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.block" xml:space="preserve">
+				<source>Display button as block element (100% width)</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.class" xml:space="preserve">
+				<source>LinkButton style type</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.additionalClassNames" xml:space="preserve">
+				<source>Additional class names for LinkButton element</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.fields.wrapTag" xml:space="preserve">
+				<source>Wrap with tag</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.sheets.addons" xml:space="preserve">
+				<source>Addons</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.sections.addons" xml:space="preserve">
+				<source>Addons</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.popover" xml:space="preserve">
+				<source>Popover dialog</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.popover.title" xml:space="preserve">
+				<source>Popover title</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.popover.content" xml:space="preserve">
+				<source>Popover content</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.modal" xml:space="preserve">
+				<source>Modal dialog</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.modal.title" xml:space="preserve">
+				<source>Modal dialog title</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.objects.modal.content" xml:space="preserve">
+				<source>Content elements to be displayed</source>
+			</trans-unit>
+			<trans-unit id="flux.buttonlink.edit" xml:space="preserve">
+				<source>Edit</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.quickselect" xml:space="preserve">
+				<source>Display circle icons for direct selection of slides, default top right corner</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.quickselectType" xml:space="preserve">
+				<source>Choose navigation display type</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.interval" xml:space="preserve">
+				<source>Interval between image changes, in miliseconds (default: 5000)</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.id" xml:space="preserve">
+				<source>DOM element ID (override not necessary but possible)</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.labelNext" xml:space="preserve">
+				<source>Label: next (empty will display default arrow)</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.labelPrev" xml:space="preserve">
+				<source>Label: previous (empty will display default arrow)</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.width" xml:space="preserve">
+				<source>Image width, supports TS IMAGE widths, fx 250c to set width 250 with cropping</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.sheets.elements" xml:space="preserve">
+				<source>Content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.sections.elements" xml:space="preserve">
+				<source>Content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text" xml:space="preserve">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text.title" xml:space="preserve">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text.size" xml:space="preserve">
+				<source>Text size</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text.text" xml:space="preserve">
+				<source>Text</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.content" xml:space="preserve">
+				<source>Content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.content.id" xml:space="preserve">
+				<source>Content area ID</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.image" xml:space="preserve">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.image.file" xml:space="preserve">
+				<source>Image file</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.sheets.styles" xml:space="preserve">
+				<source>Styles</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.void" xml:space="preserve">
+				<source> </source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.autostart" xml:space="preserve">
+				<source>Should the carousel start sliding on page-load?</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.quickselectStyles" xml:space="preserve">
+				<source>Optional CSS rule for the quick slide selector dots container</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.quickselectDotStyles" xml:space="preserve">
+				<source>Optional CSS rule for the quick slide selector dots</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.navigationStyles" xml:space="preserve">
+				<source>Optional CSS rule for the navigation dots</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.fields.settings.carousel.innerStyles" xml:space="preserve">
+				<source>CSS rule for inside of carousel</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.sheets.display" xml:space="preserve">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.fields.addWell" xml:space="preserve">
+				<source>Add well wrapper</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.fields.zeroPadding" xml:space="preserve">
+				<source>Do not pad the wrapper</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.fields.class" xml:space="preserve">
+				<source>Additional class names for wrapper element</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.sheets.items" xml:space="preserve">
+				<source>Items</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.sections.items" xml:space="preserve">
+				<source>Items</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.header" xml:space="preserve">
+				<source>Header</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.header.text" xml:space="preserve">
+				<source>Header text</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.header.class" xml:space="preserve">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item" xml:space="preserve">
+				<source>List Item</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.text" xml:space="preserve">
+				<source>Item label text</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.tooltip" xml:space="preserve">
+				<source>Optional tooltip text</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.icon" xml:space="preserve">
+				<source>Optional icon (16x16)</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.target" xml:space="preserve">
+				<source>Target</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.item.class" xml:space="preserve">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.divider" xml:space="preserve">
+				<source>Divider</source>
+			</trans-unit>
+			<trans-unit id="flux.navigationlist.objects.divider.class" xml:space="preserve">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.pageheader.fields.header" xml:space="preserve">
+				<source>Large text</source>
+			</trans-unit>
+			<trans-unit id="flux.pageheader.fields.subheader" xml:space="preserve">
+				<source>Smaller text next to large text</source>
+			</trans-unit>
+			<trans-unit id="flux.row.fields.settings.fluid" xml:space="preserve">
+				<source>Use "fluid" row type instead of standard row</source>
+			</trans-unit>
+			<trans-unit id="flux.row.sections.columns" xml:space="preserve">
+				<source>Columns</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column" xml:space="preserve">
+				<source>Column</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.addWell" xml:space="preserve">
+				<source>Add 'Well' inside cell</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.class" xml:space="preserve">
+				<source>Class</source>
+			</trans-unit>
+			<trans-unit id="flux.row.objects.column.additionalClass" xml:space="preserve">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.sheets.display" xml:space="preserve">
+				<source>Display</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.mode" xml:space="preserve">
+				<source>Display mode</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.stackable" xml:space="preserve">
+				<source>Make stackable tabs/pills</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.fields.position" xml:space="preserve">
+				<source>Positioning</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.sheets.tabs" xml:space="preserve">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.sections.tabs" xml:space="preserve">
+				<source>Tabs</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab" xml:space="preserve">
+				<source>Tab</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.title" xml:space="preserve">
+				<source>Tab title</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.class" xml:space="preserve">
+				<source>Additional CSS class names</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.active" xml:space="preserve">
+				<source>Active?</source>
+			</trans-unit>
+			<trans-unit id="flux.tabs.objects.tab.fade" xml:space="preserve">
+				<source>Enable fading effect</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.sheets.thumbnails" xml:space="preserve">
+				<source>Thumbnails</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.fields.width" xml:space="preserve">
+				<source>Maxium allowed width to distribute across 12 cells. The Twitter Bootstrap default is 960</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.fields.ratio" xml:space="preserve">
+				<source>Ratio of images, for example 0.75 (very grid friendly), 16/9 (widescreen) or 1.32 (nice golden ratio portrait)</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.sections.thumbnails" xml:space="preserve">
+				<source>Thumbnails</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image" xml:space="preserve">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.file" xml:space="preserve">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.addWell" xml:space="preserve">
+				<source>Add well on thumbnail wrap</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.scaling" xml:space="preserve">
+				<source>Scaling mode</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.title" xml:space="preserve">
+				<source>Hover title / alt text for image</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.header" xml:space="preserve">
+				<source>Caption header (optional)</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.caption" xml:space="preserve">
+				<source>Caption text (optional)</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content" xml:space="preserve">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content.name" xml:space="preserve">
+				<source>Content area name</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content.label" xml:space="preserve">
+				<source>Content area label</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content.message" xml:space="preserve">
+				<source> </source>
+			</trans-unit>
+			<trans-unit id="flux.well.areas.content" xml:space="preserve">
+				<source>Content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.jumbotron.areas.content" xml:space="preserve">
+				<source>Jumbotron content</source>
+			</trans-unit>
+			<trans-unit id="flux.alert.areas.content" xml:space="preserve">
+				<source>Alert content</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

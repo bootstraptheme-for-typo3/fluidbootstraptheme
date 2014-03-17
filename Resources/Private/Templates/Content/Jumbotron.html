@@ -1,0 +1,25 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="jumbotron" icon="{v:extension.path.resources(path: 'Icons/icon-jumbotron.gif')}">
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column>
+					<flux:form.content name="content" />
+				</flux:grid.column>
+			</flux:grid.row>
+		</flux:grid>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<flux:widget.grid />
+</f:section>
+
+<f:section name="Main">
+	<div class="jumbotron">
+		<flux:content.render area="content" />
+	</div>
+</f:section>

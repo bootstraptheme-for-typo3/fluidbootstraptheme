@@ -1,0 +1,4 @@
+plugin.tx_themebootstrap.settings {
+	# cat=FLUIDCONTENTBOOTSTRAP/settings; type=int+; label=Number of grid columns: Set this to the same number used in your custom Bootstrap CSS if you've switched from the default 12-grid
+    gridColumns = 12
+}

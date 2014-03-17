@@ -1,0 +1,9 @@
+{
+    "name": "fluidtypo3/fluidpages_bootstrap",
+    "description": "The fluidpages_bootstrap package from FluidTYPO3",
+    "require": {
+        "composer/installers": "*",
+        "fluidtypo3/fluidpages": "*"
+    },
+    "type": "typo3-cms-extension"
+}

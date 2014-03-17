@@ -1,0 +1,21 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+
+<f:layout name="FCE" />
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="pageheader" icon="{v:extension.path.resources(path: 'Icons/icon-pageheader.gif')}">
+		<flux:field.input name="header" />
+		<flux:field.input name="subheader" />
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<h2>{header} <f:if condition="{subheader}"><small>{subheader}</small></f:if></h2>
+</f:section>
+
+<f:section name="Main">
+	<div class="page-header">
+		<h1>{header}<f:if condition="{subheader}"> <small>{subheader}</small></f:if></h1>
+	</div>
+</f:section>

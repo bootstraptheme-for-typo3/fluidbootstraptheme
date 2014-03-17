@@ -1,0 +1,187 @@
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+{namespace v=Tx_Vhs_ViewHelpers}
+<f:layout name="Content" />
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="carousel" icon="{v:extension.path.resources(path: 'Icons/icon-carousel.gif')}">
+		<flux:field.checkbox name="settings.carousel.quickselect" default="1" />
+		<flux:field.select name="settings.carousel.quickselectType" items="{images: 'images', dots: 'dots', numbers: 'numbers'}" />
+		<flux:field.input name="settings.carousel.interval" default="5000" eval="int,trim" />
+		<flux:field.input name="settings.carousel.id" default="{v:random.string(length: 8)}" />
+		<flux:field.input name="settings.carousel.labelNext" default="" />
+		<flux:field.input name="settings.carousel.labelPrev" default="" />
+		<flux:field.input name="settings.carousel.width" default="1170c" />
+		<flux:field.checkbox name="settings.carousel.autostart" />
+		<flux:grid>
+			<f:for each="{elements}" as="element" iteration="iteration">
+				<f:for each="{element}" key="elementType" as="elementData">
+					<f:if condition="{0: elementType} == {0: 'content'}">
+						<flux:grid.row>
+							<flux:grid.column>
+								<flux:form.content name="{elementData.id}" label="Content: {elementData.id}" />
+							</flux:grid.column>
+						</flux:grid.row>
+					</f:if>
+				</f:for>
+			</f:for>
+		</flux:grid>
+		<flux:form.sheet name="elements">
+			<flux:form.section name="elements">
+				<flux:form.object name="text">
+					<flux:field.input name="title" />
+					<flux:field.select name="size" items="h1,h2,h3,h4,h5,h6,h7,h8" />
+					<flux:field.text name="text" enableRichText="TRUE" />
+					<f:render section="SharedObjectFields" arguments="{_all}" />
+				</flux:form.object>
+				<flux:form.object name="content">
+					<flux:field.input name="id" default="{v:random.string(length: 6)}" />
+					<f:render section="SharedObjectFields" arguments="{_all}" />
+				</flux:form.object>
+				<flux:form.object name="image">
+					<flux:field.file name="file" />
+					<f:render section="SharedObjectFields" arguments="{_all}" />
+				</flux:form.object>
+			</flux:form.section>
+		</flux:form.sheet>
+		<flux:form.sheet name="styles">
+			<flux:field.custom name="void">
+				<h3>Styling</h3>
+				<p>
+					Below you can enter a few styles to be used for this specific carousel instance.
+					Selector and curly braces are automatically added. In other words, these work just
+					like inline CSS "style" attributes in HTML elements.
+				</p>
+				<h4>Example definitions</h4>
+				<ul>
+					<li>background-color: #440033</li>
+					<li>font-size: 18px; color: #000000</li>
+				</ul>
+			</flux:field.custom>
+			<flux:field.text name="settings.carousel.quickselectStyles" cols="130" rows="3" />
+			<flux:field.text name="settings.carousel.quickselectDotStyles" cols="130" rows="3" />
+			<flux:field.text name="settings.carousel.navigationStyles" cols="130" rows="3" />
+			<flux:field.text name="settings.carousel.innerStyles" cols="130" rows="3" />
+		</flux:form.sheet>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<p>Elements: {elements -> f:count()}</p>
+	<flux:widget.grid />
+</f:section>
+
+<f:section name="SharedObjectFields">
+	<flux:field.input name="header" label="Optional header for caption" />
+	<flux:field.text name="caption" label="Optional caption body text" enableRichText="TRUE" />
+	<flux:field.file name="iconImage" label="Optional Image for Navigation Dots" />
+</f:section>
+
+<f:section name="Main">
+	<f:if condition="{settings.carousel.quickselectDotStyles">
+		<v:asset.style name="carousel{settings.carousel.id}quickselectdots">
+			.{settings.carousel.id} .carousel-indicators li {
+				<v:var.get name="settings.carousel.quickselectDotStyles" />
+			}
+		</v:asset.style>
+	</f:if>
+	<f:if condition="{settings.carousel.quickselectStyles">
+		<v:asset.style name="carousel{settings.carousel.id}quickselect">
+			.{settings.carousel.id} .carousel-indicators {
+				<v:var.get name="settings.carousel.quickselectStyles" />
+			}
+		</v:asset.style>
+	</f:if>
+	<f:if condition="{settings.carousel.navigationStyles">
+		<v:asset.style name="carousel{settings.carousel.id}navigation">
+			.{settings.carousel.id} .carousel-control {
+				<v:var.get name="settings.carousel.navigationStyles" />
+			}
+		</v:asset.style>
+	</f:if>
+	<f:if condition="{settings.carousel.innerStyles">
+		<v:asset.style name="carousel{settings.carousel.id}inner">
+			.{settings.carousel.id} .carousel-inner {
+				<v:var.get name="settings.carousel.innerStyles" />
+			}
+		</v:asset.style>
+	</f:if>
+	<div id="{settings.carousel.id}" class="{settings.carousel.id} carousel slide" data-interval="{settings.carousel.interval}"{f:if(condition: settings.carousel.autostart, then: ' data-ride="carousel"')}>
+		<f:if condition="{settings.carousel.quickselect}">
+			<ol class="carousel-indicators">
+				<f:for each="{elements}" as="image" iteration="iteration">
+					<li data-target="#{settings.carousel.id}" data-slide-to="{iteration.index}" class="{f:if(condition: iteration.isFirst, then: 'active')}">
+						<f:if condition="{settings.carousel.quickselectType} == 'images'">
+							<f:if condition="{image.content.iconImage}">
+								<f:image src="{image.content.iconImage}" alt="{image.content.header}" />
+							</f:if>
+						</f:if>
+						<f:if condition="{settings.carousel.quickselectType} == 'numbers'">
+							{iteration.cycle}
+						</f:if>
+					</li>
+				</f:for>
+			</ol>
+		</f:if>
+		<div class="carousel-inner">
+			<f:for each="{elements}" as="element" iteration="iteration">
+				<div class="item{f:if(condition: iteration.isFirst, then: ' active')}">
+					<f:for each="{element}" key="elementType" as="elementData">
+						<f:render section="{elementType -> v:format.case(case: 'ucfirst')}" arguments="{_all}" />
+						<f:if condition="{0: elementData.caption, 1: elementData.header} != {0: '', 1: ''}">
+							<div class="carousel-caption">
+
+								<f:if condition="{0: elementData.header} != {0: ''}">
+									<h3>{elementData.header -> f:format.html()}</h3>
+								</f:if>
+								<f:if condition="{0: elementData.caption} != {0: ''}">
+									{elementData.caption -> f:format.html()}
+								</f:if>
+							</div>
+						</f:if>
+					</f:for>
+				</div>
+			</f:for>
+		</div>
+		<f:if condition="{settings.carousel.labelPrev}">
+			<f:then>
+				<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev">{settings.carousel.labelPrev -> f:format.raw()}</a>
+			</f:then>
+			<f:else>
+				<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev"><span class="icon-prev"></span></a>
+			</f:else>
+		</f:if>
+		<f:if condition="{settings.carousel.labelNext}">
+			<f:then>
+				<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next">{settings.carousel.labelNext -> f:format.raw()}</a>
+			</f:then>
+			<f:else>
+				<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="prev"><span class="icon-next"></span></a>
+			</f:else>
+		</f:if>
+	</div>
+</f:section>
+
+<f:section name="Image">
+	<f:image src="{elementData.file}" alt="{elementData.header}" width="{settings.carousel.width}" />
+</f:section>
+
+<f:section name="Content">
+	<div class="container">
+		<flux:content.render area="{elementData.id}" />
+	</div>
+</f:section>
+
+<f:section name="Text">
+	<div class="container">
+		<f:if condition="{elementData.title}">
+			<{elementData.size}>{elementData.title -> f:format.htmlentities()}</{elementData.size}>
+		</f:if>
+		{elementData.text -> f:format.html()}
+	</div>
+</f:section>
+
+</div>
