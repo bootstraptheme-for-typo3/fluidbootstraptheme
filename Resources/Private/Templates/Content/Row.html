@@ -10,7 +10,6 @@
 	{v:var.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:var.set(name: 'settings')}
 	{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:var.set(name: 'numberOfColumns')}
 	<flux:form wizardTab="Bootstrap" id="row" icon="{v:extension.path.resources(path: 'Icons/icon-row.gif')}">
-		<flux:field.checkbox name="settings.fluid" />
 		<flux:form.section name="columns">
 			<flux:form.object name="column">
 				<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
@@ -34,7 +33,7 @@
 </f:section>
 
 <f:section name="Main">
-	<div class="row{f:if(condition: settings.fluid, then: '-fluid')}">
+	<div class="row">
 		<f:for each="{columns}" as="sectionObject" iteration="iteration">
 			<div class="{sectionObject.column.class}">
 				<flux:content.render area="column{iteration.cycle}" />
