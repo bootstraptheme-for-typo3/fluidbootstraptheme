@@ -1,0 +1,93 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+<f:layout name="Content"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="SimpleResponsiveImage" label="Simple Responsive Image"
+			   description="Simple Responsive Image Element" icon="{v:extension.path.resources(path: 'Icons/image.png')}">
+		<flux:form.sheet name="SimpleResponsiveImage" label="General Settings Image">
+			<flux:field.file
+					name="SimpleContentImage"
+					label="Choose a Image"
+					showThumbnails="1"
+					allowed="jpg,jpeg,png,gif,JPEG,GIF,PNG,JPG"
+					required="1"
+					maxItems="1"
+					size="1"
+					/>
+			<flux:field.input name="SimpleContentImageAlt" label="Alttext" />
+			<flux:field.checkbox name="SimpleContentImageAlignBottom" label="Align Bottom?" />
+			<flux:field.input name="SimpleContentImageCaption" label="Caption" />
+			<flux:field.input name="SimpleContentImageTitle" label="TitleText" />
+			<flux:field.input name="SimpleContentImageWidth" label="Maximale Breite " default="1140" />
+			<flux:field.input name="SimpleContentImageLink" label="Link Image" size="1">
+				<flux:wizard.link activeTab="page"/>
+			</flux:field.input>
+			</flux:form.sheet>
+		</flux:form>
+</f:section>
+
+
+	<f:section name="Preview">
+		<div style="text-align: center;">
+			<v:media.image src="{SimpleContentImage}" alt="{SimpleContentImageAlt}" width="100"/>
+		</div>
+		<p style="text-align: center;">AltText: {SimpleContentImageAlt}</p>
+	</f:section>
+
+
+<f:section name="Main">
+
+
+	<f:if condition="{SimpleContentImageAlignBottom}">
+		<f:then>
+			<v:var.set name="SimpleContentImageAlignBottomVar" value="img-bottom"/>
+		</f:then>
+		<f:else>
+
+		</f:else>
+	</f:if>
+
+	<f:if condition="{SimpleContentImageLink}">
+		<f:then>
+			<f:link.page pageUid="{SimpleContentImageLink}" style="responseimglink">
+				<f:image src="{SimpleContentImage}"
+						 alt="{SimpleContentImageAlt}"
+						 class="img-responsive {SimpleContentImageAlignBottom}"
+						 title="{SimpleContentImageTitle}"
+						 width="{SimpleContentImageWidth}px"
+						/>
+			</f:link.page>
+		</f:then>
+		<f:else>
+
+				<f:image src="{SimpleContentImage}"
+					 alt="{SimpleContentImageAlt}"
+					 class="img-responsive {SimpleContentImageAlignBottomVar}"
+					 title="{SimpleContentImageTitle}"
+					 width="1140"
+					/>
+		</f:else>
+
+
+
+	</f:if>
+	<f:if condition="{SimpleContentImageCaption}">
+		<f:then>
+			<div class="singelcontentimage-caption">
+				{SimpleContentImageCaption}
+			</div>
+		</f:then>
+		<f:else>
+
+		</f:else>
+
+	</f:if>
+
+</f:section>
+
+</div>
