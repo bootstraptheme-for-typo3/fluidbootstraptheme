@@ -81,9 +81,10 @@
 	<!-- submenu navigation, collapsible -->
 	<v:page.menu entryLevel="{settings.entryLevel -> v:math.ceil() -> v:math.sum(b: 1)}" includeSpacers="TRUE" useShortcutData="TRUE">
 		<f:if condition="{menu}">
+			<nav class="navbar-default" role="navigation">
 			<div class="container subnav navbar">
 				<div class="navbar-inner">
-					<ul class="nav">
+					<ul class="nav navbar-nav">
 						<f:for each="{menu}" as="submenuPage" iteration="iteration">
 							<f:if condition="{submenuPage.doktype} == 199">
 								<f:then>
@@ -101,6 +102,7 @@
 					</ul>
 				</div>
 			</div>
+			</nav>
 		</f:if>
 	</v:page.menu>
 </f:section>
@@ -168,11 +170,11 @@
 			<span>Site Map</span>
 		</h3>
 		<hr />
-		<div class="row-fluid">
+		<div class="row">
 			<v:page.menu useShortcutData="TRUE" entryLevel="{settings.entryLevel}">
 				<f:for each="{menu}" as="subPage">
 					<v:page.menu useShortcutData="TRUE" pageUid="{subPage.uid}">
-						<div class="span2">
+						<div class="col-sm-2">
 							<div class="lead muted">
 								<f:link.page pageUid="{subPage.uid}" class="muted">{subPage.title}</f:link.page>
 							</div>
