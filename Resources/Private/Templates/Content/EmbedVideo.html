@@ -1,0 +1,28 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+<f:layout name="Content"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="embedvideo" label="Embed Video"
+			   description="Embed responsive Video iFrame from YouTube or Vimeo" icon="{v:extension.path.resources(path: 'Icons/image.png')}">
+		<flux:form.sheet name="embedVideo" label="iFrame">
+			<flux:field.text name="videoIframe" default="Paste your iFrame here" required="1"
+							 cols="100" rows="10"  />
+		</flux:form.sheet>
+	</flux:form>
+</f:section>
+<f:section name="Preview">
+	<flux:widget.grid/>
+</f:section>
+<f:section name="Main">
+
+	<v:asset.style name="responsiveVideo" path="EXT:themebootstrap/Resources/Public/Stylesheets/ResponsiveVideo.css" group="responsiveVideo" standalone="true"/>
+
+	<div class="video-container">
+		<f:format.raw>{videoIframe}</f:format.raw>
+	</div>
+</f:section>
+</div>
