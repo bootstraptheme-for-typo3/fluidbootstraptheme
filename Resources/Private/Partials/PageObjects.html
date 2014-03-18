@@ -122,7 +122,7 @@
 	<!-- hero unit, optional content elements from colPos 1 (one) -->
 	<v:page.content.render column="1" as="heroUnitContentElements">
 		<f:if condition="{heroUnitContentElements}">
-			<div class="hero-unit">
+			<div class="jumbotron">
 				<f:for each="{heroUnitContentElements}" as="heroContentElement">
 					<f:format.raw>{heroContentElement}</f:format.raw>
 				</f:for>
