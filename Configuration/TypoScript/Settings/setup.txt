@@ -14,4 +14,5 @@ plugin.tx_themebootstrap.settings {
 	jumbotronMarginBottom = {$plugin.tx_themebootstrap.settings.jumbotronMarginBottom}
 	position = {$plugin.tx_themebootstrap.settings.position}
 	distribution = {$plugin.tx_themebootstrap.settings.distribution}
+	gridColumns = {$plugin.tx_themebootstrap.settings.gridColumns}
 }
