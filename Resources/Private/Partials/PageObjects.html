@@ -36,42 +36,46 @@
 	<v:asset.script name="jquery-uid" group="cdn" path="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js" external="TRUE" standalone="TRUE" dependencies="jquery" />
 </f:section>
 
-<f:section name="Navigation">
-	<nav id="navbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
-					<span class="sr-only">Navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="{v:site.url()}">
-					<v:site.name/>
-				</a>
-			</div>
-			<div class="collapse navbar-collapse" id="navigation">
-				<f:if condition="{settings.enableSearch}">
-					<form class="navbar-form pull-right" method="get" action="{f:uri.page(pageUid: settings.searchPageUid)}">
+	<f:section name="Navigation">
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+						<span class="sr-only">Navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="{v:site.url()}">
+						<v:site.name/>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navigation">
+					<f:if condition="{settings.enableSearch}">
+						<form class="navbar-form pull-right" method="get"
+							  action="{f:uri.page(pageUid: settings.searchPageUid)}">
 							<div class="input-append">
-								<input id="main-search-field" type="text" name="{settings.searchFieldName}" class="form-control input-nav" tabindex="2" placeholder="Search"/>
-								<button tabindex="3" type="submit" class="btn btn-inverse"><i class="icon-search"></i></button>
+								<input id="main-search-field" type="text" name="{settings.searchFieldName}"
+									   class="form-control input-nav" tabindex="2" placeholder="Search"/>
+								<button tabindex="3" type="submit" class="btn btn-inverse"><i class="icon-search"></i>
+								</button>
 							</div>
-					</form>
-				</f:if>
-				<v:page.menu entryLevel="{settings.entryLevel}" useShortcutData="TRUE">
-					<ul class="nav">
-						<f:for each="{menu}" as="mainPage" iteration="iteration">
-							<li class="{mainPage.class}">
-								<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}" class="{mainPage.class}">{mainPage.title}</a>
-							</li>
-						</f:for>
-					</ul>
-				</v:page.menu>
+						</form>
+					</f:if>
+					<v:page.menu entryLevel="{settings.entryLevel}" useShortcutData="TRUE">
+						<ul class="nav navbar-nav">
+							<f:for each="{menu}" as="mainPage" iteration="iteration">
+								<li class="{mainPage.class}">
+									<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}"
+									   class="{mainPage.class}">{mainPage.title}</a>
+								</li>
+							</f:for>
+						</ul>
+					</v:page.menu>
+				</div>
 			</div>
-		</div>
-	</nav>
-</f:section>
+		</nav>
+	</f:section>
 
 <f:section name="SubNavigation">
 	<!-- submenu navigation, collapsible -->
