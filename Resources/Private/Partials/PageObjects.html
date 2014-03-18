@@ -37,27 +37,40 @@
 </f:section>
 
 <f:section name="Navigation">
-	<div id="navbar" class="navbar navbar-inverse navbar-static-top">
-		<div class="navbar-inner">
-			<div class="container navbar-static-top">
+	<nav id="navbar" class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+					<span class="sr-only">Navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="{v:site.url()}">
+					<v:site.name/>
+				</a>
+			</div>
+			<div class="collapse navbar-collapse" id="navigation">
 				<f:if condition="{settings.enableSearch}">
-					<form class="navbar-search pull-right" method="get" action="{f:uri.page(pageUid: settings.searchPageUid)}">
-						<div class="input-append">
-							<input id="main-search-field" type="text" name="{settings.searchFieldName}" class="input-nav" tabindex="2" placeholder="Search" /><button tabindex="3" type="submit" class="btn btn-inverse"><i class="icon-search"></i></button>
-						</div>
+					<form class="navbar-form pull-right" method="get" action="{f:uri.page(pageUid: settings.searchPageUid)}">
+							<div class="input-append">
+								<input id="main-search-field" type="text" name="{settings.searchFieldName}" class="form-control input-nav" tabindex="2" placeholder="Search"/>
+								<button tabindex="3" type="submit" class="btn btn-inverse"><i class="icon-search"></i></button>
+							</div>
 					</form>
 				</f:if>
-				<a class="brand" href="{v:site.url()}"><v:site.name /></a>
 				<v:page.menu entryLevel="{settings.entryLevel}" useShortcutData="TRUE">
 					<ul class="nav">
 						<f:for each="{menu}" as="mainPage" iteration="iteration">
-							<li class="{mainPage.class}"><a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}" class="{mainPage.class}">{mainPage.title}</a></li>
+							<li class="{mainPage.class}">
+								<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}" class="{mainPage.class}">{mainPage.title}</a>
+							</li>
 						</f:for>
 					</ul>
 				</v:page.menu>
 			</div>
 		</div>
-	</div>
+	</nav>
 </f:section>
 
 <f:section name="SubNavigation">
