@@ -418,7 +418,7 @@
 			<trans-unit id="flux.tabs.objects.tab.active" xml:space="preserve">
 				<source>Active?</source>
 			</trans-unit>
-			<trans-unit id="flux.tabs.objects.tab.fade" xml:space="preserve">
+			<trans-unit id="flux.tabs.fields.fade" xml:space="preserve">
 				<source>Enable fading effect</source>
 			</trans-unit>
 			<trans-unit id="flux.thumbnails.sheets.thumbnails" xml:space="preserve">
