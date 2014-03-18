@@ -36,7 +36,45 @@
             <trans-unit id="flux.grid2.fields.col2hide">
                 <source>Column 2 Visibility on Small Device</source>
             </trans-unit>
-            <!-- TwoColumn.html -->
+            <!-- ThreeColumn.html -->
+            <trans-unit id="flux.grid3.description">
+                <source>3 Columns (30-30-30)</source>
+            </trans-unit>
+
+            <trans-unit id="flux.grid3">
+                <source>3 Columns Container</source>
+            </trans-unit>
+
+            <trans-unit id="flux.grid3.sheets.3Columns">
+                <source>Column Splitting</source>
+            </trans-unit>
+
+            <trans-unit id="flux.grid3.fields.split">
+                <source>Split Possibilities</source>
+            </trans-unit>
+
+
+            <trans-unit id="flux.grid3.fields.col1width">
+                <source>Bootstrap CSS Class Column 1</source>
+            </trans-unit>
+            <trans-unit id="flux.grid3.fields.col2width">
+                <source>Bootstrap CSS Class Column 2</source>
+            </trans-unit>
+            <trans-unit id="flux.grid3.fields.col3width">
+                <source>Bootstrap CSS Class Column 3</source>
+            </trans-unit>
+
+
+            <trans-unit id="flux.grid3.fields.col1hide">
+                <source>Column 1 Visibility on Small Device</source>
+            </trans-unit>
+            <trans-unit id="flux.grid3.fields.col2hide">
+                <source>Column 2 Visibility on Small Device</source>
+            </trans-unit>
+            <trans-unit id="flux.grid3.fields.col2hide">
+                <source>Column 2 Visibility on Small Device</source>
+            </trans-unit>
+            <!-- ThreeColumn.html -->
 
 			<trans-unit id="flux.accordion" xml:space="preserve">
 				<source>Bootstrap: Accordion with content elements</source>
