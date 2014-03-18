@@ -35,7 +35,7 @@
 						<flux:grid.column colPos="0" name="Main Content" />
 						<flux:grid.column colPos="3" name="Sidebar Content" />
 					</v:case>
-					<v:case case="default" break="TRUE">
+					<v:case case="default">
 						<flux:grid.column colPos="0" name="Main Content" colspan="2" />
 					</v:case>
 				</v:switch>
@@ -52,21 +52,21 @@
 </f:section>
 
 <f:section name="Content">
-	<div class="row-fluid">
+	<div class="row">
 		<v:switch value="{settings.position}">
 			<v:case case="left" break="TRUE">
-				<div class="span{settings.distribution}">
+				<div class="col-sm-{settings.distribution}">
 					<f:render partial="PageObjects" section="Sidebar" arguments="{_all}" />
 				</div>
-				<div class="span{v:math.subtract(a: 12, b: settings.distribution)}">
+				<div class="col-sm-{v:math.subtract(a: 12, b: settings.distribution)}">
 					<v:page.content.render column="0" />
 				</div>
 			</v:case>
 			<v:case case="right" break="TRUE">
-				<div class="span{v:math.subtract(a: 12, b: settings.distribution)}">
+				<div class="col-sm-{v:math.subtract(a: 12, b: settings.distribution)}">
 					<v:page.content.render column="0" />
 				</div>
-				<div class="span{settings.distribution}">
+				<div class="col-sm-{settings.distribution}">
 					<f:render partial="PageObjects" section="Sidebar" arguments="{_all}" />
 				</div>
 			</v:case>
