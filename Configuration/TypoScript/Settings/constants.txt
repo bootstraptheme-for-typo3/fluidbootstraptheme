@@ -1,4 +1,4 @@
-# cat=FLUIDPAGESBOOTSTRAP/settings; type=boolean; label=Use TypoScript settings instead of FlexForm values
+# cat=THEMEBOOTSTRAP/settings; type=boolean; label=Use TypoScript settings instead of FlexForm values
 plugin.tx_themebootstrap.settings.useTypoScript = 1
 plugin.tx_themebootstrap.settings {
 	# cat=THEMEBOOTSTRAP/settings; type=int+; label=main menu entry level - other menus calculated based on this
