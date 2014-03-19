@@ -9,10 +9,10 @@
 		<flux:form wizardTab="Grid" id="grid3" icon="{v:extension.path.resources(path: 'Icons/threecol.png')}">
 			<flux:form.sheet name="3Columns">
 
-						<flux:field.select name="split" items="30-30-30,more" default="30-30-30"
+						<flux:field.select name="settings.split" items="30-30-30,more" default="30-30-30"
 										   requestUpdate="1"/>
 			</flux:form.sheet>
-			<f:if condition="{split}=='more'">
+			<f:if condition="{settings.split}=='more'">
 				<f:then>
 					<f:render section="switchcaseMore" arguments="{_all}"/>
 				</f:then>
@@ -23,34 +23,34 @@
 		</flux:form>
 	</f:section>
 	<f:section name="switchcaseMore">
-		<flux:field.select name="col1width"
+		<flux:field.select name="settings.col1width"
 						   items="1,2,3,4,5,6,7,8,9,10,11,12"
 						   required="1"
 						   default="4"
 				/>
-		<flux:field.select name="col1hide" items="show,hide" required="0" default="show"/>
-		<flux:field.select name="col2width"
+		<flux:field.select name="settings.col1hide" items="show,hide" required="0" default="show"/>
+		<flux:field.select name="settings.col2width"
 						   items="1,2,3,4,5,6,7,8,9,10,11,12"
 						   required="1"
 						   default="4"
 				/>
-		<flux:field.select name="col2hide" items="show,hide" required="0" default="show"/>
-		<flux:field.select name="col3width"
+		<flux:field.select name="settings.col2hide" items="show,hide" required="0" default="show"/>
+		<flux:field.select name="settings.col3width"
 						   items="1,2,3,4,5,6,7,8,9,10,11,12"
 						   required="1"
 						   default="4"
 				/>
-		<flux:field.select name="col3hide" items="show,hide" required="0" default="show"/>
+		<flux:field.select name="settings.col3hide" items="show,hide" required="0" default="show"/>
 		<flux:grid>
 			<flux:grid.row>
 				<flux:grid.column style="width: 33%;border-right: 1px dotted #999;">
-					<flux:form.content name="column1" label="Column Left ({col1width})"/>
+					<flux:form.content name="column1" label="Column Left ({settings.col1width})"/>
 				</flux:grid.column>
 				<flux:grid.column style="width: 34%; border-right: 1px dotted #999;">
-					<flux:form.content name="column2" label="Column Middle ({col2width})"/>
+					<flux:form.content name="column2" label="Column Middle ({settings.col2width})"/>
 				</flux:grid.column>
 				<flux:grid.column style="width: 33%;">
-					<flux:form.content name="column3" label="Column Right ({col3width})"/>
+					<flux:form.content name="column3" label="Column Right ({settings.col3width})"/>
 				</flux:grid.column>
 			</flux:grid.row>
 		</flux:grid>
@@ -58,7 +58,7 @@
 	<f:section name="switchcase">
 		<flux:grid>
 			<flux:grid.row>
-				<v:switch value="{split}">
+				<v:switch value="{settings.split}">
 					<v:case case="30-30-30" break="true">
 						<v:var.set name="col1-defaultWD" value="width: 33%"/>
 						<v:var.set name="col2-defaultWD" value="width: 34%"/>
@@ -86,30 +86,30 @@
 		<flux:widget.grid/>
 	</f:section>
 	<f:section name="Main">
-		<f:if condition="{col1hide}=='hide'">
+		<f:if condition="{settings.col1hide}=='hide'">
 				<v:var.set name="col1hidexs" value="hidden-xs"/>
 		</f:if>
-		<f:if condition="{col2hide}=='hide'">
+		<f:if condition="{settings.col2hide}=='hide'">
 				<v:var.set name="col2hidexs" value="hidden-xs"/>
 		</f:if>
-		<f:if condition="{col3hide}=='hide'">
+		<f:if condition="{settings.col3hide}=='hide'">
 			<v:var.set name="col3hidexs" value="hidden-xs"/>
 		</f:if>
 		<div class="row">
-			<f:if condition="{split}=='more'">
+			<f:if condition="{settings.split}=='more'">
 				<f:then>
-					<div class="col-sm-{col1width} {col1hidexs}">
+					<div class="col-sm-{settings.col1width} {col1hidexs}">
 						<flux:content.render  area="column1"/>
 					</div>
-					<div class="col-sm-{col2width} {col2hidexs}">
+					<div class="col-sm-{settings.col2width} {col2hidexs}">
 						<flux:content.render  area="column2"/>
 					</div>
-					<div class="col-sm-{col3width} {col3hidexs}">
+					<div class="col-sm-{settings.col3width} {col3hidexs}">
 						<flux:content.render  area="column3"/>
 					</div>
 				</f:then>
 				<f:else>
-					<v:switch value="{split}">
+					<v:switch value="{settings.split}">
 						<v:case case="30-30-30" break="true">
 							<v:var.set name="col1-sm" value="4"/>
 							<v:var.set name="col2-sm" value="4"/>
