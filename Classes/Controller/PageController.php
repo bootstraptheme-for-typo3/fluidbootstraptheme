@@ -33,7 +33,7 @@
  * @subpackage Controller
  * @route off
  */
-class Tx_Bootstraptheme_Controller_PageController extends Tx_Fluidpages_Controller_AbstractPageController {
+class Tx_Fluidbootstraptheme_Controller_PageController extends Tx_Fluidpages_Controller_AbstractPageController {
 
 	/**
 	 * @return string
