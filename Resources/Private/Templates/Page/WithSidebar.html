@@ -8,7 +8,7 @@
 
 <f:section name="Configuration">
 	<flux:form id="sidebar" label="Page with sidebar" icon="{f:uri.resource(path: 'Icons/SidebarPage.png')}">
-		{v:var.typoscript(path: 'plugin.tx_bootstraptheme.settings') -> v:var.set(name: 'settings')}
+		{v:var.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:var.set(name: 'settings')}
 		<f:if condition="{settings.useTypoScript} < 1">
 			<flux:field.input name="settings.distribution" label="Width of sidebar (what remains of a 12-column total is used by main content)"
 			                           eval="int,trim" minimum="0" maximum="11" default="4">

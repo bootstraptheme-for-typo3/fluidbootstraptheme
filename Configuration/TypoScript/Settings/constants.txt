@@ -1,6 +1,6 @@
 # cat=THEMEBOOTSTRAP/settings; type=boolean; label=Use TypoScript settings instead of FlexForm values
-plugin.tx_bootstraptheme.settings.useTypoScript = 1
-plugin.tx_bootstraptheme.settings {
+plugin.tx_fluidbootstraptheme.settings.useTypoScript = 1
+plugin.tx_fluidbootstraptheme.settings {
 	# cat=BOOTSTRAPTHEME/settings; type=int+; label=main menu entry level - other menus calculated based on this
 	entryLevel = 0
 	# cat=BOOTSTRAPTHEME/settings; type=boolean; label=enable the top right corner search field
