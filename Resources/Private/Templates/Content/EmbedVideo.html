@@ -9,7 +9,7 @@
 	<flux:form wizardTab="Bootstrap" id="embedvideo" label="Embed Video"
 			   description="Embed responsive Video iFrame from YouTube or Vimeo" icon="{v:extension.path.resources(path: 'Icons/image.png')}">
 		<flux:form.sheet name="embedVideo" label="iFrame">
-			<flux:field.text name="videoIframe" default="Paste your iFrame here" required="1"
+			<flux:field.text name="settings.videoIframe" default="Paste your iFrame here" required="1"
 							 cols="100" rows="10"  />
 		</flux:form.sheet>
 	</flux:form>
@@ -22,7 +22,7 @@
 	<v:asset.style name="responsiveVideo" path="EXT:themebootstrap/Resources/Public/Stylesheets/ResponsiveVideo.css" group="responsiveVideo" standalone="true"/>
 
 	<div class="video-container">
-		<f:format.raw>{videoIframe}</f:format.raw>
+		<f:format.raw>{settings.videoIframe}</f:format.raw>
 	</div>
 </f:section>
 </div>
