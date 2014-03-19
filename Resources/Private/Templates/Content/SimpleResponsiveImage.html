@@ -11,20 +11,19 @@
 			   description="Simple Responsive Image Element" icon="{v:extension.path.resources(path: 'Icons/image.png')}">
 		<flux:form.sheet name="SimpleResponsiveImage" label="General Settings Image">
 			<flux:field.file
-					name="SimpleContentImage"
-					label="Choose a Image"
+					name="settings.SimpleContentImage"
+					label="Choose an Image"
 					showThumbnails="1"
 					allowed="jpg,jpeg,png,gif,JPEG,GIF,PNG,JPG"
 					required="1"
 					maxItems="1"
 					size="1"
 					/>
-			<flux:field.input name="SimpleContentImageAlt" label="Alttext" />
-			<flux:field.checkbox name="SimpleContentImageAlignBottom" label="Align Bottom?" />
-			<flux:field.input name="SimpleContentImageCaption" label="Caption" />
-			<flux:field.input name="SimpleContentImageTitle" label="TitleText" />
-			<flux:field.input name="SimpleContentImageWidth" label="Maximale Breite " default="1140" />
-			<flux:field.input name="SimpleContentImageLink" label="Link Image" size="1">
+			<flux:field.input name="settings.SimpleContentImageAlt" label="Alttext" />
+			<flux:field.input name="settings.SimpleContentImageCaption" label="Caption" />
+			<flux:field.input name="settings.SimpleContentImageTitle" label="TitleText" />
+			<flux:field.input name="settings.SimpleContentImageWidth" label="Maximale Breite " default="1140" />
+			<flux:field.input name="settings.SimpleContentImageLink" label="Link Image" size="1">
 				<flux:wizard.link activeTab="page"/>
 			</flux:field.input>
 			</flux:form.sheet>
@@ -34,52 +33,41 @@
 
 	<f:section name="Preview">
 		<div style="text-align: center;">
-			<v:media.image src="{SimpleContentImage}" alt="{SimpleContentImageAlt}" width="100"/>
+			<v:media.image src="{settings.SimpleContentImage}" alt="{settings.SimpleContentImageAlt}" width="100"/>
 		</div>
-		<p style="text-align: center;">AltText: {SimpleContentImageAlt}</p>
+		<p style="text-align: center;">AltText: {settings.SimpleContentImageAlt}</p>
 	</f:section>
 
 
 <f:section name="Main">
-
-
-	<f:if condition="{SimpleContentImageAlignBottom}">
+	<f:if condition="{settings.SimpleContentImageLink}">
 		<f:then>
-			<v:var.set name="SimpleContentImageAlignBottomVar" value="img-bottom"/>
-		</f:then>
-		<f:else>
-
-		</f:else>
-	</f:if>
-
-	<f:if condition="{SimpleContentImageLink}">
-		<f:then>
-			<f:link.page pageUid="{SimpleContentImageLink}" style="responseimglink">
-				<f:image src="{SimpleContentImage}"
-						 alt="{SimpleContentImageAlt}"
-						 class="img-responsive {SimpleContentImageAlignBottom}"
-						 title="{SimpleContentImageTitle}"
-						 width="{SimpleContentImageWidth}px"
+			<f:link.page pageUid="{settings.SimpleContentImageLink}" class="responseimglink" >
+				<f:image src="{settings.SimpleContentImage}"
+						 alt="{settings.SimpleContentImageAlt}"
+						 class="img-responsive"
+						 title="{settings.SimpleContentImageTitle}"
+						 width="{settings.SimpleContentImageWidth}px"
 						/>
 			</f:link.page>
 		</f:then>
 		<f:else>
 
-				<f:image src="{SimpleContentImage}"
-					 alt="{SimpleContentImageAlt}"
-					 class="img-responsive {SimpleContentImageAlignBottomVar}"
-					 title="{SimpleContentImageTitle}"
-					 width="1140"
+				<f:image src="{settings.SimpleContentImage}"
+					 alt="{settings.SimpleContentImageAlt}"
+					 class="img-responsive {settings.SimpleContentImageAlignBottomVar}"
+					 title="{settings.SimpleContentImageTitle}"
+					 width="{settings.SimpleContentImageWidth}px"
 					/>
 		</f:else>
 
 
 
 	</f:if>
-	<f:if condition="{SimpleContentImageCaption}">
+	<f:if condition="{settings.SimpleContentImageCaption}">
 		<f:then>
-			<div class="singelcontentimage-caption">
-				{SimpleContentImageCaption}
+			<div class="img-responsive-caption">
+				{settings.SimpleContentImageCaption}
 			</div>
 		</f:then>
 		<f:else>
