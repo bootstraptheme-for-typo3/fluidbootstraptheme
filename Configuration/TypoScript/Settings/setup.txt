@@ -1,18 +1,18 @@
-plugin.tx_themebootstrap.settings.useTypoScript = {$plugin.tx_themebootstrap.settings.useTypoScript}
-plugin.tx_themebootstrap.settings {
-	entryLevel = {$plugin.tx_themebootstrap.settings.entryLevel}
-	enableSearch = {$plugin.tx_themebootstrap.settings.enableSearch}
-	searchFieldName = {$plugin.tx_themebootstrap.settings.searchFieldName}
-	addWell = {$plugin.tx_themebootstrap.settings.addWell}
-	wellSmall = {$plugin.tx_themebootstrap.settings.wellSmall}
-	lightJumbotronColor = {$plugin.tx_themebootstrap.settings.lightJumbotronColor}
-	darkJumbotronColor = {$plugin.tx_themebootstrap.settings.darkJumbotronColor}
-	jumbotronTextColor = {$plugin.tx_themebootstrap.settings.jumbotronTextColor}
-	jumbotronPadding = {$plugin.tx_themebootstrap.settings.jumbotronPadding}
-	headerFontSize = {$plugin.tx_themebootstrap.settings.headerFontSize}
-	paragraphFontSize = {$plugin.tx_themebootstrap.settings.paragraphFontSize}
-	jumbotronMarginBottom = {$plugin.tx_themebootstrap.settings.jumbotronMarginBottom}
-	position = {$plugin.tx_themebootstrap.settings.position}
-	distribution = {$plugin.tx_themebootstrap.settings.distribution}
-	gridColumns = {$plugin.tx_themebootstrap.settings.gridColumns}
+plugin.tx_bootstraptheme.settings.useTypoScript = {$plugin.tx_bootstraptheme.settings.useTypoScript}
+plugin.tx_bootstraptheme.settings {
+	entryLevel = {$plugin.tx_bootstraptheme.settings.entryLevel}
+	enableSearch = {$plugin.tx_bootstraptheme.settings.enableSearch}
+	searchFieldName = {$plugin.tx_bootstraptheme.settings.searchFieldName}
+	addWell = {$plugin.tx_bootstraptheme.settings.addWell}
+	wellSmall = {$plugin.tx_bootstraptheme.settings.wellSmall}
+	lightJumbotronColor = {$plugin.tx_bootstraptheme.settings.lightJumbotronColor}
+	darkJumbotronColor = {$plugin.tx_bootstraptheme.settings.darkJumbotronColor}
+	jumbotronTextColor = {$plugin.tx_bootstraptheme.settings.jumbotronTextColor}
+	jumbotronPadding = {$plugin.tx_bootstraptheme.settings.jumbotronPadding}
+	headerFontSize = {$plugin.tx_bootstraptheme.settings.headerFontSize}
+	paragraphFontSize = {$plugin.tx_bootstraptheme.settings.paragraphFontSize}
+	jumbotronMarginBottom = {$plugin.tx_bootstraptheme.settings.jumbotronMarginBottom}
+	position = {$plugin.tx_tx_bootstraptheme.position}
+	distribution = {$plugin.tx_bootstraptheme.settings.distribution}
+	gridColumns = {$plugin.tx_bootstraptheme.settings.gridColumns}
 }

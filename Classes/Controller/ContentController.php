@@ -1,5 +1,5 @@
 <?php
-namespace FluidTYPO3\Themebootstrap\Controller;
+namespace FluidTYPO3\Bootstraptheme\Controller;
 /***************************************************************
  *  Copyright notice
  *

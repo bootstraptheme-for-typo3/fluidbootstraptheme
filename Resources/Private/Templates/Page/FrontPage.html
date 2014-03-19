@@ -8,7 +8,7 @@
 
 <f:section name="Configuration">
 	<flux:form id="front" label="Front Page" icon="{f:uri.resource(path: 'Icons/FrontPage.png')}">
-		{v:var.typoscript(path: 'plugin.tx_themebootstrap.settings') -> v:var.set(name: 'settings')}
+		{v:var.typoscript(path: 'plugin.tx_bootstraptheme.settings') -> v:var.set(name: 'settings')}
 		<f:if condition="{settings.useTypoScript} < 1">
 			<flux:field.input name="settings.entryLevel" label="Main menu entry level override for this page only"
 			                           eval="int,trim" minimum="0" maximum="6" default="{v:var.typoscript(path: 'lib.menu.main.entryLevel')}">
