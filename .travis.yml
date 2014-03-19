@@ -31,7 +31,8 @@ before_script:
 
   - git clone --depth 1 --single-branch --branch $TRAVIS_BRANCH git://github.com/FluidTYPO3/flux.git typo3conf/ext/flux
   - git clone --depth 1 --single-branch --branch $TRAVIS_BRANCH git://github.com/FluidTYPO3/fluidcontent.git typo3conf/ext/fluidcontent
-  - git clone --depth 1 git://github.com/FluidTYPO3/builder.git typo3conf/ext/builder
+  - git clone --depth 1 --single-branch --branch $TRAVIS_BRANCH git://github.com/FluidTYPO3/fluidpages.git typo3conf/ext/fluidpages
+  - git clone --depth 1 --single-branch --branch $TRAVIS_BRANCH git://github.com/FluidTYPO3/builder.git typo3conf/ext/builder
   - git clone --depth 1 git://git.typo3.org/TYPO3CMS/Extensions/phpunit.git typo3conf/ext/phpunit
   - mv fluidbootstraptheme ./typo3conf/ext/
 

@@ -185,12 +185,20 @@ return array (
 								'packagePath' => 'typo3conf/ext/fluidpages/',
 								'classesPath' => 'Classes/',
 								),
-						'fluidpages_bootstrap' =>
+						'fluidcontent' =>
 								array (
 								'manifestPath' => '',
-								'composerName' => 'fluidtypo3/fluidpages_bootstrap',
+								'composerName' => 'fluidtypo3/fluidcontent',
 								'state' => 'active',
-								'packagePath' => 'typo3conf/ext/fluidpages_bootstrap/',
+								'packagePath' => 'typo3conf/ext/fluidcontent/',
+								'classesPath' => 'Classes/',
+								),
+						'fluidbootstraptheme' =>
+								array (
+								'manifestPath' => '',
+								'composerName' => 'fluidtypo3/fluidbootstraptheme',
+								'state' => 'active',
+								'packagePath' => 'typo3conf/ext/fluidbootstraptheme/',
 								'classesPath' => 'Classes/',
 								),
 						'form' =>

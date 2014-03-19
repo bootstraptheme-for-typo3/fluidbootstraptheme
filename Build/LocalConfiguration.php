@@ -18,7 +18,7 @@ return array(
 				'extConf' => array(
 						'workspaces' => 'a:0:{}',
 				),
-				'extList' => 'extbase,fluid,info,perm,func,filelist,about,tsconfig_help,context_help,extra_page_cm_options,impexp,sys_note,tstemplate,tstemplate_ceditor,tstemplate_info,tstemplate_objbrowser,tstemplate_analyzer,func_wizards,wizard_crpages,wizard_sortpages,lowlevel,install,belog,beuser,aboutmodules,setup,taskcenter,info_pagetsconfig,viewpage,rtehtmlarea,css_styled_content,t3skin,t3editor,reports,felogin,form,phpunit,scheduler,builder,flux,fluidpages,fluidpages_bootstrap',
+				'extList' => 'extbase,fluid,info,perm,func,filelist,about,tsconfig_help,context_help,extra_page_cm_options,impexp,sys_note,tstemplate,tstemplate_ceditor,tstemplate_info,tstemplate_objbrowser,tstemplate_analyzer,func_wizards,wizard_crpages,wizard_sortpages,lowlevel,install,belog,beuser,aboutmodules,setup,taskcenter,info_pagetsconfig,viewpage,rtehtmlarea,css_styled_content,t3skin,t3editor,reports,felogin,form,phpunit,scheduler,builder,flux,fluidpages,fluidcontent,fluidbootstraptheme',
 				'extListArray' => array(
 						'extbase',
 						'fluid',
@@ -64,7 +64,8 @@ return array(
 						'builder',
 						'flux',
 						'fluidpages',
-						'fluidpages_bootstrap',
+						'fluidcontent',
+						'fluidbootstraptheme',
 				),
 		),
 		'FE' => array(
