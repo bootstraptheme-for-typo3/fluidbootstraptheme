@@ -52,15 +52,45 @@
 				</div>
 				<div class="collapse navbar-collapse" id="navigation">
 					<f:if condition="{settings.enableSearch}">
-						<form class="navbar-form pull-right" method="get"
-							  action="{f:uri.page(pageUid: settings.searchPageUid)}">
-							<div class="input-append">
-								<input id="main-search-field" type="text" name="{settings.searchFieldName}"
-									   class="form-control input-nav" tabindex="2" placeholder="Search"/>
-								<button tabindex="3" type="submit" class="btn btn-inverse"><i class="icon-search"></i>
-								</button>
+						<form action="{f:uri.page(pageUid: settings.searchPageUid)}" method="post" class="navbar-form navbar-right" role="search">
+							<input type="hidden" name="tx_indexedsearch[_sections]" value="0">
+							<input type="hidden" name="tx_indexedsearch[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="_">
+							<input type="hidden" name="tx_indexedsearch[pointer]" id="tx_indexedsearch_pointer" value="0">
+							<input type="hidden" name="tx_indexedsearch[ext]" value="">
+							<input type="hidden" name="tx_indexedsearch[type]" value="0">
+							<input type="hidden" name="tx_indexedsearch[defOp]" value="0">
+							<input type="hidden" name="tx_indexedsearch[media]" value="-1">
+							<input type="hidden" name="tx_indexedsearch[order]" value="rank_flag">
+							<input type="hidden" name="tx_indexedsearch[group]" value="sections">
+							<input type="hidden" name="tx_indexedsearch[lang]" value="-1">
+							<input type="hidden" name="tx_indexedsearch[desc]" value="0">
+							<input type="hidden" name="tx_indexedsearch[results]" value="10">
+
+							<div class="input-group">
+
+								<div class="input-group">
+<span class="input-group-addon">
+<span class="glyphicon glyphicon-search"></span>
+</span>
+									<input class="form-control input" type="text"
+										   name="tx_indexedsearch[sword]" value=""
+										   placeholder="Search...">
+								</div>
+
 							</div>
 						</form>
+
+
+
+
+
+
+
+
+
+
+
+
 					</f:if>
 					<v:page.menu entryLevel="{settings.entryLevel}" useShortcutData="TRUE">
 						<ul class="nav navbar-nav">
