@@ -17,12 +17,11 @@
             <flux:field.input name="title"/>
             <flux:field.input name="iconClass"/>
             <flux:field.select name="iconPlacement" items="left,right"/>
-            <flux:field.select name="size" items="xs,sm,lg" size="1" maxItems="1" default="sm"/>
+            <flux:field.select name="size" items="default,xs,sm,lg" size="1" maxItems="1" default="default"/>
             <flux:field.checkbox name="block"/>
-            <flux:field.select name="class" items="default,primary,success,warning,danger,info,inverse" size="1"
+            <flux:field.select name="class" items="default,primary,success,info,warning,danger,link" size="1"
                                maxItems="1"/>
             <flux:field.input name="additionalClassNames"/>
-            <flux:field.select name="wrapTag" items="none,span,p,div,dt,dd,fieldset"/>
             <flux:form.sheet name="addons">
                 <flux:form.section name="addons">
                     <flux:form.object name="popover">
@@ -46,31 +45,21 @@
     </f:section>
 
     <f:section name="Main">
-        <f:if condition="{0: wrapTag} != {0: 'none'}">
-            <f:then>
-                <{wrapTag} class="button-wrap">
-                <f:render section="Button" arguments="{_all}"/>
-            </
-            {wrapTag}>
-            </f:then>
-            <f:else>
-                <f:render section="Button" arguments="{_all}"/>
-            </f:else>
-        </f:if>
+        <button class="btn btn-{size} btn-{class} {additionalClassNames}{f:if(condition: block, then: 'btn-block')}">
+            <f:render section="Button" arguments="{_all}"/>
+        </button>
     </f:section>
 
     <f:section name="Button">
         <f:if condition="{target -> v:math.round()} > 0">
             <f:then>
                 <f:link.page pageUid="{target}"
-                             class="btn btn-{size} btn-{class} {additionalClassNames}{f:if(condition: block, then: ' btn-block')}"
                              rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">
                     <f:render section="Text" arguments="{_all}"/>
                 </f:link.page>
             </f:then>
             <f:else>
                 <a href="{target}"
-                   class="btn btn-{size} btn-{class} {additionalClassNames}{f:if(condition: block, then: ' btn-block')}"
                    rel="{f:if(condition: tooltip, then: 'tooltip')}" title="{title}">
                     <f:render section="Text" arguments="{_all}"/>
                 </a>
