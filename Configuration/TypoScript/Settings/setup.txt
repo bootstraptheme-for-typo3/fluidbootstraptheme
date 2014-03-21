@@ -12,7 +12,7 @@ plugin.tx_fluidbootstraptheme.settings {
 	headerFontSize = {$plugin.tx_fluidbootstraptheme.settings.headerFontSize}
 	paragraphFontSize = {$plugin.tx_fluidbootstraptheme.settings.paragraphFontSize}
 	jumbotronMarginBottom = {$plugin.tx_fluidbootstraptheme.settings.jumbotronMarginBottom}
-	position = {$plugin.tx_tx_fluidbootstraptheme.position}
+	position = {$plugin.tx_fluidbootstraptheme.settings.position}
 	distribution = {$plugin.tx_fluidbootstraptheme.settings.distribution}
 	gridColumns = {$plugin.tx_fluidbootstraptheme.settings.gridColumns}
 }
