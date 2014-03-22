@@ -7,24 +7,22 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:form wizardTab="Bootstrap" id="SimpleResponsiveImage" label="Simple Responsive Image"
-			   description="Simple Responsive Image Element" icon="{v:extension.path.resources(path: 'Icons/image.png')}">
-		<flux:form.sheet name="SimpleResponsiveImage" label="General Settings Image">
+	<flux:form wizardTab="Bootstrap" id="SimpleResponsiveImage" icon="{v:extension.path.resources(path: 'Icons/image.png')}">
+		<flux:form.sheet name="SimpleResponsiveImage" >
 			<flux:field.file
 					name="settings.SimpleContentImage"
-					label="Choose an Image"
 					showThumbnails="1"
 					allowed="jpg,jpeg,png,gif,JPEG,GIF,PNG,JPG"
 					required="1"
 					maxItems="1"
 					size="1"
 					/>
-            <flux:field.select name="settings.SimpleContentImageClass" items="img-rounded,img-circle,img-thumbnail,none" label="Image shapes" default="none"/>
-			<flux:field.input name="settings.SimpleContentImageAlt" label="Alttext" />
-			<flux:field.input name="settings.SimpleContentImageCaption" label="Caption" />
-			<flux:field.input name="settings.SimpleContentImageTitle" label="TitleText" />
-			<flux:field.input name="settings.SimpleContentImageWidth" label="Maximale Breite " default="1140" />
-			<flux:field.input name="settings.SimpleContentImageLink" label="Link Image" size="1">
+            <flux:field.select name="settings.SimpleContentImageClass" items="img-rounded,img-circle,img-thumbnail,none"  default="none"/>
+			<flux:field.input name="settings.SimpleContentImageAlt" />
+			<flux:field.input name="settings.SimpleContentImageCaption" />
+			<flux:field.input name="settings.SimpleContentImageTitle" />
+			<flux:field.input name="settings.SimpleContentImageWidth"  default="1140" />
+			<flux:field.input name="settings.SimpleContentImageLink"  size="1">
 				<flux:wizard.link activeTab="page"/>
 			</flux:field.input>
 			</flux:form.sheet>

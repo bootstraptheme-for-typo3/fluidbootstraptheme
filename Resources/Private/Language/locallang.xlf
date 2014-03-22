@@ -1,8 +1,9 @@
 <?xml version="1.0"?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" product-name="fluidbootstraptheme" date="2014-01-06T01:00:11+01:00">
-		<header/>
-		<body>
+    <file source-language="en" datatype="plaintext" original="messages" product-name="fluidbootstraptheme"
+          date="2014-01-06T01:00:11+01:00">
+        <header/>
+        <body>
 
             <!-- TwoColumn.html -->
             <trans-unit id="flux.grid2.description">
@@ -36,24 +37,20 @@
             <trans-unit id="flux.grid2.fields.settings.col2hide">
                 <source>Column 2 Visibility on Small Device</source>
             </trans-unit>
+
             <!-- ThreeColumn.html -->
-            <trans-unit id="flux.grid3.settings.description">
+            <trans-unit id="flux.grid3.description">
                 <source>3 Columns (30-30-30)</source>
             </trans-unit>
-
             <trans-unit id="flux.grid3">
                 <source>3 Columns Container</source>
             </trans-unit>
-
             <trans-unit id="flux.grid3.sheets.3Columns">
                 <source>Column Splitting</source>
             </trans-unit>
-
             <trans-unit id="flux.grid3.fields.settings.split">
                 <source>Split Possibilities</source>
             </trans-unit>
-
-
             <trans-unit id="flux.grid3.fields.settings.col1width">
                 <source>Bootstrap CSS Class Column 1</source>
             </trans-unit>
@@ -63,8 +60,6 @@
             <trans-unit id="flux.grid3.fields.settings.col3width">
                 <source>Bootstrap CSS Class Column 3</source>
             </trans-unit>
-
-
             <trans-unit id="flux.grid3.fields.settings.col1hide">
                 <source>Column 1 Visibility on Small Device</source>
             </trans-unit>
@@ -76,7 +71,53 @@
             </trans-unit>
             <!-- ThreeColumn.html -->
 
-			<trans-unit id="flux.accordion" xml:space="preserve">
+            <!-- SimpleResponsiveImage.html -->
+            <trans-unit id="flux.SimpleResponsiveImage.description">
+                <source>Simple Responsive Image with options</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage">
+                <source>Simple Responsive Image</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.sheets.SimpleResponsiveImage">
+                <source>General Settings Image</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImage">
+                <source>Choose an Image</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageClass">
+                <source>Image shapes</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageAlt">
+                <source>Alttext</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCaption">
+                <source>Caption</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageTitle">
+                <source>TitleText</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageWidth">
+                <source>Max. Width</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageLink">
+                <source>Link Image</source>
+            </trans-unit>
+            <!-- /SimpleResponsiveImage.html -->
+
+            <!-- EmbedVidoe.html -->
+            <trans-unit id="flux.EmbedVideo.description">
+                <source>Embed responsive Video iFrame from YouTube or Vimeo</source>
+            </trans-unit>
+            <trans-unit id="flux.EmbedVideo">
+                <source>Embed Video Iframe</source>
+            </trans-unit>
+            <trans-unit id="flux.EmbedVideo.sheets.EmbedVideo">
+                <source>EmbedVideo</source>
+            </trans-unit>
+            <!-- /EmbedVidoe.htm -->
+
+
+            <trans-unit id="flux.accordion" xml:space="preserve">
 				<source>Bootstrap: Accordion with content elements</source>
 			</trans-unit>
 			<trans-unit id="flux.accordion.description" xml:space="preserve">
@@ -475,6 +516,6 @@
 			<trans-unit id="flux.alert.areas.content" xml:space="preserve">
 				<source>Alert content</source>
 			</trans-unit>
-		</body>
-	</file>
+        </body>
+    </file>
 </xliff>
