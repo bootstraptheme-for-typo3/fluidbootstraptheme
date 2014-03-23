@@ -7,16 +7,16 @@
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:form wizardTab="Bootstrap" id="modalLight" label="BootstrapLight: Modal">
+	<flux:form wizardTab="Bootstrap" id="modalLight">
 
-		<flux:form.sheet name="openbutton" label="Modal Open Button">
-			<flux:field.input name="settings.buttonText" label="Button text"/>
-			<flux:field.input name="settings.title" label="Title"/>
+		<flux:form.sheet name="openbutton" >
+			<flux:field.input name="settings.buttonText" />
+			<flux:field.input name="settings.title" />
 
 		</flux:form.sheet>
 		<flux:form.sheet name="advanced" label="Advanced">
-			<flux:field.input name="settings.additionalClassesButton" label="Additional Button Classes"/>
-			<flux:field.input name="settings.additionalClassesModal" label="Additional Modal Classes"/>
+			<flux:field.input name="settings.additionalClassesButton" />
+			<flux:field.input name="settings.additionalClassesModal" />
 		</flux:form.sheet>
 
             <flux:grid>

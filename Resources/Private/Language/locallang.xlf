@@ -116,6 +116,32 @@
             </trans-unit>
             <!-- /EmbedVidoe.htm -->
 
+            <!-- ModalLight.html -->
+            <trans-unit id="flux.modalLight.description">
+                <source>Add Bootstrap-Modal for Content</source>
+            </trans-unit>
+            <trans-unit id="flux.modalLight">
+                <source>Modal</source>
+            </trans-unit>
+            <trans-unit id="flux.modalLight.sheets.openbutton">
+                <source>General</source>
+            </trans-unit>
+            <trans-unit id="flux.modalLight.sheets.advanced">
+                <source>CSS-Settings</source>
+            </trans-unit>
+            <trans-unit id="flux.modalLight.fields.settings.buttonText">
+                <source>Button text</source>
+            </trans-unit>
+            <trans-unit id="flux.modalLight.fields.settings.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="flux.modalLight.fields.settings.additionalClassesButton">
+                <source>Additional Class for Button</source>
+            </trans-unit>
+            <trans-unit id="flux.modalLight.fields.settings.additionalClassesModal">
+                <source>Additional Class for Modal</source>
+            </trans-unit>
+            <!-- /ModalLight.htm -->
 
             <trans-unit id="flux.accordion" xml:space="preserve">
 				<source>Bootstrap: Accordion with content elements</source>
