@@ -1,0 +1,66 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+<f:layout name="Content"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="modalLight" label="BootstrapLight: Modal">
+
+		<flux:form.sheet name="openbutton" label="Modal Open Button">
+			<flux:field.input name="settings.buttonText" label="Button text"/>
+			<flux:field.input name="settings.title" label="Title"/>
+
+		</flux:form.sheet>
+		<flux:form.sheet name="advanced" label="Advanced">
+			<flux:field.input name="settings.additionalClassesButton" label="Additional Button Classes"/>
+			<flux:field.input name="settings.additionalClassesModal" label="Additional Modal Classes"/>
+		</flux:form.sheet>
+
+            <flux:grid>
+                <flux:grid.row>
+                    <flux:grid.column>
+                        <flux:form.content name="content" label="Content Element"/>
+                    </flux:grid.column>
+                </flux:grid.row>
+            </flux:grid>
+
+
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<b>Bootstrap3: Modal Light</b><br/>
+    Modal Content:title: {settings.title} / buttonText: {settings.buttonText}<br/>
+	Modal Header: render Header: {settings.renderHeader} / Title: {settings.title}
+	<flux:widget.grid />
+</f:section>
+
+<f:section name="Main">
+    <v:var.set name="id" value="modal-{record.uid}" />
+	<button class="btn {settings.additionalClassesButton}" data-toggle="modal" data-target="#{id}">
+	{settings.buttonText}
+	</button>
+    <div class="modal fade {additionalClassesModal}" id="{id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-{id}" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+				<f:if condition="{settings.renderHeader}">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<f:if condition="{settings.title}">
+							<h4 class="modal-title" id="myModalLabel-{id}">{settings.title}</h4>
+						</f:if>
+					</div>
+				</f:if>
+                <div class="modal-body">
+					<flux:content.render area="content"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</f:section>
+
+
+</div>
