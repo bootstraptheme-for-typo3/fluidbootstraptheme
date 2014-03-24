@@ -24,5 +24,15 @@
 			<f:render partial="PageObjects" section="Sidebar" arguments="{_all}" />
 		</div>
 	</f:section>
+	<f:section name="InPut"></f:section>
+	<f:section name="OutPut"></f:section>
+	<f:section name="InPutleft">
+		<flux:grid.column colPos="3" name="Sidebar Content" />
+		<flux:grid.column colPos="0" name="Main Content" />
+	</f:section>
+	<f:section name="InPutright">
+		<flux:grid.column colPos="0" name="Main Content" />
+		<flux:grid.column colPos="3" name="Sidebar Content" />
+	</f:section>
 
 </div>
