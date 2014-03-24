@@ -180,6 +180,63 @@
             </trans-unit>
             <!-- /ButtonGroup.html -->
 
+            <!-- Thumbnails.html -->
+            <trans-unit id="flux.thumbnails" xml:space="preserve">
+				<source>Thumbnail Grid</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.areas.content" xml:space="preserve">
+				<source>Content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.description" xml:space="preserve">
+				<source>Obsolete!! will be removed in next version</source>
+			</trans-unit>
+            <trans-unit id="flux.thumbnails.sheets.thumbnails" xml:space="preserve">
+				<source>Thumbnails</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.fields.width" xml:space="preserve">
+				<source>Maxium allowed width to distribute across 12 cells. The Twitter Bootstrap default is 960</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.fields.ratio" xml:space="preserve">
+				<source>Ratio of images, for example 0.75 (very grid friendly), 16/9 (widescreen) or 1.32 (nice golden ratio portrait)</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.sections.thumbnails" xml:space="preserve">
+				<source>Thumbnails</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image" xml:space="preserve">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.file" xml:space="preserve">
+				<source>File</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.addWell" xml:space="preserve">
+				<source>Add well on thumbnail wrap</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.scaling" xml:space="preserve">
+				<source>Scaling mode</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.title" xml:space="preserve">
+				<source>Hover title / alt text for image</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.header" xml:space="preserve">
+				<source>Caption header (optional)</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.image.caption" xml:space="preserve">
+				<source>Caption text (optional)</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content" xml:space="preserve">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content.name" xml:space="preserve">
+				<source>Content area name</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content.label" xml:space="preserve">
+				<source>Content area label</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnails.objects.content.message" xml:space="preserve">
+				<source> </source>
+			</trans-unit>
+            <!-- /Thumbnails.html -->
+
             <trans-unit id="flux.accordion" xml:space="preserve">
 				<source> Accordion with content elements</source>
 			</trans-unit>
@@ -233,15 +290,6 @@
 			</trans-unit>
 			<trans-unit id="flux.tabs.description" xml:space="preserve">
 				<source>Places child content elements in tabs.</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails" xml:space="preserve">
-				<source> Thumbnail Grid</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.areas.content" xml:space="preserve">
-				<source>Content elements</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.description" xml:space="preserve">
-				<source>Responsive grid of highly configurable thumbnails configurable with lightbox-style opening of content</source>
 			</trans-unit>
 			<trans-unit id="flux.well" xml:space="preserve">
 				<source> Content well</source>
@@ -515,51 +563,6 @@
 			</trans-unit>
 			<trans-unit id="flux.tabs.fields.fade" xml:space="preserve">
 				<source>Enable fading effect</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.sheets.thumbnails" xml:space="preserve">
-				<source>Thumbnails</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.fields.width" xml:space="preserve">
-				<source>Maxium allowed width to distribute across 12 cells. The Twitter Bootstrap default is 960</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.fields.ratio" xml:space="preserve">
-				<source>Ratio of images, for example 0.75 (very grid friendly), 16/9 (widescreen) or 1.32 (nice golden ratio portrait)</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.sections.thumbnails" xml:space="preserve">
-				<source>Thumbnails</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.image" xml:space="preserve">
-				<source>Image</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.image.file" xml:space="preserve">
-				<source>File</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.image.addWell" xml:space="preserve">
-				<source>Add well on thumbnail wrap</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.image.scaling" xml:space="preserve">
-				<source>Scaling mode</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.image.title" xml:space="preserve">
-				<source>Hover title / alt text for image</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.image.header" xml:space="preserve">
-				<source>Caption header (optional)</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.image.caption" xml:space="preserve">
-				<source>Caption text (optional)</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.content" xml:space="preserve">
-				<source>Content</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.content.name" xml:space="preserve">
-				<source>Content area name</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.content.label" xml:space="preserve">
-				<source>Content area label</source>
-			</trans-unit>
-			<trans-unit id="flux.thumbnails.objects.content.message" xml:space="preserve">
-				<source> </source>
 			</trans-unit>
 			<trans-unit id="flux.well.areas.content" xml:space="preserve">
 				<source>Content elements</source>
