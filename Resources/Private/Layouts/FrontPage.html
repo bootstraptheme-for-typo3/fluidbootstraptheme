@@ -1,15 +1,15 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 <f:layout name="FrontPage" />
 
-<f:render section="Resources" optional="TRUE" arguments="{_all}" />
+<f:render partial="PageObjects" section="SharedResources" />
 
-<f:render section="Navigation" partial="PageObjects" arguments="{_all}" />
-<f:render section="Jumbotron" partial="PageObjects" optional="TRUE" arguments="{_all}" />
-<f:render section="SubNavigation" partial="PageObjects"  optional="TRUE" arguments="{_all}" />
+<f:render section="Navigation" partial="Navigation" arguments="{_all}" />
+<f:render section="Jumbotron" partial="Jumbotron" optional="TRUE" arguments="{_all}" />
+<f:render section="SubNavigation" partial="SubNavigation"  optional="TRUE" arguments="{_all}" />
 <div class="container">
-	<f:render section="TabNavigation" partial="PageObjects"  optional="TRUE" arguments="{_all}" />
+	<f:render section="TabNavigation" partial="TabNavigation"  optional="TRUE" arguments="{_all}" />
 	<!--TYPO3SEARCH_begin-->
-	<f:render section="Content" />
+	<v:page.content.render column="0" />
 	<!--TYPO3SEARCH_end-->
-	<f:render section="Footer" partial="PageObjects" arguments="{_all}" />
+	<f:render section="Footer" partial="Footer" arguments="{_all}" />
 </div>
