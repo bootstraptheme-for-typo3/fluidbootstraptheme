@@ -138,6 +138,9 @@
             <trans-unit id="flux.progressBar.fields.settings.progressBarProgress">
                 <source>Progress in %</source>
             </trans-unit>
+            <trans-unit id="flux.progressBar.fields.settings.progressBarShowText">
+                <source>Show % in Bar</source>
+            </trans-unit>
             <!-- /EmbedVidoe.htm -->
 
 
