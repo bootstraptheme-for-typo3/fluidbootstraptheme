@@ -8,7 +8,7 @@
 		>
 
 
-	<f:section name="OutPutleft">
+	<f:section name="WithSideBarOutPutleft">
 		<div class="col-sm-{settings.distribution}">
 			<f:render partial="PageObjects" section="Sidebar" arguments="{_all}" />
 		</div>
@@ -16,7 +16,7 @@
 			<v:page.content.render column="0" />
 		</div>
 	</f:section>
-	<f:section name="OutPutright">
+	<f:section name="WithSideBarOutPutright">
 		<div class="col-sm-{v:math.subtract(a: 12, b: settings.distribution)}">
 			<v:page.content.render column="0" />
 		</div>
@@ -24,13 +24,13 @@
 			<f:render partial="PageObjects" section="Sidebar" arguments="{_all}" />
 		</div>
 	</f:section>
-	<f:section name="InPut"></f:section>
-	<f:section name="OutPut"></f:section>
-	<f:section name="InPutleft">
+	<f:section name="WithSideBarInPut"></f:section>
+	<f:section name="WithSideBarOutPut"></f:section>
+	<f:section name="WithSideBarInPutleft">
 		<flux:grid.column colPos="3" name="Sidebar Content" />
 		<flux:grid.column colPos="0" name="Main Content" />
 	</f:section>
-	<f:section name="InPutright">
+	<f:section name="WithSideBarInPutright">
 		<flux:grid.column colPos="0" name="Main Content" />
 		<flux:grid.column colPos="3" name="Sidebar Content" />
 	</f:section>
