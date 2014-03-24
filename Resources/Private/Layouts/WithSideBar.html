@@ -1,5 +1,5 @@
 {namespace v=Tx_Vhs_ViewHelpers}
-<f:layout name="Page" />
+<f:layout name="WithSideBar" />
 
 <f:render  partial="SharedResources" section="SharedResources" optional="TRUE" arguments="{_all}" />
 
@@ -11,7 +11,7 @@
 	<f:render section="TabNavigation" partial="TabNavigation" optional="TRUE" arguments="{_all}" />
 	<!--TYPO3SEARCH_begin-->
 	<div class="row">
-		<f:render section="Content" />
+		<f:render partial="Page/WithSideBar" section="WithSideBarOutPut{settings.position -> v:format.case(case: 'position')}" arguments="{_all}"/>
 	</div>
 	<!--TYPO3SEARCH_end-->
 	<f:render section="Footer" partial="Footer" arguments="{_all}" />
