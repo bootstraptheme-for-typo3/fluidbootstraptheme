@@ -11,7 +11,7 @@
             </trans-unit>
 
             <trans-unit id="flux.grid2">
-                <source>2 Columns Container</source>
+                <source> 2 Columns Container</source>
             </trans-unit>
 
             <trans-unit id="flux.grid2.sheets.2Columns">
@@ -43,7 +43,7 @@
                 <source>3 Columns (30-30-30)</source>
             </trans-unit>
             <trans-unit id="flux.grid3">
-                <source>3 Columns Container</source>
+                <source> 3 Columns Container</source>
             </trans-unit>
             <trans-unit id="flux.grid3.sheets.3Columns">
                 <source>Column Splitting</source>
@@ -76,7 +76,7 @@
                 <source>Simple Responsive Image with options</source>
             </trans-unit>
             <trans-unit id="flux.SimpleResponsiveImage">
-                <source>Simple Responsive Image</source>
+                <source> Simple Responsive Image</source>
             </trans-unit>
             <trans-unit id="flux.SimpleResponsiveImage.sheets.SimpleResponsiveImage">
                 <source>General Settings Image</source>
@@ -109,7 +109,7 @@
                 <source>Embed responsive Video iFrame from YouTube or Vimeo</source>
             </trans-unit>
             <trans-unit id="flux.EmbedVideo">
-                <source>Embed Video Iframe</source>
+                <source> Embed Video Iframe</source>
             </trans-unit>
             <trans-unit id="flux.EmbedVideo.sheets.EmbedVideo">
                 <source>EmbedVideo</source>
@@ -121,7 +121,7 @@
                 <source>Insert Progressbar</source>
             </trans-unit>
             <trans-unit id="flux.progressBar">
-                <source>Progressbar</source>
+                <source> Progressbar</source>
             </trans-unit>
             <trans-unit id="flux.progressBar.sheets.progressBar">
                 <source>General</source>
@@ -146,7 +146,7 @@
                 <source>Add Bootstrap-Modal for Content</source>
             </trans-unit>
             <trans-unit id="flux.modalLight">
-                <source>Modal</source>
+                <source> Modal</source>
             </trans-unit>
             <trans-unit id="flux.modalLight.sheets.openbutton">
                 <source>General</source>
@@ -169,19 +169,19 @@
             <!-- /ModalLight.htm -->
 
             <trans-unit id="flux.accordion" xml:space="preserve">
-				<source>Bootstrap: Accordion with content elements</source>
+				<source> Accordion with content elements</source>
 			</trans-unit>
 			<trans-unit id="flux.accordion.description" xml:space="preserve">
 				<source>Accordion element container</source>
 			</trans-unit>
 			<trans-unit id="flux.alert" xml:space="preserve">
-				<source>Bootstrap: Alert (inline)</source>
+				<source> Alert (inline)</source>
 			</trans-unit>
 			<trans-unit id="flux.alert.description" xml:space="preserve">
 				<source>Alert box (not popup) inline in page</source>
 			</trans-unit>
 			<trans-unit id="flux.buttongroup" xml:space="preserve">
-				<source>Bootstrap: Button Group</source>
+				<source> Button Group</source>
 			</trans-unit>
 			<trans-unit id="flux.buttongroup.description" xml:space="preserve">
 				<source>Renders Twitter Bootstrap button elements added as child content elements in a button grouping wrapper which closely aligns the buttons/links.</source>
@@ -190,49 +190,49 @@
 				<source>Buttons</source>
 			</trans-unit>
 			<trans-unit id="flux.buttonlink" xml:space="preserve">
-				<source>Bootstrap: Button Link</source>
+				<source> Button Link</source>
 			</trans-unit>
 			<trans-unit id="flux.buttonlink.description" xml:space="preserve">
 				<source>Default Twitter Bootstrap button-styled link to a page, file or custom URL.</source>
 			</trans-unit>
 			<trans-unit id="flux.carousel" xml:space="preserve">
-				<source>Bootstrap: Element Carousel</source>
+				<source> Element Carousel</source>
 			</trans-unit>
 			<trans-unit id="flux.carousel.description" xml:space="preserve">
 				<source>Content elements, images or simple texts (each type supporting captions) in a carousel matrix with JS based slide change.</source>
 			</trans-unit>
 			<trans-unit id="flux.jumbotron" xml:space="preserve">
-				<source>Bootstrap: Jumbotron</source>
+				<source> Jumbotron</source>
 			</trans-unit>
 			<trans-unit id="flux.jumbotron.description" xml:space="preserve">
 				<source>A very large header-type element into which you can insert other content elements.</source>
 			</trans-unit>
 			<trans-unit id="flux.navigationlist" xml:space="preserve">
-				<source>Bootstrap: Navigation List</source>
+				<source> Navigation List</source>
 			</trans-unit>
 			<trans-unit id="flux.navigationlist.description" xml:space="preserve">
 				<source>Configurable navigation list of links to various resources.</source>
 			</trans-unit>
 			<trans-unit id="flux.pageheader" xml:space="preserve">
-				<source>Bootstrap: Page Header</source>
+				<source> Page Header</source>
 			</trans-unit>
 			<trans-unit id="flux.pageheader.description" xml:space="preserve">
 				<source>An underlined page header element with optional small caption.</source>
 			</trans-unit>
 			<trans-unit id="flux.row" xml:space="preserve">
-				<source>Bootstrap: Column Row</source>
+				<source> Column Row</source>
 			</trans-unit>
 			<trans-unit id="flux.row.description" xml:space="preserve">
 				<source>Adds a wrapper element that lets you define columns of varying widths</source>
 			</trans-unit>
 			<trans-unit id="flux.tabs" xml:space="preserve">
-				<source>Bootstrap: Tabs/pills with content elements</source>
+				<source> Tabs/pills with content elements</source>
 			</trans-unit>
 			<trans-unit id="flux.tabs.description" xml:space="preserve">
 				<source>Places child content elements in tabs.</source>
 			</trans-unit>
 			<trans-unit id="flux.thumbnails" xml:space="preserve">
-				<source>Bootstrap: Thumbnail Grid</source>
+				<source> Thumbnail Grid</source>
 			</trans-unit>
 			<trans-unit id="flux.thumbnails.areas.content" xml:space="preserve">
 				<source>Content elements</source>
@@ -241,7 +241,7 @@
 				<source>Responsive grid of highly configurable thumbnails configurable with lightbox-style opening of content</source>
 			</trans-unit>
 			<trans-unit id="flux.well" xml:space="preserve">
-				<source>Bootstrap: Content well</source>
+				<source> Content well</source>
 			</trans-unit>
 			<trans-unit id="flux.well.description" xml:space="preserve">
 				<source>Visual well for other content elements</source>
