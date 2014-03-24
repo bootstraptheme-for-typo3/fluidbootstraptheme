@@ -1,0 +1,28 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+		>
+
+
+	<f:section name="OutPutleft">
+		<div class="col-sm-{settings.distribution}">
+			<f:render partial="PageObjects" section="Sidebar" arguments="{_all}" />
+		</div>
+		<div class="col-sm-{v:math.subtract(a: 12, b: settings.distribution)}">
+			<v:page.content.render column="0" />
+		</div>
+	</f:section>
+	<f:section name="OutPutright">
+		<div class="col-sm-{v:math.subtract(a: 12, b: settings.distribution)}">
+			<v:page.content.render column="0" />
+		</div>
+		<div class="col-sm-{settings.distribution}">
+			<f:render partial="PageObjects" section="Sidebar" arguments="{_all}" />
+		</div>
+	</f:section>
+
+</div>

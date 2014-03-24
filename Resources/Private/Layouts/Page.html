@@ -1,16 +1,18 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 <f:layout name="Page" />
 
-<f:render section="Resources" optional="TRUE" arguments="{_all}" />
+<f:render  partial="SharedResources" section="SharedResources" optional="TRUE" arguments="{_all}" />
 
-<f:render section="Navigation" partial="PageObjects" arguments="{_all}" />
+<f:render section="Navigation" partial="Navigation" arguments="{_all}" />
 
-<f:render section="SubNavigation" partial="PageObjects"  optional="TRUE" arguments="{_all}" />
+<f:render section="SubNavigation" partial="SubNavigation"  optional="TRUE" arguments="{_all}" />
 <div class="container">
-	<f:render section="HeroUnit" partial="PageObjects" optional="TRUE" arguments="{_all}" />
-	<f:render section="TabNavigation" partial="PageObjects" optional="TRUE" arguments="{_all}" />
+	<f:render section="HeroUnit" partial="HeroUnit" optional="TRUE" arguments="{_all}" />
+	<f:render section="TabNavigation" partial="TabNavigation" optional="TRUE" arguments="{_all}" />
 	<!--TYPO3SEARCH_begin-->
-	<f:render section="Content" />
+	<div class="row">
+		<f:render partial="Page/WithSideBar" section="OutPut{settings.position -> v:format.case(case: 'position')}" arguments="{_all}"/>
+	</div>
 	<!--TYPO3SEARCH_end-->
-	<f:render section="Footer" partial="PageObjects" arguments="{_all}" />
+	<f:render section="Footer" partial="Footer" arguments="{_all}" />
 </div>
