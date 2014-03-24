@@ -168,6 +168,18 @@
             </trans-unit>
             <!-- /ModalLight.htm -->
 
+            <!-- ButtonGroup.html -->
+            <trans-unit id="flux.buttongroup" xml:space="preserve">
+				<source>Button Group</source>
+			</trans-unit>
+			<trans-unit id="flux.buttongroup.description" xml:space="preserve">
+				<source>Obsolete!! will be removed in next version</source>
+			</trans-unit>
+			<trans-unit id="flux.buttongroup.areas.content" xml:space="preserve">
+				<source>Buttons</source>
+            </trans-unit>
+            <!-- /ButtonGroup.html -->
+
             <trans-unit id="flux.accordion" xml:space="preserve">
 				<source> Accordion with content elements</source>
 			</trans-unit>
@@ -179,15 +191,6 @@
 			</trans-unit>
 			<trans-unit id="flux.alert.description" xml:space="preserve">
 				<source>Alert box (not popup) inline in page</source>
-			</trans-unit>
-			<trans-unit id="flux.buttongroup" xml:space="preserve">
-				<source> Button Group</source>
-			</trans-unit>
-			<trans-unit id="flux.buttongroup.description" xml:space="preserve">
-				<source>Renders Twitter Bootstrap button elements added as child content elements in a button grouping wrapper which closely aligns the buttons/links.</source>
-			</trans-unit>
-			<trans-unit id="flux.buttongroup.areas.content" xml:space="preserve">
-				<source>Buttons</source>
 			</trans-unit>
 			<trans-unit id="flux.buttonlink" xml:space="preserve">
 				<source> Button Link</source>
