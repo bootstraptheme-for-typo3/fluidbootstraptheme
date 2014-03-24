@@ -13,7 +13,6 @@
 			<flux:field.select name="mode" items="tab,pill" requestUpdate="TRUE" />
 			<flux:field.checkbox name="stackable" />
             <flux:field.checkbox name="fade" />
-			<flux:field.select name="position" items="default,pull-left,pull-right" />
 		</flux:form.sheet>
 
 		<flux:form.sheet name="tabs">
@@ -75,7 +74,7 @@
 
 <f:section name="Tabs">
 	<f:if condition="{tabs}">
-		<ul class="nav nav-{mode}s {f:if(condition: stackable, then: 'nav-stacked')} {position}">
+		<ul class="nav nav-{mode}s {f:if(condition: stackable, then: 'nav-stacked')}">
 			<f:for each="{tabs}" as="tab" iteration="iteration">
 				<li class="nav-link {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active')} {f:if(condition: tab.tab.class, then: 'tab-{tab.tab.class}')}">
 					<a href="{v:page.absoluteUrl()}#tab-{record.uid}-{iteration.index}" data-toggle="{mode}">{tab.tab.title}</a>
