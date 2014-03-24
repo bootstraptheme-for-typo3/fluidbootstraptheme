@@ -6,5 +6,5 @@ if (!defined('TYPO3_MODE')) {
 \t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Bootstrap Theme');
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Settings', 'Bootstrap Theme settings');
 
-Tx_Flux_Core::registerProviderExtensionKey('fluidbootstraptheme', 'Page');
-Tx_Flux_Core::registerProviderExtensionKey('fluidbootstraptheme', 'Content');
+\FluidTYPO3\Flux\Core::registerProviderExtensionKey('fluidbootstraptheme', 'Page');
+\FluidTYPO3\Flux\Core::registerProviderExtensionKey('fluidbootstraptheme', 'Content');
