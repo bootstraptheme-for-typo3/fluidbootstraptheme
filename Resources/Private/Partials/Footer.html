@@ -1,0 +1,48 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+
+
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+		>
+	<f:section name="Footer">
+		<!-- footer, optional content elements from colPos 2 (two) -->
+		<v:page.content.render column="2" as="footerContentElements">
+			<f:if condition="{footerContentElements}">
+				<div class="footer">
+					<div class="right">
+						<f:for each="{footerContentElements}" as="footerContentElement">
+							<f:format.raw>{footerContentElement}</f:format.raw>
+						</f:for>
+					</div>
+				</div>
+			</f:if>
+		</v:page.content.render>
+		<div class="sitemap">
+			<h3 class="header">
+				<span>Site Map</span>
+			</h3>
+			<hr />
+			<div class="row">
+				<v:page.menu useShortcutData="TRUE" entryLevel="{settings.entryLevel}">
+					<f:for each="{menu}" as="subPage">
+						<v:page.menu useShortcutData="TRUE" pageUid="{subPage.uid}">
+							<div class="col-sm-2">
+								<div class="lead muted">
+									<f:link.page pageUid="{subPage.uid}" class="muted">{subPage.title}</f:link.page>
+								</div>
+								<ul class="unstyled">
+									<f:for each="{menu}" as="submenuPage">
+										<li>
+											<f:link.page pageUid="{submenuPage.uid}" class="muted">{submenuPage.title}</f:link.page>
+										</li>
+									</f:for>
+								</ul>
+							</div>
+						</v:page.menu>
+					</f:for>
+				</v:page.menu>
+			</div>
+		</div>
+	</f:section>
+</div>

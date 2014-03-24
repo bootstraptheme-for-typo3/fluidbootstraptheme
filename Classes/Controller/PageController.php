@@ -1,9 +1,8 @@
 <?php
-namespace FluidBT\Fluidbootstraptheme\Controller;
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2013 Claus Due <claus@namelesscoder.net>
+ *  (c) 2014 Claus Due <claus@namelesscoder.net>
  *
  *  All rights reserved
  *
@@ -24,19 +23,17 @@ namespace FluidBT\Fluidbootstraptheme\Controller;
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
-use FluidTYPO3\Fluidpages\Controller\AbstractPageController;
-
 /**
- * Content Controller
+ * Page Controller
  *
- * Controller which is used to render individual elements from
- * the fluidcontent_bootstrap collection.
+ * Controller which is used to render individual page template
+ * files - each template corresponding to one action.
  *
- * @package FluidcontentBootstrap
+ * @package FluidpagesBootstrap
  * @subpackage Controller
  * @route off
  */
-class PageController extends AbstractPageController {
+class Tx_Fluidbootstraptheme_Controller_PageController extends Tx_Fluidpages_Controller_AbstractPageController {
 
 	/**
 	 * @return string
