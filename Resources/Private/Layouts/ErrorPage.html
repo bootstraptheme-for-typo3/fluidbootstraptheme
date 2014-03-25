@@ -1,10 +1,16 @@
 {namespace v=Tx_Vhs_ViewHelpers}
-<f:layout name="Page" />
+<f:layout name="ErrorPage" />
 
-<f:render section="Resources" optional="TRUE" arguments="{_all}" />
+<f:render partial="SharedResources" section="SharedResources" />
 
-<f:render section="Navigation" partial="PageObjects" arguments="{_all}" />
-<f:render section="SubNavigation" partial="PageObjects"  optional="TRUE" arguments="{_all}" />
+<f:render section="Navigation" partial="Navigation" arguments="{_all}" />
+<f:render section="SubNavigation" partial="SubNavigation"  optional="TRUE" arguments="{_all}" />
 <div class="container">
-	<f:render section="Content" arguments="{_all}" />
+	<div class="alert alert-error">
+		<h1>Error while rendering page</h1>
+		<p>There was an error rendering the requested page. If the error persists please contact the web master.</p>
+		<f:for each="{errors}" as="error" iteration="iteration">
+			<p>{iteration.cycle}. {error.message} (code {error.code})</p>
+		</f:for>
+	</div>
 </div>
