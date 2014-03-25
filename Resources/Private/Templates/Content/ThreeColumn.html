@@ -64,7 +64,6 @@
 		<flux:widget.grid/>
 	</f:section>
 	<f:section name="InPutThreeCol"></f:section>
-	<f:section name="OnPutThreeCol"></f:section>
 	<f:section name="Main">
 		<f:if condition="{settings.col1hide}=='hide'">
 			<v:var.set name="col1hidexs" value="hidden-xs"/>
@@ -104,6 +103,17 @@
 		<flux:grid.column style="width:33%;">
 			<flux:form.content name="column3" label="Column Right"/>
 		</flux:grid.column>
+	</f:section>
+	<f:section name="OutPutThreeCol">
+		<div class="col-sm-4">
+			<flux:content.render area="column1"/>
+		</div>
+		<div class="col-sm-4">
+			<flux:content.render area="column2"/>
+		</div>
+		<div class="col-sm-4">
+			<flux:content.render area="column3"/>
+		</div>
 	</f:section>
 	<f:section name="OutPutThreeCol30-30-30">
 		<div class="col-sm-4">
