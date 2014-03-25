@@ -18,7 +18,7 @@
 					<f:else>
 						<flux:grid>
 							<flux:grid.row>
-								<f:render section="InPut{settings.split -> v:format.case(case: 'split')}"
+								<f:render section="InPutTwoCol{settings.split -> v:format.case(case: 'split')}"
 										  arguments="{_all}"/>
 							</flux:grid.row>
 						</flux:grid>
@@ -54,7 +54,8 @@
 	<f:section name="Preview">
 		<flux:widget.grid/>
 	</f:section>
-	<f:section name="InPut"></f:section>
+	<f:section name="InPutTwoCol"></f:section>
+	<f:section name="OnPutTwoCol"></f:section>
 	<f:section name="Main">
 		<f:if condition="{settings.col1hide}=='hide'">
 			<v:var.set name="col1hidexs" value="hidden-xs"/>
@@ -73,12 +74,12 @@
 					</div>
 				</f:then>
 				<f:else>
-					<f:render section="OutPut{settings.split -> v:format.case(case: 'split')}" arguments="{_all}"/>
+					<f:render section="OutPutTwoCol{settings.split -> v:format.case(case: 'split')}" arguments="{_all}"/>
 				</f:else>
 			</f:if>
 		</div>
 	</f:section>
-	<f:section name="InPut50-50">
+	<f:section name="InPutTwoCol50-50">
 		<flux:grid.column style="border-right: 1px dotted #999;">
 			<flux:form.content name="column1" label="Column Left"/>
 		</flux:grid.column>
@@ -86,7 +87,7 @@
 			<flux:form.content name="column2" label="Column Right"/>
 		</flux:grid.column>
 	</f:section>
-	<f:section name="InPut70-30">
+	<f:section name="InPutTwoCol70-30">
 		<flux:grid.column style="width:70%;border-right: 1px dotted #999;">
 			<flux:form.content name="column1" label="Column Left"/>
 		</flux:grid.column>
@@ -94,7 +95,7 @@
 			<flux:form.content name="column2" label="Column Right"/>
 		</flux:grid.column>
 	</f:section>
-	<f:section name="InPut30-70">
+	<f:section name="InPutTwoCol30-70">
 		<flux:grid.column style="width:30%;border-right: 1px dotted #999;">
 			<flux:form.content name="column1" label="Column Left"/>
 		</flux:grid.column>
@@ -102,7 +103,7 @@
 			<flux:form.content name="column2" label="Column Right"/>
 		</flux:grid.column>
 	</f:section>
-	<f:section name="OutPut50-50">
+	<f:section name="OutPutTwoCol50-50">
 		<div class="col-sm-6">
 			<flux:content.render area="column1"/>
 		</div>
@@ -110,7 +111,7 @@
 			<flux:content.render area="column2"/>
 		</div>
 	</f:section>
-	<f:section name="OutPut70-30">
+	<f:section name="OutPutTwoCol70-30">
 		<div class="col-sm-8">
 			<flux:content.render area="column1"/>
 		</div>
@@ -118,7 +119,7 @@
 			<flux:content.render area="column2"/>
 		</div>
 	</f:section>
-	<f:section name="OutPut30-70">
+	<f:section name="OutPutTwoCol30-70">
 		<div class="col-sm-4">
 			<flux:content.render area="column1"/>
 		</div>
