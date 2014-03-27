@@ -35,13 +35,7 @@
 
 
     <f:section name="Main">
-        <f:if condition="{settings.progressBarStriped}">
-            <v:var.set name="progress-striped" value="progress-striped"/>
-        </f:if>
-        <f:if condition="{settings.progressBarAnimated}">
-            <v:var.set name="animated" value="active"/>
-        </f:if>
-        <div class="progress {progress-striped} {animated} ">
+        <div class="progress {f:if(condition: settings.progressBarStriped, then: 'progress-striped')} {f:if(condition: settings.progressBarAnimated, then: 'animated')} ">
             <div class="progress-bar {settings.progressBarColor}" role="progressbar"
                  aria-valuenow="{settings.progressBarProgress}" aria-valuemin="0" aria-valuemax="100"
                  style="width:{settings.progressBarProgress}%;">
