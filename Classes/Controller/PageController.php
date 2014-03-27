@@ -1,4 +1,5 @@
 <?php
+namespace FluidBT\Fluidbootstraptheme\Controller;
 /***************************************************************
  *  Copyright notice
  *
@@ -23,6 +24,8 @@
  *  This copyright notice MUST APPEAR in all copies of the script!
  ***************************************************************/
 
+use FluidTYPO3\Fluidpages\Controller\AbstractPageController;
+
 /**
  * Page Controller
  *
@@ -33,7 +36,7 @@
  * @subpackage Controller
  * @route off
  */
-class Tx_Fluidbootstraptheme_Controller_PageController extends Tx_Fluidpages_Controller_AbstractPageController {
+class PageController extends AbstractPageController {
 
 	/**
 	 * @return string

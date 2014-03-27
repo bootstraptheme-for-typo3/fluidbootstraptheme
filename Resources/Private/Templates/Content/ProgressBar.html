@@ -7,7 +7,7 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
     <f:section name="Configuration">
-        <flux:form wizardTab="Bootstrap" id="progressBar"
+        <flux:form wizardTab="Bootstrap" id="progressBar" options="{useTypoScript: 0}"
                    icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_042_pie_chart.png')}">
             <flux:form.sheet name="progressBar">
                 <flux:field.checkbox name="settings.progressBarAnimated" default="0"/>
@@ -35,13 +35,7 @@
 
 
     <f:section name="Main">
-        <f:if condition="{settings.progressBarStriped}">
-            <v:var.set name="progress-striped" value="progress-striped"/>
-        </f:if>
-        <f:if condition="{settings.progressBarAnimated}">
-            <v:var.set name="animated" value="active"/>
-        </f:if>
-        <div class="progress {progress-striped} {animated} ">
+        <div class="progress {f:if(condition: settings.progressBarStriped, then: 'progress-striped')} {f:if(condition: settings.progressBarAnimated, then: 'animated')} ">
             <div class="progress-bar {settings.progressBarColor}" role="progressbar"
                  aria-valuenow="{settings.progressBarProgress}" aria-valuemin="0" aria-valuemax="100"
                  style="width:{settings.progressBarProgress}%;">
