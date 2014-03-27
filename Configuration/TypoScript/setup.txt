@@ -11,14 +11,8 @@ plugin.tx_fluidbootstraptheme.view {
 
 plugin.tx_fluidbootstraptheme.settings {
 	gridColumns = {$plugin.tx_fluidbootstraptheme.settings.gridColumns}
-}
-
-
-lib.menu {
-	main {
-		entryLevel = 0
-	}
-	sub {
-		entryLevel = 1
+	menu {
+		main.entryLevel = 0
+		sub.entryLevel = 1
 	}
 }
