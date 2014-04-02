@@ -141,5 +141,11 @@ class ContentController extends AbstractContentController {
 	public function progressBarAction() {
 
 	}
+    /**
+     * @return string
+     */
+    public function modalLightAction() {
+
+    }
 
 }
