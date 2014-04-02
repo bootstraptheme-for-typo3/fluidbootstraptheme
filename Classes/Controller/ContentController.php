@@ -154,5 +154,11 @@ class ContentController extends AbstractContentController {
     public function accordionAction() {
 
     }
+    /**
+     * @return string
+     */
+    public function alertAction() {
+
+    }
 
 }
