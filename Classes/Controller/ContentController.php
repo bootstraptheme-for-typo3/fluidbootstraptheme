@@ -160,5 +160,94 @@ class ContentController extends AbstractContentController {
     public function alertAction() {
 
     }
+    /**
+     * @return string
+     */
+    public function buttonAction() {
 
+    }
+    /**
+     * @return string
+     */
+    public function buttonGroupAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function buttonLinkAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function carouselAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function embedVideoAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function JumbotronAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function navigationListAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function pageHeaderAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function rowAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function simpleResponsiveImageAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function tabsAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function threeColumnAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function thumbnailsAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function twoColumnAction() {
+
+    }
+    /**
+     * @return string
+     */
+    public function wellAction() {
+
+    }
 }
