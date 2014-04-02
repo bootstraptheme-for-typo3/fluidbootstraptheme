@@ -7,7 +7,7 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 <f:section name="Configuration">
-	<flux:form wizardTab="Bootstrap" id="tabs" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_440_folder_closed.png')}">
+	<flux:form wizardTab="Bootstrap" id="tabs" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_440_folder_closed.png')}">
 
 		<flux:form.sheet name="display">
 			<flux:field.select name="mode" items="tab,pill" requestUpdate="TRUE" />
