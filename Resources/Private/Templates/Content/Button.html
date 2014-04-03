@@ -8,7 +8,8 @@
 
     <f:section name="Configuration">
         <flux:form wizardTab="Bootstrap" id="button" label="Button"
-                   description="the Swiss Army Knife of the Buttons" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_050_link.png')}">
+                   description="the Swiss Army Knife of the Buttons" options="{useTypoScript: 0}"
+                   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_050_link.png')}">
             <flux:form.sheet name="ButtonSheetOne" label="Button Settings">
                 <flux:field.select items="def,lg,sm,xs" name="ButtonSize" label="Button Size"/>
                 <flux:field.checkbox name="ButtonBlock" label="Block level Button" default="0"/>
@@ -33,7 +34,10 @@
     <f:section name="Preview">
         <f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
             <div style="background-color:#efefef; margin-bottom: 10px; padding: 10px;">
-                <b>Text:</b> {ButtonObjectItem.ButtonObject.ButtonText} |  <b>State:</b> {ButtonObjectItem.ButtonObject.ButtonOptions}  | <b>Active:</b> {ButtonObjectItem.ButtonObject.ButtonActive} | <b>Link to:</b> PID [{ButtonObjectItem.ButtonObject.target}]
+                <b>Text:</b> {ButtonObjectItem.ButtonObject.ButtonText} | <b>State:</b>
+                {ButtonObjectItem.ButtonObject.ButtonOptions} | <b>Active:</b>
+                {ButtonObjectItem.ButtonObject.ButtonActive} | <b>Link to:</b> PID
+                [{ButtonObjectItem.ButtonObject.target}]
             </div>
         </f:for>
     </f:section>
@@ -54,7 +58,9 @@
                 </div>
             </f:then>
             <f:else>
-                <f:render section="Button" arguments="{_all}"/>
+                <div class="buttonwrap">
+                    <f:render section="Button" arguments="{_all}"/>
+                </div>
             </f:else>
         </f:if>
     </f:section>
@@ -85,5 +91,5 @@
             {ButtonObjectItem.ButtonObject.ButtonText}
         </f:link.page>
     </f:section>
-    
+
 </div>
