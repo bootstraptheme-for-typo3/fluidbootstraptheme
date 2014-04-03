@@ -60,6 +60,7 @@
     </f:section>
 
     <f:section name="Button">
+        <div class="buttonwrap">
         <f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
             <f:if condition="{ButtonObjectItem.ButtonObject.target}">
                 <f:then>
@@ -70,6 +71,7 @@
                 </f:else>
             </f:if>
         </f:for>
+        </div>
     </f:section>
 
     <f:section name="BottonWithOutLink">
