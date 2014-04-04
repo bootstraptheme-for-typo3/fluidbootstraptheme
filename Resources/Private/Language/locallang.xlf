@@ -184,6 +184,12 @@
             <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageLink">
                 <source>Link Image</source>
             </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCustomCSS">
+                <source>Custom CSS for image</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCaptionCustomCSS">
+                <source>Custom CSS for Caption</source>
+            </trans-unit>
             <!-- /SimpleResponsiveImage.html -->
 
             <!-- EmbedVidoe.html -->
