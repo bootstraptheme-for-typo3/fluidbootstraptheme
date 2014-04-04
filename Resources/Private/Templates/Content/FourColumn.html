@@ -7,7 +7,7 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
     <f:section name="Configuration">
-        <flux:form wizardTab="Grid" id="grid4"
+        <flux:form wizardTab="Grid" id="grid4" options="{useTypoScript: 0}"
                    icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png')}">
             <flux:form.sheet name="colSettings">
                 <flux:field.select name="settings.grid4.split"
@@ -94,46 +94,36 @@
         <div class="row {settings.grid4.rowCSS}">
             <f:if condition="{settings.grid4.split}=='more'">
                 <f:then>
-                    <f:render section="FEMoreGrid4" arguments="{_all}"/>
+					<div class="{settings.grid4.col1width} {settings.grid4.col1CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">
+						<flux:flexform.renderContent area="column1"/>
+					</div>
+					<div class="{settings.grid4.col2width} {settings.grid4.col2CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
+						<flux:flexform.renderContent area="column2"/>
+					</div>
+					<div class="{settings.grid4.col3width} {settings.grid4.col3CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
+						<flux:flexform.renderContent area="column3"/>
+					</div>
+					<div class="{settings.grid4.col4width} {settings.grid4.col4CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
+						<flux:flexform.renderContent area="column4"/>
+					</div>
                 </f:then>
                 <f:else>
-                    <f:render section="FE{settings.grid4.split -> v:format.case(case: 'settings.grid4.split')}"
-                              arguments="{_all}"/>
+					<div class="col-sm-3 {settings.grid4.col1CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">
+						<flux:flexform.renderContent area="column1"/>
+					</div>
+					<div class="col-sm-3 {settings.grid4.col2CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
+						<flux:flexform.renderContent area="column2"/>
+					</div>
+					<div class="col-sm-3 {settings.grid4.col3CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col3hide, then: 'hidden-xs')}">
+						<flux:flexform.renderContent area="column3"/>
+					</div>
+					<div class="col-sm-3 {settings.grid4.col4CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col4hide, then: 'hidden-xs')}">
+						<flux:flexform.renderContent area="column4"/>
+					</div>
                 </f:else>
             </f:if>
         </div>
     </f:section>
-
-    <f:comment>Frontend Switchcase Sections</f:comment>
-    <f:section name="FEMoreGrid4">
-        <div class="{settings.grid4.col1width} {settings.grid4.col1CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column1"/>
-        </div>
-        <div class="{settings.grid4.col2width} {settings.grid4.col2CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column2"/>
-        </div>
-        <div class="{settings.grid4.col3width} {settings.grid4.col3CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column3"/>
-        </div>
-        <div class="{settings.grid4.col4width} {settings.grid4.col4CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column4"/>
-        </div>
-    </f:section>
-    <f:section name="FE25-25-25-25">
-        <div class="col-sm-3 {settings.grid4.col1CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column1"/>
-        </div>
-        <div class="col-sm-3 {settings.grid4.col2CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column2"/>
-        </div>
-        <div class="col-sm-3 {settings.grid4.col3CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col3hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column3"/>
-        </div>
-        <div class="col-sm-3 {settings.grid4.col4CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col4hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column4"/>
-        </div>
-    </f:section>
-    <f:comment>Frontend Switchcase Sections END</f:comment>
 
     <f:section name="Preview">
         <flux:widget.grid/>

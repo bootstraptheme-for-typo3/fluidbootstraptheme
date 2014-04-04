@@ -7,7 +7,7 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
     <f:section name="Configuration">
-        <flux:form wizardTab="Grid" id="grid3" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png')}">
+        <flux:form wizardTab="Grid" id="grid3" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png')}">
             <flux:form.sheet name="colSettings">
                 <flux:field.select name="settings.grid3.split"
                                    items="30-30-30,20-60-20,20-20-60,more"
@@ -126,6 +126,17 @@
             <flux:flexform.renderContent area="column3"/>
         </div>
     </f:section>
+	<f:section name="FE">
+		<div class="col-sm-4 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column1"/>
+		</div>
+		<div class="col-sm-4 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column2"/>
+		</div>
+		<div class="col-sm-4 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column3"/>
+		</div>
+	</f:section>
     <f:section name="FE30-30-30">
         <div class="col-sm-4 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
             <flux:flexform.renderContent area="column1"/>
