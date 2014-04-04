@@ -18,23 +18,21 @@
                 <source>Column Splitting</source>
             </trans-unit>
 
-            <trans-unit id="flux.grid2.fields.settings.split">
+            <trans-unit id="flux.grid2.fields.settings.grid2.split">
                 <source>Split Possibilities</source>
             </trans-unit>
 
-
-            <trans-unit id="flux.grid2.fields.settings.col1width">
+            <trans-unit id="flux.grid2.fields.settings.grid2.col1width">
                 <source>Bootstrap CSS Class Column 1</source>
             </trans-unit>
             <trans-unit id="flux.grid2.fields.col2width">
                 <source>Bootstrap CSS Class Column 2</source>
             </trans-unit>
 
-
-            <trans-unit id="flux.grid2.fields.settings.col1hide">
+            <trans-unit id="flux.grid2.fields.settings.grid2.col1hide">
                 <source>Column 1 Visibility on Small Device</source>
             </trans-unit>
-            <trans-unit id="flux.grid2.fields.settings.col2hide">
+            <trans-unit id="flux.grid2.fields.settings.grid2.col2hide">
                 <source>Column 2 Visibility on Small Device</source>
             </trans-unit>
 
@@ -48,29 +46,70 @@
             <trans-unit id="flux.grid3.sheets.3Columns">
                 <source>Column Splitting</source>
             </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.split">
+            <trans-unit id="flux.grid3.fields.settings.grid3.split">
                 <source>Split Possibilities</source>
             </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.col1width">
+            <trans-unit id="flux.grid3.fields.settings.grid3.col1width">
                 <source>Bootstrap CSS Class Column 1</source>
             </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.col2width">
+            <trans-unit id="flux.grid3.fields.settings.grid3.col2width">
                 <source>Bootstrap CSS Class Column 2</source>
             </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.col3width">
+            <trans-unit id="flux.grid3.fields.settings.grid3.col3width">
                 <source>Bootstrap CSS Class Column 3</source>
             </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.col1hide">
+            <trans-unit id="flux.grid3.fields.settings.grid3.col1hide">
                 <source>Column 1 Visibility on Small Device</source>
             </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.col2hide">
+            <trans-unit id="flux.grid3.fields.settings.grid3.col2hide">
                 <source>Column 2 Visibility on Small Device</source>
             </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.col2hide">
+            <trans-unit id="flux.grid3.fields.settings.grid3.col3hide">
                 <source>Column 3 Visibility on Small Device</source>
             </trans-unit>
             <!-- ThreeColumn.html -->
 
+            
+            <!-- ThreeColumn.html -->
+            <trans-unit id="flux.grid4.description">
+                <source>4 Columns (25-25-25-25)</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4">
+                <source>4 Columns Container</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.sheets.3Columns">
+                <source>Column Splitting</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.split">
+                <source>Split Possibilities</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col1width">
+                <source>Bootstrap CSS Class Column 1</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col2width">
+                <source>Bootstrap CSS Class Column 2</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col3width">
+                <source>Bootstrap CSS Class Column 3</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col4width">
+                <source>Bootstrap CSS Class Column 4</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col1hide">
+                <source>Column 1 Visibility on Small Device</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col2hide">
+                <source>Column 2 Visibility on Small Device</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col3hide">
+                <source>Column 3 Visibility on Small Device</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col4hide">
+                <source>Column 4 Visibility on Small Device</source>
+            </trans-unit>
+            <!-- ThreeColumn.html -->
+
+            
             <!-- SimpleResponsiveImage.html -->
             <trans-unit id="flux.SimpleResponsiveImage.description">
                 <source>Simple Responsive Image with options</source>

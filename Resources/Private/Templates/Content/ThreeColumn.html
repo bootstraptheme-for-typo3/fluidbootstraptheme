@@ -15,12 +15,6 @@
                                    requestUpdate="1">
                 </flux:field.select>
                 <flux:field.checkbox name="settings.grid3.eqh" label="Equal Heigt of Colums" default="0"/>
-                <f:comment>
-                    <flux:field.select name="settings.grid3.mgtop" items="0,10,15,20,25,30,40,50" default="0"
-                                       label="Spacing Top"/>
-                    <flux:field.select name="settings.grid3.mgbot" items="0,10,15,20,25,30,40,50" default="0"
-                                       label="Spacing Bottom"/>
-                </f:comment>
                 <f:if condition="{settings.grid3.split}=='more'">
                     <f:then>
                         <flux:field.custom name="CarouselDescription">

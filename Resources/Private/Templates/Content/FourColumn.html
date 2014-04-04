@@ -7,8 +7,8 @@
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
     <f:section name="Configuration">
-
-        <flux:form wizardTab="Grid" id="grid4" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png')}">
+        <flux:form wizardTab="Grid" id="grid4"
+                   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png')}">
             <flux:form.sheet name="4Columns">
                 <flux:field.select name="settings.grid4.split"
                                    items="25-25-25-25,more"
@@ -16,8 +16,6 @@
                                    requestUpdate="1">
                 </flux:field.select>
                 <flux:field.checkbox name="settings.grid4.eqh" label="Equal Heigt of Colums" default="0"/>
-                <flux:field.select name="settings.grid4.mgtop" items="0,10,15,20,25,30,40,50" label="Spacing Top"/>
-                <flux:field.select name="settings.grid4.mgbot" items="0,10,15,20,25,30,40,50" label="Spacing Bottom"/>
                 <f:if condition="{settings.grid4.split}=='more'">
                     <f:then>
                         <flux:field.custom name="CarouselDescription">
