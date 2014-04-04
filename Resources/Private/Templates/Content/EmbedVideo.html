@@ -11,6 +11,7 @@
 		<flux:form.sheet name="EmbedVideo">
 			<flux:field.text name="settings.videoIframe" default="Paste your iFrame here" required="1"
 							 cols="100" rows="10"  />
+			<flux:field.input name="settings.videoIframeCustomCSS"  />
 		</flux:form.sheet>
 	</flux:form>
 </f:section>
@@ -21,7 +22,7 @@
 
 	<v:asset.style name="responsiveVideo" path="EXT:fluidbootstraptheme/Resources/Public/Stylesheets/ResponsiveVideo.css" group="responsiveVideo" standalone="true"/>
 
-	<div class="video-container">
+	<div class="video-container {settings.videoIframeCustomCSS} ">
 		<f:format.raw>{settings.videoIframe}</f:format.raw>
 	</div>
 </f:section>
