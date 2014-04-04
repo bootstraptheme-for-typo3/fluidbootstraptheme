@@ -1,0 +1,140 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+<f:layout name="FCE"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+    <f:section name="Configuration">
+
+        <flux:form wizardTab="Grid" id="grid4" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png')}">
+            <flux:form.sheet name="4Columns">
+                <flux:field.select name="settings.grid4.split"
+                                   items="25-25-25-25,more"
+                                   default="25-25-25-25"
+                                   requestUpdate="1">
+                </flux:field.select>
+                <flux:field.checkbox name="settings.grid4.eqh" label="Equal Heigt of Colums" default="0"/>
+                <flux:field.select name="settings.grid4.mgtop" items="0,10,15,20,25,30,40,50" label="Spacing Top"/>
+                <flux:field.select name="settings.grid4.mgbot" items="0,10,15,20,25,30,40,50" label="Spacing Bottom"/>
+                <f:if condition="{settings.grid4.split}=='more'">
+                    <f:then>
+                        <flux:field.custom name="CarouselDescription">
+                            <h3>
+                                Customize the Column settings:
+                            </h3>
+                        </flux:field.custom>
+                        <f:render section="grid4more" arguments="{_all}"/>
+                    </f:then>
+                    <f:else>
+                    </f:else>
+                </f:if>
+                <flux:grid>
+                    <flux:grid.row>
+                        <flux:grid.column
+                                style="width: 25%;border-right: 1px dotted #999;">
+                            <flux:form.content name="column1"
+                                               label="Column One ({settings.grid4.col1width})"/>
+                        </flux:grid.column>
+                        <flux:grid.column
+                                style="width: 25%;border-right: 1px dotted #999;">
+                            <flux:form.content name="column2"
+                                               label="Column Two ({settings.grid4.col2width})"/>
+                        </flux:grid.column>
+                        <flux:grid.column
+                                style="width: 25%;border-right: 1px dotted #999;">
+                            <flux:form.content name="column3"
+                                               label="Column Three ({settings.grid4.col3width})"/>
+                        </flux:grid.column>
+                        <flux:grid.column
+                                style="width: 25%;">
+                            <flux:form.content name="column4"
+                                               label="Column Four ({col4width})"/>
+                        </flux:grid.column>
+                    </flux:grid.row>
+                </flux:grid>
+            </flux:form.sheet>
+        </flux:form>
+    </f:section>
+
+    <f:section name="grid4more">
+        <flux:field.select name="settings.grid4.col1width"
+                           items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+                           required="1"
+                           default="col-sm-3"
+                />
+        <flux:field.checkbox name="settings.grid4.col1hide" default="0" label="Hide Colum On Phone"/>
+        <flux:field.select name="settings.grid4.col2width"
+                           items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+                           required="1"
+                           default="col-sm-3"
+                />
+        <flux:field.checkbox name="settings.grid4.col2hide" default="0" label="Hide Colum On Phone"/>
+        <flux:field.select name="settings.grid4.col3width"
+                           items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+                           required="1"
+                           default="col-sm-3"
+                />
+        <flux:field.checkbox name="settings.grid4.col3hide" default="0" label="Hide Colum On Phone"/>
+        <flux:field.select name="col4width"
+                           items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+                           required="1"
+                           default="col-sm-3"
+                />
+        <flux:field.checkbox name="settings.grid4.col4hide" default="0" label="Hide Colum On Phone"/>
+    </f:section>
+
+    <f:section name="FrontendColRenderingGrid4">
+        <div class="row {f:if(condition: settings.grid4.mgtop, then: 'mg{settings.grid4.mgtop}')} {f:if(condition: settings.grid4.mgbot, then: 'mg{settings.grid4.mgbot}b')}">
+            <f:if condition="{settings.grid4.split}=='more'">
+                <f:then>
+                    <f:render section="FEMoreGrid4" arguments="{_all}"/>
+                </f:then>
+                <f:else>
+                    <f:render section="FE{settings.grid4.split -> v:format.case(case: 'settings.grid4.split')}"
+                              arguments="{_all}"/>
+                </f:else>
+            </f:if>
+        </div>
+    </f:section>
+
+    <f:comment>Frontend Switchcase Sections</f:comment>
+    <f:section name="FEMoreGrid4">
+        <div class="{settings.grid4.col1width} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">
+            <flux:flexform.renderContent area="column1"/>
+        </div>
+        <div class="{settings.grid4.col2width} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
+            <flux:flexform.renderContent area="column2"/>
+        </div>
+        <div class="{settings.grid4.col3width} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
+            <flux:flexform.renderContent area="column3"/>
+        </div>
+        <div class="{col4width} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
+            <flux:flexform.renderContent area="column4"/>
+        </div>
+    </f:section>
+    <f:section name="FE25-25-25-25">
+        <div class="col-sm-3 {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
+            <flux:flexform.renderContent area="column1"/>
+        </div>
+        <div class="col-sm-3 {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
+            <flux:flexform.renderContent area="column2"/>
+        </div>
+        <div class="col-sm-3 {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
+            <flux:flexform.renderContent area="column3"/>
+        </div>
+        <div class="col-sm-3 {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
+            <flux:flexform.renderContent area="column4"/>
+        </div>
+    </f:section>
+    <f:comment>Frontend Switchcase Sections END</f:comment>
+
+    <f:section name="Preview">
+        <flux:widget.grid/>
+    </f:section>
+
+    <f:section name="Main">
+        <f:render section="FrontendColRenderingGrid4" arguments="{_all}"/>
+    </f:section>
+</div>
