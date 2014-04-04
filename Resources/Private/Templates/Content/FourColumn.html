@@ -62,25 +62,29 @@
                            required="1"
                            default="col-sm-3"
                 />
-        <flux:field.checkbox name="settings.grid4.col1hide" default="0" label="Hide Colum On Phone"/>
+        <flux:field.checkbox name="settings.grid4.col1hide" default="0" />
+        <flux:field.input name="settings.grid4.col1CSS" size="10"/>
         <flux:field.select name="settings.grid4.col2width"
                            items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
                            required="1"
                            default="col-sm-3"
                 />
-        <flux:field.checkbox name="settings.grid4.col2hide" default="0" label="Hide Colum On Phone"/>
+        <flux:field.checkbox name="settings.grid4.col2hide" default="0" />
+        <flux:field.input name="settings.grid4.col2CSS" size="10"/>
         <flux:field.select name="settings.grid4.col3width"
                            items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
                            required="1"
                            default="col-sm-3"
                 />
-        <flux:field.checkbox name="settings.grid4.col3hide" default="0" label="Hide Colum On Phone"/>
-        <flux:field.select name="col4width"
+        <flux:field.checkbox name="settings.grid4.col3hide" default="0" />
+        <flux:field.input name="settings.grid4.col3CSS" size="10"/>
+        <flux:field.select name="settings.grid4.col4width"
                            items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
                            required="1"
                            default="col-sm-3"
                 />
-        <flux:field.checkbox name="settings.grid4.col4hide" default="0" label="Hide Colum On Phone"/>
+        <flux:field.checkbox name="settings.grid4.col4hide" default="0" />
+        <flux:field.input name="settings.grid4.col4CSS" size="10"/>
     </f:section>
 
     <f:section name="FrontendColRenderingGrid4">
@@ -99,30 +103,30 @@
 
     <f:comment>Frontend Switchcase Sections</f:comment>
     <f:section name="FEMoreGrid4">
-        <div class="{settings.grid4.col1width} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">
+        <div class="{settings.grid4.col1width} {settings.grid4.col1CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">
             <flux:flexform.renderContent area="column1"/>
         </div>
-        <div class="{settings.grid4.col2width} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
+        <div class="{settings.grid4.col2width} {settings.grid4.col2CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
             <flux:flexform.renderContent area="column2"/>
         </div>
-        <div class="{settings.grid4.col3width} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
+        <div class="{settings.grid4.col3width} {settings.grid4.col3CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
             <flux:flexform.renderContent area="column3"/>
         </div>
-        <div class="{col4width} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
+        <div class="{settings.grid4.col4width} {settings.grid4.col4CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
             <flux:flexform.renderContent area="column4"/>
         </div>
     </f:section>
     <f:section name="FE25-25-25-25">
-        <div class="col-sm-3 {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
+        <div class="col-sm-3 {settings.grid4.col1CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
             <flux:flexform.renderContent area="column1"/>
         </div>
-        <div class="col-sm-3 {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
+        <div class="col-sm-3 {settings.grid4.col2CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
             <flux:flexform.renderContent area="column2"/>
         </div>
-        <div class="col-sm-3 {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
+        <div class="col-sm-3 {settings.grid4.col3CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
             <flux:flexform.renderContent area="column3"/>
         </div>
-        <div class="col-sm-3 {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
+        <div class="col-sm-3 {settings.grid4.col4CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')}">
             <flux:flexform.renderContent area="column4"/>
         </div>
     </f:section>

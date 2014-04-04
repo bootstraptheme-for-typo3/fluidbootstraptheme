@@ -9,32 +9,34 @@
             <trans-unit id="flux.grid2.description">
                 <source>2 Columns (50-50,70-30,30-70)</source>
             </trans-unit>
-
             <trans-unit id="flux.grid2">
                 <source> 2 Columns Container</source>
             </trans-unit>
-
             <trans-unit id="flux.grid2.sheets.2Columns">
                 <source>Column Splitting</source>
             </trans-unit>
-
             <trans-unit id="flux.grid2.fields.settings.grid2.split">
                 <source>Split Possibilities</source>
             </trans-unit>
-
             <trans-unit id="flux.grid2.fields.settings.grid2.col1width">
                 <source>Bootstrap CSS Class Column 1</source>
             </trans-unit>
             <trans-unit id="flux.grid2.fields.col2width">
                 <source>Bootstrap CSS Class Column 2</source>
             </trans-unit>
-
             <trans-unit id="flux.grid2.fields.settings.grid2.col1hide">
-                <source>Column 1 Visibility on Small Device</source>
+                <source>Column 1:  hide on small device</source>
             </trans-unit>
             <trans-unit id="flux.grid2.fields.settings.grid2.col2hide">
-                <source>Column 2 Visibility on Small Device</source>
+                <source>Column 2:  hide on small device</source>
             </trans-unit>
+            <trans-unit id="flux.grid2.fields.settings.grid2.col1CSS">
+                <source>Column Custom CSS Class</source>
+            </trans-unit>
+            <trans-unit id="flux.grid2.fields.settings.grid2.col2CSS">
+                <source>Column Custom CSS Class</source>
+            </trans-unit>
+            <!-- TwoColumn.html -->
 
             <!-- ThreeColumn.html -->
             <trans-unit id="flux.grid3.description">
@@ -59,25 +61,34 @@
                 <source>Bootstrap CSS Class Column 3</source>
             </trans-unit>
             <trans-unit id="flux.grid3.fields.settings.grid3.col1hide">
-                <source>Column 1 Visibility on Small Device</source>
+                <source>Column 1:  hide on small device</source>
             </trans-unit>
             <trans-unit id="flux.grid3.fields.settings.grid3.col2hide">
-                <source>Column 2 Visibility on Small Device</source>
+                <source>Column 2:  hide on small device</source>
             </trans-unit>
             <trans-unit id="flux.grid3.fields.settings.grid3.col3hide">
-                <source>Column 3 Visibility on Small Device</source>
+                <source>Column 3:  hide on small device</source>
+            </trans-unit>
+            <trans-unit id="flux.grid3.fields.settings.grid3.col1CSS">
+                <source>Column Custom CSS Class</source>
+            </trans-unit>
+            <trans-unit id="flux.grid3.fields.settings.grid3.col2CSS">
+                <source>Column Custom CSS Class</source>
+            </trans-unit>
+            <trans-unit id="flux.grid3.fields.settings.grid3.col3CSS">
+                <source>Column Custom CSS Class</source>
             </trans-unit>
             <!-- ThreeColumn.html -->
 
             
-            <!-- ThreeColumn.html -->
+            <!-- FourColumn.html -->
             <trans-unit id="flux.grid4.description">
                 <source>4 Columns (25-25-25-25)</source>
             </trans-unit>
             <trans-unit id="flux.grid4">
                 <source>4 Columns Container</source>
             </trans-unit>
-            <trans-unit id="flux.grid4.sheets.3Columns">
+            <trans-unit id="flux.grid4.sheets.4Columns">
                 <source>Column Splitting</source>
             </trans-unit>
             <trans-unit id="flux.grid4.fields.settings.grid4.split">
@@ -96,20 +107,34 @@
                 <source>Bootstrap CSS Class Column 4</source>
             </trans-unit>
             <trans-unit id="flux.grid4.fields.settings.grid4.col1hide">
-                <source>Column 1 Visibility on Small Device</source>
+                <source>Column 1:  hide on small device</source>
             </trans-unit>
             <trans-unit id="flux.grid4.fields.settings.grid4.col2hide">
-                <source>Column 2 Visibility on Small Device</source>
+                <source>Column 2:  hide on small device</source>
             </trans-unit>
             <trans-unit id="flux.grid4.fields.settings.grid4.col3hide">
-                <source>Column 3 Visibility on Small Device</source>
+                <source>Column 3:  hide on small device</source>
             </trans-unit>
             <trans-unit id="flux.grid4.fields.settings.grid4.col4hide">
-                <source>Column 4 Visibility on Small Device</source>
+                <source>Column 4:  hide on small device</source>
             </trans-unit>
-            <!-- ThreeColumn.html -->
+            <trans-unit id="flux.grid4.fields.settings.grid4.col1CSS">
+                <source>Column Custom CSS Class</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col2CSS">
+                <source>Column Custom CSS Class</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col3CSS">
+                <source>Column Custom CSS Class</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.fields.settings.grid4.col4CSS">
+                <source>Column Custom CSS Class</source>
+            </trans-unit>
+            <!-- FourColumn.html -->
 
-            
+
+
+
             <!-- SimpleResponsiveImage.html -->
             <trans-unit id="flux.SimpleResponsiveImage.description">
                 <source>Simple Responsive Image with options</source>
