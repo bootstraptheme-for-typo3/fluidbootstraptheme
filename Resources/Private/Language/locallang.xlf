@@ -88,8 +88,11 @@
             <trans-unit id="flux.grid4">
                 <source>4 Columns Container</source>
             </trans-unit>
-            <trans-unit id="flux.grid4.sheets.4Columns">
-                <source>Column Splitting</source>
+            <trans-unit id="flux.grid4.sheets.colSettings">
+                <source>Column Splittings</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.sheets.additionalCSS">
+                <source>Additional CSS</source>
             </trans-unit>
             <trans-unit id="flux.grid4.fields.settings.grid4.split">
                 <source>Split Possibilities</source>
@@ -119,16 +122,16 @@
                 <source>Column 4:  hide on small device</source>
             </trans-unit>
             <trans-unit id="flux.grid4.fields.settings.grid4.col1CSS">
-                <source>Column Custom CSS Class</source>
+                <source>Column Custom CSS Class for Col1</source>
             </trans-unit>
             <trans-unit id="flux.grid4.fields.settings.grid4.col2CSS">
-                <source>Column Custom CSS Class</source>
+                <source>Column Custom CSS Class for Col2</source>
             </trans-unit>
             <trans-unit id="flux.grid4.fields.settings.grid4.col3CSS">
-                <source>Column Custom CSS Class</source>
+                <source>Column Custom CSS Class for Col3</source>
             </trans-unit>
             <trans-unit id="flux.grid4.fields.settings.grid4.col4CSS">
-                <source>Column Custom CSS Class</source>
+                <source>Column Custom CSS Class for Col4</source>
             </trans-unit>
             <!-- FourColumn.html -->
 
