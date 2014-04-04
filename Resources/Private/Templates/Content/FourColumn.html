@@ -54,6 +54,7 @@
                 </flux:grid>
             </flux:form.sheet>
 			<flux:form.sheet name="additionalCSS">
+							<flux:field.input name="settings.grid4.rowCSS" size="10"/>
 							<flux:field.input name="settings.grid4.col1CSS" size="10"/>
 							<flux:field.checkbox name="settings.grid4.col1hide" default="0" />
 							<flux:field.input name="settings.grid4.col2CSS" size="10"/>
@@ -90,7 +91,7 @@
     </f:section>
 
     <f:section name="FrontendColRenderingGrid4">
-        <div class="row">
+        <div class="row {settings.grid4.rowCSS}">
             <f:if condition="{settings.grid4.split}=='more'">
                 <f:then>
                     <f:render section="FEMoreGrid4" arguments="{_all}"/>
