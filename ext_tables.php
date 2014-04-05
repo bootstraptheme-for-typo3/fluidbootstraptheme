@@ -3,8 +3,8 @@ if (!defined('TYPO3_MODE')) {
     die ('Access denied.');
 }
 
-\t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Bootstrap Theme');
-\t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Settings', 'Bootstrap Theme settings');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Bootstrap Theme');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Settings', 'Bootstrap Theme settings');
 
 \FluidTYPO3\Flux\Core::registerProviderExtensionKey('FluidBT.Fluidbootstraptheme', 'Page');
 \FluidTYPO3\Flux\Core::registerProviderExtensionKey('FluidBT.Fluidbootstraptheme', 'Content');
