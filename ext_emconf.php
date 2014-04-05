@@ -1,7 +1,7 @@
 <?php
 
 /***************************************************************
- * Extension Manager/Repository config file for ext "theme_bootstrap".
+ * Extension Manager/Repository config file for ext "fluidbootstraptheme".
  *
  * Auto generated 19-05-2013 14:40
  *
@@ -11,29 +11,30 @@
  ***************************************************************/
 
 $EM_CONF[$_EXTKEY] = array(
-	'title' => 'Fluid : Twitter Bootstrap Theme',
+	'title' => 'FBT: Bootstrap based Pages and Content',
 	'description' => 'A collection of Twitter Bootstrap oriented Fluid Content Elements and Pages written for EXT:fluidcontent and EXT:fluidpages using ViewHelpers from EXT:vhs',
 	'category' => 'misc',
-	'author' => 'Claus Due',
-	'author_email' => 'claus@namelesscoder.net',
-	'author_company' => 'Wildside A/S',
+	'author' => 'Claus Due, Harry Glatz, Boris Schauer ',
+    'author_email' => 'claus@namelesscoder.net,glatz@analog.de, me@bschauer.de',
+    'author_company' => 'NamelessCoder,analog multimedia, bschauer',
 	'shy' => '',
 	'dependencies' => 'cms,fluidcontent,fluidpages,vhs',
 	'conflicts' => '',
 	'priority' => '',
 	'module' => '',
-	'state' => 'stable',
+	'state' => 'beta',
 	'internal' => '',
 	'uploadfolder' => 0,
 	'createDirs' => '',
 	'modify_tables' => '',
 	'clearCacheOnLoad' => 1,
 	'lockType' => '',
-	'version' => '2.0.0',
+	'version' => '0.5.0',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '6.1.00-6.2.99',
 			'cms' => '',
+            'flux' => '7.1.0',
 			'fluidcontent' => '',
             'fluidpages' => '',
 			'vhs' => '',

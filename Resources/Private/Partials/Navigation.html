@@ -1,0 +1,65 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+
+
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+		>
+
+	<f:section name="Navigation">
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation">
+						<span class="sr-only">Navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="{v:site.url()}">
+						<v:site.name/>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="navigation">
+					<f:if condition="{settings.enableSearch}">
+						<form action="{f:uri.page(pageUid: settings.searchPageUid)}" method="post" class="navbar-form navbar-right" role="search">
+							<input type="hidden" name="tx_indexedsearch[_sections]" value="0">
+							<input type="hidden" name="tx_indexedsearch[_freeIndexUid]" id="tx_indexedsearch_freeIndexUid" value="_">
+							<input type="hidden" name="tx_indexedsearch[pointer]" id="tx_indexedsearch_pointer" value="0">
+							<input type="hidden" name="tx_indexedsearch[ext]" value="">
+							<input type="hidden" name="tx_indexedsearch[type]" value="0">
+							<input type="hidden" name="tx_indexedsearch[defOp]" value="0">
+							<input type="hidden" name="tx_indexedsearch[media]" value="-1">
+							<input type="hidden" name="tx_indexedsearch[order]" value="rank_flag">
+							<input type="hidden" name="tx_indexedsearch[group]" value="sections">
+							<input type="hidden" name="tx_indexedsearch[lang]" value="-1">
+							<input type="hidden" name="tx_indexedsearch[desc]" value="0">
+							<input type="hidden" name="tx_indexedsearch[results]" value="10">
+							<div class="input-group">
+								<div class="input-group">
+										<span class="input-group-addon">
+											<span class="glyphicon glyphicon-search"></span>
+										</span>
+									<input class="form-control input" type="text"
+										   name="tx_indexedsearch[sword]" value=""
+										   placeholder="Search...">
+								</div>
+
+							</div>
+						</form>
+					</f:if>
+					<v:page.menu entryLevel="{settings.entryLevel}" useShortcutData="TRUE">
+						<ul class="nav navbar-nav">
+							<f:for each="{menu}" as="mainPage" iteration="iteration">
+								<li class="{mainPage.class}">
+									<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}"
+									   class="{mainPage.class}">{mainPage.title}</a>
+								</li>
+							</f:for>
+						</ul>
+					</v:page.menu>
+				</div>
+			</div>
+		</nav>
+	</f:section>
+</div>

@@ -9,18 +9,10 @@
 	<flux:form id="error" label="Error page" enabled="FALSE" />
 </f:section>
 
-<f:section name="Resources">
-	<f:render partial="PageObjects" section="SharedResources" />
+<f:section name="Preview">
 </f:section>
 
-<f:section name="Content">
-	<div class="alert alert-error">
-		<h1>Error while rendering page</h1>
-		<p>There was an error rendering the requested page. If the error persists please contact the web master.</p>
-		<f:for each="{errors}" as="error" iteration="iteration">
-			<p>{iteration.cycle}. {error.message} (code {error.code})</p>
-		</f:for>
-	</div>
+<f:section name="Main">
 </f:section>
 
 </div>

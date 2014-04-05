@@ -1,17 +1,24 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
-<f:layout name="Page" />
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
-     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
+<f:layout name="WithSideBar"/>
+
+<?xml version="1.0" encoding="UTF-8" ?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	  xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	  xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+		>
+<head>
+	<title>WithSidebar</title>
+</head>
+<body>
 <f:section name="Configuration">
 	<flux:form id="sidebar" label="Page with sidebar" icon="{f:uri.resource(path: 'Icons/SidebarPage.png')}">
-		{v:var.typoscript(path: 'plugin.tx_fluidpagesbootstrap.settings') -> v:var.set(name: 'settings')}
+		{v:var.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:var.set(name: 'settings')}
 		<f:if condition="{settings.useTypoScript} < 1">
 			<flux:field.input name="settings.distribution" label="Width of sidebar (what remains of a 12-column total is used by main content)"
-			                           eval="int,trim" minimum="0" maximum="11" default="4">
+							  eval="int,trim" minimum="0" maximum="11" default="4">
 				<flux:wizard.slider hideParent="TRUE" step="1" width="100" />
 			</flux:field.input>
 			<flux:field.select name="settings.position" label="Placement of sidebar" items="left,right" />
@@ -20,25 +27,13 @@
 			<flux:field.input name="settings.searchFieldName" label="Name (HTML attribute) of form field, example tx_solr[q]" default="q" />
 			<flux:field.checkbox name="settings.addWell" label="Add 'Well' to Sidebar" />
 			<flux:field.checkbox name="settings.wellSmall" label="Make 'Well' padding smaller than normal" />
-		</f:if>
+			</f:if>
 		<flux:grid>
 			<flux:grid.row>
 				<flux:grid.column colPos="1" name="Hero Unit" colspan="2" />
 			</flux:grid.row>
 			<flux:grid.row>
-				<v:switch value="{settings.position}">
-					<v:case case="left" break="TRUE">
-						<flux:grid.column colPos="3" name="Sidebar Content" />
-						<flux:grid.column colPos="0" name="Main Content" />
-					</v:case>
-					<v:case case="right" break="TRUE">
-						<flux:grid.column colPos="0" name="Main Content" />
-						<flux:grid.column colPos="3" name="Sidebar Content" />
-					</v:case>
-					<v:case case="default">
-						<flux:grid.column colPos="0" name="Main Content" colspan="2" />
-					</v:case>
-				</v:switch>
+				<f:render partial="Page/WithSideBar" section="WithSideBarInPut{settings.position -> v:format.case(case: 'position')}" arguments="{_all}"/>
 			</flux:grid.row>
 			<flux:grid.row>
 				<flux:grid.column colPos="2" name="Footer Content" colspan="2" />
@@ -46,32 +41,10 @@
 		</flux:grid>
 	</flux:form>
 </f:section>
-
-<f:section name="Resources">
-	<f:render partial="PageObjects" section="SharedResources" />
+<f:section name="Preview">
 </f:section>
 
-<f:section name="Content">
-	<div class="row-fluid">
-		<v:switch value="{settings.position}">
-			<v:case case="left" break="TRUE">
-				<div class="span{settings.distribution}">
-					<f:render partial="PageObjects" section="Sidebar" arguments="{_all}" />
-				</div>
-				<div class="span{v:math.subtract(a: 12, b: settings.distribution)}">
-					<v:page.content.render column="0" />
-				</div>
-			</v:case>
-			<v:case case="right" break="TRUE">
-				<div class="span{v:math.subtract(a: 12, b: settings.distribution)}">
-					<v:page.content.render column="0" />
-				</div>
-				<div class="span{settings.distribution}">
-					<f:render partial="PageObjects" section="Sidebar" arguments="{_all}" />
-				</div>
-			</v:case>
-		</v:switch>
-	</div>
+<f:section name="Main">
 </f:section>
-
-</div>
+</body>
+</html>

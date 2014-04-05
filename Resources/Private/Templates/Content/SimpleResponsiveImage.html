@@ -1,0 +1,84 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+<f:layout name="Content"/>
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+<f:section name="Configuration">
+	<flux:form wizardTab="Bootstrap" id="SimpleResponsiveImage" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_138_picture.png')}">
+		<flux:form.sheet name="SimpleResponsiveImage" >
+			<flux:field.file
+					name="settings.SimpleContentImage"
+					showThumbnails="1"
+					allowed="jpg,jpeg,png,gif,JPEG,GIF,PNG,JPG"
+					required="1"
+					maxItems="1"
+					size="1"
+					/>
+            <flux:field.select name="settings.SimpleContentImageClass" items="img-rounded,img-circle,img-thumbnail,none"  default="none"/>
+			<flux:field.input name="settings.SimpleContentImageAlt" />
+			<flux:field.input name="settings.SimpleContentImageCaption" />
+			<flux:field.input name="settings.SimpleContentImageTitle" />
+			<flux:field.input name="settings.SimpleContentImageWidth"  default="1140" />
+			<flux:field.input name="settings.SimpleContentImageLink"  size="1">
+				<flux:wizard.link activeTab="page"/>
+			</flux:field.input>
+			</flux:form.sheet>
+		<flux:form.sheet name="additionalCSS">
+			<flux:field.input name="settings.SimpleContentImageCustomCSS"  />
+			<flux:field.input name="settings.SimpleContentImageCaptionCustomCSS"  />
+		</flux:form.sheet>
+		</flux:form>
+</f:section>
+
+
+	<f:section name="Preview">
+		<div style="text-align: center;">
+			<v:media.image src="{settings.SimpleContentImage}" alt="{settings.SimpleContentImageAlt}" width="100"/>
+		</div>
+		<p style="text-align: center;">AltText: {settings.SimpleContentImageAlt}</p>
+	</f:section>
+
+
+<f:section name="Main">
+	<f:if condition="{settings.SimpleContentImageLink}">
+		<f:then>
+			<f:link.page pageUid="{settings.SimpleContentImageLink}" class="responseimglink" >
+				<f:image src="{settings.SimpleContentImage}"
+						 alt="{settings.SimpleContentImageAlt}"
+						 class="img-responsive {settings.SimpleContentImageClass} {settings.SimpleContentImageCustomCSS}"
+						 title="{settings.SimpleContentImageTitle}"
+						 width="{settings.SimpleContentImageWidth}px"
+						/>
+			</f:link.page>
+		</f:then>
+		<f:else>
+
+				<f:image src="{settings.SimpleContentImage}"
+					 alt="{settings.SimpleContentImageAlt}"
+					 class="img-responsive {settings.SimpleContentImageAlignBottomVar} {settings.SimpleContentImageClass} {settings.SimpleContentImageCustomCSS}"
+					 title="{settings.SimpleContentImageTitle}"
+					 width="{settings.SimpleContentImageWidth}px"
+					/>
+		</f:else>
+
+
+
+	</f:if>
+	<f:if condition="{settings.SimpleContentImageCaption}">
+		<f:then>
+			<div class="img-responsive-caption {settings.SimpleContentImageCaptionCustomCSS}">
+				{settings.SimpleContentImageCaption}
+			</div>
+		</f:then>
+		<f:else>
+
+		</f:else>
+
+	</f:if>
+
+</f:section>
+
+</div>

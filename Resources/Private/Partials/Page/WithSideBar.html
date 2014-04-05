@@ -1,0 +1,38 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+		>
+
+
+	<f:section name="WithSideBarOutPutleft">
+		<div class="col-sm-{settings.distribution}">
+			<f:render partial="Sidebar" section="Sidebar" arguments="{_all}" />
+		</div>
+		<div class="col-sm-{v:math.subtract(a: 12, b: settings.distribution)}">
+			<v:page.content.render column="0" />
+		</div>
+	</f:section>
+	<f:section name="WithSideBarOutPutright">
+		<div class="col-sm-{v:math.subtract(a: 12, b: settings.distribution)}">
+			<v:page.content.render column="0" />
+		</div>
+		<div class="col-sm-{settings.distribution}">
+			<f:render partial="Sidebar" section="Sidebar" arguments="{_all}" />
+		</div>
+	</f:section>
+	<f:section name="WithSideBarInPut"></f:section>
+	<f:section name="WithSideBarOutPut"></f:section>
+	<f:section name="WithSideBarInPutleft">
+		<flux:grid.column colPos="3" name="Sidebar Content" />
+		<flux:grid.column colPos="0" name="Main Content" />
+	</f:section>
+	<f:section name="WithSideBarInPutright">
+		<flux:grid.column colPos="0" name="Main Content" />
+		<flux:grid.column colPos="3" name="Sidebar Content" />
+	</f:section>
+
+</div>

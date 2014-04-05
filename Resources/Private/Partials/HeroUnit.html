@@ -1,0 +1,20 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+
+
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+		>
+	<f:section name="HeroUnit">
+		<!-- hero unit, optional content elements from colPos 1 (one) -->
+		<v:page.content.render column="1" as="heroUnitContentElements">
+			<f:if condition="{heroUnitContentElements}">
+				<div class="jumbotron">
+					<f:for each="{heroUnitContentElements}" as="heroContentElement">
+						<f:format.raw>{heroContentElement}</f:format.raw>
+					</f:for>
+				</div>
+			</f:if>
+		</v:page.content.render>
+	</f:section>
+</div>
