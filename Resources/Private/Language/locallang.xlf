@@ -205,6 +205,9 @@
             <trans-unit id="flux.EmbedVideo.sheets.EmbedVideo">
                 <source>EmbedVideo</source>
             </trans-unit>
+            <trans-unit id="flux.EmbedVideo.sheets.additionalCSS">
+                <source>Additional CSS</source>
+            </trans-unit>
             <trans-unit id="flux.EmbedVideo.fields.settings.videoIframeCustomCSS">
                 <source>Custom CSS for Video</source>
             </trans-unit>
