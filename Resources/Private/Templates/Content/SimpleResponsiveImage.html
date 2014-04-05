@@ -22,12 +22,14 @@
 			<flux:field.input name="settings.SimpleContentImageCaption" />
 			<flux:field.input name="settings.SimpleContentImageTitle" />
 			<flux:field.input name="settings.SimpleContentImageWidth"  default="1140" />
-			<flux:field.input name="settings.SimpleContentImageCustomCSS"  />
-			<flux:field.input name="settings.SimpleContentImageCaptionCustomCSS"  />
 			<flux:field.input name="settings.SimpleContentImageLink"  size="1">
 				<flux:wizard.link activeTab="page"/>
 			</flux:field.input>
 			</flux:form.sheet>
+		<flux:form.sheet name="additionalCSS">
+			<flux:field.input name="settings.SimpleContentImageCustomCSS"  />
+			<flux:field.input name="settings.SimpleContentImageCaptionCustomCSS"  />
+		</flux:form.sheet>
 		</flux:form>
 </f:section>
 

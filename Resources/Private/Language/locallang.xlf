@@ -163,6 +163,9 @@
             <trans-unit id="flux.SimpleResponsiveImage.sheets.SimpleResponsiveImage">
                 <source>General Settings Image</source>
             </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.sheets.additionalCSS">
+                <source>Additional CSS</source>
+            </trans-unit>
             <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImage">
                 <source>Choose an Image</source>
             </trans-unit>
