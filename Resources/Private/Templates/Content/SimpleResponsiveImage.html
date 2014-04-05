@@ -26,6 +26,10 @@
 				<flux:wizard.link activeTab="page"/>
 			</flux:field.input>
 			</flux:form.sheet>
+		<flux:form.sheet name="additionalCSS">
+			<flux:field.input name="settings.SimpleContentImageCustomCSS"  />
+			<flux:field.input name="settings.SimpleContentImageCaptionCustomCSS"  />
+		</flux:form.sheet>
 		</flux:form>
 </f:section>
 
@@ -44,7 +48,7 @@
 			<f:link.page pageUid="{settings.SimpleContentImageLink}" class="responseimglink" >
 				<f:image src="{settings.SimpleContentImage}"
 						 alt="{settings.SimpleContentImageAlt}"
-						 class="img-responsive {settings.SimpleContentImageClass}"
+						 class="img-responsive {settings.SimpleContentImageClass} {settings.SimpleContentImageCustomCSS}"
 						 title="{settings.SimpleContentImageTitle}"
 						 width="{settings.SimpleContentImageWidth}px"
 						/>
@@ -54,7 +58,7 @@
 
 				<f:image src="{settings.SimpleContentImage}"
 					 alt="{settings.SimpleContentImageAlt}"
-					 class="img-responsive {settings.SimpleContentImageAlignBottomVar} {settings.SimpleContentImageClass}"
+					 class="img-responsive {settings.SimpleContentImageAlignBottomVar} {settings.SimpleContentImageClass} {settings.SimpleContentImageCustomCSS}"
 					 title="{settings.SimpleContentImageTitle}"
 					 width="{settings.SimpleContentImageWidth}px"
 					/>
@@ -65,7 +69,7 @@
 	</f:if>
 	<f:if condition="{settings.SimpleContentImageCaption}">
 		<f:then>
-			<div class="img-responsive-caption">
+			<div class="img-responsive-caption {settings.SimpleContentImageCaptionCustomCSS}">
 				{settings.SimpleContentImageCaption}
 			</div>
 		</f:then>

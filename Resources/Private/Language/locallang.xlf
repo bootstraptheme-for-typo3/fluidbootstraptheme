@@ -163,6 +163,9 @@
             <trans-unit id="flux.SimpleResponsiveImage.sheets.SimpleResponsiveImage">
                 <source>General Settings Image</source>
             </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.sheets.additionalCSS">
+                <source>Additional CSS</source>
+            </trans-unit>
             <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImage">
                 <source>Choose an Image</source>
             </trans-unit>
@@ -184,6 +187,12 @@
             <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageLink">
                 <source>Link Image</source>
             </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCustomCSS">
+                <source>Custom CSS for image</source>
+            </trans-unit>
+            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCaptionCustomCSS">
+                <source>Custom CSS for Caption</source>
+            </trans-unit>
             <!-- /SimpleResponsiveImage.html -->
 
             <!-- EmbedVidoe.html -->
@@ -195,6 +204,12 @@
             </trans-unit>
             <trans-unit id="flux.EmbedVideo.sheets.EmbedVideo">
                 <source>EmbedVideo</source>
+            </trans-unit>
+            <trans-unit id="flux.EmbedVideo.sheets.additionalCSS">
+                <source>Additional CSS</source>
+            </trans-unit>
+            <trans-unit id="flux.EmbedVideo.fields.settings.videoIframeCustomCSS">
+                <source>Custom CSS for Video</source>
             </trans-unit>
             <!-- /EmbedVidoe.htm -->
 
