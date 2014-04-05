@@ -11,7 +11,7 @@
                    description="the Swiss Army Knife of the Buttons" options="{useTypoScript: 0}"
                    icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_050_link.png')}">
             <flux:form.sheet name="ButtonSheetOne" label="Button Settings">
-                <flux:field.select items="def,lg,sm,xs" name="ButtonSize" label="Button Size"/>
+                <flux:field.select items="xs,sm,default,lg" name="ButtonSize" label="Button Size" default="default"/>
                 <flux:field.checkbox name="ButtonBlock" label="Block level Button" default="0"/>
                 <flux:field.checkbox name="ButtonGroup" label="Group Buttons Horizontal" default="0"/>
             </flux:form.sheet>
@@ -80,13 +80,13 @@
 
     <f:section name="BottonWithOutLink">
         <button type="button"
-                class="btn btn-{ButtonObjectItem.ButtonObject.ButtonOptions} btn-{ButtonSize} {ButtonBlockVar} {f:if(then: 'disabled', else: '', condition: '{ButtonObjectItem.ButtonObject.ButtonActive}')}">
-            {ButtonObjectItem.ButtonObject.ButtonText}
+                class="btn btn-{ButtonObjectItem.ButtonObject.ButtonOptions} {f:if(then: 'btn-{ButtonSize}', else: '', condition: '{ButtonSize}!=\'default\'')} {f:if(then: 'disabled', else: '', condition: '{ButtonObjectItem.ButtonObject.ButtonActive}')}">
+            {ButtonObjectItem.ButtonObject.ButtonText} link
         </button>
     </f:section>
     <f:section name="BottonWithLink">
         <f:link.page pageUid="{ButtonObjectItem.ButtonObject.target}"
-                     class="btn btn-{ButtonObjectItem.ButtonObject.ButtonOptions} btn-{ButtonSize} {ButtonBlockVar} {ButtonDisable} {f:if(then: 'disabled', else: '', condition: '{ButtonObjectItem.ButtonObject.ButtonActive}')}"
+                     class="btn btn-{ButtonObjectItem.ButtonObject.ButtonOptions} {f:if(then: 'btn-{ButtonSize}', else: '', condition: '{ButtonSize}!=\'default\'')} {ButtonBlockVar} {ButtonDisable} {f:if(then: 'disabled', else: '', condition: '{ButtonObjectItem.ButtonObject.ButtonActive}')}"
                      additionalAttributes="{role: 'button'}">
             {ButtonObjectItem.ButtonObject.ButtonText}
         </f:link.page>
