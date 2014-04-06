@@ -1,0 +1,5 @@
+  # cat=basic/enable; type=boolean; label=Disable Page Templates: Use this option to completely disable (cannot be selected, cannot be rendered, overlayed, etc) the page templates provided by this extension.
+disablePageTemplates = 0
+
+  # cat=basic/enable; type=boolean; label=Disable Content Templates: Use this option to completely disable (cannot be selected, cannot be rendered, overlayed, etc) the content templates provided by this extension.
+disableContentTemplates = 0
