@@ -21,5 +21,4 @@ plugin.tx_fluidbootstraptheme.settings {
     enableCustomStyle = 0
     # cat=FLUIDBOOTSTRAPTHEME/settings; type=string; label=Path to CustomStyle (ThemeCSS)
     customStylePath =
-
 }

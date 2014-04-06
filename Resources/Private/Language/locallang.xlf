@@ -1,275 +1,270 @@
 <?xml version="1.0"?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" product-name="fluidbootstraptheme"
-          date="2014-01-06T01:00:11+01:00">
-        <header/>
-        <body>
+	<file source-language="en" datatype="plaintext" original="messages" product-name="fluidbootstraptheme"
+		  date="2014-01-06T01:00:11+01:00">
+		<header/>
+		<body>
 
-            <!-- TwoColumn.html -->
-            <trans-unit id="flux.grid2.description">
-                <source>2 Columns (50-50,70-30,30-70)</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2">
-                <source> 2 Columns Container</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.sheets.colSettings">
-                <source>Column Splitting</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.sheets.additionalCSS">
-                <source>Additional CSS</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.fields.settings.grid2.split">
-                <source>Split Possibilities</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.fields.settings.grid2.col1width">
-                <source>Bootstrap CSS Class Column 1</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.fields.col2width">
-                <source>Bootstrap CSS Class Column 2</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.fields.settings.grid2.col1hide">
-                <source>Column 1:  hide on small device</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.fields.settings.grid2.col2hide">
-                <source>Column 2:  hide on small device</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.fields.settings.grid2.col1CSS">
-                <source>Column Custom CSS Class for Col1</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.fields.settings.grid2.col2CSS">
-                <source>Column Custom CSS Class for Col2</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.fields.settings.grid2.rowCSS">
-                <source>Column Custom CSS Class for Row</source>
-            </trans-unit>
-            <!-- TwoColumn.html -->
+			<!-- TwoColumn.html -->
+			<trans-unit id="flux.grid2.description">
+				<source>2 Columns (50-50,70-30,30-70)</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2">
+				<source>2 Columns Container</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.sheets.colSettings">
+				<source>Column Splitting</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.sheets.additionalCSS">
+				<source>Additional CSS</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.fields.settings.grid2.split">
+				<source>Split Possibilities</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.fields.settings.grid2.col1width">
+				<source>Bootstrap CSS Class Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.fields.col2width">
+				<source>Bootstrap CSS Class Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.fields.settings.grid2.col1hide">
+				<source>Column 1: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.fields.settings.grid2.col2hide">
+				<source>Column 2: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.fields.settings.grid2.col1CSS">
+				<source>Column Custom CSS Class for Col1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.fields.settings.grid2.col2CSS">
+				<source>Column Custom CSS Class for Col2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.fields.settings.grid2.rowCSS">
+				<source>Column Custom CSS Class for Row</source>
+			</trans-unit>
+			<!-- TwoColumn.html -->
 
-            <!-- ThreeColumn.html -->
-            <trans-unit id="flux.grid3.description">
-                <source>3 Columns (30-30-30)</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3">
-                <source> 3 Columns Container</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.sheets.colSettings">
-                <source>Column Splitting</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.sheets.additionalCSS">
-                <source>Additional CSS</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.split">
-                <source>Split Possibilities</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.col1width">
-                <source>Bootstrap CSS Class Column 1</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.col2width">
-                <source>Bootstrap CSS Class Column 2</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.col3width">
-                <source>Bootstrap CSS Class Column 3</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.col1hide">
-                <source>Column 1:  hide on small device</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.col2hide">
-                <source>Column 2:  hide on small device</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.col3hide">
-                <source>Column 3:  hide on small device</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.col1CSS">
-                <source>Column Custom CSS Class</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.col2CSS">
-                <source>Column Custom CSS Class</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.col3CSS">
-                <source>Column Custom CSS Class</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.fields.settings.grid3.rowCSS">
-                <source>Column Custom CSS Class for Row</source>
-            </trans-unit>
-            <!-- ThreeColumn.html -->
+			<!-- ThreeColumn.html -->
+			<trans-unit id="flux.grid3.description">
+				<source>3 Columns (30-30-30)</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3">
+				<source>3 Columns Container</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.sheets.colSettings">
+				<source>Column Splitting</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.sheets.additionalCSS">
+				<source>Additional CSS</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.split">
+				<source>Split Possibilities</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.col1width">
+				<source>Bootstrap CSS Class Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.col2width">
+				<source>Bootstrap CSS Class Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.col3width">
+				<source>Bootstrap CSS Class Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.col1hide">
+				<source>Column 1: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.col2hide">
+				<source>Column 2: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.col3hide">
+				<source>Column 3: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.col1CSS">
+				<source>Column Custom CSS Class</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.col2CSS">
+				<source>Column Custom CSS Class</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.col3CSS">
+				<source>Column Custom CSS Class</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.rowCSS">
+				<source>Column Custom CSS Class for Row</source>
+			</trans-unit>
+			<!-- ThreeColumn.html -->
 
-            
-            <!-- FourColumn.html -->
-            <trans-unit id="flux.grid4.description">
-                <source>4 Columns (25-25-25-25)</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4">
-                <source>4 Columns Container</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.sheets.colSettings">
-                <source>Column Splittings</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.sheets.additionalCSS">
-                <source>Additional CSS</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.split">
-                <source>Split Possibilities</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col1width">
-                <source>Bootstrap CSS Class Column 1</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col2width">
-                <source>Bootstrap CSS Class Column 2</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col3width">
-                <source>Bootstrap CSS Class Column 3</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col4width">
-                <source>Bootstrap CSS Class Column 4</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col1hide">
-                <source>Column 1:  hide on small device</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col2hide">
-                <source>Column 2:  hide on small device</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col3hide">
-                <source>Column 3:  hide on small device</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col4hide">
-                <source>Column 4:  hide on small device</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col1CSS">
-                <source>Column Custom CSS Class for Col1</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col2CSS">
-                <source>Column Custom CSS Class for Col2</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col3CSS">
-                <source>Column Custom CSS Class for Col3</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.col4CSS">
-                <source>Column Custom CSS Class for Col4</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.fields.settings.grid4.rowCSS">
-                <source>Column Custom CSS Class for Row</source>
-            </trans-unit>
-            <!-- FourColumn.html -->
+			<!-- FourColumn.html -->
+			<trans-unit id="flux.grid4.description">
+				<source>4 Columns (25-25-25-25)</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4">
+				<source>4 Columns Container</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.sheets.colSettings">
+				<source>Column Splittings</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.sheets.additionalCSS">
+				<source>Additional CSS</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.split">
+				<source>Split Possibilities</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col1width">
+				<source>Bootstrap CSS Class Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col2width">
+				<source>Bootstrap CSS Class Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col3width">
+				<source>Bootstrap CSS Class Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col4width">
+				<source>Bootstrap CSS Class Column 4</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col1hide">
+				<source>Column 1: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col2hide">
+				<source>Column 2: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col3hide">
+				<source>Column 3: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col4hide">
+				<source>Column 4: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col1CSS">
+				<source>Column Custom CSS Class for Col1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col2CSS">
+				<source>Column Custom CSS Class for Col2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col3CSS">
+				<source>Column Custom CSS Class for Col3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.col4CSS">
+				<source>Column Custom CSS Class for Col4</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.rowCSS">
+				<source>Column Custom CSS Class for Row</source>
+			</trans-unit>
+			<!-- FourColumn.html -->
 
+			<!-- SimpleResponsiveImage.html -->
+			<trans-unit id="flux.SimpleResponsiveImage.description">
+				<source>Simple Responsive Image with options</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage">
+				<source>Simple Responsive Image</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.sheets.SimpleResponsiveImage">
+				<source>General Settings Image</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.sheets.additionalCSS">
+				<source>Additional CSS</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImage">
+				<source>Choose an Image</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageClass">
+				<source>Image shapes</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageAlt">
+				<source>Alttext</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCaption">
+				<source>Caption</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageTitle">
+				<source>TitleText</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageWidth">
+				<source>Max. Width</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageLink">
+				<source>Link Image</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCustomCSS">
+				<source>Custom CSS for image</source>
+			</trans-unit>
+			<trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCaptionCustomCSS">
+				<source>Custom CSS for Caption</source>
+			</trans-unit>
+			<!-- /SimpleResponsiveImage.html -->
 
+			<!-- EmbedVidoe.html -->
+			<trans-unit id="flux.EmbedVideo.description">
+				<source>Embed responsive Video iFrame from YouTube or Vimeo</source>
+			</trans-unit>
+			<trans-unit id="flux.EmbedVideo">
+				<source>Embed Video Iframe</source>
+			</trans-unit>
+			<trans-unit id="flux.EmbedVideo.sheets.EmbedVideo">
+				<source>EmbedVideo</source>
+			</trans-unit>
+			<trans-unit id="flux.EmbedVideo.sheets.additionalCSS">
+				<source>Additional CSS</source>
+			</trans-unit>
+			<trans-unit id="flux.EmbedVideo.fields.settings.videoIframeCustomCSS">
+				<source>Custom CSS for Video</source>
+			</trans-unit>
+			<!-- /EmbedVidoe.htm -->
 
+			<!-- ProgressBar.html -->
+			<trans-unit id="flux.progressBar.description">
+				<source>Insert Progressbar</source>
+			</trans-unit>
+			<trans-unit id="flux.progressBar">
+				<source>Progressbar</source>
+			</trans-unit>
+			<trans-unit id="flux.progressBar.sheets.progressBar">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="flux.progressBar.fields.settings.progressBarAnimated">
+				<source>Animated?</source>
+			</trans-unit>
+			<trans-unit id="flux.progressBar.fields.settings.progressBarStriped">
+				<source>Striped?</source>
+			</trans-unit>
+			<trans-unit id="flux.progressBar.fields.settings.progressBarColor">
+				<source>Color?</source>
+			</trans-unit>
+			<trans-unit id="flux.progressBar.fields.settings.progressBarProgress">
+				<source>Progress in %</source>
+			</trans-unit>
+			<trans-unit id="flux.progressBar.fields.settings.progressBarShowText">
+				<source>Show % in Bar</source>
+			</trans-unit>
+			<!-- /EmbedVidoe.htm -->
 
-            <!-- SimpleResponsiveImage.html -->
-            <trans-unit id="flux.SimpleResponsiveImage.description">
-                <source>Simple Responsive Image with options</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage">
-                <source> Simple Responsive Image</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.sheets.SimpleResponsiveImage">
-                <source>General Settings Image</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.sheets.additionalCSS">
-                <source>Additional CSS</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImage">
-                <source>Choose an Image</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageClass">
-                <source>Image shapes</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageAlt">
-                <source>Alttext</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCaption">
-                <source>Caption</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageTitle">
-                <source>TitleText</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageWidth">
-                <source>Max. Width</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageLink">
-                <source>Link Image</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCustomCSS">
-                <source>Custom CSS for image</source>
-            </trans-unit>
-            <trans-unit id="flux.SimpleResponsiveImage.fields.settings.SimpleContentImageCaptionCustomCSS">
-                <source>Custom CSS for Caption</source>
-            </trans-unit>
-            <!-- /SimpleResponsiveImage.html -->
+			<!-- ModalLight.html -->
+			<trans-unit id="flux.modalLight.description">
+				<source>Add Bootstrap-Modal for Content</source>
+			</trans-unit>
+			<trans-unit id="flux.modalLight">
+				<source>Modal</source>
+			</trans-unit>
+			<trans-unit id="flux.modalLight.sheets.openbutton">
+				<source>General</source>
+			</trans-unit>
+			<trans-unit id="flux.modalLight.sheets.advanced">
+				<source>CSS-Settings</source>
+			</trans-unit>
+			<trans-unit id="flux.modalLight.fields.settings.buttonText">
+				<source>Button text</source>
+			</trans-unit>
+			<trans-unit id="flux.modalLight.fields.settings.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="flux.modalLight.fields.settings.additionalClassesButton">
+				<source>Additional Class for Button</source>
+			</trans-unit>
+			<trans-unit id="flux.modalLight.fields.settings.additionalClassesModal">
+				<source>Additional Class for Modal</source>
+			</trans-unit>
+			<!-- /ModalLight.htm -->
 
-            <!-- EmbedVidoe.html -->
-            <trans-unit id="flux.EmbedVideo.description">
-                <source>Embed responsive Video iFrame from YouTube or Vimeo</source>
-            </trans-unit>
-            <trans-unit id="flux.EmbedVideo">
-                <source> Embed Video Iframe</source>
-            </trans-unit>
-            <trans-unit id="flux.EmbedVideo.sheets.EmbedVideo">
-                <source>EmbedVideo</source>
-            </trans-unit>
-            <trans-unit id="flux.EmbedVideo.sheets.additionalCSS">
-                <source>Additional CSS</source>
-            </trans-unit>
-            <trans-unit id="flux.EmbedVideo.fields.settings.videoIframeCustomCSS">
-                <source>Custom CSS for Video</source>
-            </trans-unit>
-            <!-- /EmbedVidoe.htm -->
-
-            <!-- ProgressBar.html -->
-            <trans-unit id="flux.progressBar.description">
-                <source>Insert Progressbar</source>
-            </trans-unit>
-            <trans-unit id="flux.progressBar">
-                <source> Progressbar</source>
-            </trans-unit>
-            <trans-unit id="flux.progressBar.sheets.progressBar">
-                <source>General</source>
-            </trans-unit>
-            <trans-unit id="flux.progressBar.fields.settings.progressBarAnimated">
-                <source>Animated?</source>
-            </trans-unit>
-            <trans-unit id="flux.progressBar.fields.settings.progressBarStriped">
-                <source>Striped?</source>
-            </trans-unit>
-            <trans-unit id="flux.progressBar.fields.settings.progressBarColor">
-                <source>Color?</source>
-            </trans-unit>
-            <trans-unit id="flux.progressBar.fields.settings.progressBarProgress">
-                <source>Progress in %</source>
-            </trans-unit>
-            <trans-unit id="flux.progressBar.fields.settings.progressBarShowText">
-                <source>Show % in Bar</source>
-            </trans-unit>
-            <!-- /EmbedVidoe.htm -->
-
-
-            <!-- ModalLight.html -->
-            <trans-unit id="flux.modalLight.description">
-                <source>Add Bootstrap-Modal for Content</source>
-            </trans-unit>
-            <trans-unit id="flux.modalLight">
-                <source> Modal</source>
-            </trans-unit>
-            <trans-unit id="flux.modalLight.sheets.openbutton">
-                <source>General</source>
-            </trans-unit>
-            <trans-unit id="flux.modalLight.sheets.advanced">
-                <source>CSS-Settings</source>
-            </trans-unit>
-            <trans-unit id="flux.modalLight.fields.settings.buttonText">
-                <source>Button text</source>
-            </trans-unit>
-            <trans-unit id="flux.modalLight.fields.settings.title">
-                <source>Title</source>
-            </trans-unit>
-            <trans-unit id="flux.modalLight.fields.settings.additionalClassesButton">
-                <source>Additional Class for Button</source>
-            </trans-unit>
-            <trans-unit id="flux.modalLight.fields.settings.additionalClassesModal">
-                <source>Additional Class for Modal</source>
-            </trans-unit>
-            <!-- /ModalLight.htm -->
-
-            <!-- ButtonGroup.html -->
-            <trans-unit id="flux.buttongroup" xml:space="preserve">
+			<!-- ButtonGroup.html -->
+			<trans-unit id="flux.buttongroup" xml:space="preserve">
 				<source>Button Group</source>
 			</trans-unit>
 			<trans-unit id="flux.buttongroup.description" xml:space="preserve">
@@ -278,10 +273,10 @@
 			<trans-unit id="flux.buttongroup.areas.content" xml:space="preserve">
 				<source>Buttons</source>
             </trans-unit>
-            <!-- /ButtonGroup.html -->
+			<!-- /ButtonGroup.html -->
 
-            <!-- Thumbnails.html -->
-            <trans-unit id="flux.thumbnails" xml:space="preserve">
+			<!-- Thumbnails.html -->
+			<trans-unit id="flux.thumbnails" xml:space="preserve">
 				<source>Thumbnail Grid</source>
 			</trans-unit>
 			<trans-unit id="flux.thumbnails.areas.content" xml:space="preserve">
@@ -335,9 +330,9 @@
 			<trans-unit id="flux.thumbnails.objects.content.message" xml:space="preserve">
 				<source> </source>
 			</trans-unit>
-            <!-- /Thumbnails.html -->
+			<!-- /Thumbnails.html -->
 
-            <trans-unit id="flux.accordion" xml:space="preserve">
+			<trans-unit id="flux.accordion" xml:space="preserve">
 				<source> Accordion with content elements</source>
 			</trans-unit>
 			<trans-unit id="flux.accordion.description" xml:space="preserve">
@@ -673,6 +668,6 @@
 			<trans-unit id="flux.alert.areas.content" xml:space="preserve">
 				<source>Alert content</source>
 			</trans-unit>
-        </body>
-    </file>
+		</body>
+	</file>
 </xliff>

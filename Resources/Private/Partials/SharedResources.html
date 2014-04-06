@@ -1,10 +1,8 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 
-
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
-		>
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 	<f:section name="SharedResources">
 		<v:asset.style name="sitemap" group="page">
 			.sitemap .lead,
@@ -31,10 +29,9 @@
 			}
 		</v:asset.style>
 		{v:var.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:var.set(name: 'settings')}
-		
+
 		<f:if condition="{settings.enableCustomStyle} == 1">
 			<v:asset.style name="customTheme" group="custom" path="{settings.customStylePath}" dependencies="bootstrap-css" standalone="TRUE" />
 		</f:if>
-
-    </f:section>
+	</f:section>
 </div>

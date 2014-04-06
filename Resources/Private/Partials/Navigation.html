@@ -3,9 +3,7 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
-		>
-
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 	<f:section name="Navigation">
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
 			<div class="container">
@@ -40,9 +38,7 @@
 										<span class="input-group-addon">
 											<span class="glyphicon glyphicon-search"></span>
 										</span>
-									<input class="form-control input" type="text"
-										   name="tx_indexedsearch[sword]" value=""
-										   placeholder="Search...">
+									<input class="form-control input" type="text" name="tx_indexedsearch[sword]" value="" placeholder="Search...">
 								</div>
 
 							</div>
@@ -52,8 +48,7 @@
 						<ul class="nav navbar-nav">
 							<f:for each="{menu}" as="mainPage" iteration="iteration">
 								<li class="{mainPage.class}">
-									<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}"
-									   class="{mainPage.class}">{mainPage.title}</a>
+									<a tabindex="{iteration.cycle -> v:math.sum(b: 100)}" href="{mainPage.link}" class="{mainPage.class}">{mainPage.title}</a>
 								</li>
 							</f:for>
 						</ul>

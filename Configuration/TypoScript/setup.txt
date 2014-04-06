@@ -4,9 +4,9 @@ plugin.tx_fluidbootstraptheme.view {
 	partialRootPath = {$plugin.tx_fluidbootstraptheme.view.partialRootPath}
 	layoutRootPath = {$plugin.tx_fluidbootstraptheme.view.layoutRootPath}
 	widget {
-    		Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
-    		TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
-    	}
+    	Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
+    	TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
+    }
 }
 
 plugin.tx_fluidbootstraptheme.settings {
@@ -61,5 +61,3 @@ plugin.tx_vhs.settings.asset.fontawesome {
     group = cdn
     standalone = 1
 }
-
-
