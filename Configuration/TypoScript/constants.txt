@@ -1,0 +1,5 @@
+plugin.tx_fluidbootstraptheme.view {
+	templateRootPath = EXT:fluidbootstraptheme/Resources/Private/Templates/
+	partialRootPath = EXT:fluidbootstraptheme/Resources/Private/Partials/
+	layoutRootPath = EXT:fluidbootstraptheme/Resources/Private/Layouts/
+}

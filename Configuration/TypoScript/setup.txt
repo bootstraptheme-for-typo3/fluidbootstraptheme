@@ -1,8 +1,8 @@
 [GLOBAL]
 plugin.tx_fluidbootstraptheme.view {
-	templateRootPath = EXT:fluidbootstraptheme/Resources/Private/Templates/
-	partialRootPath = EXT:fluidbootstraptheme/Resources/Private/Partials/
-	layoutRootPath = EXT:fluidbootstraptheme/Resources/Private/Layouts/
+	templateRootPath = {$plugin.tx_fluidbootstraptheme.view.templateRootPath}
+	partialRootPath = {$plugin.tx_fluidbootstraptheme.view.partialRootPath}
+	layoutRootPath = {$plugin.tx_fluidbootstraptheme.view.layoutRootPath}
 	widget {
     		Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
     		TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
