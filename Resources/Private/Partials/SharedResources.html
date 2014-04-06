@@ -30,17 +30,11 @@
 			font-weight: normal;
 			}
 		</v:asset.style>
-		<v:asset.style name="fontawesome" group="cdn" path="//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css" external="TRUE" standalone="TRUE" />
-		<v:asset.style name="bootstrap-css" group="cdn" path="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" external="TRUE" standalone="TRUE" />
 		{v:var.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:var.set(name: 'settings')}
 		
 		<f:if condition="{settings.enableCustomStyle} == 1">
 			<v:asset.style name="customTheme" group="custom" path="{settings.customStylePath}" dependencies="bootstrap-css" standalone="TRUE" />
 		</f:if>
 
-		<v:asset.script name="bootstrap-core" group="cdn" path="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js" external="TRUE" standalone="TRUE" dependencies="jquery" />
-		<v:asset.script name="jquery" group="cdn" path="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" external="TRUE" standalone="TRUE" />
-		<v:asset.script name="jquery-uid" group="cdn" path="//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js" external="TRUE" standalone="TRUE" dependencies="jquery" />
-        <v:asset.script name="eqheight" group="JS" path="EXT:fluidbootstraptheme/Resources/Public/JS/eqheight.js" allowMoveToFooter="1" dependencies="jquery"/>
     </f:section>
 </div>
