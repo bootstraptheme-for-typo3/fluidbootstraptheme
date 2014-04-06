@@ -5,13 +5,6 @@ plugin.tx_fluidbootstraptheme.settings {
 	searchFieldName = {$plugin.tx_fluidbootstraptheme.settings.searchFieldName}
 	addWell = {$plugin.tx_fluidbootstraptheme.settings.addWell}
 	wellSmall = {$plugin.tx_fluidbootstraptheme.settings.wellSmall}
-	lightJumbotronColor = {$plugin.tx_fluidbootstraptheme.settings.lightJumbotronColor}
-	darkJumbotronColor = {$plugin.tx_fluidbootstraptheme.settings.darkJumbotronColor}
-	jumbotronTextColor = {$plugin.tx_fluidbootstraptheme.settings.jumbotronTextColor}
-	jumbotronPadding = {$plugin.tx_fluidbootstraptheme.settings.jumbotronPadding}
-	headerFontSize = {$plugin.tx_fluidbootstraptheme.settings.headerFontSize}
-	paragraphFontSize = {$plugin.tx_fluidbootstraptheme.settings.paragraphFontSize}
-	jumbotronMarginBottom = {$plugin.tx_fluidbootstraptheme.settings.jumbotronMarginBottom}
 	position = {$plugin.tx_fluidbootstraptheme.settings.position}
 	distribution = {$plugin.tx_fluidbootstraptheme.settings.distribution}
 	gridColumns = {$plugin.tx_fluidbootstraptheme.settings.gridColumns}

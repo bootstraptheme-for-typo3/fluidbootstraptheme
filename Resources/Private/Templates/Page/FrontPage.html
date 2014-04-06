@@ -13,31 +13,6 @@
 			<flux:field.input name="settings.entryLevel" label="Main menu entry level override for this page only"
 			                           eval="int,trim" minimum="0" maximum="6" default="{settings.menu.main.entryLevel}">
 			</flux:field.input>
-			<flux:field.input name="settings.lightJumbotronColor" label="Light Jumbotron background color" default="#FFAA00">
-				<flux:wizard.colorPicker hideParent="TRUE" />
-			</flux:field.input>
-			<flux:field.input name="settings.darkJumbotronColor" label="Dark Jumbotron background color" default="#A66F00">
-				<flux:wizard.colorPicker hideParent="TRUE" />
-			</flux:field.input>
-			<flux:field.input name="settings.jumbotronTextColor" label="Jumbotron text color" default="#FFFFFF">
-				<flux:wizard.colorPicker hideParent="TRUE" />
-			</flux:field.input>
-			<flux:field.input name="settings.jumbotronPadding" label="Jumbotron top and bottom padding" default="70"
-			                           minimum="0" maximum="200" eval="int,trim">
-				<flux:wizard.slider hideParent="TRUE" width="200" />
-			</flux:field.input>
-			<flux:field.input name="settings.headerFontSize" label="Jumbotron header font size" default="80"
-			                           minimum="0" maximum="200" eval="int,trim">
-				<flux:wizard.slider hideParent="TRUE" width="200" />
-			</flux:field.input>
-			<flux:field.input name="settings.paragraphFontSize" label="Jumbotron paragraph font size" default="24"
-			                           minimum="0" maximum="200" eval="int,trim">
-				<flux:wizard.slider hideParent="TRUE" width="200" />
-			</flux:field.input>
-			<flux:field.input name="settings.jumbotronMarginBottom" label="Jumbotron bottom margin" default="24"
-			                           minimum="0" maximum="80" eval="int,trim">
-				<flux:wizard.slider hideParent="TRUE" width="200" />
-			</flux:field.input>
 			<flux:field.checkbox name="settings.enableSearch" label="Enable search field in top navigation bar" default="1" />
 			<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="searchPageUid" label="Page with search form">
 				<flux:wizard.list table="pages" />
