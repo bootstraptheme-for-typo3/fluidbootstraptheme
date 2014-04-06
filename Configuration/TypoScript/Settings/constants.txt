@@ -11,20 +11,6 @@ plugin.tx_fluidbootstraptheme.settings {
 	addWell = 0
 	# cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=make the well's padding smaller than standard
 	wellSmall = 0
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=color; label=Jumbotron light background color
-	lightJumbotronColor =
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=color; label=Jumbotron dark background color
-	darkJumbotronColor =
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=color; label=Jumbotron text color
-	jumbotronTextColor =
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=Jumbotron general padding
-	jumbotronPadding = 50
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=Jumbotron header font size
-	headerFontSize = 48
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=Jumbotron paragraph font size
-	paragraphFontSize = 22
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=Jumbotron margin bottom
-	jumbotronMarginBottom = 40
 	# cat=FLUIDBOOTSTRAPTHEME/settings; type=options[left,right]; label=Placement of sidebar
 	position = left
 	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=Width of sidebar (what remains of a 12-column total is used by main content)
