@@ -48,7 +48,7 @@ plugin.tx_vhs.settings.asset.jquery-uid {
 }
 
 plugin.tx_vhs.settings.asset.eqheight {
-    path = EXT:fluidbootstraptheme/Resources/Public/JS/eqheight.js
+    path = EXT:fluidbootstraptheme/Resources/Public/Javascript/eqheight.js
     overwrite = Integer 0/1 # If set to `1` this Asset is permitted to overwrite existing, identically named Assets
     dependencies = jquery
     group = JS
