@@ -59,12 +59,14 @@ plugin.tx_vhs.settings.asset{
 		dependencies = jquery
 		group = JS
 		allowMoveToFooter = 1
+		type = js
 	}
 
 	fontawesome {
-			path = http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css
-			external = 1
-			group = cdn
-			standalone = 1
-		}
+		path = http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css
+		external = 1
+		group = cdn
+		standalone = 1
+		type = css
+	}
 }
