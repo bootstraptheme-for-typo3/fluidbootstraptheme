@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE')) {
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['fluidbootstraptheme']['setup'] = unserialize($_EXTCONF);
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Bootstrap Theme');
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Settings', 'Bootstrap Theme settings');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript/Settings', 'Bootstrap Theme Settings');
 
 if (FALSE === (boolean) $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['fluidbootstraptheme']['setup']['disablePageTemplates']) {
 	\FluidTYPO3\Flux\Core::registerProviderExtensionKey('FluidBT.Fluidbootstraptheme', 'Page');

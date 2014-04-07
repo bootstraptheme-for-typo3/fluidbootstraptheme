@@ -1,10 +1,8 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 
-
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
-		>
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 	<f:section name="Footer">
 		<!-- footer, optional content elements from colPos 2 (two) -->
 		<v:page.content.render column="2" as="footerContentElements">
@@ -34,7 +32,8 @@
 								<ul class="unstyled">
 									<f:for each="{menu}" as="submenuPage">
 										<li>
-											<f:link.page pageUid="{submenuPage.uid}" class="muted">{submenuPage.title}</f:link.page>
+											<f:link.page pageUid="{submenuPage.uid}" class="muted">{submenuPage.title}
+											</f:link.page>
 										</li>
 									</f:for>
 								</ul>

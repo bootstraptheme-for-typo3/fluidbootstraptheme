@@ -1,31 +1,33 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
-<f:layout name="Content"/>
+
+<f:layout name="Content" />
+
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
-     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
-<f:section name="Configuration">
-	<flux:form wizardTab="Bootstrap" id="EmbedVideo"
-			   options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_008_film.png')}">
-		<flux:form.sheet name="EmbedVideo">
-			<flux:field.text name="settings.videoIframe" default="Paste your iFrame here" required="1"
-							 cols="100" rows="10"  />
-		</flux:form.sheet>
-		<flux:form.sheet name="additionalCSS">
-			<flux:field.input name="settings.videoIframeCustomCSS"  />
-		</flux:form.sheet>
-	</flux:form>
-</f:section>
-<f:section name="Preview">
-	<flux:widget.grid/>
-</f:section>
-<f:section name="Main">
+	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	<f:section name="Configuration">
+		<flux:form wizardTab="Bootstrap" id="EmbedVideo"
+				   options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_008_film.png')}">
+			<flux:form.sheet name="EmbedVideo">
+				<flux:field.text name="settings.videoIframe" default="Paste your iFrame here" required="1"
+								 cols="100" rows="10" />
+			</flux:form.sheet>
+			<flux:form.sheet name="additionalCSS">
+				<flux:field.input name="settings.videoIframeCustomCSS" />
+			</flux:form.sheet>
+		</flux:form>
+	</f:section>
+	<f:section name="Preview">
+		<flux:widget.grid />
+	</f:section>
+	<f:section name="Main">
 
-	<v:asset.style name="responsiveVideo" path="EXT:fluidbootstraptheme/Resources/Public/Stylesheets/ResponsiveVideo.css" group="responsiveVideo" standalone="true"/>
+		<v:asset.style name="responsiveVideo" path="EXT:fluidbootstraptheme/Resources/Public/Stylesheets/ResponsiveVideo.css" group="responsiveVideo" standalone="true" />
 
-	<div class="video-container {settings.videoIframeCustomCSS} ">
-		<f:format.raw>{settings.videoIframe}</f:format.raw>
-	</div>
-</f:section>
+		<div class="video-container {settings.videoIframeCustomCSS} ">
+			<f:format.raw>{settings.videoIframe}</f:format.raw>
+		</div>
+	</f:section>
 </div>

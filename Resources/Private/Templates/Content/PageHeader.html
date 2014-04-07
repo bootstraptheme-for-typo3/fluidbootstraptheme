@@ -11,11 +11,19 @@
 </f:section>
 
 <f:section name="Preview">
-	<h2>{header} <f:if condition="{subheader}"><small>{subheader}</small></f:if></h2>
+	<h2>{header}
+		<f:if condition="{subheader}">
+			<small>{subheader}</small>
+		</f:if>
+	</h2>
 </f:section>
 
 <f:section name="Main">
 	<div class="page-header">
-		<h1>{header}<f:if condition="{subheader}"> <small>{subheader}</small></f:if></h1>
+		<h1>{header}
+			<f:if condition="{subheader}">
+				<small>{subheader}</small>
+			</f:if>
+		</h1>
 	</div>
 </f:section>
