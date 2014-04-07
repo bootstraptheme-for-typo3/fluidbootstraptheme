@@ -8,6 +8,5 @@ plugin.tx_fluidbootstraptheme.settings {
 	position = {$plugin.tx_fluidbootstraptheme.settings.position}
 	distribution = {$plugin.tx_fluidbootstraptheme.settings.distribution}
 	gridColumns = {$plugin.tx_fluidbootstraptheme.settings.gridColumns}
-	enableCustomStyle = {$plugin.tx_fluidbootstraptheme.settings.enableCustomStyle}
-	customStylePath = {$plugin.tx_fluidbootstraptheme.settings.customStylePath}
+
 }

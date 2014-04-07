@@ -17,8 +17,5 @@ plugin.tx_fluidbootstraptheme.settings {
 	distribution = 4
 	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=Number of grid columns: Set this to the same number used in your custom Bootstrap CSS if you've switched from the default 12-grid
     gridColumns = 12
-    # cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=Enable CustomStyle (ThemeCSS
-    enableCustomStyle = 0
-    # cat=FLUIDBOOTSTRAPTHEME/settings; type=string; label=Path to CustomStyle (ThemeCSS)
-    customStylePath =
+
 }

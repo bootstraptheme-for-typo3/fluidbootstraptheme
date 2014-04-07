@@ -4,8 +4,8 @@ plugin.tx_fluidbootstraptheme.view {
 	partialRootPath = {$plugin.tx_fluidbootstraptheme.view.partialRootPath}
 	layoutRootPath = {$plugin.tx_fluidbootstraptheme.view.layoutRootPath}
 	widget {
-    	Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
-    	TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
+    		Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
+    		TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
     }
 }
 
@@ -16,48 +16,50 @@ plugin.tx_fluidbootstraptheme.settings {
 		sub.entryLevel = 1
 	}
 }
-plugin.tx_vhs.settings.asset.bootstrap-css {
-    path = //netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css
-    external = 1
-    group = cdn
-    standalone = 1
-}
-plugin.tx_vhs.settings.asset.bootstrap-core {
-    path = //netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js
-    external = 1
-    dependencies = jquery
-    group = cdn
-    standalone = 1
-    allowMoveToFooter = 1
-}
-plugin.tx_vhs.settings.asset.jquery {
-    path = //ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
-    external = 1
-    group = cdn
-    standalone = 1
-    allowMoveToFooter = 0
-}
+plugin.tx_vhs.settings.asset{
+	bootstrap-css {
+		path = //netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css
+		external = 1
+		group = cdn
+		standalone = 1
+	}
+	bootstrap-core {
+		path = //netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js
+		external = 1
+		dependencies = jquery
+		group = cdn
+		standalone = 1
+		allowMoveToFooter = 1
+	}
+	jquery {
+		path = //ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+		external = 1
+		group = cdn
+		standalone = 1
+		allowMoveToFooter = 0
+	}
 
-plugin.tx_vhs.settings.asset.jquery-uid {
-    path = //ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js
-    external = 1
-    dependencies = jquery
-    group = cdn
-    standalone = 1
-    allowMoveToFooter = 1
-}
+	jquery-uid {
+		path = //ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js
+		external = 1
+		dependencies = jquery
+		group = cdn
+		standalone = 1
+		allowMoveToFooter = 1
+	}
 
-plugin.tx_vhs.settings.asset.eqheight {
-    path = EXT:fluidbootstraptheme/Resources/Public/Javascript/eqheight.js
-    overwrite = Integer 0/1 # If set to `1` this Asset is permitted to overwrite existing, identically named Assets
-    dependencies = jquery
-    group = JS
-    allowMoveToFooter = 1
-}
+	eqheight {
+		path = EXT:fluidbootstraptheme/Resources/Public/Javascript/eqheight.js
+		overwrite = Integer 0/1 # If set to `1` this Asset is permitted to overwrite existing, identically named Assets
+		dependencies = jquery
+		group = JS
+		allowMoveToFooter = 1
+	}
 
-plugin.tx_vhs.settings.asset.fontawesome {
-    path = //netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css
-    external = 1
-    group = cdn
-    standalone = 1
+	fontawesome {
+		path = //netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css
+		external = 1
+		group = cdn
+		standalone = 1
+	}
 }
