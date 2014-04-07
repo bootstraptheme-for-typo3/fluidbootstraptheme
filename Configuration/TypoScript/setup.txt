@@ -17,15 +17,15 @@ plugin.tx_fluidbootstraptheme.settings {
 	}
 }
 plugin.tx_vhs.settings.asset{
-bootstrapcss {
-	path = http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css
-	external = 1
-	group = cdn
-	standalone = 1
-	type = css
-}
+	bootstrapcss {
+		path = http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css
+		external = 1
+		group = cdn
+		standalone = 1
+		type = css
+	}
 
-bootstrapcore {
+	bootstrapcore {
 		path = http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js
 		external = 1
 		dependencies = jquery
@@ -35,7 +35,7 @@ bootstrapcore {
 		type = js
 	}
 
-jquery {
+	jquery {
 		path = http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
 		external = 1
 		group = cdn
@@ -44,7 +44,7 @@ jquery {
 		type = js
 	}
 
-jqueryuid {
+	jqueryuid {
 		path = http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js
 		external = 1
 		dependencies = jquery
@@ -54,17 +54,17 @@ jqueryuid {
 		type = js
 	}
 
-eqheight {
+	eqheight {
 		path = EXT:fluidbootstraptheme/Resources/Public/Javascript/eqheight.js
 		dependencies = jquery
 		group = JS
 		allowMoveToFooter = 1
 	}
 
-fontawesome {
-		path = http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css
-		external = 1
-		group = cdn
-		standalone = 1
-	}
+	fontawesome {
+			path = http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css
+			external = 1
+			group = cdn
+			standalone = 1
+		}
 }
