@@ -1,65 +1,60 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
-<f:layout name="Content"/>
+
+<f:layout name="Content" />
+
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
 	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-<f:section name="Configuration">
-	<flux:form wizardTab="Bootstrap" id="modalLight" options="{useTypoScript: 0}"
-			   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_151_new_window.png')}">
+	<f:section name="Configuration">
+		<flux:form wizardTab="Bootstrap" id="modalLight" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_151_new_window.png')}">
+			<flux:form.sheet name="openbutton">
+				<flux:field.input name="settings.buttonText" />
+				<flux:field.input name="settings.title" />
+			</flux:form.sheet>
+			<flux:form.sheet name="advanced" label="Advanced">
+				<flux:field.input name="settings.additionalClassesButton" />
+				<flux:field.input name="settings.additionalClassesModal" />
+			</flux:form.sheet>
 
-		<flux:form.sheet name="openbutton" >
-			<flux:field.input name="settings.buttonText" />
-			<flux:field.input name="settings.title" />
+			<flux:grid>
+				<flux:grid.row>
+					<flux:grid.column>
+						<flux:form.content name="content" label="Content Element" />
+					</flux:grid.column>
+				</flux:grid.row>
+			</flux:grid>
+		</flux:form>
+	</f:section>
 
-		</flux:form.sheet>
-		<flux:form.sheet name="advanced" label="Advanced">
-			<flux:field.input name="settings.additionalClassesButton" />
-			<flux:field.input name="settings.additionalClassesModal" />
-		</flux:form.sheet>
+	<f:section name="Preview">
+		<b>Bootstrap3: Modal Light</b><br />
+		Modal Content:title: {settings.title} / buttonText: {settings.buttonText}<br />
+		Modal Header: render Header: {settings.renderHeader} / Title: {settings.title}
+		<flux:widget.grid />
+	</f:section>
 
-            <flux:grid>
-                <flux:grid.row>
-                    <flux:grid.column>
-                        <flux:form.content name="content" label="Content Element"/>
-                    </flux:grid.column>
-                </flux:grid.row>
-            </flux:grid>
-
-
-	</flux:form>
-</f:section>
-
-<f:section name="Preview">
-	<b>Bootstrap3: Modal Light</b><br/>
-    Modal Content:title: {settings.title} / buttonText: {settings.buttonText}<br/>
-	Modal Header: render Header: {settings.renderHeader} / Title: {settings.title}
-	<flux:widget.grid />
-</f:section>
-
-<f:section name="Main">
-    <v:var.set name="id" value="modal-{record.uid}" />
-	<button class="btn {settings.additionalClassesButton}" data-toggle="modal" data-target="#{id}">
-	{settings.buttonText}
-	</button>
-    <div class="modal fade {additionalClassesModal}" id="{id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-{id}" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
+	<f:section name="Main">
+		<v:var.set name="id" value="modal-{record.uid}" />
+		<button class="btn {settings.additionalClassesButton}" data-toggle="modal" data-target="#{id}">
+			{settings.buttonText}
+		</button>
+		<div class="modal fade {additionalClassesModal}" id="{id}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel-{id}" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
 					<div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<f:if condition="{settings.title}">
 							<h4 class="modal-title" id="myModalLabel-{id}">{settings.title}</h4>
 						</f:if>
 					</div>
-                <div class="modal-body">
-					<flux:content.render area="content"/>
-                </div>
-            </div>
-        </div>
-    </div>
-</f:section>
-
-
+					<div class="modal-body">
+						<flux:content.render area="content" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</f:section>
 </div>

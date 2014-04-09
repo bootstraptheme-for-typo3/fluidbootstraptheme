@@ -1,183 +1,179 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
-<f:layout name="FCE"/>
+
+<f:layout name="FCE" />
+
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
-     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
-
-    <f:section name="Configuration">
-        <flux:form wizardTab="Grid" id="grid3" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png')}">
-            <flux:form.sheet name="colSettings">
-                <flux:field.select name="settings.grid3.split"
-                                   items="30-30-30,20-60-20,20-20-60,more"
-                                   default="30-30-30"
-                                   requestUpdate="1">
-                </flux:field.select>
-                <flux:field.checkbox name="settings.grid3.eqh" label="Equal Heigt of Colums" default="0"/>
-                <f:if condition="{settings.grid3.split}=='more'">
-                    <f:then>
-                        <flux:field.custom name="CarouselDescription">
-                            <h3>
-                                Customize the Column settings:
-                            </h3>
-                        </flux:field.custom>
-                        <f:render section="grid3more" arguments="{_all}"/>
-                    </f:then>
-                    <f:else>
-                        <flux:grid>
-                            <flux:grid.row>
-
-									<flux:grid.column style="width: 33.333%;border-right: 1px dotted #999;">
-										<flux:form.content name="column1" label="Column Left"/>
-									</flux:grid.column>
-									<flux:grid.column style="width: 33.333%;border-right: 1px dotted #999;">
-										<flux:form.content name="column2" label="Column Middle"/>
-									</flux:grid.column>
-									<flux:grid.column style="width: 33.333%;">
-										<flux:form.content name="column3" label="Column Right"/>
-									</flux:grid.column>
-
-                            </flux:grid.row>
-                        </flux:grid>
-                    </f:else>
-                </f:if>
-            </flux:form.sheet>
+	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	<f:section name="Configuration">
+		<flux:form wizardTab="Grid" id="grid3" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png')}">
+			<flux:form.sheet name="colSettings">
+				<flux:field.select name="settings.grid3.split"
+								   items="30-30-30,20-60-20,20-20-60,more"
+								   default="30-30-30"
+								   requestUpdate="1">
+				</flux:field.select>
+				<flux:field.checkbox name="settings.grid3.eqh" label="Equal Heigt of Colums" default="0" />
+				<f:if condition="{settings.grid3.split}=='more'">
+					<f:then>
+						<flux:field.custom name="CarouselDescription">
+							<h3>
+								Customize the Column settings:
+							</h3>
+						</flux:field.custom>
+						<f:render section="grid3more" arguments="{_all}" />
+					</f:then>
+					<f:else>
+						<flux:grid>
+							<flux:grid.row>
+								<flux:grid.column style="width: 33.333%;border-right: 1px dotted #999;">
+									<flux:form.content name="column1" label="Column Left" />
+								</flux:grid.column>
+								<flux:grid.column style="width: 33.333%;border-right: 1px dotted #999;">
+									<flux:form.content name="column2" label="Column Middle" />
+								</flux:grid.column>
+								<flux:grid.column style="width: 33.333%;">
+									<flux:form.content name="column3" label="Column Right" />
+								</flux:grid.column>
+							</flux:grid.row>
+						</flux:grid>
+					</f:else>
+				</f:if>
+			</flux:form.sheet>
 			<flux:form.sheet name="additionalCSS">
-				<flux:field.input name="settings.grid3.rowCSS" size="10"/>
-				<flux:field.input name="settings.grid3.col1CSS" size="10"/>
+				<flux:field.input name="settings.grid3.rowCSS" size="10" />
+				<flux:field.input name="settings.grid3.col1CSS" size="10" />
 				<flux:field.checkbox name="settings.grid3.col1hide" default="0" />
-				<flux:field.input name="settings.grid3.col2CSS" size="10"/>
+				<flux:field.input name="settings.grid3.col2CSS" size="10" />
 				<flux:field.checkbox name="settings.grid3.col2hide" default="0" />
-				<flux:field.input name="settings.grid3.col3CSS" size="10"/>
+				<flux:field.input name="settings.grid3.col3CSS" size="10" />
 				<flux:field.checkbox name="settings.grid3.col3hide" default="0" />
 			</flux:form.sheet>
-
 		</flux:form>
-    </f:section>
+	</f:section>
 
-    <f:section name="grid3more">
-        <flux:field.select name="settings.grid3.col1width"
-                           items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
-                           required="1"
-                           default="col-sm-4"
-                />
-        <flux:field.checkbox name="settings.grid3.col1hide" default="0" />
-        <flux:field.input name="settings.grid3.col1CSS" size="10"/>
-        <flux:field.select name="settings.grid3.col2width"
-                           items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
-                           required="1"
-                           default="col-sm-4"
-                />
-        <flux:field.checkbox name="settings.grid3.col2hide" default="0" />
-        <flux:field.input name="settings.grid3.col2CSS" size="10"/>
-        <flux:field.select name="settings.grid3.col3width"
-                           items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
-                           required="1"
-                           default="col-sm-4"
-                />
-        <flux:field.checkbox name="settings.grid3.col3hide" default="0" />
-        <flux:field.input name="settings.grid3.col3CSS" size="10"/>
-        <flux:grid>
-            <flux:grid.row>
-                <flux:grid.column
-                        style="width: 33.333%;border-right: 1px dotted #999;">
-                    <flux:form.content name="column1"
-                                       label="Column Left ({settings.grid3.col1width})"/>
-                </flux:grid.column>
-                <flux:grid.column
-                        style="width: 33.333%;border-right: 1px dotted #999;">
-                    <flux:form.content name="column2"
-                                       label="Column Middle ({settings.grid3.col2width})"/>
-                </flux:grid.column>
-                <flux:grid.column
-                        style="width: 33.333%;">
-                    <flux:form.content name="column3"
-                                       label="Column Right ({settings.grid3.col3width})"/>
-                </flux:grid.column>
-            </flux:grid.row>
-        </flux:grid>
-    </f:section>
+	<f:section name="grid3more">
+		<flux:field.select name="settings.grid3.col1width"
+						   items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+						   required="1"
+						   default="col-sm-4"
+				/>
+		<flux:field.checkbox name="settings.grid3.col1hide" default="0" />
+		<flux:field.input name="settings.grid3.col1CSS" size="10" />
+		<flux:field.select name="settings.grid3.col2width"
+						   items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+						   required="1"
+						   default="col-sm-4"
+				/>
+		<flux:field.checkbox name="settings.grid3.col2hide" default="0" />
+		<flux:field.input name="settings.grid3.col2CSS" size="10" />
+		<flux:field.select name="settings.grid3.col3width"
+						   items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+						   required="1"
+						   default="col-sm-4"
+				/>
+		<flux:field.checkbox name="settings.grid3.col3hide" default="0" />
+		<flux:field.input name="settings.grid3.col3CSS" size="10" />
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column
+						style="width: 33.333%;border-right: 1px dotted #999;">
+					<flux:form.content name="column1"
+									   label="Column Left ({settings.grid3.col1width})" />
+				</flux:grid.column>
+				<flux:grid.column
+						style="width: 33.333%;border-right: 1px dotted #999;">
+					<flux:form.content name="column2"
+									   label="Column Middle ({settings.grid3.col2width})" />
+				</flux:grid.column>
+				<flux:grid.column
+						style="width: 33.333%;">
+					<flux:form.content name="column3"
+									   label="Column Right ({settings.grid3.col3width})" />
+				</flux:grid.column>
+			</flux:grid.row>
+		</flux:grid>
+	</f:section>
 
-
-    <f:section name="FrontendColRenderingGrid3">
-        <div class="row {settings.grid3.rowCSS} ">
-            <f:if condition="{settings.grid3.split}=='more'">
-                <f:then>
-                    <f:render section="FEMoreGrid2" arguments="{_all}"/>
-                </f:then>
-                <f:else>
-                    <f:render section="FE{settings.grid3.split -> v:format.case(case: 'settings.grid3.split')}"
-                              arguments="{_all}"/>
-                </f:else>
-            </f:if>
-        </div>
-    </f:section>
-
-    <f:comment>Frontend Switchcase Sections</f:comment>
-    <f:section name="FEMoreGrid2">
-        <div class="{settings.grid3.col1width} {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column1"/>
-        </div>
-        <div class="{settings.grid3.col2width} {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column2"/>
-        </div>
-        <div class="{settings.grid3.col2width} {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column3"/>
-        </div>
-    </f:section>
-	<f:section name="FE">
-		<div class="col-sm-4 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
-			<flux:flexform.renderContent area="column1"/>
-		</div>
-		<div class="col-sm-4 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-			<flux:flexform.renderContent area="column2"/>
-		</div>
-		<div class="col-sm-4 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-			<flux:flexform.renderContent area="column3"/>
+	<f:section name="FrontendColRenderingGrid3">
+		<div class="row {settings.grid3.rowCSS} ">
+			<f:if condition="{settings.grid3.split}=='more'">
+				<f:then>
+					<f:render section="FEMoreGrid2" arguments="{_all}" />
+				</f:then>
+				<f:else>
+					<f:render section="FE{settings.grid3.split -> v:format.case(case: 'settings.grid3.split')}"
+							  arguments="{_all}" />
+				</f:else>
+			</f:if>
 		</div>
 	</f:section>
-    <f:section name="FE30-30-30">
-        <div class="col-sm-4 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column1"/>
-        </div>
-        <div class="col-sm-4 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column2"/>
-        </div>
-        <div class="col-sm-4 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column3"/>
-        </div>
-    </f:section>
-    <f:section name="FE20-60-20">
-        <div class="col-sm-3 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column1"/>
-        </div>
-        <div class="col-sm-6 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column2"/>
-        </div>
-        <div class="col-sm-3 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column3"/>
-        </div>
-    </f:section>
-    <f:section name="FE20-20-60">
-        <div class="col-sm-3 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column1"/>
-        </div>
-        <div class="col-sm-3 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column2"/>
-        </div>
-        <div class="col-sm-6 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-            <flux:flexform.renderContent area="column3"/>
-        </div>
-    </f:section>
-    <f:comment>Frontend Switchcase Sections END</f:comment>
 
-    <f:section name="Preview">
-        <flux:widget.grid/>
-    </f:section>
+	<f:comment>Frontend Switchcase Sections</f:comment>
+	<f:section name="FEMoreGrid2">
+		<div class="{settings.grid3.col1width} {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column1" />
+		</div>
+		<div class="{settings.grid3.col2width} {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column2" />
+		</div>
+		<div class="{settings.grid3.col2width} {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column3" />
+		</div>
+	</f:section>
+	<f:section name="FE">
+		<div class="col-sm-4 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column1" />
+		</div>
+		<div class="col-sm-4 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column2" />
+		</div>
+		<div class="col-sm-4 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column3" />
+		</div>
+	</f:section>
+	<f:section name="FE30-30-30">
+		<div class="col-sm-4 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column1" />
+		</div>
+		<div class="col-sm-4 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column2" />
+		</div>
+		<div class="col-sm-4 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column3" />
+		</div>
+	</f:section>
+	<f:section name="FE20-60-20">
+		<div class="col-sm-3 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column1" />
+		</div>
+		<div class="col-sm-6 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column2" />
+		</div>
+		<div class="col-sm-3 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column3" />
+		</div>
+	</f:section>
+	<f:section name="FE20-20-60">
+		<div class="col-sm-3 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column1" />
+		</div>
+		<div class="col-sm-3 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column2" />
+		</div>
+		<div class="col-sm-6 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:flexform.renderContent area="column3" />
+		</div>
+	</f:section>
+	<f:comment>Frontend Switchcase Sections END</f:comment>
 
-    <f:section name="Main">
-        <f:render section="FrontendColRenderingGrid3" arguments="{_all}"/>
-    </f:section>
+	<f:section name="Preview">
+		<flux:widget.grid />
+	</f:section>
 
+	<f:section name="Main">
+		<f:render section="FrontendColRenderingGrid3" arguments="{_all}" />
+	</f:section>
 </div>

@@ -45,7 +45,7 @@ class ContentController extends AbstractContentController {
 		$record = $this->getRecord();
 		$useTypoScriptOptionFromForm = $this->provider->getForm($record)->getOption('useTypoScript');
 		if (NULL !== $useTypoScriptOptionFromForm) {
-			$this->settings['useTypoScript'] = (boolean) $useTypoScriptOptionFromForm;
+			$this->settings['useTypoScript'] = (boolean)$useTypoScriptOptionFromForm;
 		}
 		parent::initializeOverriddenSettings();
 	}
@@ -141,44 +141,51 @@ class ContentController extends AbstractContentController {
 	public function progressBarAction() {
 
 	}
-    /**
-     * @return string
-     */
-    public function modalLightAction() {
 
-    }
-    /**
-     * @return string
-     */
-    public function buttonAction() {
+	/**
+	 * @return string
+	 */
+	public function modalLightAction() {
 
-    }
-    /**
-     * @return string
-     */
-    public function embedVideoAction() {
+	}
 
-    }
-    /**
-     * @return string
-     */
-    public function simpleResponsiveImageAction() {
+	/**
+	 * @return string
+	 */
+	public function buttonAction() {
 
-    }
-    /**
-     * @return string
-     */
-    public function threeColumnAction() {
+	}
 
-    }
-    /**
-     * @return string
-     */
-    public function twoColumnAction() {
+	/**
+	 * @return string
+	 */
+	public function embedVideoAction() {
 
-    }
-    public function fourColumnAction() {
+	}
 
-    }
+	/**
+	 * @return string
+	 */
+	public function simpleResponsiveImageAction() {
+
+	}
+
+	/**
+	 * @return string
+	 */
+	public function threeColumnAction() {
+
+	}
+
+	/**
+	 * @return string
+	 */
+	public function twoColumnAction() {
+
+	}
+
+	public function fourColumnAction() {
+
+	}
 
 }

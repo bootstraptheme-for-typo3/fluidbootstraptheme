@@ -10,10 +10,6 @@
 		<!-- jumbotron with background image, optional content elements from colPos 1 (one) -->
 		<v:page.content.render column="1" as="jumbotronContentElements">
 			<f:if condition="{jumbotronContentElements}">
-				<v:asset.style name="jumbotron" path="{f:uri.resource(path: 'Stylesheets/Jumbotron.css', extensionName: 'FluidpagesBootstrap')}"
-							   fluid="TRUE" arguments="{light: settings.lightJumbotronColor, dark: settings.darkJumbotronColor,
-						padding: settings.jumbotronPadding, text: settings.jumbotronTextColor,
-						headerSize: settings.headerFontSize, paragraphSize: settings.paragraphFontSize, marginBottom: settings.jumbotronMarginBottom}" />
 				<div class="jumbotron masthead">
 					<div class="container">
 						<f:for each="{jumbotronContentElements}" as="jumbotronContentElement">

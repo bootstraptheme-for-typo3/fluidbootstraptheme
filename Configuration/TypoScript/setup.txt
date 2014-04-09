@@ -1,12 +1,12 @@
 [GLOBAL]
 plugin.tx_fluidbootstraptheme.view {
-	templateRootPath = EXT:fluidbootstraptheme/Resources/Private/Templates/
-	partialRootPath = EXT:fluidbootstraptheme/Resources/Private/Partials/
-	layoutRootPath = EXT:fluidbootstraptheme/Resources/Private/Layouts/
+	templateRootPath = {$plugin.tx_fluidbootstraptheme.view.templateRootPath}
+	partialRootPath = {$plugin.tx_fluidbootstraptheme.view.partialRootPath}
+	layoutRootPath = {$plugin.tx_fluidbootstraptheme.view.layoutRootPath}
 	widget {
     		Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
     		TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
-    	}
+	}
 }
 
 plugin.tx_fluidbootstraptheme.settings {
@@ -14,5 +14,59 @@ plugin.tx_fluidbootstraptheme.settings {
 	menu {
 		main.entryLevel = 0
 		sub.entryLevel = 1
+	}
+}
+plugin.tx_vhs.settings.asset{
+	bootstrapcss {
+		path = http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css
+		external = 1
+		group = cdn
+		standalone = 1
+		type = css
+	}
+
+	bootstrapcore {
+		path = http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js
+		external = 1
+		dependencies = jquery
+		group = cdn
+		standalone = 1
+		allowMoveToFooter = 1
+		type = js
+	}
+
+	jquery {
+		path = http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+		external = 1
+		group = cdn
+		standalone = 1
+		allowMoveToFooter = 0
+		type = js
+	}
+
+	jqueryuid {
+		path = http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js
+		external = 1
+		dependencies = jquery
+		group = cdn
+		standalone = 1
+		allowMoveToFooter = 1
+		type = js
+	}
+
+	eqheight {
+		path = EXT:fluidbootstraptheme/Resources/Public/Javascript/eqheight.js
+		dependencies = jquery
+		group = JS
+		allowMoveToFooter = 1
+		type = js
+	}
+
+	fontawesome {
+		path = http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css
+		external = 1
+		group = cdn
+		standalone = 1
+		type = css
 	}
 }

@@ -1,48 +1,47 @@
 {namespace v=Tx_Vhs_ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
-<f:layout name="Content"/>
+
+<f:layout name="Content" />
+
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
-     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	<f:section name="Configuration">
+		<flux:form wizardTab="Bootstrap" id="progressBar" options="{useTypoScript: 0}"
+				   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_042_pie_chart.png')}">
+			<flux:form.sheet name="progressBar">
+				<flux:field.checkbox name="settings.progressBarAnimated" default="0" />
+				<flux:field.checkbox name="settings.progressBarStriped" default="0" />
+				<flux:field.select name="settings.progressBarColor"
+								   items="progress-bar-success,progress-bar-info,progress-bar-warning,progress-bar-danger"
+								   default="progress-bar-success" />
+				<flux:field.input name="settings.progressBarProgress" eval="int,trim" minimum="0" maximum="100" default="50">
+					<flux:wizard.slider hideParent="TRUE" step="1" width="100" />
+				</flux:field.input>
+				<flux:field.checkbox name="settings.progressBarShowText" default="0" />
+			</flux:form.sheet>
+		</flux:form>
+	</f:section>
 
-    <f:section name="Configuration">
-        <flux:form wizardTab="Bootstrap" id="progressBar" options="{useTypoScript: 0}"
-                   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_042_pie_chart.png')}">
-            <flux:form.sheet name="progressBar">
-                <flux:field.checkbox name="settings.progressBarAnimated" default="0"/>
-                <flux:field.checkbox name="settings.progressBarStriped" default="0"/>
-                <flux:field.select name="settings.progressBarColor"
-                                   items="progress-bar-success,progress-bar-info,progress-bar-warning,progress-bar-danger"
-                                   default="progress-bar-success"/>
-                <flux:field.input name="settings.progressBarProgress" eval="int,trim" minimum="0" maximum="100"
-                                  default="50">
-                    <flux:wizard.slider hideParent="TRUE" step="1" width="100"/>
-                </flux:field.input>
-                <flux:field.checkbox name="settings.progressBarShowText" default="0"/>
-            </flux:form.sheet>
-        </flux:form>
-    </f:section>
-
-
-    <f:section name="Preview">
-            <div style="border: solid 1px #000000; overflow: auto;">
-                <div style="float: left; width:{settings.progressBarProgress}%; background-color:#999999; height: 20px; overflow: hidden; text-align: center;">
-                    {settings.progressBarProgress}%
-                </div>
-            </div>
-    </f:section>
-    <f:section name="Main">
-        <div class="progress {f:if(condition: settings.progressBarStriped, then: 'progress-striped')} {f:if(condition: settings.progressBarAnimated, then: 'active')} ">
-            <div class="progress-bar {settings.progressBarColor}" role="progressbar"
-                 aria-valuenow="{settings.progressBarProgress}" aria-valuemin="0" aria-valuemax="100"
-                 style="width:{settings.progressBarProgress}%;">
-                <f:if condition="{settings.progressBarShowText}">
-                    <f:then>
-                        {settings.progressBarProgress}%
-                    </f:then>
-                </f:if>
-            </div>
-        </div>
-    </f:section>
+	<f:section name="Preview">
+		<div style="border: solid 1px #000000; overflow: auto;">
+			<div style="float: left; width:{settings.progressBarProgress}%; background-color:#999999; height: 20px; overflow: hidden; text-align: center;">
+				{settings.progressBarProgress}%
+			</div>
+		</div>
+	</f:section>
+	<f:section name="Main">
+		<div class="progress {f:if(condition: settings.progressBarStriped, then: 'progress-striped')} {f:if(condition: settings.progressBarAnimated, then: 'active')} ">
+			<div class="progress-bar {settings.progressBarColor}" role="progressbar"
+				 aria-valuenow="{settings.progressBarProgress}" aria-valuemin="0" aria-valuemax="100"
+				 style="width:{settings.progressBarProgress}%;">
+				<f:if condition="{settings.progressBarShowText}">
+					<f:then>
+						{settings.progressBarProgress}%
+					</f:then>
+				</f:if>
+			</div>
+		</div>
+	</f:section>
 </div>
