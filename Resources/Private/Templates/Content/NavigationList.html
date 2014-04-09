@@ -42,7 +42,7 @@
 	<f:section name="Preview">
 		<ul>
 			<f:for each="{items}" as="itemSectionObject">
-				<f:for each="{itemSectionObjects}" as="object" key="objectType">
+				<f:for each="{itemSectionObject}" as="object" key="objectType">
 					<li><strong>{objectType}</strong>
 						<f:if condition="{0: objectType} != {0: 'divider'}"><em>{object.text} ({object.target})</em>
 							<v:media.exists file="{object.icon}">Icon: {object.icon}</v:media.exists>
