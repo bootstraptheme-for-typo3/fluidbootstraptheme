@@ -5,7 +5,7 @@
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 	<f:section name="Footer">
 		<!-- footer, optional content elements from colPos 2 (two) -->
-		<v:page.content.render column="2" as="footerContentElements">
+		<v:content.render column="2" as="footerContentElements">
 			<f:if condition="{footerContentElements}">
 				<div class="footer">
 					<div class="right">
@@ -15,7 +15,7 @@
 					</div>
 				</div>
 			</f:if>
-		</v:page.content.render>
+		</v:content.render>
 		<div class="sitemap">
 			<h3 class="header">
 				<span>Site Map</span>

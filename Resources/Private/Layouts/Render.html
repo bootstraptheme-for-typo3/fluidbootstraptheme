@@ -8,10 +8,10 @@
 <div class="container">
 	<f:render section="HeroUnit" partial="HeroUnit" optional="TRUE" arguments="{_all}" />
 	<f:render section="TabNavigation" partial="TabNavigation" optional="TRUE" arguments="{_all}" />
-	<!--TYPO3SEARCH_begin-->
 	<div class="maincontent">
-		<v:page.content.render column="0" />
+		<!--TYPO3SEARCH_begin-->
+		<v:content.render column="0" />
+		<!--TYPO3SEARCH_end-->
 	</div>
-	<!--TYPO3SEARCH_end-->
 	<f:render section="Footer" partial="Footer" arguments="{_all}" />
 </div>
