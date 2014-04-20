@@ -10,12 +10,12 @@
 			<f:render partial="Sidebar" section="Sidebar" arguments="{_all}" />
 		</div>
 		<div class="col-sm-{v:math.subtract(a: 12, b: settings.distribution)}">
-			<v:page.content.render column="0" />
+			<v:content.render column="0" />
 		</div>
 	</f:section>
 	<f:section name="WithSideBarOutPutright">
 		<div class="col-sm-{v:math.subtract(a: 12, b: settings.distribution)}">
-			<v:page.content.render column="0" />
+			<v:content.render column="0" />
 		</div>
 		<div class="col-sm-{settings.distribution}">
 			<f:render partial="Sidebar" section="Sidebar" arguments="{_all}" />
