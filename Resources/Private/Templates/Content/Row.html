@@ -37,7 +37,7 @@
 	<f:section name="Main">
 		<div class="row">
 			<f:for each="{columns}" as="sectionObject" iteration="iteration">
-				<div class="{sectionObject.column.class} {sectionObject.column.additionalClass}">
+				<div class="{sectionObject.column.class} {sectionObject.column.additionalClass} {f:if(then: 'well', else: '', condition: '{sectionObject.column.addWell}')}">
 					<flux:content.render area="column{iteration.cycle}" />
 				</div>
 			</f:for>
