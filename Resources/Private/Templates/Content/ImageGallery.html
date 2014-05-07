@@ -1,0 +1,139 @@
+{namespace v=Tx_Vhs_ViewHelpers}
+{namespace flux=FluidTYPO3\Flux\ViewHelpers}
+
+<f:layout name="FCE"/>
+
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+    <f:section name="Configuration">
+        <flux:form wizardTab="Bootstrap" id="imgGallery" label="Image Gallery"
+                   description="Responsive Image Gallery"
+                   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_138_picture.png')}" options="{useTypoScript: 0}">
+            <flux:form.sheet name="imgGallerySheetImages" label="Images">
+                <flux:field.inline.fal name="settings.imgGalleryFalImageItems" label="Images" multiple="TRUE"
+                                       maxItems="20"
+                                       collapseAll="TRUE"/>
+            </flux:form.sheet>
+            <flux:form.sheet name="imgGallerySheetAdvanced" label="Advanced">
+                <flux:field.input name="settings.imgGalleryFalClassesModal"
+                                  label="Custom CSS Class"/>
+                <flux:field.checkbox name="settings.imgGalleryFalShowPreviewTitle" label="Show Title in Preview"
+                                     default="1"/>
+                <flux:field.select items="picture,footer"
+                                   name="settings.imgGalleryFalPrevNextPosition" label="Postition of Prev-Next"
+                                   default="footer"/>
+                <flux:field.input name="settings.imgGalleryFalImageWidth"
+                                  label="Size of Preview Image" default="320"/>
+                <flux:field.select name="settings.imgGalleryFalRowLg" items="2,3,4,6,12" default="4"
+                                   label="Images in a row - Large Screen"/>
+                <flux:field.select name="settings.imgGalleryFalRowMd" items="2,3,4,6,12" default="4"
+                                   label="Images in a row - Small Screen"/>
+                <flux:field.select name="settings.imgGalleryFalRowSm" items="2,3,4,6,12" default="3"
+                                   label="Images in a row - Tablet"/>
+                <flux:field.select name="settings.imgGalleryFalRowXs" items="2,3,4,6,12" default="2"
+                                   label="Images in a row - Phones"/>
+            </flux:form.sheet>
+        </flux:form>
+    </f:section>
+
+    <f:section name="Preview">
+        <v:content.resources.fal field="settings.imgGalleryFalImageItems" as="images">
+            <f:for each="{images}" as="image" iteration="iteration">
+                <v:media.image src="{image.url}" alt="{ImageAltText}" width="120c" height="120c"/>
+            </f:for>
+        </v:content.resources.fal>
+    </f:section>
+
+    <f:section name="Main">
+
+        <v:asset.style name="ImageGalleryCSS">
+            .carousel-control.right,.carousel-control.left {
+            background-image:none;
+            }
+            .text-right{
+            overflow:hidden;
+            white-space:nowrap;
+            }
+        </v:asset.style>
+
+        <div class="row">
+            <v:content.resources.fal field="settings.imgGalleryFalImageItems" as="images">
+                <f:for each="{images}" as="image" iteration="iteration">
+                    <div class='col-xs-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowXs)} col-sm-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowSm)}  col-md-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowMd)}  col-lg-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowLg)} '>
+                        <a class="thumbnail fancybox" data-toggle="modal" data-target="#modal{iteration.index}">
+                            <f:image src="{image.url}" width="{settings.imgGalleryFalImageWidth}c"
+                                     height="{settings.imgGalleryFalImageWidth}c"
+                                     alt="{image.alternative}"
+                                     title="{image.title}" class="img-responsive"/>
+                            <f:if condition="{settings.imgGalleryFalShowPreviewTitle}">
+                                <div class='text-right' style="min-height:20px;">
+                                    <small class='text-muted'>
+                                        <f:format.crop maxCharacters="100" append="..." respectWordBoundaries="1"
+                                                       respectHtml="1">
+                                            {f:if(then: '{image.title}', else: '{image.name}', condition:image.title)}
+                                        </f:format.crop>
+                                    </small>
+                                </div>
+                            </f:if>
+                        </a>
+                        <div id="modal{iteration.index}" class="modal fade {settings.imgGalleryFalClassesModal}"
+                             tabindex="-1" role="dialog"
+                             aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal"
+                                                aria-hidden="true">&times;</button>
+                                        <h4 class="modal-title text-center">
+                                            {f:if(then: '{image.title}', else: '{image.name}', condition:image.title)}
+                                        </h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <f:image src="{image.url}" width="858"
+                                                 alt="{image.alternative}"
+                                                 title="{image.title}" class="img-responsive"/>
+                                        <f:if condition="{0:settings.imgGalleryFalPrevNextPosition} == {0:'picture'}">
+                                            <a class="left carousel-control" data-dismiss="modal"
+                                               data-toggle="modal"
+                                               data-target="#modal{v:math.subtract(a: iteration.index, fail: 1, b: 1)}"
+                                               data-slide="prev">
+                                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                            </a>
+                                            <a class="right carousel-control" data-dismiss="modal"
+                                               data-toggle="modal"
+                                               data-target="#modal{v:math.sum(a: iteration.index, fail: 1, b: 1)}"
+                                               data-slide="next">
+                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </a>
+                                        </f:if>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <h4 class="modal-title">{image.description}</h4>
+                                        <f:if condition="{0:settings.imgGalleryFalPrevNextPosition} == {0:'footer'}">
+                                            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal"
+                                                    data-toggle="modal"
+                                                    data-target="#modal{v:math.subtract(a: iteration.index, fail: 1, b: 1)}">
+                                                <span class="glyphicon glyphicon glyphicon-chevron-left"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-primary btn-sm" data-dismiss="modal"
+                                                    data-toggle="modal"
+                                                    data-target="#modal{v:math.sum(a: iteration.index, fail: 1, b: 1)}">
+                                                <span class="glyphicon glyphicon glyphicon-chevron-right"></span>
+                                            </button>
+                                            <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">
+                                                <span class="glyphicon glyphicon glyphicon glyphicon-remove"></span>
+                                            </button>
+                                        </f:if>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </v:content.resources.fal>
+        </div>
+    </f:section>
+</div>

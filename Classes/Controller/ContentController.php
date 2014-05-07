@@ -187,5 +187,8 @@ class ContentController extends AbstractContentController {
 	public function fourColumnAction() {
 
 	}
+    public function imageGalleryAction() {
+
+    }
 
 }
