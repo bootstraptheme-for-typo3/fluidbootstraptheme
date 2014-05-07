@@ -79,30 +79,30 @@
 			<f:if condition="{settings.grid4.split}=='more'">
 				<f:then>
 					<div class="{settings.grid4.col1width} {settings.grid4.col1CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">
-						<flux:flexform.renderContent area="column1" />
+						<flux:content.render area="column1" />
 					</div>
 					<div class="{settings.grid4.col2width} {settings.grid4.col2CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
-						<flux:flexform.renderContent area="column2" />
+						<flux:content.render area="column2" />
 					</div>
 					<div class="{settings.grid4.col3width} {settings.grid4.col3CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
-						<flux:flexform.renderContent area="column3" />
+						<flux:content.render area="column3" />
 					</div>
 					<div class="{settings.grid4.col4width} {settings.grid4.col4CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
-						<flux:flexform.renderContent area="column4" />
+						<flux:content.render area="column4" />
 					</div>
 				</f:then>
 				<f:else>
 					<div class="col-sm-3 {settings.grid4.col1CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">
-						<flux:flexform.renderContent area="column1" />
+						<flux:content.render area="column1" />
 					</div>
 					<div class="col-sm-3 {settings.grid4.col2CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col2hide, then: 'hidden-xs')}">
-						<flux:flexform.renderContent area="column2" />
+						<flux:content.render area="column2" />
 					</div>
 					<div class="col-sm-3 {settings.grid4.col3CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col3hide, then: 'hidden-xs')}">
-						<flux:flexform.renderContent area="column3" />
+						<flux:content.render area="column3" />
 					</div>
 					<div class="col-sm-3 {settings.grid4.col4CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col4hide, then: 'hidden-xs')}">
-						<flux:flexform.renderContent area="column4" />
+						<flux:content.render area="column4" />
 					</div>
 				</f:else>
 			</f:if>
