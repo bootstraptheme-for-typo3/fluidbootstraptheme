@@ -16,12 +16,12 @@
 										<f:then>
 											<li class="disabled">
 												<f:if condition="{iteration.isFirst}" else="&nbsp;&nbsp;" />
-												<span class="navbar-text">{submenuPage.title}:</span>
+												<span class="navbar-text">{submenuPage.linktext}:</span>
 												&nbsp;
 											</li>
 										</f:then>
 										<f:else>
-											<li class="{submenuPage.class}"><a tabindex="{iteration.cycle -> v:math.sum(b: 200)}" href="{submenuPage.link}" class="{submenuPage.class}">{submenuPage.title}</a></li>
+											<li class="{submenuPage.class}"><a tabindex="{iteration.cycle -> v:math.sum(b: 200)}" href="{submenuPage.link}" class="{submenuPage.class}">{submenuPage.linktext}</a></li>
 										</f:else>
 									</f:if>
 								</f:for>
