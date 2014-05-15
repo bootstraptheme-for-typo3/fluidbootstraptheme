@@ -63,7 +63,7 @@ plugin.tx_vhs.settings.asset{
 	}
 
 	fontawesome {
-		path = http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css
+		path = http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css
 		external = 1
 		group = cdn
 		standalone = 1
