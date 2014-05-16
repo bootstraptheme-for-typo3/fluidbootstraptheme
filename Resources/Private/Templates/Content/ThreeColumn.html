@@ -104,7 +104,7 @@
 					<f:render section="FEMoreGrid2" arguments="{_all}" />
 				</f:then>
 				<f:else>
-					<f:render section="FE{settings.grid3.split -> v:format.case(case: 'settings.grid3.split')}"
+					<f:render section="FE{settings.grid3.split}"
 							  arguments="{_all}" />
 				</f:else>
 			</f:if>
@@ -120,17 +120,6 @@
 			<flux:content.render area="column2" />
 		</div>
 		<div class="{settings.grid3.col2width} {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-			<flux:content.render area="column3" />
-		</div>
-	</f:section>
-	<f:section name="FE">
-		<div class="col-sm-4 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
-			<flux:content.render area="column1" />
-		</div>
-		<div class="col-sm-4 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
-			<flux:content.render area="column2" />
-		</div>
-		<div class="col-sm-4 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
 			<flux:content.render area="column3" />
 		</div>
 	</f:section>
