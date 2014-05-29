@@ -149,25 +149,25 @@
 					</div>
 				</f:for>
 			</div>
+			<f:if condition="{settings.carousel.labelPrev}">
+				<f:then>
+					<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev">{settings.carousel.labelPrev
+						-> f:format.raw()}</a>
+				</f:then>
+				<f:else>
+					<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				</f:else>
+			</f:if>
+			<f:if condition="{settings.carousel.labelNext}">
+				<f:then>
+					<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next">{settings.carousel.labelNext
+						-> f:format.raw()}</a>
+				</f:then>
+				<f:else>
+					<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+				</f:else>
+			</f:if>
 		</div>
-		<f:if condition="{settings.carousel.labelPrev}">
-			<f:then>
-				<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev">{settings.carousel.labelPrev
-					-> f:format.raw()}</a>
-			</f:then>
-			<f:else>
-				<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-			</f:else>
-		</f:if>
-		<f:if condition="{settings.carousel.labelNext}">
-			<f:then>
-				<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next">{settings.carousel.labelNext
-					-> f:format.raw()}</a>
-			</f:then>
-			<f:else>
-				<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-			</f:else>
-		</f:if>
 	</f:section>
 
 	<f:section name="Image">
