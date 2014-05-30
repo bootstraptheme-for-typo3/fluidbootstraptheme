@@ -113,60 +113,61 @@
 		</f:if>
 		<div id="{settings.carousel.id}" class="{settings.carousel.id} carousel slide" data-interval="{settings.carousel.interval}"
 		{f:if(condition: settings.carousel.autostart, then: ' data-ride="carousel"')}>
-		<f:if condition="{settings.carousel.quickselect}">
-			<ol class="carousel-indicators">
-				<f:for each="{elements}" as="image" iteration="iteration">
-					<li data-target="#{settings.carousel.id}" data-slide-to="{iteration.index}" class="{f:if(condition: iteration.isFirst, then: 'active')}">
-						<f:if condition="{settings.carousel.quickselectType} == 'images'">
-							<f:if condition="{image.content.iconImage}">
-								<f:image src="{image.content.iconImage}" alt="{image.content.header}" />
+			<f:if condition="{settings.carousel.quickselect}">
+				<ol class="carousel-indicators">
+					<f:for each="{elements}" as="image" iteration="iteration">
+						<li data-target="#{settings.carousel.id}" data-slide-to="{iteration.index}" class="{f:if(condition: iteration.isFirst, then: 'active')}">
+							<f:if condition="{settings.carousel.quickselectType} == 'images'">
+								<f:if condition="{image.content.iconImage}">
+									<f:image src="{image.content.iconImage}" alt="{image.content.header}" />
+								</f:if>
 							</f:if>
-						</f:if>
-						<f:if condition="{settings.carousel.quickselectType} == 'numbers'">
-							{iteration.cycle}
-						</f:if>
-					</li>
-				</f:for>
-			</ol>
-		</f:if>
-		<div class="carousel-inner">
-			<f:for each="{elements}" as="element" iteration="iteration">
-				<div class="item{f:if(condition: iteration.isFirst, then: ' active')}">
-					<f:for each="{element}" key="elementType" as="elementData">
-						<f:render section="{elementType -> v:format.case(case: 'ucfirst')}" arguments="{_all}" />
-						<f:if condition="{0: elementData.caption, 1: elementData.header} != {0: '', 1: ''}">
-							<div class="carousel-caption">
-
-								<f:if condition="{0: elementData.header} != {0: ''}">
-									<h3>{elementData.header -> f:format.html()}</h3>
-								</f:if>
-								<f:if condition="{0: elementData.caption} != {0: ''}">
-									{elementData.caption -> f:format.html()}
-								</f:if>
-							</div>
-						</f:if>
+							<f:if condition="{settings.carousel.quickselectType} == 'numbers'">
+								{iteration.cycle}
+							</f:if>
+						</li>
 					</f:for>
-				</div>
-			</f:for>
+				</ol>
+			</f:if>
+			<div class="carousel-inner">
+				<f:for each="{elements}" as="element" iteration="iteration">
+					<div class="item{f:if(condition: iteration.isFirst, then: ' active')}">
+						<f:for each="{element}" key="elementType" as="elementData">
+							<f:render section="{elementType -> v:format.case(case: 'ucfirst')}" arguments="{_all}" />
+							<f:if condition="{0: elementData.caption, 1: elementData.header} != {0: '', 1: ''}">
+								<div class="carousel-caption">
+	
+									<f:if condition="{0: elementData.header} != {0: ''}">
+										<h3>{elementData.header -> f:format.html()}</h3>
+									</f:if>
+									<f:if condition="{0: elementData.caption} != {0: ''}">
+										{elementData.caption -> f:format.html()}
+									</f:if>
+								</div>
+							</f:if>
+						</f:for>
+					</div>
+				</f:for>
+			</div>
+			<f:if condition="{settings.carousel.labelPrev}">
+				<f:then>
+					<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev">{settings.carousel.labelPrev
+						-> f:format.raw()}</a>
+				</f:then>
+				<f:else>
+					<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+				</f:else>
+			</f:if>
+			<f:if condition="{settings.carousel.labelNext}">
+				<f:then>
+					<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next">{settings.carousel.labelNext
+						-> f:format.raw()}</a>
+				</f:then>
+				<f:else>
+					<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+				</f:else>
+			</f:if>
 		</div>
-		<f:if condition="{settings.carousel.labelPrev}">
-			<f:then>
-				<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev">{settings.carousel.labelPrev
-					-> f:format.raw()}</a>
-			</f:then>
-			<f:else>
-				<a class="carousel-control left" href="#{settings.carousel.id}" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-			</f:else>
-		</f:if>
-		<f:if condition="{settings.carousel.labelNext}">
-			<f:then>
-				<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next">{settings.carousel.labelNext
-					-> f:format.raw()}</a>
-			</f:then>
-			<f:else>
-				<a class="carousel-control right" href="#{settings.carousel.id}" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-			</f:else>
-		</f:if>
 	</f:section>
 
 	<f:section name="Image">
