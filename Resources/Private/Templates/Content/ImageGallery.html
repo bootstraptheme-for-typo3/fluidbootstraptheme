@@ -92,23 +92,25 @@
                                         </h4>
                                     </div>
                                     <div class="modal-body">
-                                        <f:image src="{image.url}" width="858"
-                                                 alt="{image.alternative}"
-                                                 title="{image.title}" class="img-responsive"/>
-                                        <f:if condition="{0:settings.imgGalleryFalPrevNextPosition} == {0:'picture'}">
-                                            <a class="left carousel-control" data-dismiss="modal"
-                                               data-toggle="modal"
-                                               data-target="#modal{v:math.subtract(a: iteration.index, fail: 1, b: 1)}"
-                                               data-slide="prev">
-                                                <span class="glyphicon glyphicon-chevron-left"></span>
-                                            </a>
-                                            <a class="right carousel-control" data-dismiss="modal"
-                                               data-toggle="modal"
-                                               data-target="#modal{v:math.sum(a: iteration.index, fail: 1, b: 1)}"
-                                               data-slide="next">
-                                                <span class="glyphicon glyphicon-chevron-right"></span>
-                                            </a>
-                                        </f:if>
+                                        <div class="carousel">
+                                             <f:image src="{image.url}" width="858"
+                                                      alt="{image.alternative}"
+                                                      title="{image.title}" class="img-responsive"/>
+                                             <f:if condition="{0:settings.imgGalleryFalPrevNextPosition} == {0:'picture'}">
+                                                 <a class="left carousel-control" data-dismiss="modal"
+                                                    data-toggle="modal"
+                                                    data-target="#modal{v:math.subtract(a: iteration.index, fail: 1, b: 1)}"
+                                                    data-slide="prev">
+                                                     <span class="glyphicon glyphicon-chevron-left"></span>
+                                                 </a>
+                                                 <a class="right carousel-control" data-dismiss="modal"
+                                                    data-toggle="modal"
+                                                    data-target="#modal{v:math.sum(a: iteration.index, fail: 1, b: 1)}"
+                                                    data-slide="next">
+                                                     <span class="glyphicon glyphicon-chevron-right"></span>
+                                                 </a>
+                                             </f:if>
+                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <h4 class="modal-title">{image.description}</h4>
