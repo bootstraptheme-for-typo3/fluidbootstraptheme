@@ -28,12 +28,8 @@
 					<f:else>
 						<flux:grid>
 							<flux:grid.row>
-								<flux:grid.column style="width: 50%;border-right: 1px dotted #999;">
-									<flux:form.content name="column1" label="Column Left" />
-								</flux:grid.column>
-								<flux:grid.column style="width: 50%;">
-									<flux:form.content name="column2" label="Column Right" />
-								</flux:grid.column>
+								<flux:grid.column style="width: 50%;border-right: 1px dotted #999;" name="column1" label="Column Left" />
+								<flux:grid.column style="width: 50%;" name="column2" label="Column Right" />
 							</flux:grid.row>
 						</flux:grid>
 					</f:else>
@@ -60,15 +56,8 @@
 						   default="col-sm-6" />
 		<flux:grid>
 			<flux:grid.row>
-				<flux:grid.column
-						style="width: 50%;border-right: 1px dotted #999;">
-					<flux:form.content name="column1"
-									   label="Column Left ({settings.grid2.col1width})" />
-				</flux:grid.column>
-				<flux:grid.column style="width: 50%;">
-					<flux:form.content name="column2"
-									   label="Column Right ({settings.grid2.col2width})" />
-				</flux:grid.column>
+				<flux:grid.column style="width: 50%;border-right: 1px dotted #999;" name="column1" label="Column Left ({settings.grid2.col1width})" />
+				<flux:grid.column style="width: 50%;" name="column2" label="Column Right ({settings.grid2.col2width})" />
 			</flux:grid.row>
 		</flux:grid>
 	</f:section>
