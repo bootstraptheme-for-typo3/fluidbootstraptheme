@@ -25,9 +25,7 @@
 					<f:for each="{columns}" as="sectionObject" iteration="iteration">
 						<v:var.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 4)}" />
 						<v:var.set name="percent" value="{width  -> v:math.division(b: numberOfColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
-						<flux:grid.column style="width: {percent}%">
-							<flux:form.content name="column{iteration.cycle}" label="{percent}%" />
-						</flux:grid.column>
+						<flux:grid.column style="width: {percent}%" name="column{iteration.cycle}" label="{percent}%" />
 					</f:for>
 				</flux:grid.row>
 			</flux:grid>
