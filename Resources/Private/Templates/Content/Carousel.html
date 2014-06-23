@@ -136,7 +136,7 @@
 								<div class="carousel-caption">
 	
 									<f:if condition="{0: elementData.header} != {0: ''}">
-										<h3>{elementData.header -> f:format.html()}</h3>
+										<h3>{elementData.header -> f:format.raw()}</h3>
 									</f:if>
 									<f:if condition="{0: elementData.caption} != {0: ''}">
 										{elementData.caption -> f:format.html()}
