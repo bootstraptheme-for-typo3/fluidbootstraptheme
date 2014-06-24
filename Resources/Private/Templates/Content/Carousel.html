@@ -169,7 +169,11 @@
 	</f:section>
 
 	<f:section name="Image">
-		<f:image src="{elementData.file}" alt="{elementData.header}" width="{settings.carousel.width}" />
+        <f:if condition="{elementData.file}">
+            <f:then>
+                <f:image src="{elementData.file}" alt="{elementData.header}" width="{settings.carousel.width}" />
+            </f:then>
+        </f:if>
 	</f:section>
 
 	<f:section name="Content">
