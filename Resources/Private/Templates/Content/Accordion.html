@@ -21,9 +21,7 @@
 			<flux:grid>
 				<f:for each="{panels}" as="panel" iteration="iteration">
 					<flux:grid.row>
-						<flux:grid.column>
-							<flux:form.content name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel {iteration.cycle}')}" />
-						</flux:grid.column>
+						<flux:grid.column name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel {iteration.cycle}')}" />
 					</flux:grid.row>
 				</f:for>
 			</flux:grid>
