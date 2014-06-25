@@ -3,9 +3,10 @@
 
 <f:layout name="Content" />
 
-<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
 	<f:section name="Configuration">
 		<flux:form wizardTab="Obsolete" id="thumbnails" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_156_show_thumbnails.png')}">
 			<flux:form.sheet name="thumbnails">
@@ -100,4 +101,5 @@
 			</f:for>
 		</ul>
 	</f:section>
+    
 </div>
