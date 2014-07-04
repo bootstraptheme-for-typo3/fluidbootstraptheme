@@ -4,48 +4,47 @@
 		  date="2014-01-06T01:00:11+01:00">
 		<header/>
 		<body>
-            <!-- Button.html -->
-            <trans-unit id="flux.button">
-                <source>Button</source>
-            </trans-unit>
-            <trans-unit id="flux.button.description">
-                <source>the Swiss Army Knife of the Buttons</source>
-            </trans-unit>
-            <trans-unit id="flux.button.sheets.ButtonSheetOne">
-                <source>Button Settings</source>
-            </trans-unit>
-            <trans-unit id="flux.button.fields.settings.ButtonSize">
-                <source>Button Size</source>
-            </trans-unit>
-            <trans-unit id="flux.button.fields.settings.ButtonBlock">
-                <source>Block level Button</source>
-            </trans-unit>
-            <trans-unit id="flux.button.fields.settings.ButtonGroup">
-                <source>Group Buttons Horizontal</source>
-            </trans-unit>
-            <trans-unit id="flux.button.sheets.ButtonSheetTwo">
-                <source>Add Buttons</source>
-            </trans-unit>
-            <trans-unit id="flux.button.sections.ButtonSection">
-                <source>Add the Buttons here</source>
-            </trans-unit>
-            <trans-unit id="flux.button.objects.ButtonObject">
-                <source>Button</source>
-            </trans-unit>
-            <trans-unit id="flux.button.objects.ButtonObject.ButtonText">
-                <source>Button Text</source>
-            </trans-unit>
-            <trans-unit id="flux.button.objects.ButtonObject.target">
-                <source>Button Link</source>
-            </trans-unit>
-            <trans-unit id="flux.button.objects.ButtonObject.ButtonOptions">
-                <source>Button Options</source>
-            </trans-unit>
-            <trans-unit id="flux.button.objects.ButtonObject.ButtonActive">
-                <source>Set Button to Inactive</source>
-            </trans-unit>
-            <!-- Button.html -->
-
+			<!-- Button.html -->
+			<trans-unit id="flux.button">
+				<source>Button</source>
+			</trans-unit>
+			<trans-unit id="flux.button.description">
+				<source>the Swiss Army Knife of the Buttons</source>
+			</trans-unit>
+			<trans-unit id="flux.button.sheets.ButtonSheetOne">
+				<source>Button Settings</source>
+			</trans-unit>
+			<trans-unit id="flux.button.fields.settings.ButtonSize">
+				<source>Button Size</source>
+			</trans-unit>
+			<trans-unit id="flux.button.fields.settings.ButtonBlock">
+				<source>Block level Button</source>
+			</trans-unit>
+			<trans-unit id="flux.button.fields.settings.ButtonGroup">
+				<source>Group Buttons Horizontal</source>
+			</trans-unit>
+			<trans-unit id="flux.button.sheets.ButtonSheetTwo">
+				<source>Add Buttons</source>
+			</trans-unit>
+			<trans-unit id="flux.button.sections.ButtonSection">
+				<source>Add the Buttons here</source>
+			</trans-unit>
+			<trans-unit id="flux.button.objects.ButtonObject">
+				<source>Button</source>
+			</trans-unit>
+			<trans-unit id="flux.button.objects.ButtonObject.ButtonText">
+				<source>Button Text</source>
+			</trans-unit>
+			<trans-unit id="flux.button.objects.ButtonObject.target">
+				<source>Button Link</source>
+			</trans-unit>
+			<trans-unit id="flux.button.objects.ButtonObject.ButtonOptions">
+				<source>Button Options</source>
+			</trans-unit>
+			<trans-unit id="flux.button.objects.ButtonObject.ButtonActive">
+				<source>Set Button to Inactive</source>
+			</trans-unit>
+			<!-- Button.html -->
 
 			<!-- TwoColumn.html -->
 			<trans-unit id="flux.grid2.description">
@@ -314,7 +313,7 @@
 			</trans-unit>
 			<trans-unit id="flux.buttongroup.areas.content" xml:space="preserve">
 				<source>Buttons</source>
-            </trans-unit>
+			</trans-unit>
 			<!-- /ButtonGroup.html -->
 
 			<!-- Thumbnails.html -->
@@ -327,7 +326,7 @@
 			<trans-unit id="flux.thumbnails.description" xml:space="preserve">
 				<source>Obsolete!! will be removed in next version</source>
 			</trans-unit>
-            <trans-unit id="flux.thumbnails.sheets.thumbnails" xml:space="preserve">
+			<trans-unit id="flux.thumbnails.sheets.thumbnails" xml:space="preserve">
 				<source>Thumbnails</source>
 			</trans-unit>
 			<trans-unit id="flux.thumbnails.fields.width" xml:space="preserve">
