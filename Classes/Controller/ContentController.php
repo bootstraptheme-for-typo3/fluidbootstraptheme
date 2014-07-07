@@ -45,7 +45,7 @@ class ContentController extends AbstractContentController {
 		$record = $this->getRecord();
 		$useTypoScriptOptionFromForm = $this->provider->getForm($record)->getOption('useTypoScript');
 		if (NULL !== $useTypoScriptOptionFromForm) {
-			$this->settings['useTypoScript'] = (boolean)$useTypoScriptOptionFromForm;
+			$this->settings['useTypoScript'] = (boolean) $useTypoScriptOptionFromForm;
 		}
 		parent::initializeOverriddenSettings();
 	}
@@ -184,11 +184,18 @@ class ContentController extends AbstractContentController {
 
 	}
 
+	/**
+	 * @return string
+	 */
 	public function fourColumnAction() {
 
 	}
-    public function imageGalleryAction() {
 
-    }
+	/**
+	 * @return string
+	 */
+	public function imageGalleryAction() {
+
+	}
 
 }
