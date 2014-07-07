@@ -1,4 +1,4 @@
-{namespace v=Tx_Vhs_ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
 
 <f:layout name="Content" />
@@ -76,8 +76,8 @@
 							<div class="{f:if(condition: object.addWell, then: 'well')}">
 								<v:switch value="{objectType}">
 									<v:case case="image" break="TRUE">
-										<v:var.set name="imageWidth" value="{width -> v:math.division(b: 12) -> v:math.product(b: object.class)}" />
-										<v:var.set name="imageHeight" value="{ratio -> v:math.division(b: imageWidth)}" />
+										<v:variable.set name="imageWidth" value="{width -> v:math.division(b: 12) -> v:math.product(b: object.class)}" />
+										<v:variable.set name="imageHeight" value="{ratio -> v:math.division(b: imageWidth)}" />
 										<a href="#" class="img-thumbnail">
 											<f:image src="{object.file}" width="{imageWidth}{object.scaling}" height="{imageHeight}{object.scaling}" alt="{object.title}" />
 										</a>

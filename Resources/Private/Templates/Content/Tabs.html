@@ -1,4 +1,4 @@
-{namespace v=Tx_Vhs_ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
 
 <f:layout name="Content" />
@@ -43,11 +43,11 @@
 	</f:section>
 
 	<f:section name="Main">
-		<v:var.set name="activeTabIndex" value="0" />
+		<v:variable.set name="activeTabIndex" value="0" />
 		<f:if condition="{tabs}">
 			<f:for each="{tabs}" as="tab" iteration="iteration">
 				<f:if condition="{tab.tab.active}">
-					<v:var.set name="activeTabIndex" value="{iteration.index}" />
+					<v:variable.set name="activeTabIndex" value="{iteration.index}" />
 				</f:if>
 			</f:for>
 		</f:if>

@@ -1,5 +1,5 @@
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
-{namespace v=Tx_Vhs_ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 
 <f:layout name="Content" />
 
@@ -84,28 +84,28 @@
 		<f:if condition="{settings.carousel.quickselectDotStyles">
 			<v:asset.style name="carousel{settings.carousel.id}quickselectdots">
 				.{settings.carousel.id} .carousel-indicators li {
-				<v:var.get name="settings.carousel.quickselectDotStyles" />
+				<v:variable.get name="settings.carousel.quickselectDotStyles" />
 				}
 			</v:asset.style>
 		</f:if>
 		<f:if condition="{settings.carousel.quickselectStyles">
 			<v:asset.style name="carousel{settings.carousel.id}quickselect">
 				.{settings.carousel.id} .carousel-indicators {
-				<v:var.get name="settings.carousel.quickselectStyles" />
+				<v:variable.get name="settings.carousel.quickselectStyles" />
 				}
 			</v:asset.style>
 		</f:if>
 		<f:if condition="{settings.carousel.navigationStyles">
 			<v:asset.style name="carousel{settings.carousel.id}navigation">
 				.{settings.carousel.id} .carousel-control {
-				<v:var.get name="settings.carousel.navigationStyles" />
+				<v:variable.get name="settings.carousel.navigationStyles" />
 				}
 			</v:asset.style>
 		</f:if>
 		<f:if condition="{settings.carousel.innerStyles">
 			<v:asset.style name="carousel{settings.carousel.id}inner">
 				.{settings.carousel.id} .carousel-inner {
-				<v:var.get name="settings.carousel.innerStyles" />
+				<v:variable.get name="settings.carousel.innerStyles" />
 				}
 			</v:asset.style>
 		</f:if>

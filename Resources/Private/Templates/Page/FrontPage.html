@@ -1,4 +1,4 @@
-{namespace v=Tx_Vhs_ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
 <f:layout name="FrontPage" />
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
@@ -8,7 +8,7 @@
 
 <f:section name="Configuration">
 	<flux:form id="front" label="Front Page" icon="{f:uri.resource(path: 'Icons/FrontPage.png')}">
-		{v:var.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:var.set(name: 'settings')}
+		{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:variable.set(name: 'settings')}
 		<f:if condition="{settings.useTypoScript} < 1">
 			<flux:field.input name="settings.entryLevel" label="Main menu entry level override for this page only"
 			                           eval="int,trim" minimum="0" maximum="6" default="{settings.menu.main.entryLevel}">

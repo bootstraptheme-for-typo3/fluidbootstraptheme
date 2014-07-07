@@ -1,4 +1,4 @@
-{namespace v=Tx_Vhs_ViewHelpers}
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
 {namespace flux=FluidTYPO3\Flux\ViewHelpers}
 
 <f:layout name="Content" />
@@ -57,7 +57,7 @@
 		<div class="{class} {f:if(condition: addWell, then: 'well')}" style="{f:if(condition: zeroPadding, then: 'padding: 8px 0px 8px 0px;')}">
 			<ul class="nav nav-list">
 				<f:for each="{items}" as="itemSectionObjects">
-					<v:var.set name="icon" value="" />
+					<v:variable.set name="icon" value="" />
 					<f:for each="{itemSectionObjects}" as="object" key="objectType">
 						<v:switch value="{objectType}">
 							<v:case case="header" break="TRUE">
@@ -69,7 +69,7 @@
 								<li class="nav-divider {object.class}"></li>
 							</v:case>
 							<v:case case="default">
-								<v:var.set name="icon" value="{v:media.exists(file: object.icon, then: '<img src=\'{object.icon}\' alt=\'\' class=\'icon-blank\' /> ', else: '')}" />
+								<v:variable.set name="icon" value="{v:media.exists(file: object.icon, then: '<img src=\'{object.icon}\' alt=\'\' class=\'icon-blank\' /> ', else: '')}" />
 								<li class="{f:if(condition: '{contentObject.pid} == {object.target}', then: 'active', else: 'item')}">
 									<f:if condition="{object.target -> v:math.round()} > 0">
 										<f:then>
