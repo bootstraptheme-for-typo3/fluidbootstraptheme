@@ -34,14 +34,21 @@
     </f:section>
 
     <f:section name="Preview">
-        <f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
-            <div style="background-color:#efefef; margin-bottom: 10px; padding: 10px;">
-                <b>Text:</b> {ButtonObjectItem.ButtonObject.ButtonText} | <b>State:</b>
-                {ButtonObjectItem.ButtonObject.ButtonOptions} | <b>Active:</b>
-                {ButtonObjectItem.ButtonObject.ButtonActive} | <b>Link to:</b> PID
-                [{ButtonObjectItem.ButtonObject.target}]
-            </div>
-        </f:for>
+        <v:condition.type.isArray value="{ButtonSection}">
+            <f:then>
+                <f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
+                    <div style="background-color:#efefef; margin-bottom: 10px; padding: 10px;">
+                        <b>Text:</b> {ButtonObjectItem.ButtonObject.ButtonText} | <b>State:</b>
+                        {ButtonObjectItem.ButtonObject.ButtonOptions} | <b>Active:</b>
+                        {ButtonObjectItem.ButtonObject.ButtonActive} | <b>Link to:</b> PID
+                        [{ButtonObjectItem.ButtonObject.target}]
+                    </div>
+                </f:for>
+            </f:then>
+            <f:else>
+                <b>Please Create a Object in there</b>
+            </f:else>
+        </v:condition.type.isArray>
     </f:section>
 
     <f:section name="Main">

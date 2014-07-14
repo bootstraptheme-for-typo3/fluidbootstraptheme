@@ -18,15 +18,17 @@
 			<flux:field.input name="settings.carousel.width" default="1170c" />
 			<flux:field.checkbox name="settings.carousel.autostart" />
 			<flux:grid>
-				<f:for each="{elements}" as="element" iteration="iteration">
-					<f:for each="{element}" key="elementType" as="elementData">
-						<f:if condition="{0: elementType} == {0: 'content'}">
-							<flux:grid.row>
-								<flux:grid.column name="{elementData.id}" label="Content: {elementData.id}" />
-							</flux:grid.row>
-						</f:if>
-					</f:for>
-				</f:for>
+                <v:condition.type.isArray value="{elements}">
+                    <f:for each="{elements}" as="element" iteration="iteration">
+                        <f:for each="{element}" key="elementType" as="elementData">
+                            <f:if condition="{0: elementType} == {0: 'content'}">
+                                <flux:grid.row>
+                                    <flux:grid.column name="{elementData.id}" label="Content: {elementData.id}" />
+                                </flux:grid.row>
+                            </f:if>
+                        </f:for>
+                    </f:for>
+                </v:condition.type.isArray>
 			</flux:grid>
 			<flux:form.sheet name="elements">
 				<flux:form.section name="elements">

@@ -41,9 +41,17 @@
 
     <f:section name="Preview">
         <v:content.resources.fal field="settings.imgGalleryFalImageItems" as="images">
-            <f:for each="{images}" as="image" iteration="iteration">
-                <v:media.image src="{image.url}" alt="{ImageAltText}" width="120c" height="120c"/>
-            </f:for>
+            <v:condition.type.isArray value="{images}">
+                <f:then>
+                    <f:for each="{images}" as="image" iteration="iteration">
+                        <v:media.image src="{image.url}" alt="{ImageAltText}" width="120c" height="120c"/>
+                    </f:for>
+                </f:then>
+                <f:else>
+                    <b>Please Create a Object in there</b>
+                </f:else>
+            </v:condition.type.isArray>
+
         </v:content.resources.fal>
     </f:section>
 
