@@ -250,6 +250,45 @@
 			</trans-unit>
 			<!-- /EmbedVidoe.htm -->
 
+			<!-- ImageGallery.html -->
+			<trans-unit id="flux.ImageGallery.description">
+				<source>Responsive Image Gallery</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery">
+				<source>Image Gallery</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery.sheets.imgGallerySheetImages">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery.sheets.imgGallerySheetAdvanced">
+				<source>Advanced</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalClassesModal">
+				<source>Custom CSS Class</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalShowPreviewTitle">
+				<source>Show Title in Preview</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalPrevNextPosition">
+				<source>Postition of Prev-Next</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalImageWidth">
+				<source>Size of Preview Image</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalRowLg">
+				<source>Images in a row - Large Screen</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalRowMd">
+				<source>Images in a row - Small Screen</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalRowSm">
+				<source>Images in a row - Tablet</source>
+			</trans-unit>
+			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalRowXs">
+				<source>Images in a row - Phones</source>
+			</trans-unit>
+			<!-- /ImageGallery.html -->
+
 			<!-- ProgressBar.html -->
 			<trans-unit id="flux.progressBar.description">
 				<source>Insert Progressbar</source>
