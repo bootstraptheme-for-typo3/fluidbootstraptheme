@@ -5,6 +5,7 @@
 
 <div xmlns="http://www.w3.org/1999/xhtml"
      xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
      xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
 	<f:section name="Configuration">
@@ -19,15 +20,17 @@
 			</flux:form.sheet>
 			<f:if condition="{thumbnails -> f:count()}">
 				<flux:grid>
-					<f:for each="{thumbnails}" as="itemSectionObjects" iteration="iteration">
-						<f:for each="{itemSectionObjects}" as="object" key="objectType">
-							<f:if condition="{0: objectType, 1: object.disabled} == {0: 'content', 1: 0}">
-								<flux:grid.row>
-									<flux:grid.column name="contentElements.{object.name}" label="{object.label}" />
-								</flux:grid.row>
-							</f:if>
-						</f:for>
-					</f:for>
+                    <v:condition.type.isArray value="{thumbnails}">
+                        <f:for each="{thumbnails}" as="itemSectionObjects" iteration="iteration">
+                            <f:for each="{itemSectionObjects}" as="object" key="objectType">
+                                <f:if condition="{0: objectType, 1: object.disabled} == {0: 'content', 1: 0}">
+                                    <flux:grid.row>
+                                        <flux:grid.column name="contentElements.{object.name}" label="{object.label}" />
+                                    </flux:grid.row>
+                                </f:if>
+                            </f:for>
+                        </f:for>
+                    </v:condition.type.isArray>
 				</flux:grid>
 			</f:if>
 		</flux:form>

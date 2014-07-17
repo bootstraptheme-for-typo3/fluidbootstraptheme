@@ -19,11 +19,13 @@
 				</flux:form.section>
 			</flux:form.sheet>
 			<flux:grid>
-				<f:for each="{panels}" as="panel" iteration="iteration">
-					<flux:grid.row>
-						<flux:grid.column name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel {iteration.cycle}')}" />
-					</flux:grid.row>
-				</f:for>
+                <v:condition.type.isArray value="{panels}">
+                    <f:for each="{panels}" as="panel" iteration="iteration">
+                        <flux:grid.row>
+                            <flux:grid.column name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel {iteration.cycle}')}" />
+                        </flux:grid.row>
+                     </f:for>
+                </v:condition.type.isArray>
 			</flux:grid>
 		</flux:form>
 	</f:section>
