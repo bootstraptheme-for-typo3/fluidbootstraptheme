@@ -15,7 +15,7 @@
 								   default="50-50"
 								   requestUpdate="1">
 				</flux:field.select>
-				<flux:field.checkbox name="settings.grid2.eqh" label="Equal Heigt of Colums" default="0" />
+				<flux:field.checkbox name="settings.grid2.eqh" default="0" />
 				<f:if condition="{settings.grid2.split}=='more'">
 					<f:then>
 						<flux:field.custom name="grid2Description">
@@ -28,8 +28,8 @@
 					<f:else>
 						<flux:grid>
 							<flux:grid.row>
-								<flux:grid.column style="width: 50%;border-right: 1px dotted #999;" name="column1" label="Column Left" />
-								<flux:grid.column style="width: 50%;" name="column2" label="Column Right" />
+								<flux:grid.column style="width: 50%;border-right: 1px dotted #999;" name="column1"/>
+								<flux:grid.column style="width: 50%;" name="column2"/>
 							</flux:grid.row>
 						</flux:grid>
 					</f:else>
