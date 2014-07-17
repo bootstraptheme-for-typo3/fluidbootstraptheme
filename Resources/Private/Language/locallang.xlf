@@ -412,6 +412,21 @@
 			</trans-unit>
 			<!-- /Thumbnails.html -->
 
+			<!-- Well.html -->
+			<trans-unit id="flux.well" xml:space="preserve">
+				<source> Content well</source>
+			</trans-unit>
+			<trans-unit id="flux.well.description" xml:space="preserve">
+				<source>Visual well for other content elements</source>
+			</trans-unit>
+			<trans-unit id="flux.well.fields.wellStyle" xml:space="preserve">
+				<source>Optional Well Style Class</source>
+			</trans-unit>
+			<trans-unit id="flux.well.areas.content" xml:space="preserve">
+				<source>Content elements</source>
+			</trans-unit>
+			<!-- /Well.html -->
+
 			<trans-unit id="flux.accordion" xml:space="preserve">
 				<source> Accordion with content elements</source>
 			</trans-unit>
@@ -465,12 +480,6 @@
 			</trans-unit>
 			<trans-unit id="flux.tabs.description" xml:space="preserve">
 				<source>Places child content elements in tabs.</source>
-			</trans-unit>
-			<trans-unit id="flux.well" xml:space="preserve">
-				<source> Content well</source>
-			</trans-unit>
-			<trans-unit id="flux.well.description" xml:space="preserve">
-				<source>Visual well for other content elements</source>
 			</trans-unit>
 			<trans-unit id="flux.accordion.sheets.panels" xml:space="preserve">
 				<source>Panels</source>
@@ -738,9 +747,6 @@
 			</trans-unit>
 			<trans-unit id="flux.tabs.fields.fade" xml:space="preserve">
 				<source>Enable fading effect</source>
-			</trans-unit>
-			<trans-unit id="flux.well.areas.content" xml:space="preserve">
-				<source>Content elements</source>
 			</trans-unit>
 			<trans-unit id="flux.jumbotron.areas.content" xml:space="preserve">
 				<source>Jumbotron content</source>
