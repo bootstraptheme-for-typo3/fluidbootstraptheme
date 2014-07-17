@@ -275,43 +275,43 @@
 			<!-- /EmbedVideo.htm -->
 
 			<!-- ImageGallery.html -->
-			<trans-unit id="flux.ImageGallery.description">
+			<trans-unit id="flux.imgGallery.description" xml:space="preserve">
 				<source>Responsive Image Gallery</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery">
+			<trans-unit id="flux.imgGallery" xml:space="preserve">
 				<source>Image Gallery</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.sheets.imgGallerySheetImages">
+			<trans-unit id="flux.imgGallery.sheets.imgGallerySheetImages" xml:space="preserve">
 				<source>Images</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.sheets.imgGallerySheetAdvanced">
+			<trans-unit id="flux.imgGallery.sheets.imgGallerySheetAdvanced" xml:space="preserve">
 				<source>Advanced</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalImageItems">
+			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalImageItems" xml:space="preserve">
 				<source>Images</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalClassesModal">
+			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalClassesModal" xml:space="preserve">
 				<source>Custom CSS Class</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalShowPreviewTitle">
+			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalShowPreviewTitle" xml:space="preserve">
 				<source>Show Title in Preview</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalPrevNextPosition">
+			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalPrevNextPosition" xml:space="preserve">
 				<source>Postition of Prev-Next</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalImageWidth">
+			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalImageWidth" xml:space="preserve">
 				<source>Size of Preview Image</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalRowLg">
+			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalRowLg" xml:space="preserve">
 				<source>Images in a row - Large Screen</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalRowMd">
+			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalRowMd" xml:space="preserve">
 				<source>Images in a row - Small Screen</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalRowSm">
+			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalRowSm" xml:space="preserve">
 				<source>Images in a row - Tablet</source>
 			</trans-unit>
-			<trans-unit id="flux.ImageGallery.fields.settings.imgGalleryFalRowXs">
+			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalRowXs" xml:space="preserve">
 				<source>Images in a row - Phones</source>
 			</trans-unit>
 			<!-- /ImageGallery.html -->
