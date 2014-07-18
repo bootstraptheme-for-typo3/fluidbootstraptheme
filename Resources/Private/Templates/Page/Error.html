@@ -1,12 +1,10 @@
-{namespace flux=FluidTYPO3\Flux\ViewHelpers}
-{namespace v=FluidTYPO3\Vhs\ViewHelpers}
-
-<f:layout name="ErrorPage" />
-
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
-	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="ErrorPage" />
+
 	<f:section name="Configuration">
 		<flux:form id="error" label="Error page" enabled="FALSE" />
 	</f:section>
@@ -16,4 +14,5 @@
 
 	<f:section name="Main">
 	</f:section>
+
 </div>

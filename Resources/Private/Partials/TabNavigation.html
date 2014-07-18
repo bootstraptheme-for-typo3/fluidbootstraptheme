@@ -1,8 +1,7 @@
-{namespace v=FluidTYPO3\Vhs\ViewHelpers}
-
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
 	<f:section name="TabNavigation">
 		<!-- tabbed, lower submenu navigation, collapsible -->
 		<v:page.menu entryLevel="{settings.entryLevel -> v:math.ceil() -> v:math.sum(b: 2)}" useShortcutData="TRUE">
@@ -15,4 +14,5 @@
 			</f:if>
 		</v:page.menu>
 	</f:section>
+
 </div>

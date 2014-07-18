@@ -1,12 +1,10 @@
-{namespace v=FluidTYPO3\Vhs\ViewHelpers}
-{namespace flux=FluidTYPO3\Flux\ViewHelpers}
-
-<f:layout name="Content" />
-
 <div xmlns="http://www.w3.org/1999/xhtml"
-	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="Content" />
+
 	<f:section name="Configuration">
 		{v:variable.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:variable.set(name: 'settings')}
 		{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:variable.set(name:
@@ -15,20 +13,20 @@
 			<flux:form.section name="columns">
 				<flux:form.object name="column">
 					<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
-				    -> v:iterator.loop(count: numberOfColumns, iteration: 'iteration', minimum: 1)}" label="Columns: numberOfColumns" />
+					-> v:iterator.loop(count: numberOfColumns, iteration: 'iteration', minimum: 1)}" label="Columns: numberOfColumns" />
 					<flux:field.checkbox name="addWell" />
 					<flux:field.input name="additionalClass" />
 				</flux:form.object>
 			</flux:form.section>
 			<flux:grid>
 				<flux:grid.row>
-                    <v:condition.type.isArray value="{columns}">
-                        <f:for each="{columns}" as="sectionObject" iteration="iteration">
-                            <v:variable.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 4)}" />
-                            <v:variable.set name="percent" value="{width  -> v:math.division(b: numberOfColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
-                            <flux:grid.column style="width: {percent}%" name="column{iteration.cycle}" label="{percent}%" />
-                        </f:for>
-                    </v:condition.type.isArray>
+					<v:condition.type.isArray value="{columns}">
+						<f:for each="{columns}" as="sectionObject" iteration="iteration">
+							<v:variable.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 4)}" />
+							<v:variable.set name="percent" value="{width  -> v:math.division(b: numberOfColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
+							<flux:grid.column style="width: {percent}%" name="column{iteration.cycle}" label="{percent}%" />
+						</f:for>
+					</v:condition.type.isArray>
 				</flux:grid.row>
 			</flux:grid>
 		</flux:form>
@@ -49,4 +47,5 @@
 	</f:section>
 
 	<f:section name="Value">col-md-{iteration.cycle}{f:if(condition: iteration.isLast, else: ',')}</f:section>
+
 </div>

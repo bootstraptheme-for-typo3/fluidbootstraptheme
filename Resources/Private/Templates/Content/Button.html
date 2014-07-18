@@ -1,103 +1,102 @@
-{namespace v=FluidTYPO3\Vhs\ViewHelpers}
-{namespace flux=FluidTYPO3\Flux\ViewHelpers}
-
-<f:layout name="Content"/>
-
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-     xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-     xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
-     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
-    <f:section name="Configuration">
-        <flux:form wizardTab="Bootstrap"
-                   id="button"
-                   options="{useTypoScript: 0}"
-                   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_050_link.png')}">
-            <flux:form.sheet name="ButtonSheetOne">
-                <flux:field.select items="xs,sm,default,lg" name="settings.ButtonSize" default="default"/>
-                <flux:field.checkbox name="settings.ButtonBlock" default="0"/>
-                <flux:field.checkbox name="settings.ButtonGroup" default="0"/>
-            </flux:form.sheet>
-            <flux:form.sheet name="ButtonSheetTwo">
-                <flux:form.section name="ButtonSection">
-                    <flux:form.object name="ButtonObject">
-                        <flux:field.input name="ButtonText"/>
-                        <flux:field.input name="target">
-                            <flux:wizard.link activeTab="Page"/>
-                        </flux:field.input>
-                        <flux:field.select items="default,primary,success,info,warning,danger,link"
-                                           name="ButtonOptions" default="default"/>
-                        <flux:field.checkbox name="ButtonActive" default="0"/>
-                    </flux:form.object>
-                </flux:form.section>
-            </flux:form.sheet>
-        </flux:form>
-    </f:section>
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-    <f:section name="Preview">
-        <v:condition.type.isArray value="{ButtonSection}">
-            <f:then>
-                <f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
-                    <div style="background-color:#efefef; margin-bottom: 10px; padding: 10px;">
-                        <b>Text:</b> {ButtonObjectItem.ButtonObject.ButtonText} | <b>State:</b>
-                        {ButtonObjectItem.ButtonObject.ButtonOptions} | <b>Active:</b>
-                        {ButtonObjectItem.ButtonObject.ButtonActive} | <b>Link to:</b> PID
-                        [{ButtonObjectItem.ButtonObject.target}]
-                    </div>
-                </f:for>
-            </f:then>
-            <f:else>
-                <b>Please Create a Object in there</b>
-            </f:else>
-        </v:condition.type.isArray>
-    </f:section>
+	<f:layout name="Content"/>
 
-    <f:section name="Main">
-        <f:if condition="{settings.ButtonBlock}">
-            <f:then>
-                <v:variable.set name="settings.ButtonBlockVar" value="btn-block"/>
-            </f:then>
-            <f:else>
-                <v:variable.set name="settings.ButtonBlockVar" value=""/>
-            </f:else>
-        </f:if>
-        <f:if condition="{settings.ButtonGroup}">
-            <f:then>
-                <div class="btn-group">
-                    <f:render section="Button" arguments="{_all}"/>
-                </div>
-            </f:then>
-            <f:else>
-                <div class="buttonwrap">
-                    <f:render section="Button" arguments="{_all}"/>
-                </div>
-            </f:else>
-        </f:if>
-    </f:section>
+	<f:section name="Configuration">
+		<flux:form wizardTab="Bootstrap"
+				   id="button"
+				   options="{useTypoScript: 0}"
+				   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_050_link.png')}">
+			<flux:form.sheet name="ButtonSheetOne">
+				<flux:field.select items="xs,sm,default,lg" name="settings.ButtonSize" default="default"/>
+				<flux:field.checkbox name="settings.ButtonBlock" default="0"/>
+				<flux:field.checkbox name="settings.ButtonGroup" default="0"/>
+			</flux:form.sheet>
+			<flux:form.sheet name="ButtonSheetTwo">
+				<flux:form.section name="ButtonSection">
+					<flux:form.object name="ButtonObject">
+						<flux:field.input name="ButtonText"/>
+						<flux:field.input name="target">
+							<flux:wizard.link activeTab="Page"/>
+						</flux:field.input>
+						<flux:field.select items="default,primary,success,info,warning,danger,link"
+										   name="ButtonOptions" default="default"/>
+						<flux:field.checkbox name="ButtonActive" default="0"/>
+					</flux:form.object>
+				</flux:form.section>
+			</flux:form.sheet>
+		</flux:form>
+	</f:section>
 
-    <f:section name="Button">
-        <f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
-            <f:if condition="{ButtonObjectItem.ButtonObject.target}">
-                <f:then>
-                    <f:render section="BottonWithLink" arguments="{_all}"/>
-                </f:then>
-                <f:else>
-                    <f:render section="BottonWithOutLink" arguments="{_all}"/>
-                </f:else>
-            </f:if>
-        </f:for>
-    </f:section>
+	<f:section name="Preview">
+		<v:condition.type.isArray value="{ButtonSection}">
+			<f:then>
+				<f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
+					<div style="background-color:#efefef; margin-bottom: 10px; padding: 10px;">
+						<b>Text:</b> {ButtonObjectItem.ButtonObject.ButtonText} | <b>State:</b>
+						{ButtonObjectItem.ButtonObject.ButtonOptions} | <b>Active:</b>
+						{ButtonObjectItem.ButtonObject.ButtonActive} | <b>Link to:</b> PID
+						[{ButtonObjectItem.ButtonObject.target}]
+					</div>
+				</f:for>
+			</f:then>
+			<f:else>
+				<b>Please Create a Object in there</b>
+			</f:else>
+		</v:condition.type.isArray>
+	</f:section>
 
-    <f:section name="BottonWithOutLink">
-        <button type="button"
-                class="btn btn-{ButtonObjectItem.ButtonObject.ButtonOptions} {f:if(then: 'btn-{settings.ButtonSize}', else: '', condition: '{settings.ButtonSize}!=\'default\'')} {f:if(then: 'disabled', else: '', condition: '{ButtonObjectItem.ButtonObject.ButtonActive}')}">
-            {ButtonObjectItem.ButtonObject.ButtonText} link
-        </button>
-    </f:section>
-    <f:section name="BottonWithLink">
-        <f:link.page pageUid="{ButtonObjectItem.ButtonObject.target}"
-                     class="btn btn-{ButtonObjectItem.ButtonObject.ButtonOptions} {f:if(then: 'btn-{settings.ButtonSize}', else: '', condition: '{settings.ButtonSize}!=\'default\'')} {settings.ButtonBlockVar} {ButtonDisable} {f:if(then: 'disabled', else: '', condition: '{ButtonObjectItem.ButtonObject.ButtonActive}')}"
-                     additionalAttributes="{role: 'button'}">
-            {ButtonObjectItem.ButtonObject.ButtonText}
-        </f:link.page>
-    </f:section>
+	<f:section name="Main">
+		<f:if condition="{settings.ButtonBlock}">
+			<f:then>
+				<v:variable.set name="settings.ButtonBlockVar" value="btn-block"/>
+			</f:then>
+			<f:else>
+				<v:variable.set name="settings.ButtonBlockVar" value=""/>
+			</f:else>
+		</f:if>
+		<f:if condition="{settings.ButtonGroup}">
+			<f:then>
+				<div class="btn-group">
+					<f:render section="Button" arguments="{_all}"/>
+				</div>
+			</f:then>
+			<f:else>
+				<div class="buttonwrap">
+					<f:render section="Button" arguments="{_all}"/>
+				</div>
+			</f:else>
+		</f:if>
+	</f:section>
+
+	<f:section name="Button">
+		<f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
+			<f:if condition="{ButtonObjectItem.ButtonObject.target}">
+				<f:then>
+					<f:render section="BottonWithLink" arguments="{_all}"/>
+				</f:then>
+				<f:else>
+					<f:render section="BottonWithOutLink" arguments="{_all}"/>
+				</f:else>
+			</f:if>
+		</f:for>
+	</f:section>
+
+	<f:section name="BottonWithOutLink">
+		<button type="button"
+				class="btn btn-{ButtonObjectItem.ButtonObject.ButtonOptions} {f:if(then: 'btn-{settings.ButtonSize}', else: '', condition: '{settings.ButtonSize}!=\'default\'')} {f:if(then: 'disabled', else: '', condition: '{ButtonObjectItem.ButtonObject.ButtonActive}')}">
+			{ButtonObjectItem.ButtonObject.ButtonText} link
+		</button>
+	</f:section>
+	<f:section name="BottonWithLink">
+		<f:link.page pageUid="{ButtonObjectItem.ButtonObject.target}"
+					 class="btn btn-{ButtonObjectItem.ButtonObject.ButtonOptions} {f:if(then: 'btn-{settings.ButtonSize}', else: '', condition: '{settings.ButtonSize}!=\'default\'')} {settings.ButtonBlockVar} {ButtonDisable} {f:if(then: 'disabled', else: '', condition: '{ButtonObjectItem.ButtonObject.ButtonActive}')}"
+					 additionalAttributes="{role: 'button'}">
+			{ButtonObjectItem.ButtonObject.ButtonText}
+		</f:link.page>
+	</f:section>
+
 </div>
