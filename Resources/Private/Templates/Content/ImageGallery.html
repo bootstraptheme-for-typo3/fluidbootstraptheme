@@ -16,6 +16,7 @@
 			<flux:form.sheet name="imgGallerySheetAdvanced">
 				<flux:field.input name="settings.imgGalleryFalClassesModal"/>
 				<flux:field.checkbox name="settings.imgGalleryFalShowPreviewTitle" default="1"/>
+				<flux:field.checkbox name="settings.imgGalleryFalRenderHrefToOriginal" default="0"/>
 				<flux:field.select items="picture,footer" name="settings.imgGalleryFalPrevNextPosition" default="footer"/>
 				<flux:field.input name="settings.imgGalleryFalImageWidth" default="320"/>
 				<flux:field.select name="settings.imgGalleryFalRowLg" items="2,3,4,6,12" default="4"/>
@@ -58,7 +59,7 @@
 			<v:content.resources.fal field="settings.imgGalleryFalImageItems" as="images">
 				<f:for each="{images}" as="image" iteration="iteration">
 					<div class='col-xs-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowXs)} col-sm-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowSm)}  col-md-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowMd)}  col-lg-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowLg)} '>
-						<a class="thumbnail fancybox" data-toggle="modal" data-target="#modal{iteration.index}">
+						<a {f:if(then: 'href="{image.url}" ', condition:settings.imgGalleryFalRenderHrefToOriginal )}class="thumbnail fancybox" data-toggle="modal" data-target="#modal{iteration.index}">
 							<f:image src="{image.url}" width="{settings.imgGalleryFalImageWidth}c"
 									 height="{settings.imgGalleryFalImageWidth}c"
 									 alt="{image.alternative}"
