@@ -1,10 +1,9 @@
-{namespace v=FluidTYPO3\Vhs\ViewHelpers}
-{namespace flux=FluidTYPO3\Flux\ViewHelpers}
-<f:layout name="FCE" />
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="FCE" />
 
 	<f:section name="Configuration">
 		<flux:form wizardTab="Grid" id="grid4" options="{useTypoScript: 0}"
@@ -108,4 +107,5 @@
 	<f:section name="Main">
 		<f:render section="FrontendColRenderingGrid4" arguments="{_all}" />
 	</f:section>
+
 </div>

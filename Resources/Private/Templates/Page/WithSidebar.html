@@ -1,12 +1,10 @@
-{namespace v=FluidTYPO3\Vhs\ViewHelpers}
-{namespace flux=FluidTYPO3\Flux\ViewHelpers}
-
-<f:layout name="WithSideBar" />
-
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
-	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="WithSideBar" />
+
 	<f:section name="Configuration">
 		<flux:form id="sidebar" label="Page with sidebar" icon="{f:uri.resource(path: 'Icons/SidebarPage.png')}">
 			{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:variable.set(name: 'settings')}
@@ -35,9 +33,11 @@
 			</flux:grid>
 		</flux:form>
 	</f:section>
+
 	<f:section name="Preview">
 	</f:section>
 
 	<f:section name="Main">
 	</f:section>
+
 </div>

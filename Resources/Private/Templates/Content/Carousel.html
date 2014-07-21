@@ -1,12 +1,10 @@
-{namespace flux=FluidTYPO3\Flux\ViewHelpers}
-{namespace v=FluidTYPO3\Vhs\ViewHelpers}
-
-<f:layout name="Content" />
-
-<div xmlns="http://www.w3.org/1999/xhtml"
-	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
-	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="Content" />
+
 	<f:section name="Configuration">
 		<flux:form wizardTab="Bootstrap" id="carousel" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons//bootstrap/glyphicons_319_sort.png')}">
 			<flux:field.checkbox name="settings.carousel.quickselect" default="1" />
@@ -18,17 +16,17 @@
 			<flux:field.input name="settings.carousel.width" default="1170c" />
 			<flux:field.checkbox name="settings.carousel.autostart" />
 			<flux:grid>
-                <v:condition.type.isArray value="{elements}">
-                    <f:for each="{elements}" as="element" iteration="iteration">
-                        <f:for each="{element}" key="elementType" as="elementData">
-                            <f:if condition="{0: elementType} == {0: 'content'}">
-                                <flux:grid.row>
-                                    <flux:grid.column name="{elementData.id}" label="Content: {elementData.id}" />
-                                </flux:grid.row>
-                            </f:if>
-                        </f:for>
-                    </f:for>
-                </v:condition.type.isArray>
+				<v:condition.type.isArray value="{elements}">
+					<f:for each="{elements}" as="element" iteration="iteration">
+						<f:for each="{element}" key="elementType" as="elementData">
+							<f:if condition="{0: elementType} == {0: 'content'}">
+								<flux:grid.row>
+									<flux:grid.column name="{elementData.id}" label="Content: {elementData.id}" />
+								</flux:grid.row>
+							</f:if>
+						</f:for>
+					</f:for>
+				</v:condition.type.isArray>
 			</flux:grid>
 			<flux:form.sheet name="elements">
 				<flux:form.section name="elements">
@@ -171,11 +169,11 @@
 	</f:section>
 
 	<f:section name="Image">
-        <f:if condition="{elementData.file}">
-            <f:then>
-                <f:image src="{elementData.file}" alt="{elementData.header}" width="{settings.carousel.width}" />
-            </f:then>
-        </f:if>
+		<f:if condition="{elementData.file}">
+			<f:then>
+				<f:image src="{elementData.file}" alt="{elementData.header}" width="{settings.carousel.width}" />
+			</f:then>
+		</f:if>
 	</f:section>
 
 	<f:section name="Content">
@@ -192,4 +190,5 @@
 			{elementData.text -> f:format.html()}
 		</div>
 	</f:section>
+
 </div>

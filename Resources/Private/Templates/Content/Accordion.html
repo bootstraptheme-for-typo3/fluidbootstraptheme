@@ -1,12 +1,9 @@
-{namespace flux=FluidTYPO3\Flux\ViewHelpers}
-{namespace v=FluidTYPO3\Vhs\ViewHelpers}
-
-<f:layout name="Content" />
-
-<div xmlns="http://www.w3.org/1999/xhtml"
-	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
-	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="Content" />
 
 	<f:section name="Configuration">
 		<flux:form wizardTab="Bootstrap" id="accordion" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_113_justify.png')}">
@@ -19,13 +16,13 @@
 				</flux:form.section>
 			</flux:form.sheet>
 			<flux:grid>
-                <v:condition.type.isArray value="{panels}">
-                    <f:for each="{panels}" as="panel" iteration="iteration">
-                        <flux:grid.row>
-                            <flux:grid.column name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel {iteration.cycle}')}" />
-                        </flux:grid.row>
-                     </f:for>
-                </v:condition.type.isArray>
+				<v:condition.type.isArray value="{panels}">
+					<f:for each="{panels}" as="panel" iteration="iteration">
+						<flux:grid.row>
+							<flux:grid.column name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel {iteration.cycle}')}" />
+						</flux:grid.row>
+					 </f:for>
+				</v:condition.type.isArray>
 			</flux:grid>
 		</flux:form>
 	</f:section>
@@ -62,4 +59,5 @@
 			</f:for>
 		</div>
 	</f:section>
+
 </div>

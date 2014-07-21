@@ -296,6 +296,9 @@
 			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalShowPreviewTitle" xml:space="preserve">
 				<source>Show Title in Preview</source>
 			</trans-unit>
+			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalRenderHrefToOriginal" xml:space="preserve">
+				<source>Render Link Href Attribut to original image</source>
+			</trans-unit>
 			<trans-unit id="flux.imgGallery.fields.settings.imgGalleryFalPrevNextPosition" xml:space="preserve">
 				<source>Postition of Prev-Next</source>
 			</trans-unit>
