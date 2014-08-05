@@ -50,6 +50,9 @@
 			<trans-unit id="flux.alert.fields.isBlock" xml:space="preserve">
 				<source>Add additional padding</source>
 			</trans-unit>
+            <trans-unit id="flux.alert.columns.content" xml:space="preserve">
+				<source>Alert</source>
+			</trans-unit>
 			<!-- /Alert.html -->
 
 			<!-- Button.html -->
@@ -328,6 +331,9 @@
 			</trans-unit>
 			<trans-unit id="flux.jumbotron.areas.content" xml:space="preserve">
 				<source>Jumbotron content</source>
+			</trans-unit>
+            <trans-unit id="flux.jumbotron.columns.content" xml:space="preserve">
+				<source>Jumbotron</source>
 			</trans-unit>
 			<!-- /Jumbotron.html -->
 
@@ -695,6 +701,12 @@
 			<trans-unit id="flux.grid2.fields.settings.grid2.rowCSS">
 				<source>Column Custom CSS Class for Row</source>
 			</trans-unit>
+            <trans-unit id="flux.grid2.columns.column1">
+                <source>Left Column</source>
+            </trans-unit>
+            <trans-unit id="flux.grid2.columns.column2">
+                <source>Right Column</source>
+            </trans-unit>
 			<!-- TwoColumn.html -->
 
 			<!-- ThreeColumn.html -->
@@ -752,6 +764,15 @@
 			<trans-unit id="flux.grid3.fields.settings.grid3.rowCSS">
 				<source>Column Custom CSS Class for Row</source>
 			</trans-unit>
+            <trans-unit id="flux.grid3.columns.column1">
+                <source>Left Column</source>
+            </trans-unit>
+            <trans-unit id="flux.grid3.columns.column2">
+                <source>Middle Column</source>
+            </trans-unit>
+            <trans-unit id="flux.grid3.columns.column3">
+                <source>Right Column</source>
+            </trans-unit>
 			<!-- ThreeColumn.html -->
 
 			<!-- FourColumn.html -->
@@ -812,6 +833,19 @@
 			<trans-unit id="flux.grid4.fields.settings.grid4.rowCSS">
 				<source>Column Custom CSS Class for Row</source>
 			</trans-unit>
+            <trans-unit id="flux.grid4.columns.column1">
+                <source>Left Column</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.columns.column2">
+                <source>Middle Right</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.columns.column3">
+                <source>Middle Left</source>
+            </trans-unit>
+            <trans-unit id="flux.grid4.columns.column4">
+                <source>Right Column</source>
+            </trans-unit>
+
 			<!-- FourColumn.html -->
 		</body>
 	</file>
