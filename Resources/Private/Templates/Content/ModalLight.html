@@ -1,12 +1,9 @@
-{namespace v=Tx_Vhs_ViewHelpers}
-{namespace flux=FluidTYPO3\Flux\ViewHelpers}
-
-<f:layout name="Content" />
-
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="Content" />
 
 	<f:section name="Configuration">
 		<flux:form wizardTab="Bootstrap" id="modalLight" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_151_new_window.png')}">
@@ -19,13 +16,8 @@
 				<flux:field.input name="settings.additionalClassesModal" />
 			</flux:form.sheet>
 
-			<flux:grid>
-				<flux:grid.row>
-					<flux:grid.column>
-						<flux:form.content name="content" label="Content Element" />
-					</flux:grid.column>
-				</flux:grid.row>
-			</flux:grid>
+			<flux:form.content name="content" label="Content Element" />
+
 		</flux:form>
 	</f:section>
 
@@ -37,7 +29,7 @@
 	</f:section>
 
 	<f:section name="Main">
-		<v:var.set name="id" value="modal-{record.uid}" />
+		<v:variable.set name="id" value="modal-{record.uid}" />
 		<button class="btn {settings.additionalClassesButton}" data-toggle="modal" data-target="#{id}">
 			{settings.buttonText}
 		</button>
@@ -57,4 +49,5 @@
 			</div>
 		</div>
 	</f:section>
+
 </div>

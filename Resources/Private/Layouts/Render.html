@@ -1,17 +1,10 @@
-{namespace v=Tx_Vhs_ViewHelpers}
-
 <f:layout name="Page" />
-
 
 <f:render section="Navigation" partial="Navigation" arguments="{_all}" />
 <f:render section="SubNavigation" partial="SubNavigation" optional="TRUE" arguments="{_all}" />
 <div class="container">
 	<f:render section="HeroUnit" partial="HeroUnit" optional="TRUE" arguments="{_all}" />
 	<f:render section="TabNavigation" partial="TabNavigation" optional="TRUE" arguments="{_all}" />
-	<div class="maincontent">
-		<!--TYPO3SEARCH_begin-->
-		<v:content.render column="0" />
-		<!--TYPO3SEARCH_end-->
-	</div>
+    <f:render section="RenderColPos" partial="ContentRender" arguments="{_all}" />
 	<f:render section="Footer" partial="Footer" arguments="{_all}" />
 </div>

@@ -1,38 +1,37 @@
-{namespace v=Tx_Vhs_ViewHelpers}
-{namespace flux=FluidTYPO3\Flux\ViewHelpers}
-
-<f:layout name="Content" />
-
-<div xmlns="http://www.w3.org/1999/xhtml"
-	 xmlns:v="http://fedext.net/ns/vhs/ViewHelpers"
-	 xmlns:flux="http://fedext.net/ns/flux/ViewHelpers"
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="Content" />
+
 	<f:section name="Configuration">
-		<flux:form wizardTab="Bootstrap" id="navigationlist" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_072_bookmark.png')}">
+		<flux:form wizardTab="Bootstrap" id="navigationlist" options="{useTypoScript: 0}"
+				   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_072_bookmark.png')}">
 			<flux:form.sheet name="display">
-				<flux:field.checkbox name="addWell" />
-				<flux:field.checkbox name="zeroPadding" />
-				<flux:field.input name="class" />
+				<flux:field.checkbox name="addWell"/>
+				<flux:field.checkbox name="zeroPadding"/>
+				<flux:field.input name="class"/>
 			</flux:form.sheet>
 			<flux:form.sheet name="items">
 				<flux:form.section name="items">
 					<flux:form.object name="header">
-						<flux:field.input name="text" />
-						<flux:field.input name="class" />
+						<flux:field.input name="text"/>
+						<flux:field.input name="class"/>
 					</flux:form.object>
 					<flux:form.object name="item">
-						<flux:field.input name="text" />
-						<flux:field.input name="tooltip" />
+						<flux:field.input name="text"/>
+						<flux:field.input name="tooltip"/>
 						<flux:field.input name="icon" eval="trim">
-							<flux:wizard.link />
+							<flux:wizard.link/>
 						</flux:field.input>
 						<flux:field.input name="target">
-							<flux:wizard.link />
+							<flux:wizard.link/>
 						</flux:field.input>
-						<flux:field.input name="class" />
+						<flux:field.input name="class"/>
 					</flux:form.object>
 					<flux:form.object name="divider">
-						<flux:field.input name="class" />
+						<flux:field.input name="class"/>
 					</flux:form.object>
 				</flux:form.section>
 			</flux:form.sheet>
@@ -41,23 +40,33 @@
 
 	<f:section name="Preview">
 		<ul>
-			<f:for each="{items}" as="itemSectionObject">
-				<f:for each="{itemSectionObject}" as="object" key="objectType">
-					<li><strong>{objectType}</strong>
-						<f:if condition="{0: objectType} != {0: 'divider'}"><em>{object.text} ({object.target})</em>
-							<v:media.exists file="{object.icon}">Icon: {object.icon}</v:media.exists>
-						</f:if>
-					</li>
-				</f:for>
-			</f:for>
+			<v:condition.type.isArray value="{items}">
+				<f:then>
+					<f:for each="{items}" as="itemSectionObject">
+						<f:for each="{itemSectionObject}" as="object" key="objectType">
+							<li><strong>{objectType}</strong>
+								<f:if condition="{0: objectType} != {0: 'divider'}"><em>{object.text}
+									({object.target})</em>
+									<v:media.exists file="{object.icon}">Icon: {object.icon}</v:media.exists>
+								</f:if>
+							</li>
+						</f:for>
+					</f:for>
+				</f:then>
+				<f:else>
+					<b>Please Create a Object in there</b>
+				</f:else>
+			</v:condition.type.isArray>
+
 		</ul>
 	</f:section>
 
 	<f:section name="Main">
-		<div class="{class} {f:if(condition: addWell, then: 'well')}" style="{f:if(condition: zeroPadding, then: 'padding: 8px 0px 8px 0px;')}">
+		<div class="{class} {f:if(condition: addWell, then: 'well')}"
+			 style="{f:if(condition: zeroPadding, then: 'padding: 8px 0px 8px 0px;')}">
 			<ul class="nav nav-list">
 				<f:for each="{items}" as="itemSectionObjects">
-					<v:var.set name="icon" value="" />
+					<v:variable.set name="icon" value=""/>
 					<f:for each="{itemSectionObjects}" as="object" key="objectType">
 						<v:switch value="{objectType}">
 							<v:case case="header" break="TRUE">
@@ -69,16 +78,21 @@
 								<li class="nav-divider {object.class}"></li>
 							</v:case>
 							<v:case case="default">
-								<v:var.set name="icon" value="{v:media.exists(file: object.icon, then: '<img src=\'{object.icon}\' alt=\'\' class=\'icon-blank\' /> ', else: '')}" />
+								<v:variable.set name="icon"
+												value="{v:media.exists(file: object.icon, then: '<img src=\'{object.icon}\' alt=\'\' class=\'icon-blank\' /> ', else: '')}"/>
 								<li class="{f:if(condition: '{contentObject.pid} == {object.target}', then: 'active', else: 'item')}">
 									<f:if condition="{object.target -> v:math.round()} > 0">
 										<f:then>
-											<f:link.page pageUid="{object.target}" class="{object.class}" rel="{f:if(condition: object.tooltip, then: 'tooltip')}" title="{object.tooltip}">
+											<f:link.page pageUid="{object.target}" class="{object.class}"
+														 rel="{f:if(condition: object.tooltip, then: 'tooltip')}"
+														 title="{object.tooltip}">
 												<f:format.raw>{icon}{object.text}</f:format.raw>
 											</f:link.page>
 										</f:then>
 										<f:else>
-											<a href="{object.target}" class="{object.class}" rel="{f:if(condition: object.tooltip, then: 'tooltip')}" title="{object.tooltip}">
+											<a href="{object.target}" class="{object.class}"
+											   rel="{f:if(condition: object.tooltip, then: 'tooltip')}"
+											   title="{object.tooltip}">
 												<f:format.raw>{icon}{object.text}</f:format.raw>
 											</a>
 										</f:else>
@@ -91,4 +105,5 @@
 			</ul>
 		</div>
 	</f:section>
+
 </div>

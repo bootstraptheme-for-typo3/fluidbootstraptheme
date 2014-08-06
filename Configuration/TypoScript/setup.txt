@@ -4,8 +4,8 @@ plugin.tx_fluidbootstraptheme.view {
 	partialRootPath = {$plugin.tx_fluidbootstraptheme.view.partialRootPath}
 	layoutRootPath = {$plugin.tx_fluidbootstraptheme.view.layoutRootPath}
 	widget {
-    		Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
-    		TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
+		Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
+		TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
 	}
 }
 
@@ -63,7 +63,7 @@ plugin.tx_vhs.settings.asset{
 	}
 
 	fontawesome {
-		path = http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css
+		path = http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css
 		external = 1
 		group = cdn
 		standalone = 1

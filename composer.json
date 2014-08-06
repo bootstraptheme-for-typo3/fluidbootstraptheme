@@ -5,5 +5,6 @@
          "fluidtypo3/flux": "*",
          "fluidtypo3/vhs": "*"
      },
-     "type": "typo3-cms-extension"
+     "type": "typo3-cms-extension",
+     "version": "0.6.0"
   }
