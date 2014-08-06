@@ -17,9 +17,14 @@ Provides the template files and TypoScript setup necessary to use the included e
 By leveraging the integration logic provided by `EXT:fluidcontent` and `EXT:fluidpages` - enabling use of specially constructed Fluid templates as
 content elements, much like the Flexible Content Elements concept from TemplaVoila.
 
-## How is it installed?
+## How to install it?
 
-Download, install the extension and include the static TypoScript configuration.
+Download, install the extension and include the static TypoScript template in your Roottemplate.
+You can use the Constant-Editor to define basic configuration for the extension like Columnwidth etc. If you dont want to use the Constant-Editor to set these globally, you can disable this funktionality by adding `plugin.tx_fluidbootstraptheme.settings.useTypoScript = 0` to your Setup. By doing this, you enable these settings in the properties of each page. 
+
+## Dependencies
+
+Actually FluidBoostrapTheme is only working with DEV Versions of : `EXT:flux`, `EXT:vhs`, `EXT:fluidcontent`, `EXT:fluidpages` - You can get them on http://www.github.com/FluidTypo3
 
 ## How is it used?
 
