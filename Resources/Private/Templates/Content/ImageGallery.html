@@ -6,8 +6,7 @@
 	<f:layout name="FCE"/>
 
 	<f:section name="Configuration">
-		<flux:form wizardTab="Bootstrap" id="imgGallery"
-				   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_138_picture.png')}" options="{useTypoScript: 0}">
+		<flux:form id="imgGallery" options="{useTypoScript: 0, group: 'Bootstrap', icon: '../typo3conf/ext/fluidbootstraptheme/Resources/Public/Icons/bootstrap/glyphicons_138_picture.png'}">
 			<flux:form.sheet name="imgGallerySheetImages">
 				<flux:field.inline.fal name="settings.imgGalleryFalImageItems" multiple="TRUE"
 									   maxItems="20"

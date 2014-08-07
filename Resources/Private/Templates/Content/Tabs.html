@@ -6,15 +6,12 @@
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form wizardTab="Bootstrap" id="tabs" options="{useTypoScript: 0}"
-				   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_440_folder_closed.png')}">
-
+		<flux:form id="tabs" options="{useTypoScript: 0, group: 'Bootstrap', icon: '../typo3conf/ext/fluidbootstraptheme/Resources/Public/Icons/bootstrap/glyphicons_440_folder_closed.png'}">
 			<flux:form.sheet name="display">
 				<flux:field.select name="mode" items="tab,pill" requestUpdate="TRUE"/>
 				<flux:field.checkbox name="stackable"/>
 				<flux:field.checkbox name="fade"/>
 			</flux:form.sheet>
-
 			<flux:form.sheet name="tabs">
 				<flux:form.section name="tabs">
 					<flux:form.object name="tab">
@@ -24,7 +21,6 @@
 					</flux:form.object>
 				</flux:form.section>
 			</flux:form.sheet>
-
 			<flux:grid>
 				<flux:grid.row>
 					<f:if condition="{tabs}">

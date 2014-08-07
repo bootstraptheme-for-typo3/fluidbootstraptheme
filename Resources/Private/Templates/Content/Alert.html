@@ -6,7 +6,7 @@
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form wizardTab="Bootstrap" id="alert" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_355_bullhorn.png')}">
+		<flux:form id="alert" options="{useTypoScript: 0, group: 'Bootstrap', icon: '../typo3conf/ext/fluidbootstraptheme/Resources/Public/Icons/bootstrap/glyphicons_355_bullhorn.png'}">
 			<flux:field.input name="header" />
 			<flux:field.input name="closeLinkText" />
 			<flux:field.select name="class" items="info,success,warning,danger" default="info" />

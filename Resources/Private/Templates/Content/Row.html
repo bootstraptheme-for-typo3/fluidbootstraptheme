@@ -9,7 +9,7 @@
 		{v:variable.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:variable.set(name: 'settings')}
 		{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:variable.set(name:
 		'numberOfColumns')}
-		<flux:form wizardTab="Grid" id="row" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png')}">
+		<flux:form id="row" options="{useTypoScript: 0, group: 'Bootstrap', icon: '../typo3conf/ext/fluidbootstraptheme/Resources/Public/Icons/bootstrap/glyphicons_155_show_big_thumbnails.png'}">
 			<flux:form.section name="columns">
 				<flux:form.object name="column">
 					<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
