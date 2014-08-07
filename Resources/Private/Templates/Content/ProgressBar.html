@@ -6,8 +6,7 @@
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form wizardTab="Bootstrap" id="progressBar" options="{useTypoScript: 0}"
-				   icon="{v:extension.path.resources(path: 'Icons/bootstrap/glyphicons_042_pie_chart.png')}">
+		<flux:form id="progressBar" options="{useTypoScript: 0, group: 'Bootstrap', icon: '../typo3conf/ext/fluidbootstraptheme/Resources/Public/Icons/bootstrap/glyphicons_042_pie_chart.png'}">
 			<flux:form.sheet name="progressBar">
 				<flux:field.checkbox name="settings.progressBarAnimated" default="0" />
 				<flux:field.checkbox name="settings.progressBarStriped" default="0" />

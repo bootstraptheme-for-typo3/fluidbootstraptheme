@@ -6,7 +6,7 @@
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form wizardTab="Bootstrap" id="carousel" options="{useTypoScript: 0}" icon="{v:extension.path.resources(path: 'Icons//bootstrap/glyphicons_319_sort.png')}">
+		<flux:form id="carousel" options="{useTypoScript: 0, group: 'Bootstrap', icon: '../typo3conf/ext/fluidbootstraptheme/Resources/Public/Icons/bootstrap/glyphicons_319_sort.png'}">
 			<flux:field.checkbox name="settings.carousel.quickselect" default="1" />
 			<flux:field.select name="settings.carousel.quickselectType" items="{images: 'images', dots: 'dots', numbers: 'numbers'}" />
 			<flux:field.input name="settings.carousel.interval" default="5000" eval="int,trim" />
