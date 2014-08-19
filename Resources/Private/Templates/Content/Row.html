@@ -22,7 +22,7 @@
 				<flux:grid.row>
 					<v:condition.type.isArray value="{columns}">
 						<f:for each="{columns}" as="sectionObject" iteration="iteration">
-							<v:variable.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 4)}" />
+							<v:variable.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 7)}" />
 							<v:variable.set name="percent" value="{width  -> v:math.division(b: numberOfColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
 							<flux:grid.column style="width: {percent}%" name="column{iteration.cycle}" label="{percent}%" />
 						</f:for>
