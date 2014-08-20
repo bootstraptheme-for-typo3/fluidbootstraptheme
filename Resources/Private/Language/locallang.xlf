@@ -837,10 +837,10 @@
                 <source>Left Column</source>
             </trans-unit>
             <trans-unit id="flux.grid4.columns.column2">
-                <source>Middle Right</source>
+                <source>Middle Left</source>
             </trans-unit>
             <trans-unit id="flux.grid4.columns.column3">
-                <source>Middle Left</source>
+                <source>Middle Right</source>
             </trans-unit>
             <trans-unit id="flux.grid4.columns.column4">
                 <source>Right Column</source>
