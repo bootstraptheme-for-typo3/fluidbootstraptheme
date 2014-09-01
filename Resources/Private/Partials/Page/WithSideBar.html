@@ -3,11 +3,6 @@
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-	<f:section name="WithSideBarInPut">
-		<flux:grid.column colPos="3" name="Sidebar Content" />
-		<flux:grid.column colPos="0" name="Main Content" />
-	</f:section>
-
 	<f:section name="WithSideBarOutPut">
 		<div class="col-sm-{settings.distribution}">
 			<f:render partial="Sidebar" section="Sidebar" arguments="{_all}" />
@@ -33,16 +28,6 @@
 		<div class="col-sm-{settings.distribution}">
 			<f:render partial="Sidebar" section="Sidebar" arguments="{_all}" />
 		</div>
-	</f:section>
-
-	<f:section name="WithSideBarInPutleft">
-		<flux:grid.column colPos="3" name="Sidebar Content" />
-		<flux:grid.column colPos="0" name="Main Content" />
-	</f:section>
-
-	<f:section name="WithSideBarInPutright">
-		<flux:grid.column colPos="0" name="Main Content" />
-		<flux:grid.column colPos="3" name="Sidebar Content" />
 	</f:section>
 	
 </div>
