@@ -31,7 +31,7 @@
 			<v:condition.type.isArray value="{images}">
 				<f:then>
 					<f:for each="{images}" as="image" iteration="iteration">
-						<v:media.image src="{image.url}" alt="{ImageAltText}" width="120c" height="120c"/>
+                        <v:media.image src="{image.url}" alt="{image.alternative}" width="120c" height="120c"/>
 					</f:for>
 				</f:then>
 				<f:else>
