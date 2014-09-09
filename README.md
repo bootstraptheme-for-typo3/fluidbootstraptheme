@@ -6,7 +6,7 @@
 
 ## What is it
 
-A collection of Twitter Boostrap oriented Fluid Content Elements and Page Templates written for `EXT:fluidcontent` and `EXT:fluidpages` using ViewHelpers from `EXT:vhs`.
+A collection of Twitter Bootstrap oriented Fluid Content Elements and Page Templates written for `EXT:fluidcontent` and `EXT:fluidpages` using ViewHelpers from `EXT:vhs`.
 It uses `EXT:flux`
 
 ===
@@ -33,7 +33,7 @@ You can use the Constant-Editor to define basic configuration for the extension 
 
 ## Dependencies
 
-Actually FluidBoostrapTheme is only working with DEV Versions of : `EXT:flux`, `EXT:vhs`, `EXT:fluidcontent`, `EXT:fluidpages` - You can get them on http://www.github.com/FluidTypo3
+Actually FluidBootstrapTheme is only working with DEV Versions of : `EXT:flux`, `EXT:vhs`, `EXT:fluidcontent`, `EXT:fluidpages` - You can get them on http://www.github.com/FluidTypo3
 
 ===
 
