@@ -6,27 +6,27 @@
 	<f:layout name="Render" />
 
 	<f:section name="Configuration">
-		<flux:form id="default" label="Standard Page" icon="{f:uri.resource(path: 'Icons/Page.png')}">
+		<flux:form id="default" icon="{f:uri.resource(path: 'Icons/Page.png')}">
 			{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:variable.set(name: 'settings' )}
 			<f:if condition="{settings.useTypoScript} < 1">
-				<flux:field.input name="settings.entryLevel" label="Main menu entry level override for this page only"
+				<flux:field.input name="settings.entryLevel"
 								  eval="int,trim" minimum="0" maximum="6" default="{settings.menu.main.entryLevel}">
 				</flux:field.input>
-				<flux:field.checkbox name="settings.enableSearch" label="Enable search field in top navigation bar" default="1" />
-				<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="searchPageUid" label="Page with search form">
+				<flux:field.checkbox name="settings.enableSearch" default="1" />
+				<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="searchPageUid">
 					<flux:wizard.list table="pages" />
 				</flux:field.relation>
 				<flux:field.input name="settings.searchFieldName" label="Name (HTML attribute) of form field, example tx_solr[q]" default="q" />
 			</f:if>
 			<flux:grid>
 				<flux:grid.row>
-					<flux:grid.column colPos="1" name="Hero Unit" />
+					<flux:grid.column colPos="1" name="hero" />
 				</flux:grid.row>
 				<flux:grid.row>
-					<flux:grid.column colPos="0" name="Main Content" />
+					<flux:grid.column colPos="0" name="main" />
 				</flux:grid.row>
 				<flux:grid.row>
-					<flux:grid.column colPos="2" name="Footer Content" />
+					<flux:grid.column colPos="2" name="footer" />
 				</flux:grid.row>
 			</flux:grid>
 		</flux:form>
