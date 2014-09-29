@@ -7,7 +7,7 @@
 
 	<f:section name="Configuration">
 		<flux:form id="tabs"
-				   options="{useTypoScript: 0, group: 'Bootstrap', icon: '../typo3conf/ext/fluidbootstraptheme/Resources/Public/Icons/bootstrap/glyphicons_440_folder_closed.png'}">
+				   options="{useTypoScript: 0, group: 'Bootstrap', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_440_folder_closed.png\')}'}">
 			<flux:form.sheet name="display">
 				<flux:field.select name="mode" items="tab,pill" requestUpdate="TRUE" />
 				<flux:field.checkbox name="stackable" />
