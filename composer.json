@@ -3,6 +3,8 @@
      "description": "The fluid_bootstrap package from FluidTYPO3",
      "require": {
          "fluidtypo3/flux": "*",
+         "fluidtypo3/fluidcontent": "*",
+         "fluidtypo3/fluidpages": "*",
          "fluidtypo3/vhs": "*"
      },
      "type": "typo3-cms-extension",
