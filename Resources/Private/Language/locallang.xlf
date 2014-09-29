@@ -4,6 +4,8 @@
 		  date="2014-01-06T01:00:11+01:00">
 		<header/>
 		<body>
+			<!-- Content -->
+
 			<!-- Accordion.html -->
 			<trans-unit id="flux.accordion" xml:space="preserve">
 				<source> Accordion with content elements</source>
@@ -845,8 +847,111 @@
             <trans-unit id="flux.grid4.columns.column4">
                 <source>Right Column</source>
             </trans-unit>
-
 			<!-- FourColumn.html -->
+
+			<!-- /Content -->
+			<!-- Pages -->
+
+			<!-- Error.html -->
+			<trans-unit id="flux.error">
+				<source>Error page</source>
+			</trans-unit>
+			<!-- /Error.html -->
+
+			<!-- FrontPage.html -->
+			<trans-unit id="flux.front">
+				<source>Front Page</source>
+			</trans-unit>
+			<trans-unit id="flux.front.fields.settings.entryLevel">
+				<source>Main menu entry level override for this page only</source>
+			</trans-unit>
+			<trans-unit id="flux.front.fields.settings.enableSearch">
+				<source>Enable search field in top navigation bar</source>
+			</trans-unit>
+			<trans-unit id="flux.front.fields.searchPageUid">
+				<source>Page with search form</source>
+			</trans-unit>
+			<trans-unit id="flux.front.fields.settings.searchFieldName">
+				<source>Name (HTML attribute) of form field, example tx_solr[q]</source>
+			</trans-unit>
+			<trans-unit id="flux.front.columns.jumbotron">
+				<source>Jumbotron</source>
+			</trans-unit>
+			<trans-unit id="flux.front.columns.main">
+				<source>Main Content</source>
+			</trans-unit>
+			<trans-unit id="flux.front.columns.footer">
+				<source>Footer Content</source>
+			</trans-unit>
+			<!-- /FrontPage.html -->
+
+			<!-- Render.html -->
+			<trans-unit id="flux.default">
+				<source>Standard Page</source>
+			</trans-unit>
+			<trans-unit id="flux.default.fields.settings.entryLevel">
+				<source>Main menu entry level override for this page only</source>
+			</trans-unit>
+			<trans-unit id="flux.default.fields.settings.enableSearch">
+				<source>Enable search field in top navigation bar</source>
+			</trans-unit>
+			<trans-unit id="flux.default.fields.searchPageUid">
+				<source>Page with search form</source>
+			</trans-unit>
+			<trans-unit id="flux.default.fields.settings.searchFieldName">
+				<source>Name (HTML attribute) of form field, example tx_solr[q]</source>
+			</trans-unit>
+			<trans-unit id="flux.default.columns.hero">
+				<source>Hero Unit</source>
+			</trans-unit>
+			<trans-unit id="flux.default.columns.main">
+				<source>Main Content</source>
+			</trans-unit>
+			<trans-unit id="flux.default.columns.footer">
+				<source>Footer Content</source>
+			</trans-unit>
+			<!-- /Render.html -->
+
+			<!-- WithSidebar.html -->
+			<trans-unit id="flux.sidebar">
+				<source>Page with sidebar</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.fields.settings.distribution">
+				<source>Width of sidebar (what remains of a 12-column total is used by main content)</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.fields.settings.position">
+				<source>Placement of sidebar</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.fields.settings.enableSearch">
+				<source>Enable search field in top navigation bar</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.fields.searchPageUid">
+				<source>Page with search form</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.fields.settings.searchFieldName">
+				<source>Name (HTML attribute) of form field, example tx_solr[q]</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.fields.settings.addWell">
+				<source>Add 'Well' to Sidebar</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.fields.settings.wellSmall">
+				<source>Make 'Well' padding smaller than normal</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.columns.hero">
+				<source>Hero Unit</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.columns.main">
+				<source>Main Content</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.columns.sidebar">
+				<source>Sidebar Content</source>
+			</trans-unit>
+			<trans-unit id="flux.sidebar.columns.footer">
+				<source>Footer Content</source>
+			</trans-unit>
+			<!-- /WithSidebar.html -->
+
+			<!-- /Pages -->
 		</body>
 	</file>
 </xliff>
