@@ -6,7 +6,7 @@
 	<f:layout name="Content"/>
 
 	<f:section name="Configuration">
-		<flux:form id="button" options="{useTypoScript: 0, group: 'Bootstrap', icon: '../typo3conf/ext/fluidbootstraptheme/Resources/Public/Icons/bootstrap/glyphicons_050_link.png'}">
+		<flux:form id="button" options="{useTypoScript: 0, group: 'Bootstrap', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_050_link.png\')}'}">
 			<flux:form.sheet name="ButtonSheetOne">
 				<flux:field.select items="xs,sm,default,lg" name="settings.ButtonSize" default="default"/>
 				<flux:field.checkbox name="settings.ButtonBlock" default="0"/>

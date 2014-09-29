@@ -3,11 +3,11 @@
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
 	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
 
-	<f:layout name="FCE" />
+	<f:layout name="Content" />
 
 	<f:section name="Configuration">
 		<flux:form id="imgGallery"
-				   options="{useTypoScript: 0, group: 'Bootstrap', icon: '../typo3conf/ext/fluidbootstraptheme/Resources/Public/Icons/bootstrap/glyphicons_138_picture.png'}">
+				   options="{useTypoScript: 0, group: 'Bootstrap', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_138_picture.png\')}'}">
 			<flux:form.sheet name="imgGallerySheetImages">
 				<flux:field.inline.fal name="settings.imgGalleryFalImageItems" multiple="TRUE"
 									   maxItems="20"
