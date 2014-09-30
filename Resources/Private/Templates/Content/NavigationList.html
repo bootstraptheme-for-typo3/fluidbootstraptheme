@@ -79,23 +79,14 @@
 							<v:case case="default">
 								<v:variable.set name="icon"
 												value="{v:media.exists(file: object.icon, then: '<img src=\'{object.icon}\' alt=\'\' class=\'icon-blank\' /> ', else: '')}"/>
-								<li class="{f:if(condition: '{contentObject.pid} == {object.target}', then: 'active', else: 'item')}">
-									<f:if condition="{object.target -> v:math.round()} > 0">
-										<f:then>
-											<f:link.page pageUid="{object.target}" class="{object.class}"
-														 rel="{f:if(condition: object.tooltip, then: 'tooltip')}"
-														 title="{object.tooltip}">
-												<f:format.raw>{icon}{object.text}</f:format.raw>
-											</f:link.page>
-										</f:then>
-										<f:else>
-											<a href="{object.target}" class="{object.class}"
-											   rel="{f:if(condition: object.tooltip, then: 'tooltip')}"
-											   title="{object.tooltip}">
-												<f:format.raw>{icon}{object.text}</f:format.raw>
-											</a>
-										</f:else>
-									</f:if>
+								<v:variable.set name="linkTargetObject"
+												value="{v:iterator.explode(content: '{object.target}', glue: ' ')}"/>
+								<li class="{f:if(condition: '{contentObject.pid} == {linkTargetObject.0}', then: 'active', else: 'item')}">
+									<f:link.page pageUid="{linkTargetObject.0}" class="{object.class}" target="{f:if(condition:'{linkTargetObject.1}', then: '{linkTargetObject.1}', else: '')}"
+											 rel="{f:if(condition: object.tooltip, then: 'tooltip')}"
+											 title="{object.tooltip}">
+										<f:format.raw>{icon}{object.text}</f:format.raw>
+									</f:link.page>
 								</li>
 							</v:case>
 						</v:switch>
