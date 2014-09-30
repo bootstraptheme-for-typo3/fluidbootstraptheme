@@ -16,6 +16,11 @@ plugin.tx_fluidbootstraptheme.settings {
 	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=Width of sidebar (what remains of a 12-column total is used by main content)
 	distribution = 4
 	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=Number of grid columns: Set this to the same number used in your custom Bootstrap CSS if you've switched from the default 12-grid
-    gridColumns = 12
+	gridColumns = 12
 
+}
+
+plugin.tx_fluidbootstraptheme.settings {
+	# cat=FLUIDBOOTSTRAPTHEME CSS/settings; type=string; label = CSS wrapper Classes for Grid Container (comma separated list)
+	colwrap = first, second, third
 }

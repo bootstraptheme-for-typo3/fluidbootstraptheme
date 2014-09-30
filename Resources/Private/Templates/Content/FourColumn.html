@@ -32,6 +32,9 @@
 				</flux:grid>
 			</flux:form.sheet>
 			<flux:form.sheet name="additionalCSS">
+				<v:variable.set name="settings.wrapdropdown"
+								value="{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings.colwrap')}" />
+				<flux:field.select name="settings.grid4.wrapclass" items="none,{settings.wrapdropdown}" label="Choose a Wrap Class" default="none" />
 				<flux:field.input name="settings.grid4.rowCSS" size="10" />
 				<flux:field.input name="settings.grid4.col1CSS" size="10" />
 				<flux:field.checkbox name="settings.grid4.col1hide" default="0" />
@@ -65,7 +68,7 @@
 	</f:section>
 
 	<f:section name="FrontendColRenderingGrid4">
-		<div class="row {settings.grid4.rowCSS}">
+		<div class="row {settings.grid4.rowCSS} {f:if(condition: "{0: settings.grid4.wrapclass} == {0 : 'none'}", else: '{settings.grid4.wrapclass}')} ">
 			<f:if condition="{settings.grid4.split}=='more'">
 				<f:then>
 					<div class="{settings.grid4.col1width} {settings.grid4.col1CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">
