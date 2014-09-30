@@ -2,11 +2,11 @@
      "name": "fluidtypo3/fluidbootstraptheme",
      "description": "The fluid_bootstrap package from FluidTYPO3",
      "require": {
-         "fluidtypo3/flux": "*",
-         "fluidtypo3/fluidcontent": "*",
-         "fluidtypo3/fluidpages": "*",
-         "fluidtypo3/vhs": "*"
+         "fluidtypo3/flux": "7.1.0",
+         "fluidtypo3/fluidcontent": "4.1.0",
+         "fluidtypo3/fluidpages": "3.1.1",
+         "fluidtypo3/vhs": "2.0.2"
      },
      "type": "typo3-cms-extension",
-     "version": "1.0.0"
+     "version": "1.1.0"
   }
