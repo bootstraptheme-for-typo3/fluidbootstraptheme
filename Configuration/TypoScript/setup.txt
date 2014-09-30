@@ -11,6 +11,7 @@ plugin.tx_fluidbootstraptheme.view {
 
 plugin.tx_fluidbootstraptheme.settings {
 	gridColumns = {$plugin.tx_fluidbootstraptheme.settings.gridColumns}
+	colwrap = {$plugin.tx_fluidbootstraptheme.settings.colwrap}
 	menu {
 		main.entryLevel = 0
 		sub.entryLevel = 1
