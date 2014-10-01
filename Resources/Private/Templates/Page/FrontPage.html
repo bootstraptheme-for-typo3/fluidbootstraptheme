@@ -13,7 +13,7 @@
 										   eval="int,trim" minimum="0" maximum="6" default="{settings.menu.main.entryLevel}">
 				</flux:field.input>
 				<flux:field.checkbox name="settings.enableSearch" default="1" />
-				<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="searchPageUid">
+				<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="settings.searchPageUid">
 					<flux:wizard.list table="pages" />
 				</flux:field.relation>
 				<flux:field.input name="settings.searchFieldName" />
