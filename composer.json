@@ -1,5 +1,5 @@
 {
-	"name": "fluidtypo3/fluidbootstraptheme",
+	"name": "FluidBT/fluidbootstraptheme",
 	"description": "The fluid_bootstrap package from FluidTYPO3",
 	"require": {
 		"fluidtypo3/flux": "dev-development",
