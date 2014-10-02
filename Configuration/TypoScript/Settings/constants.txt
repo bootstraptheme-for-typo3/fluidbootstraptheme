@@ -5,6 +5,8 @@ plugin.tx_fluidbootstraptheme.settings {
 	entryLevel = 0
 	# cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=enable the top right corner search field
 	enableSearch = 1
+	# cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=Uid of the Searchresultpage
+	searchPageUid =
 	# cat=FLUIDBOOTSTRAPTHEME/settings; type=small; label=name attribute of search field
 	searchFieldName = q
 	# cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=enables a "well" class on the side bar of templates using side bar
