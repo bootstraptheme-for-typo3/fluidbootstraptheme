@@ -1,0 +1,96 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+	<f:layout name="Content" />
+
+	<f:section name="Configuration">
+		<flux:form id="thumbnailbox"
+				   label="Thumbnail Box"
+				   description="Box with a Thumbnail Image and Modal"
+				   options="{useTypoScript: 0, group: 'Bootstrap', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_138_picture.png\')}'}">
+			<flux:form.sheet name="thumbnailboxsheet" label="Thumbnailbox">
+				<flux:field.input name="settings.thumbHeadline" label="Headline" />
+				<flux:field.text name="settings.thumbText" label="Text Block" enableRichText="true" />
+				<flux:field.text name="settings.thumbLightbox" label="Lightbox Text" enableRichText="true" />
+				<flux:field.inline.fal name="settings.thumbImages" label="Reference Images (fist Image is Thumbnail)"
+									   maxItems="10"
+									   allowedExtensions="gif,jpg,jpeg,png" collapseAll="true" />
+			</flux:form.sheet>
+		</flux:form>
+	</f:section>
+
+	<f:section name="Preview">
+		<div class="thumbnail">
+			<v:content.resources.fal field="settings.thumbImages" as="ImageItems">
+				<f:for each="{ImageItems}" as="ImageItem" iteration="ImageCount">
+					<v:media.image src="{ImageItem.id}" alt="image" width="100px" />
+				</f:for>
+			</v:content.resources.fal>
+			<div class="caption">
+				<h3>{settings.thumbHeadline}</h3>
+				<f:format.html>{settings.thumbText}</f:format.html>
+			</div>
+		</div>
+	</f:section>
+
+	<f:section name="Main">
+		<v:variable.set name="thumbID" value="{v:system.uniqId(prefix: 'thumb-')}" />
+		<div class="thumbnail">
+			<v:content.resources.fal field="settings.thumbImages" as="ImageItems">
+				<f:for each="{ImageItems}" as="ImageItem" iteration="ImageCount">
+					<f:if condition="{ImageCount.isFirst}=='TRUE'">
+						<f:render section="ItemThumb" arguments="{_all}" />
+					</f:if>
+				</f:for>
+			</v:content.resources.fal>
+			<div class="caption">
+				<h3>{settings.thumbHeadline}</h3>
+				<f:format.html>{settings.thumbText}</f:format.html>
+				<button class="btn btn-primary" data-toggle="modal" data-target="#{thumbID}">
+					more..
+				</button>
+			</div>
+		</div>
+		<div class="modal fade" id="{thumbID}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+			 aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+								class="sr-only">Close</span></button>
+						<h3 class="modal-title" id="myModalLabel">{settings.thumbHeadline}</h3>
+						<f:format.html>{settings.thumbLightbox}</f:format.html>
+					</div>
+					<div class="modal-body">
+						<v:content.resources.fal field="settings.thumbImages" as="ImageItems">
+							<f:for each="{ImageItems}" as="ImageItem" iteration="ImageCount">
+								<f:if condition="{ImageCount.isFirst}=='TRUE'">
+									<f:else>
+										<f:render section="ItemAll" arguments="{_all}" />
+									</f:else>
+								</f:if>
+							</f:for>
+						</v:content.resources.fal>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</f:section>
+
+
+	<f:section name="ItemThumb">
+		<f:image treatIdAsReference="TRUE" src="{ImageItem.id}" alt="{ImageItem.title}"
+				 title="{f:if(condition: ImageItem.description, then: '{ImageItem.title}: ', else: '{ImageItem.title}')}{ImageItem.description}"
+				 width="500" />
+	</f:section>
+	<f:section name="ItemAll">
+		<f:image treatIdAsReference="TRUE" src="{ImageItem.id}" alt="{ImageItem.title}"
+				 title="{f:if(condition: ImageItem.description, then: '{ImageItem.title}: ', else: '{ImageItem.title}')}{ImageItem.description}"
+				 width="858" />
+	</f:section>
+</div>
