@@ -7,14 +7,12 @@
 
 	<f:section name="Configuration">
 		<flux:form id="thumbnailbox"
-				   label="Thumbnail Box"
-				   description="Box with a Thumbnail Image and Modal"
 				   options="{useTypoScript: 0, group: 'Bootstrap', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_138_picture.png\')}'}">
-			<flux:form.sheet name="thumbnailboxsheet" label="Thumbnailbox">
-				<flux:field.input name="settings.thumbHeadline" label="Headline" />
-				<flux:field.text name="settings.thumbText" label="Text Block" enableRichText="true" />
-				<flux:field.text name="settings.thumbLightbox" label="Lightbox Text" enableRichText="true" />
-				<flux:field.inline.fal name="settings.thumbImages" label="Reference Images (fist Image is Thumbnail)"
+			<flux:form.sheet name="thumbnailboxsheet">
+				<flux:field.input name="settings.thumbHeadline" />
+				<flux:field.text name="settings.thumbText" enableRichText="true" />
+				<flux:field.text name="settings.thumbLightbox" enableRichText="true" />
+				<flux:field.inline.fal name="settings.thumbImages"
 									   maxItems="10"
 									   allowedExtensions="gif,jpg,jpeg,png" collapseAll="true" />
 			</flux:form.sheet>

@@ -21,7 +21,7 @@
 						<f:for each="{element}" key="elementType" as="elementData">
 							<f:if condition="{0: elementType} == {0: 'content'}">
 								<flux:grid.row>
-									<flux:grid.column name="{elementData.id}" label="Content: {elementData.id}" />
+									<flux:grid.column name="{elementData.id}" label="{v:l(key: 'flux.carousel.label.grid.column.prefix')}: {elementData.id}" />
 								</flux:grid.row>
 							</f:if>
 						</f:for>
@@ -75,9 +75,9 @@
 	</f:section>
 
 	<f:section name="SharedObjectFields">
-		<flux:field.input name="header" label="Optional header for caption" />
-		<flux:field.text name="caption" label="Optional caption body text" enableRichText="TRUE" />
-		<flux:field.file name="iconImage" label="Optional Image for Navigation Dots" />
+		<flux:field.input name="header" />
+		<flux:field.text name="caption" enableRichText="TRUE" />
+		<flux:field.file name="iconImage" />
 	</f:section>
 
 	<f:section name="Main">

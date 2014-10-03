@@ -13,9 +13,7 @@
 				<f:if condition="{settings.grid4.split}=='more'">
 					<f:then>
 						<flux:field.custom name="grid4Description">
-							<h3>
-								Customize the Column settings:
-							</h3>
+							<h3><v:l key="flux.grid4.label.customize.column.settings"/>:</h3>
 						</flux:field.custom>
 						<f:render section="grid4more" arguments="{_all}" />
 					</f:then>
@@ -34,7 +32,7 @@
 			<flux:form.sheet name="additionalCSS">
 				<v:variable.set name="settings.wrapdropdown"
 								value="{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings.colwrap')}" />
-				<flux:field.select name="settings.grid4.wrapclass" items="none,{settings.wrapdropdown}" label="Choose a Wrap Class" default="none" />
+				<flux:field.select name="settings.grid4.wrapclass" items="none,{settings.wrapdropdown}" default="none" />
 				<flux:field.input name="settings.grid4.rowCSS" size="10" />
 				<flux:field.input name="settings.grid4.col1CSS" size="10" />
 				<flux:field.checkbox name="settings.grid4.col1hide" default="0" />

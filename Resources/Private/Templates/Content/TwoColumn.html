@@ -17,9 +17,7 @@
 				<f:if condition="{settings.grid2.split}=='more'">
 					<f:then>
 						<flux:field.custom name="grid2Description">
-							<h3>
-								Customize the Column settings:
-							</h3>
+							<h3><v:l key="flux.grid2.label.customize.column.settings"/>:</h3>
 						</flux:field.custom>
 						<f:render section="grid2more" arguments="{_all}" />
 					</f:then>
@@ -36,7 +34,7 @@
 			<flux:form.sheet name="additionalCSS">
 				<v:variable.set name="settings.wrapdropdown"
 								value="{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings.colwrap')}" />
-				<flux:field.select name="settings.grid2.wrapclass" items="none,{settings.wrapdropdown}" label="Choose a Wrap Class" default="none" />
+				<flux:field.select name="settings.grid2.wrapclass" items="none,{settings.wrapdropdown}" default="none" />
 				<flux:field.input name="settings.grid2.rowCSS" size="10" />
 				<flux:field.input name="settings.grid2.col1CSS" size="10" />
 				<flux:field.checkbox name="settings.grid2.col1hide" default="0" />
@@ -57,8 +55,8 @@
 						   default="col-sm-6" />
 		<flux:grid>
 			<flux:grid.row>
-				<flux:grid.column style="width: 50%;border-right: 1px dotted #999;" name="column1" label="Column Left ({settings.grid2.col1width})" />
-				<flux:grid.column style="width: 50%;" name="column2" label="Column Right ({settings.grid2.col2width})" />
+				<flux:grid.column style="width: 50%;border-right: 1px dotted #999;" name="column1" label="{v:l(key: 'flux.grid2.columns.column1')} ({settings.grid2.col1width})" />
+				<flux:grid.column style="width: 50%;" name="column2" label="{v:l(key: 'flux.grid2.columns.column2')} ({settings.grid2.col2width})" />
 			</flux:grid.row>
 		</flux:grid>
 	</f:section>
