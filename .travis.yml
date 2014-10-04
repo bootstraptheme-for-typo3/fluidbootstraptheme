@@ -1,18 +1,18 @@
 language: php
 php:
   - 5.3
-  - 5.4
-  - 5.5
+#  - 5.4
+#  - 5.5
 
 env:
-  - DB=mysql TYPO3=master INTEGRATION=master
-  - DB=mysql TYPO3=TYPO3_6-1 INTEGRATION=master
+  - DB=mysql TYPO3=TYPO3_6-1 INTEGRATION=master BUILDER=master
+#  - DB=mysql TYPO3=TYPO3_6-1 INTEGRATION=master BUILDER=master
 
-matrix:
-   fast_finish: true
-   include:
-     - php: 5.6
-       env: DB=mysql TYPO3=master INTEGRATION=master
+#matrix:
+#   fast_finish: true
+#   include:
+#     - php: 5.6
+#       env: DB=mysql TYPO3=master INTEGRATION=master
 
 before_script:
   - cd ..
@@ -29,12 +29,16 @@ before_script:
   - mkdir uploads
   - mkdir typo3temp
 
-  - git clone --depth 1 --single-branch --branch $TRAVIS_BRANCH git://github.com/FluidTYPO3/flux.git typo3conf/ext/flux
-  - git clone --depth 1 --single-branch --branch $TRAVIS_BRANCH git://github.com/FluidTYPO3/fluidcontent.git typo3conf/ext/fluidcontent
-  - git clone --depth 1 --single-branch --branch $TRAVIS_BRANCH git://github.com/FluidTYPO3/fluidpages.git typo3conf/ext/fluidpages
-  - git clone --depth 1 --single-branch --branch $TRAVIS_BRANCH git://github.com/FluidTYPO3/builder.git typo3conf/ext/builder
+  - cp fluidbootstraptheme/composer.json .
+  - composer install
+  - git clone --depth 1 --single-branch --branch $BUILDER git://github.com/FluidTYPO3/builder.git typo3conf/ext/builder
   - git clone --depth 1 git://git.typo3.org/TYPO3CMS/Extensions/phpunit.git typo3conf/ext/phpunit
-  - mv fluidbootstraptheme ./typo3conf/ext/
+  - ln -s ../../vendor/fluidtypo3/flux typo3conf/ext/flux
+  - ln -s ../../vendor/fluidtypo3/fluidcontent typo3conf/ext/fluidcontent
+  - ln -s ../../vendor/fluidtypo3/fluidpages typo3conf/ext/fluidpages
+  - ln -s ../../vendor/fluidtypo3/vhs typo3conf/ext/vhs
+
+  - ln -s ../../fluidbootstraptheme typo3conf/ext/fluidbootstraptheme
 
   - if [[ "$DB" == "mysql" ]]; then mysql -e "DROP DATABASE IF EXISTS typo3_test;" -uroot; fi
   - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS typo3_test;" -uroot; fi
