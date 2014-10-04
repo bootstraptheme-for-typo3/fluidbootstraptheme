@@ -1,18 +1,13 @@
 language: php
 php:
   - 5.3
-#  - 5.4
-#  - 5.5
+  - 5.4
+  - 5.5
+  - 5.6
 
 env:
-  - DB=mysql TYPO3=TYPO3_6-1 INTEGRATION=master BUILDER=master
-#  - DB=mysql TYPO3=TYPO3_6-1 INTEGRATION=master BUILDER=master
-
-#matrix:
-#   fast_finish: true
-#   include:
-#     - php: 5.6
-#       env: DB=mysql TYPO3=master INTEGRATION=master
+  - DB=mysql TYPO3=TYPO3_6-1 INTEGRATION=master BUILDER=master INTRODUCTION=TYPO3_6-1
+  - DB=mysql TYPO3=TYPO3_6-2 INTEGRATION=master BUILDER=master INTRODUCTION=master
 
 before_script:
   - cd ..
@@ -21,7 +16,7 @@ before_script:
   - git clone git://github.com/squizlabs/PHP_CodeSniffer.git build-environment/CodeSniffer
   - git clone --single-branch --branch $TYPO3 --depth 1 https://github.com/TYPO3/TYPO3.CMS.git core
   - source build-environment/install-helper.sh
-  - git clone --single-branch --branch $TYPO3 --depth 1 git://git.typo3.org/TYPO3CMS/Distributions/Introduction.git build-environment/Introduction
+  - git clone --single-branch --branch $INTRODUCTION --depth 1 git://git.typo3.org/TYPO3CMS/Distributions/Introduction.git build-environment/Introduction
   - mv core/typo3 .
   - if [[ -d core/t3lib ]]; then mv core/t3lib . ; fi
   - mv build-environment/typo3conf .
