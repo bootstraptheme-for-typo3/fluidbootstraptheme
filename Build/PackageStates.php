@@ -463,6 +463,14 @@ return array (
 										'packagePath' => 'typo3/sysext/version/',
 										'classesPath' => 'Classes/',
 								),
+						'vhs' =>
+								array (
+										'manifestPath' => '',
+										'composerName' => 'fluidtypo3/vhs',
+										'state' => 'active',
+										'packagePath' => 'typo3conf/ext/flux/',
+										'classesPath' => 'Classes/',
+						),
 						'viewpage' =>
 								array (
 										'manifestPath' => '',
