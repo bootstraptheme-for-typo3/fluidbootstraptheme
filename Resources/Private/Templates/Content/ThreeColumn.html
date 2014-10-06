@@ -13,13 +13,11 @@
 								   default="30-30-30"
 								   requestUpdate="1">
 				</flux:field.select>
-				<flux:field.checkbox name="settings.grid3.eqh" label="Equal Heigt of Colums" default="0"/>
+				<flux:field.checkbox name="settings.grid3.eqh" default="0"/>
 				<f:if condition="{settings.grid3.split}=='more'">
 					<f:then>
 						<flux:field.custom name="CarouselDescription">
-							<h3>
-								Customize the Column settings:
-							</h3>
+							<h3><v:l key="flux.grid3.label.customize.column.settings"/>:</h3>
 						</flux:field.custom>
 						<f:render section="grid3more" arguments="{_all}"/>
 					</f:then>
@@ -37,7 +35,7 @@
 			<flux:form.sheet name="additionalCSS">
 				<v:variable.set name="settings.wrapdropdown"
 								value="{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings.colwrap')}" />
-				<flux:field.select name="settings.grid3.wrapclass" items="none,{settings.wrapdropdown}" label="Choose a Wrap Class" default="none" />
+				<flux:field.select name="settings.grid3.wrapclass" items="none,{settings.wrapdropdown}" default="none" />
 				<flux:field.input name="settings.grid3.rowCSS" size="10"/>
 				<flux:field.input name="settings.grid3.col1CSS" size="10"/>
 				<flux:field.checkbox name="settings.grid3.col1hide" default="0"/>
@@ -75,13 +73,13 @@
 			<flux:grid.row>
 				<flux:grid.column
 						style="width: 33.333%;border-right: 1px dotted #999;" name="column1"
-						label="Column Left ({settings.grid3.col1width})"/>
+						label="{v:l(key: 'flux.grid3.columns.column1')} ({settings.grid3.col1width})"/>
 				<flux:grid.column
 						style="width: 33.333%;border-right: 1px dotted #999;" name="column2"
-						label="Column Middle ({settings.grid3.col2width})"/>
+						label="{v:l(key: 'flux.grid3.columns.column2')} ({settings.grid3.col2width})"/>
 				<flux:grid.column
 						style="width: 33.333%;" name="column3"
-						label="Column Right ({settings.grid3.col3width})"/>
+						label="{v:l(key: 'flux.grid3.columns.column3')} ({settings.grid3.col3width})"/>
 			</flux:grid.row>
 		</flux:grid>
 	</f:section>

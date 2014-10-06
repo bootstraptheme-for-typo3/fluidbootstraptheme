@@ -13,7 +13,7 @@
 			<flux:form.section name="columns">
 				<flux:form.object name="column">
 					<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
-					-> v:iterator.loop(count: numberOfColumns, iteration: 'iteration', minimum: 1)}" label="Columns: numberOfColumns" />
+					-> v:iterator.loop(count: numberOfColumns, iteration: 'iteration', minimum: 1)}" />
 					<flux:field.checkbox name="addWell" />
 					<flux:field.input name="additionalClass" />
 				</flux:form.object>

@@ -182,7 +182,7 @@
 
 			<!-- Carousel.html -->
 			<trans-unit id="flux.carousel" xml:space="preserve">
-				<source> Element Carousel</source>
+				<source>Element Carousel</source>
 			</trans-unit>
 			<trans-unit id="flux.carousel.description" xml:space="preserve">
 				<source>Content elements, images or simple texts (each type supporting captions) in a carousel matrix with JS based slide change.</source>
@@ -226,17 +226,44 @@
 			<trans-unit id="flux.carousel.objects.text.text" xml:space="preserve">
 				<source>Text</source>
 			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text.header" xml:space="preserve">
+				<source>Optional header for caption</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text.caption" xml:space="preserve">
+				<source>Optional caption body text</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.text.iconImage" xml:space="preserve">
+				<source>Optional Image for Navigation Dots</source>
+			</trans-unit>
 			<trans-unit id="flux.carousel.objects.content" xml:space="preserve">
 				<source>Content elements</source>
 			</trans-unit>
 			<trans-unit id="flux.carousel.objects.content.id" xml:space="preserve">
 				<source>Content area ID</source>
 			</trans-unit>
+			<trans-unit id="flux.carousel.objects.content.header" xml:space="preserve">
+				<source>Optional header for caption</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.content.caption" xml:space="preserve">
+				<source>Optional caption body text</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.content.iconImage" xml:space="preserve">
+				<source>Optional Image for Navigation Dots</source>
+			</trans-unit>
 			<trans-unit id="flux.carousel.objects.image" xml:space="preserve">
 				<source>Image</source>
 			</trans-unit>
 			<trans-unit id="flux.carousel.objects.image.file" xml:space="preserve">
 				<source>Image file</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.image.header" xml:space="preserve">
+				<source>Optional header for caption</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.image.caption" xml:space="preserve">
+				<source>Optional caption body text</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.objects.image.iconImage" xml:space="preserve">
+				<source>Optional Image for Navigation Dots</source>
 			</trans-unit>
 			<trans-unit id="flux.carousel.sheets.styles" xml:space="preserve">
 				<source>Styles</source>
@@ -257,6 +284,9 @@
 				<source>Optional CSS rule for the navigation dots</source>
 			</trans-unit>
 			<trans-unit id="flux.carousel.fields.settings.carousel.innerStyles" xml:space="preserve">
+				<source>CSS rule for inside of carousel</source>
+			</trans-unit>
+			<trans-unit id="flux.carousel.label.grid.column.prefix" xml:space="preserve">
 				<source>CSS rule for inside of carousel</source>
 			</trans-unit>
 			<!-- /Carousel.html -->
@@ -350,7 +380,7 @@
 				<source>General</source>
 			</trans-unit>
 			<trans-unit id="flux.modalLight.sheets.advanced">
-				<source>CSS-Settings</source>
+				<source>Advanced</source>
 			</trans-unit>
 			<trans-unit id="flux.modalLight.fields.settings.buttonText">
 				<source>Button text</source>
@@ -363,6 +393,9 @@
 			</trans-unit>
 			<trans-unit id="flux.modalLight.fields.settings.additionalClassesModal">
 				<source>Additional Class for Modal</source>
+			</trans-unit>
+			<trans-unit id="flux.modalLight.columns.content">
+				<source>Content</source>
 			</trans-unit>
 			<!-- /ModalLight.htm -->
 
@@ -671,10 +704,7 @@
 				<source>Split Possibilities</source>
 			</trans-unit>
 			<trans-unit id="flux.grid2.fields.settings.grid2.eqh">
-				<source>Equal Heigt of Colums</source>
-			</trans-unit>
-			<trans-unit id="flux.grid2.grids.column1">
-				<source>Column Left</source>
+				<source>Equal Height of Colums</source>
 			</trans-unit>
 			<trans-unit id="flux.grid2.grids.column1">
 				<source>Column Left</source>
@@ -703,12 +733,18 @@
 			<trans-unit id="flux.grid2.fields.settings.grid2.rowCSS">
 				<source>Column Custom CSS Class for Row</source>
 			</trans-unit>
+			<trans-unit id="flux.grid2.fields.settings.grid2.wrapclass">
+				<source>Choose a Wrap Class</source>
+			</trans-unit>
             <trans-unit id="flux.grid2.columns.column1">
                 <source>Left Column</source>
             </trans-unit>
             <trans-unit id="flux.grid2.columns.column2">
                 <source>Right Column</source>
             </trans-unit>
+			<trans-unit id="flux.grid2.label.customize.column.settings">
+				<source>Customize the Column settings</source>
+			</trans-unit>
 			<!-- TwoColumn.html -->
 
 			<!-- ThreeColumn.html -->
@@ -735,6 +771,9 @@
 			</trans-unit>
 			<trans-unit id="flux.grid3.fields.settings.grid3.split">
 				<source>Split Possibilities</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.eqh">
+				<source>Equal Height of Colums</source>
 			</trans-unit>
 			<trans-unit id="flux.grid3.fields.settings.grid3.col1width">
 				<source>Bootstrap CSS Class Column 1</source>
@@ -766,6 +805,9 @@
 			<trans-unit id="flux.grid3.fields.settings.grid3.rowCSS">
 				<source>Column Custom CSS Class for Row</source>
 			</trans-unit>
+			<trans-unit id="flux.grid3.fields.settings.grid3.wrapclass">
+				<source>Choose a Wrap Class</source>
+			</trans-unit>
             <trans-unit id="flux.grid3.columns.column1">
                 <source>Left Column</source>
             </trans-unit>
@@ -775,6 +817,10 @@
             <trans-unit id="flux.grid3.columns.column3">
                 <source>Right Column</source>
             </trans-unit>
+            <trans-unit id="flux.grid3.label.customize.column.settings">
+                <source>Customize the Column settings</source>
+            </trans-unit>
+
 			<!-- ThreeColumn.html -->
 
 			<!-- FourColumn.html -->
@@ -835,6 +881,9 @@
 			<trans-unit id="flux.grid4.fields.settings.grid4.rowCSS">
 				<source>Column Custom CSS Class for Row</source>
 			</trans-unit>
+			<trans-unit id="flux.grid4.fields.settings.grid4.wrapclass">
+				<source>Choose a Wrap Class</source>
+			</trans-unit>
             <trans-unit id="flux.grid4.columns.column1">
                 <source>Left Column</source>
             </trans-unit>
@@ -847,7 +896,34 @@
             <trans-unit id="flux.grid4.columns.column4">
                 <source>Right Column</source>
             </trans-unit>
+			<trans-unit id="flux.grid4.label.customize.column.settings">
+				<source>Customize the Column settings</source>
+			</trans-unit>
 			<!-- FourColumn.html -->
+
+			<!-- ThumbnailBox.html -->
+			<trans-unit id="flux.thumbnailbox">
+				<source>Thumbnail Box</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnailbox.description">
+				<source>Box with a Thumbnail Image and Modal</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnailbox.sheets.thumbnailboxsheet">
+				<source>Thumbnailbox</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnailbox.fields.settings.thumbHeadline">
+				<source>Headline</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnailbox.fields.settings.thumbText">
+				<source>Text Block</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnailbox.fields.settings.thumbLightbox">
+				<source>Lightbox Text</source>
+			</trans-unit>
+			<trans-unit id="flux.thumbnailbox.fields.settings.thumbImages">
+				<source>Reference Images (fist Image is Thumbnail)</source>
+			</trans-unit>
+			<!-- /ThumbnailBox.html -->
 
 			<!-- /Content -->
 			<!-- Pages -->
