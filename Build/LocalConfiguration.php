@@ -65,6 +65,7 @@ return array(
 						'flux',
 						'fluidpages',
 						'fluidcontent',
+						'vhs',
 						'fluidbootstraptheme',
 				),
 		),
