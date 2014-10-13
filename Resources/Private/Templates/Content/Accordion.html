@@ -32,7 +32,7 @@
 	</f:section>
 
 	<f:section name="Main">
-		<v:variable.set name="activeTabIndex" value="0" />
+		<v:variable.set name="activeTabIndex" value="-1" />
 		<f:for each="{panels}" as="panel" iteration="iteration">
 			<f:if condition="{panel.panel.active}">
 				<v:variable.set name="activeTabIndex" value="{iteration.index}" />
