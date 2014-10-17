@@ -32,6 +32,12 @@
 	</f:section>
 
 	<f:section name="Main">
+		<v:asset.script name="accordion" dependencies="bootstrapcore" allowMoveToFooter="1">
+			$('.panel-collapse').on('shown.bs.collapse', function () {
+			var activepanel = $(this).attr( "id" );
+			window.location.hash=activepanel;
+			})
+		</v:asset.script>
 		<v:variable.set name="activeTabIndex" value="-1" />
 		<f:for each="{panels}" as="panel" iteration="iteration">
 			<f:if condition="{panel.panel.active}">
