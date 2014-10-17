@@ -33,7 +33,15 @@ You can use the Constant-Editor to define basic configuration for the extension 
 
 ## Dependencies
 
-Actually FluidBootstrapTheme is only working with DEV Versions of : `EXT:flux`, `EXT:vhs`, `EXT:fluidcontent`, `EXT:fluidpages` - You can get them on http://www.github.com/FluidTypo3
+FluidBootstrapTheme now has a stable release on the TYPO3 Extension Repository (TER). If you use our Development branch FluidBootstrapTheme should also work with all the Development releases of the following dependencies.
+<ul>
+<li><code>EXT:flux</code></li>
+<li><code>EXT:vhs</code></li>
+<li><code>EXT:fluidcontent</code></li>
+<li><code>EXT:fluidpages</code></li>
+</ul>
+
+You can get extensions at http://www.github.com/FluidTypo3
 
 ===
 
