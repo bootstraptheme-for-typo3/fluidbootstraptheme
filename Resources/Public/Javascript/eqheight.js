@@ -32,15 +32,17 @@
     });
 })(jQuery);
 
-$(document).ready(function () {
-    $('.equal-height').css("height", "auto");
-    $('.equal-height').each(function(index, el){
-        $(el).parents('.row').find('.equal-height').equalHeights();
+(function ($) {
+    $(document).ready(function () {
+        $('.equal-height').css("height", "auto");
+        $('.equal-height').each(function(index, el){
+            $(el).parents('.row').find('.equal-height').equalHeights();
+        });
     });
-});
-$(window).resize(function(){
-    $('.equal-height').css("height", "auto");
-    $('.equal-height').each(function(index, el){
-        $(el).parents('.row').find('.equal-height').equalHeights();
-    });
-})
+    $(window).resize(function(){
+        $('.equal-height').css("height", "auto");
+        $('.equal-height').each(function(index, el){
+            $(el).parents('.row').find('.equal-height').equalHeights();
+        });
+    })
+})(jQuery);
