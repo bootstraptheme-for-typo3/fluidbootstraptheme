@@ -6,7 +6,7 @@
 	<f:layout name="FrontPage" />
 
 	<f:section name="Configuration">
-		<flux:form id="front" icon="{f:uri.resource(path: 'Icons/FrontPage.png')}">
+		<flux:form id="front" options="{icon: '{f:uri.resource(path: \'Icons/FrontPage.png\')}'}">
 			{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:variable.set(name: 'settings')}
 			<f:if condition="{settings.useTypoScript} < 1">
 				<flux:field.input name="settings.entryLevel"
