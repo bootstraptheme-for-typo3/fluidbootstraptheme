@@ -17,7 +17,7 @@ indent_size = 4
 [*.html]
 indent_size = 4
 
-[{*.txt,*.md}]
+[*.{txt,md}]
 indent_style = space
 indent_size = 2
 
