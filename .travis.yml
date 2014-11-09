@@ -11,6 +11,7 @@ env:
   - DB=mysql TYPO3=master INTEGRATION=master BUILDER=master INTRODUCTION=master
 
 before_script:
+  - composer self-update
   - cd ..
   - git clone --single-branch --branch $INTEGRATION --depth 1 git://github.com/typo3-ci/TYPO3-Travis-Integration.git build-environment
   - git clone --depth 1 git://github.com/FluidTYPO3/FluidTYPO3-CodingStandards.git build-environment/FluidTYPO3-CodingStandards
@@ -40,14 +41,24 @@ before_script:
   - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS typo3_test;" -uroot; fi
   - if [[ "$DB" == "mysql" ]]; then mysql -uroot typo3_test < build-environment/Introduction/typo3conf/ext/introduction/Resources/Private/Subpackages/Introduction/Database/introduction.sql; fi
 
+  - >
+    echo "Copying configuration..";
+    if [[ "$TYPO3" == "master" ]]; then
+      # CMS 7 / master
+      cp typo3conf/ext/fluidbootstraptheme/Build/LocalConfiguration7.php typo3conf/LocalConfiguration.php;
+      cp typo3conf/ext/fluidbootstraptheme/Build/PackageStates7.php typo3conf/PackageStates.php;
+    else
+      # CMS 6
+      cp typo3conf/ext/fluidbootstraptheme/Build/LocalConfiguration.php typo3conf/LocalConfiguration.php;
+      cp typo3conf/ext/fluidbootstraptheme/Build/PackageStates.php typo3conf/PackageStates.php;
+    fi
+
   # post core schema import of extension schemas and state file from this and dependency extensions
   - if [[ "$DB" == "mysql" && -f typo3conf/ext/builder/Build/ImportSchema.sql ]]; then mysql -uroot typo3_test < typo3conf/ext/builder/Build/ImportSchema.sql; fi
   - if [[ "$DB" == "mysql" && -f typo3conf/ext/flux/Build/ImportSchema.sql ]]; then mysql -uroot typo3_test < typo3conf/ext/flux/Build/ImportSchema.sql; fi
   - if [[ "$DB" == "mysql" && -f typo3conf/ext/fluidpages/Build/ImportSchema.sql ]]; then mysql -uroot typo3_test < typo3conf/ext/fluidpages/Build/ImportSchema.sql; fi
   - if [[ "$DB" == "mysql" && -f typo3conf/ext/fluidcontent/Build/ImportSchema.sql ]]; then mysql -uroot typo3_test < typo3conf/ext/fluidcontent/Build/ImportSchema.sql; fi
   - if [[ "$DB" == "mysql" && -f typo3conf/ext/fluidbootstraptheme/Build/ImportSchema.sql ]]; then mysql -uroot typo3_test < typo3conf/ext/fluidbootstraptheme/Build/ImportSchema.sql; fi
-  - if [[ -f typo3conf/LocalConfiguration.php && -f typo3conf/ext/fluidbootstraptheme/Build/LocalConfiguration.php ]]; then cp typo3conf/ext/fluidbootstraptheme/Build/LocalConfiguration.php typo3conf/LocalConfiguration.php; fi
-  - if [[ -f typo3conf/ext/fluidbootstraptheme/Build/PackageStates.php ]]; then cp typo3conf/ext/fluidbootstraptheme/Build/PackageStates.php typo3conf/PackageStates.php; fi
   - if [[ -f typo3conf/localconf.php && -f typo3conf/ext/fluidbootstraptheme/Build/localconf.php ]]; then cp typo3conf/ext/fluidbootstraptheme/Build/localconf.php typo3conf/localconf.php; fi
   - if [[ -f typo3conf/ext/fluidbootstraptheme/Tests/phpunit.xml ]]; then cp typo3conf/ext/fluidbootstraptheme/Tests/phpunit.xml phpunit.xml; fi
 
@@ -59,4 +70,4 @@ script:
 # PHPCodeSniffer code inspection with only errors displayed (no warnings)
   - build-environment/CodeSniffer/scripts/phpcs -n --standard=$PWD/build-environment/FluidTYPO3-CodingStandards/ruleset.xml $PWD/typo3conf/ext/fluidbootstraptheme
 # PHPUnit tests from overridden phpunit tests configuration file
-  - if [[ -f typo3conf/ext/fluidbootstraptheme/Tests/phpunit.xml ]]; then typo3/cli_dispatch.phpsh phpunit -c phpunit.xml --coverage-text; fi
+#  - if [[ -f typo3conf/ext/fluidbootstraptheme/Tests/phpunit.xml ]]; then typo3/cli_dispatch.phpsh phpunit -c phpunit.xml --coverage-text; fi
