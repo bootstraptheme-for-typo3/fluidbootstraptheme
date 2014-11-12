@@ -1,5 +1,6 @@
 language: php
 php:
+  - 5.3
   - 5.4
   - 5.5
   - 5.6
@@ -8,6 +9,11 @@ env:
   - DB=mysql TYPO3=TYPO3_6-1 INTEGRATION=master BUILDER=master INTRODUCTION=TYPO3_6-1
   - DB=mysql TYPO3=TYPO3_6-2 INTEGRATION=master BUILDER=master INTRODUCTION=master
   - DB=mysql TYPO3=master INTEGRATION=master BUILDER=master INTRODUCTION=master
+
+matrix:
+  exclude:
+    - php: 5.3
+      env: DB=mysql TYPO3=master INTEGRATION=master BUILDER=master INTRODUCTION=master
 
 before_script:
   - composer self-update
