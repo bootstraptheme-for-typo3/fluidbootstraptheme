@@ -20,12 +20,12 @@ class ext_update {
      */
     public function main() {
 
-        //select all Contentelements from Fluidcontent_bootstrap and migrate them
+        //select all Contentelements from Fluidcontent_bootstrap and migrate them - new version
 
-        $res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', 'tt_content', '`tx_fed_fcefile` LIKE "FluidTYPO3.Fluidcontentbootstrap:%"', 'tx_fed_fcefile', '', '');
+        $res = $GLOBALS['TYPO3_DB']->exec_SELECTquery('*', 'tt_content', '(`tx_fed_fcefile` LIKE "FluidTYPO3.Fluidcontentbootstrap:%" OR `tx_fed_fcefile` LIKE "fluidcontent_bootstrap:%" OR `tx_fed_fcefile` LIKE "fluidcontent_twitterbootstrap:%" OR `tx_fed_fcefile` LIKE "fluidbootstraptheme:%")', 'tx_fed_fcefile', '', '');
 
         while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
-            $replaced = str_replace('FluidTYPO3.FluidcontentBootstrap', 'fluidbootstraptheme', $row['tx_fed_fcefile']);
+            $replaced = str_replace(array('FluidTYPO3.FluidcontentBootstrap','fluidcontent_bootstrap','fluidcontent_twitterbootstrap','fluidbootstraptheme'), 'FluidBT.Fluidbootstraptheme', $row['tx_fed_fcefile']);
 
             $GLOBALS['TYPO3_DB']->exec_UPDATEquery('tt_content', 'tx_fed_fcefile = "'.$row['tx_fed_fcefile'].'"', array('tx_fed_fcefile' => $replaced));
             $updated.= $GLOBALS['TYPO3_DB']->sql_affected_rows() . ' rows have been updated for '.$row['tx_fed_fcefile'].'';
