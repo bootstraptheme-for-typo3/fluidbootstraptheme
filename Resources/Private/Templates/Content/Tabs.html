@@ -57,7 +57,7 @@
 			<div class="tab-content">
 				<f:if condition="{tabs}">
 					<f:for each="{tabs}" as="tab" iteration="iteration">
-						<div class="tab-pane {f:if(condition: tab.tab.fade, then: 'fade')} {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active in')} {f:if(condition: tab.tab.class, then: 'tab-pane-{tab.tab.class}')}"
+						<div class="tab-pane {f:if(condition: fade, then: 'fade')} {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active in')} {f:if(condition: tab.tab.class, then: 'tab-pane-{tab.tab.class}')}"
 							 id="tab-{record.uid}-{iteration.index}">
 							<flux:content.render area="content.{iteration.index}" />
 						</div>
