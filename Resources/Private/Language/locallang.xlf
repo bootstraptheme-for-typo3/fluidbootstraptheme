@@ -901,6 +901,102 @@
 			</trans-unit>
 			<!-- FourColumn.html -->
 
+			<!-- SixColumn.html -->
+			<trans-unit id="flux.grid6.description">
+				<source>6 Columns</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6">
+				<source>6 Columns Container</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.eqh">
+				<source>Equal Height of Columns</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.sheets.colSettings">
+				<source>Column Splittings</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.sheets.additionalCSS">
+				<source>Additional CSS</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.split">
+				<source>Split Possibilities</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col1width">
+				<source>Bootstrap CSS Class Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col2width">
+				<source>Bootstrap CSS Class Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col3width">
+				<source>Bootstrap CSS Class Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col4width">
+				<source>Bootstrap CSS Class Column 4</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col5width">
+				<source>Bootstrap CSS Class Column 5</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col6width">
+				<source>Bootstrap CSS Class Column 6</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col1hide">
+				<source>Column 1: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col2hide">
+				<source>Column 2: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col3hide">
+				<source>Column 3: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col4hide">
+				<source>Column 4: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col5hide">
+				<source>Column 5: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col6hide">
+				<source>Column 6: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col1CSS">
+				<source>Column Custom CSS Class for Col1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col2CSS">
+				<source>Column Custom CSS Class for Col2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col3CSS">
+				<source>Column Custom CSS Class for Col3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col4CSS">
+				<source>Column Custom CSS Class for Col4</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.rowCSS">
+				<source>Column Custom CSS Class for Row</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.wrapclass">
+				<source>Choose a Wrap Class</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column1">
+				<source>Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column2">
+				<source>Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column3">
+				<source>Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column4">
+				<source>Column 4</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column5">
+				<source>Column 5</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column6">
+				<source>Column 6</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.label.customize.column.settings">
+				<source>Customize the Column settings</source>
+			</trans-unit>
+			<!-- SixColumn.html -->
+
 			<!-- ThumbnailBox.html -->
 			<trans-unit id="flux.thumbnailbox">
 				<source>Thumbnail Box</source>
