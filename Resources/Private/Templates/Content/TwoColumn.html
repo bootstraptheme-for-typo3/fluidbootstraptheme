@@ -9,7 +9,7 @@
 		<flux:form id="grid2" options="{useTypoScript: 0, group: 'Grid', Fluidcontent: {sorting: 50}, icon: '{f:uri.resource(path: \'Icons/Content/TwoColumn.png\')}'}">
 			<flux:form.sheet name="colSettings">
 				<flux:field.select name="settings.grid2.split"
-								   items="50-50,66-33,33-66,more"
+								   items="50-50,66-33,33-66,75-25,25-75,more"
 								   default="50-50"
 								   requestUpdate="1">
 				</flux:field.select>
@@ -107,6 +107,22 @@
 			<flux:content.render area="column1" />
 		</div>
 		<div class="col-sm-8 {settings.grid2.col2CSS} {f:if(condition: settings.grid2.eqh, then: 'equal-height')} {f:if(condition: settings.grid2.col2hide, then: 'hidden-xs')}">
+			<flux:content.render area="column2" />
+		</div>
+	</f:section>
+	<f:section name="FE75-25">
+		<div class="col-sm-9 {settings.grid2.col1CSS} {f:if(condition: settings.grid2.eqh, then: 'equal-height')} {f:if(condition: settings.grid2.col1hide, then: 'hidden-xs')}">
+			<flux:content.render area="column1" />
+		</div>
+		<div class="col-sm-3 {settings.grid2.col2CSS} {f:if(condition: settings.grid2.eqh, then: 'equal-height')} {f:if(condition: settings.grid2.col2hide, then: 'hidden-xs')}">
+			<flux:content.render area="column2" />
+		</div>
+	</f:section>
+	<f:section name="FE25-75">
+		<div class="col-sm-3 {settings.grid2.col1CSS} {f:if(condition: settings.grid2.eqh, then: 'equal-height')} {f:if(condition: settings.grid2.col1hide, then: 'hidden-xs')}">
+			<flux:content.render area="column1" />
+		</div>
+		<div class="col-sm-9 {settings.grid2.col2CSS} {f:if(condition: settings.grid2.eqh, then: 'equal-height')} {f:if(condition: settings.grid2.col2hide, then: 'hidden-xs')}">
 			<flux:content.render area="column2" />
 		</div>
 	</f:section>
