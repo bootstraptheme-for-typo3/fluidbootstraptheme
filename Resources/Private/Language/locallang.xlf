@@ -903,7 +903,7 @@
 
 			<!-- SixColumn.html -->
 			<trans-unit id="flux.grid6.description">
-				<source>6 Columns</source>
+				<source>6 Columns (16-16-16-16-16-16)</source>
 			</trans-unit>
 			<trans-unit id="flux.grid6">
 				<source>6 Columns Container</source>
