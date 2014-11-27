@@ -6,7 +6,7 @@
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="carousel" options="{useTypoScript: 0, group: 'Bootstrap', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_319_sort.png\')}'}">
+		<flux:form id="carousel" options="{useTypoScript: 0, group: 'Bootstrap', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Icons/Content/Carousel.png\')}'}">
 			<flux:field.checkbox name="settings.carousel.quickselect" default="1" />
 			<flux:field.select name="settings.carousel.quickselectType" items="{images: 'images', dots: 'dots', numbers: 'numbers'}" />
 			<flux:field.input name="settings.carousel.interval" default="5000" eval="int,trim" />
@@ -134,7 +134,7 @@
 							<f:render section="{elementType -> v:format.case(case: 'ucfirst')}" arguments="{_all}" />
 							<f:if condition="{0: elementData.caption, 1: elementData.header} != {0: '', 1: ''}">
 								<div class="carousel-caption">
-	
+
 									<f:if condition="{0: elementData.header} != {0: ''}">
 										<h3>{elementData.header -> f:format.raw()}</h3>
 									</f:if>
