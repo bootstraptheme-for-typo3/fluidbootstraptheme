@@ -6,7 +6,7 @@
 	<f:layout name="WithSideBar" />
 
 	<f:section name="Configuration">
-		<flux:form id="sidebar" options="{icon: '{f:uri.resource(path: \'Icons/SidebarPage.png\')}'}">
+		<flux:form id="sidebar" options="{icon: '{f:uri.resource(path: \'Icons/Page/WithSidebar.png\')}'}">
 			{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:variable.set(name: 'settings')}
 			<f:if condition="{settings.useTypoScript} < 1">
 				<flux:field.input name="settings.distribution"
