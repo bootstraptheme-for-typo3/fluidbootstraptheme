@@ -8,7 +8,7 @@
 
 			<!-- Accordion.html -->
 			<trans-unit id="flux.accordion" xml:space="preserve">
-				<source> Accordion with content elements</source>
+				<source>Accordion with content elements</source>
 			</trans-unit>
 			<trans-unit id="flux.accordion.description" xml:space="preserve">
 				<source>Accordion element container</source>
@@ -32,7 +32,7 @@
 
 			<!-- Alert.html -->
 			<trans-unit id="flux.alert" xml:space="preserve">
-				<source> Alert (inline)</source>
+				<source>Alert (inline)</source>
 			</trans-unit>
 			<trans-unit id="flux.alert.description" xml:space="preserve">
 				<source>Alert box (not popup) inline in page</source>
@@ -113,7 +113,7 @@
 
 			<!-- ButtonLink.html -->
 			<trans-unit id="flux.buttonlink" xml:space="preserve">
-				<source> Button Link</source>
+				<source>Button Link</source>
 			</trans-unit>
 			<trans-unit id="flux.buttonlink.description" xml:space="preserve">
 				<source>Default Twitter Bootstrap button-styled link to a page, file or custom URL.</source>
@@ -356,7 +356,7 @@
 
 			<!-- Jumbotron.html -->
 			<trans-unit id="flux.jumbotron" xml:space="preserve">
-				<source> Jumbotron</source>
+				<source>Jumbotron</source>
 			</trans-unit>
 			<trans-unit id="flux.jumbotron.description" xml:space="preserve">
 				<source>A very large header-type element into which you can insert other content elements.</source>
@@ -401,7 +401,7 @@
 
 			<!-- NavigationList.html -->
 			<trans-unit id="flux.navigationlist" xml:space="preserve">
-				<source> Navigation List</source>
+				<source>Navigation List</source>
 			</trans-unit>
 			<trans-unit id="flux.navigationlist.description" xml:space="preserve">
 				<source>Configurable navigation list of links to various resources.</source>
@@ -461,7 +461,7 @@
 
 			<!-- PageHeader.html -->
 			<trans-unit id="flux.pageheader" xml:space="preserve">
-				<source> Page Header</source>
+				<source>Page Header</source>
 			</trans-unit>
 			<trans-unit id="flux.pageheader.description" xml:space="preserve">
 				<source>An underlined page header element with optional small caption.</source>
@@ -503,7 +503,7 @@
 
 			<!-- Row.html -->
 			<trans-unit id="flux.row" xml:space="preserve">
-				<source> Column Row</source>
+				<source>Column Row</source>
 			</trans-unit>
 			<trans-unit id="flux.row.description" xml:space="preserve">
 				<source>Adds a wrapper element that lets you define columns of varying widths</source>
@@ -572,7 +572,7 @@
 
 			<!-- Tabs.html -->
 			<trans-unit id="flux.tabs" xml:space="preserve">
-				<source> Tabs/pills with content elements</source>
+				<source>Tabs/pills with content elements</source>
 			</trans-unit>
 			<trans-unit id="flux.tabs.description" xml:space="preserve">
 				<source>Places child content elements in tabs.</source>
@@ -704,7 +704,7 @@
 				<source>Split Possibilities</source>
 			</trans-unit>
 			<trans-unit id="flux.grid2.fields.settings.grid2.eqh">
-				<source>Equal Height of Colums</source>
+				<source>Equal Height of Columns</source>
 			</trans-unit>
 			<trans-unit id="flux.grid2.grids.column1">
 				<source>Column Left</source>
@@ -831,7 +831,7 @@
 				<source>4 Columns Container</source>
 			</trans-unit>
 			<trans-unit id="flux.grid4.fields.settings.grid4.eqh">
-				<source>Equal Heigt of Colums</source>
+				<source>Equal Height of Columns</source>
 			</trans-unit>
 			<trans-unit id="flux.grid4.sheets.colSettings">
 				<source>Column Splittings</source>
@@ -900,6 +900,102 @@
 				<source>Customize the Column settings</source>
 			</trans-unit>
 			<!-- FourColumn.html -->
+
+			<!-- SixColumn.html -->
+			<trans-unit id="flux.grid6.description">
+				<source>6 Columns</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6">
+				<source>6 Columns Container</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.eqh">
+				<source>Equal Height of Columns</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.sheets.colSettings">
+				<source>Column Splittings</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.sheets.additionalCSS">
+				<source>Additional CSS</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.split">
+				<source>Split Possibilities</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col1width">
+				<source>Bootstrap CSS Class Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col2width">
+				<source>Bootstrap CSS Class Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col3width">
+				<source>Bootstrap CSS Class Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col4width">
+				<source>Bootstrap CSS Class Column 4</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col5width">
+				<source>Bootstrap CSS Class Column 5</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col6width">
+				<source>Bootstrap CSS Class Column 6</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col1hide">
+				<source>Column 1: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col2hide">
+				<source>Column 2: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col3hide">
+				<source>Column 3: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col4hide">
+				<source>Column 4: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col5hide">
+				<source>Column 5: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col6hide">
+				<source>Column 6: hide on small device</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col1CSS">
+				<source>Column Custom CSS Class for Col1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col2CSS">
+				<source>Column Custom CSS Class for Col2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col3CSS">
+				<source>Column Custom CSS Class for Col3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.col4CSS">
+				<source>Column Custom CSS Class for Col4</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.rowCSS">
+				<source>Column Custom CSS Class for Row</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.fields.settings.grid6.wrapclass">
+				<source>Choose a Wrap Class</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column1">
+				<source>Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column2">
+				<source>Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column3">
+				<source>Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column4">
+				<source>Column 4</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column5">
+				<source>Column 5</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.columns.column6">
+				<source>Column 6</source>
+			</trans-unit>
+			<trans-unit id="flux.grid6.label.customize.column.settings">
+				<source>Customize the Column settings</source>
+			</trans-unit>
+			<!-- SixColumn.html -->
 
 			<!-- ThumbnailBox.html -->
 			<trans-unit id="flux.thumbnailbox">

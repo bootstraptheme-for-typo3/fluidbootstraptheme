@@ -1,0 +1,137 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+
+	<f:layout name="Content" />
+
+	<f:section name="Configuration">
+		<flux:form id="grid6" options="{useTypoScript: 0, group: 'Grid', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Icons/Content/SixColumn.png\')}'}">
+			<flux:form.sheet name="colSettings">
+				<flux:field.select name="settings.grid6.split" items="16-16-16-16-16-16,more" default="16-16-16-16-16-16" requestUpdate="1" />
+				<flux:field.checkbox name="settings.grid6.eqh" default="0" />
+				<f:if condition="{settings.grid6.split}=='more'">
+					<f:then>
+						<flux:field.custom name="grid6Description">
+							<h3><v:l key="flux.grid6.label.customize.column.settings"/>:</h3>
+						</flux:field.custom>
+						<f:render section="grid6more" arguments="{_all}" />
+					</f:then>
+					<f:else>
+					</f:else>
+				</f:if>
+				<flux:grid>
+					<flux:grid.row>
+						<flux:grid.column style="width: 16%;border-right: 1px dotted #999;" name="column1"  />
+						<flux:grid.column style="width: 16%;border-right: 1px dotted #999;" name="column2"  />
+						<flux:grid.column style="width: 16%;border-right: 1px dotted #999;" name="column3"  />
+						<flux:grid.column style="width: 16%;border-right: 1px dotted #999;" name="column4"  />
+						<flux:grid.column style="width: 16%;border-right: 1px dotted #999;" name="column5"  />
+						<flux:grid.column style="width: 16%;" name="column6"  />
+					</flux:grid.row>
+				</flux:grid>
+			</flux:form.sheet>
+			<flux:form.sheet name="additionalCSS">
+				<v:variable.set name="settings.wrapdropdown"
+								value="{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings.colwrap')}" />
+				<flux:field.select name="settings.grid6.wrapclass" items="none,{settings.wrapdropdown}" default="none" />
+				<flux:field.input name="settings.grid6.rowCSS" size="10" />
+				<flux:field.input name="settings.grid6.col1CSS" size="10" />
+				<flux:field.checkbox name="settings.grid6.col1hide" default="0" />
+				<flux:field.input name="settings.grid6.col2CSS" size="10" />
+				<flux:field.checkbox name="settings.grid6.col2hide" default="0" />
+				<flux:field.input name="settings.grid6.col3CSS" size="10" />
+				<flux:field.checkbox name="settings.grid6.col3hide" default="0" />
+				<flux:field.input name="settings.grid6.col4CSS" size="10" />
+				<flux:field.checkbox name="settings.grid6.col4hide" default="0" />
+				<flux:field.input name="settings.grid6.col5CSS" size="10" />
+				<flux:field.checkbox name="settings.grid6.col5hide" default="0" />
+				<flux:field.input name="settings.grid6.col6CSS" size="10" />
+				<flux:field.checkbox name="settings.grid6.col6hide" default="0" />
+			</flux:form.sheet>
+		</flux:form>
+	</f:section>
+
+	<f:section name="grid6more">
+		<flux:field.select name="settings.grid6.col1width"
+						   items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+						   required="1"
+						   default="col-sm-3" />
+		<flux:field.select name="settings.grid6.col2width"
+						   items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+						   required="1"
+						   default="col-sm-3" />
+		<flux:field.select name="settings.grid6.col3width"
+						   items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+						   required="1"
+						   default="col-sm-3" />
+		<flux:field.select name="settings.grid6.col4width"
+						   items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+						   required="1"
+						   default="col-sm-3" />
+		<flux:field.select name="settings.grid6.col5width"
+						   items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+						   required="1"
+						   default="col-sm-3" />
+		<flux:field.select name="settings.grid6.col6width"
+						   items="col-sm-1,col-sm-2,col-sm-3,col-sm-4,col-sm-5,col-sm-6,col-sm-7,col-sm-8,col-sm-9,col-sm-10,col-sm-11,col-sm-12"
+						   required="1"
+						   default="col-sm-3" />
+	</f:section>
+
+	<f:section name="FrontendColRenderingGrid6">
+		<div class="row {settings.grid6.rowCSS} {f:if(condition: "{0: settings.grid6.wrapclass} == {0 : 'none'}", else: '{settings.grid6.wrapclass}')} ">
+			<f:if condition="{settings.grid6.split}=='more'">
+				<f:then>
+					<div class="{settings.grid6.col1width} {settings.grid6.col1CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col1hide, then: 'hidden-xs')}">
+						<flux:content.render area="column1" />
+					</div>
+					<div class="{settings.grid6.col2width} {settings.grid6.col2CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col2hide, then: 'hidden-xs')}">
+						<flux:content.render area="column2" />
+					</div>
+					<div class="{settings.grid6.col3width} {settings.grid6.col3CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col3hide, then: 'hidden-xs')}">
+						<flux:content.render area="column3" />
+					</div>
+					<div class="{settings.grid6.col4width} {settings.grid6.col4CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col4hide, then: 'hidden-xs')}">
+						<flux:content.render area="column4" />
+					</div>
+					<div class="{settings.grid6.col5width} {settings.grid6.col5CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col5hide, then: 'hidden-xs')}">
+						<flux:content.render area="column4" />
+					</div>
+					<div class="{settings.grid6.col6width} {settings.grid6.col6CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col6hide, then: 'hidden-xs')}">
+						<flux:content.render area="column4" />
+					</div>
+				</f:then>
+				<f:else>
+					<div class="col-sm-2 {settings.grid6.col1CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col1hide, then: 'hidden-xs')}">
+						<flux:content.render area="column1" />
+					</div>
+					<div class="col-sm-2 {settings.grid6.col2CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col2hide, then: 'hidden-xs')}">
+						<flux:content.render area="column2" />
+					</div>
+					<div class="col-sm-2 {settings.grid6.col3CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col3hide, then: 'hidden-xs')}">
+						<flux:content.render area="column3" />
+					</div>
+					<div class="col-sm-2 {settings.grid6.col4CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col4hide, then: 'hidden-xs')}">
+						<flux:content.render area="column4" />
+					</div>
+					<div class="col-sm-2 {settings.grid6.col5CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col5hide, then: 'hidden-xs')}">
+						<flux:content.render area="column4" />
+					</div>
+					<div class="col-sm-2 {settings.grid6.col6CSS} {f:if(condition: settings.grid6.eqh, then: 'equal-height')} {f:if(condition: settings.grid6.col6hide, then: 'hidden-xs')}">
+						<flux:content.render area="column4" />
+					</div>
+				</f:else>
+			</f:if>
+		</div>
+	</f:section>
+
+	<f:section name="Preview">
+		<flux:widget.grid />
+	</f:section>
+
+	<f:section name="Main">
+		<f:render section="FrontendColRenderingGrid6" arguments="{_all}" />
+	</f:section>
+
+</div>
