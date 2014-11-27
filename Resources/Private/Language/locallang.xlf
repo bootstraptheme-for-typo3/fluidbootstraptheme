@@ -906,7 +906,7 @@
 				<source>6 Columns</source>
 			</trans-unit>
 			<trans-unit id="flux.grid6">
-				<source>6 Columns Container</source>
+				<source>6 Columns Container (16-16-16-16-16-16)</source>
 			</trans-unit>
 			<trans-unit id="flux.grid6.fields.settings.grid6.eqh">
 				<source>Equal Height of Columns</source>
