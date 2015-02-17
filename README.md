@@ -1,7 +1,7 @@
 # Fluid Theme for Twitter Bootstrap
 ===
 
-[![Build Status](https://travis-ci.org/FluidTYPO3/fluidcontent_bootstrap.png?branch=master)](https://travis-ci.org/FluidTYPO3/fluidcontent_bootstrap)
+[![Build Status](https://travis-ci.org/bootstraptheme-for-typo3/fluidbootstraptheme.png?branch=master)](https://travis-ci.org/bootstraptheme-for-typo3/fluidbootstraptheme)
 
 
 ## What is it
