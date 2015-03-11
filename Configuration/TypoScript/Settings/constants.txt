@@ -1,26 +1,5 @@
 # cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=Use TypoScript settings instead of FlexForm values
-plugin.tx_fluidbootstraptheme.settings.useTypoScript = 1
-plugin.tx_fluidbootstraptheme.settings {
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=main menu entry level - other menus calculated based on this
-	entryLevel = 0
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=enable the top right corner search field
-	enableSearch = 1
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=Uid of the Searchresultpage
-	searchPageUid =
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=small; label=name attribute of search field
-	searchFieldName = q
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=enables a "well" class on the side bar of templates using side bar
-	addWell = 0
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=make the well's padding smaller than standard
-	wellSmall = 0
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=options[left,right]; label=Placement of sidebar
-	position = left
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=Width of sidebar (what remains of a 12-column total is used by main content)
-	distribution = 4
-	# cat=FLUIDBOOTSTRAPTHEME/settings; type=int+; label=Number of grid columns: Set this to the same number used in your custom Bootstrap CSS if you've switched from the default 12-grid
-	gridColumns = 12
-
-}
+plugin.tx_fluidbootstraptheme.settings.useTypoScript = 0
 
 plugin.tx_fluidbootstraptheme.settings {
 	# cat=FLUIDBOOTSTRAPTHEME CSS/settings; type=string; label = CSS wrapper Classes for Grid Container (comma separated list)

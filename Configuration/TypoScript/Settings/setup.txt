@@ -1,4 +1,3 @@
-plugin.tx_fluidbootstraptheme.settings.useTypoScript = {$plugin.tx_fluidbootstraptheme.settings.useTypoScript}
 plugin.tx_fluidbootstraptheme.settings {
 	entryLevel = {$plugin.tx_fluidbootstraptheme.settings.entryLevel}
 	enableSearch = {$plugin.tx_fluidbootstraptheme.settings.enableSearch}

@@ -39,19 +39,6 @@ use FluidTYPO3\Fluidcontent\Controller\AbstractContentController;
 class ContentController extends AbstractContentController {
 
 	/**
-	 * @return void
-	 */
-	protected function initializeOverriddenSettings() {
-		$record = $this->getRecord();
-		$useTypoScriptOptionFromForm = $this->provider->getForm($record)->getOption('useTypoScript');
-		if (NULL !== $useTypoScriptOptionFromForm) {
-			$this->settings['useTypoScript'] = (boolean) $useTypoScriptOptionFromForm;
-		}
-		parent::initializeOverriddenSettings();
-	}
-
-
-	/**
 	 * @return string
 	 */
 	public function accordionAction() {

@@ -12,7 +12,7 @@
 		{v:variable.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:variable.set(name: 'settings')}
 		{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:variable.set(name:
 		'numberOfColumns')}
-		<flux:form id="row" options="{useTypoScript: 0, group: 'Grid', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Icons/Content/Row.png\')}'}">
+		<flux:form id="row" options="group: 'Grid', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Icons/Content/Row.png\')}'}">
 			<flux:form.section name="columns">
 				<flux:form.object name="column">
 					<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
