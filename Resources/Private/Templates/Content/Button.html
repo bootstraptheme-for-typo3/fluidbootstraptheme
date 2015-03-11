@@ -9,7 +9,7 @@
 	<f:layout name="Content"/>
 
 	<f:section name="Configuration">
-		<flux:form id="button" options="group: 'Bootstrap', Fluidcontent: {sorting: 600}, icon: '{f:uri.resource(path: \'Icons/Content/Button.png\')}'}">
+		<flux:form id="button" options="{group: 'Bootstrap', Fluidcontent: {sorting: 600}, icon: '{f:uri.resource(path: \'Icons/Content/Button.png\')}'}">
 			<flux:form.sheet name="ButtonSheetOne">
 				<flux:field.select items="xs,sm,default,lg" name="settings.ButtonSize" default="default"/>
 				<flux:field.checkbox name="settings.ButtonBlock" default="0"/>

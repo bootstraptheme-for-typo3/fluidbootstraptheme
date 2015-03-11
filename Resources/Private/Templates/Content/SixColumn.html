@@ -9,7 +9,7 @@
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="grid6" options="group: 'Grid', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Icons/Content/SixColumn.png\')}'}">
+		<flux:form id="grid6" options="{group: 'Grid', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Icons/Content/SixColumn.png\')}'}">
 			<flux:form.sheet name="colSettings">
 				<flux:field.select name="settings.grid6.split" items="16-16-16-16-16-16,more" default="16-16-16-16-16-16" requestUpdate="1" />
 				<flux:field.checkbox name="settings.grid6.eqh" default="0" />
