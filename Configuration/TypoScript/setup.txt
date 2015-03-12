@@ -1,11 +1,11 @@
 [GLOBAL]
 plugin.tx_fluidbootstraptheme.view {
-	templateRootPath = {$plugin.tx_fluidbootstraptheme.view.templateRootPath}
-	partialRootPath = {$plugin.tx_fluidbootstraptheme.view.partialRootPath}
-	layoutRootPath = {$plugin.tx_fluidbootstraptheme.view.layoutRootPath}
+	templateRootPaths.0 = {$plugin.tx_fluidbootstraptheme.view.templateRootPaths.0}
+	partialRootPaths.0 = {$plugin.tx_fluidbootstraptheme.view.partialRootPaths.0}
+	layoutRootPaths.0 = {$plugin.tx_fluidbootstraptheme.view.layoutRootPaths.0}
 	widget {
-    		Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
-    		TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
+    		Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPaths.0 < plugin.tx_fluidbootstraptheme.view.templateRootPaths.0
+    		TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPaths.0 < plugin.tx_fluidbootstraptheme.view.templateRootPaths.0
 	}
 }
 
