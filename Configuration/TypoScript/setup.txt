@@ -5,8 +5,6 @@ plugin.tx_fluidbootstraptheme.view {
 	layoutRootPath = {$plugin.tx_fluidbootstraptheme.view.layoutRootPath}
 }
 
-plugin.tx_fluidbootstraptheme.settings.useTypoScript = 0
-
 plugin.tx_fluidbootstraptheme.settings {
 	colwrap = {$plugin.tx_fluidbootstraptheme.settings.colwrap}
 }
