@@ -9,7 +9,7 @@
 	},
 	"keywords": ["TYPO3 CMS", "templating", "Bootstrap", "FluidTYPO3", "fluid"],
 	"type": "typo3-cms-extension",
-	"version": "1.2.0",
+	"version": "2.0.0",
 	"homepage": "http://www.fluidbootstraptheme.net",
 	"license": "GPL-2.0+",
 	"support": {

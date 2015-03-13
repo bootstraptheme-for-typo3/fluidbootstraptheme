@@ -1,12 +1,15 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	 f:schemaLocation="https://fluidtypo3.org/schemas/fluid-master.xsd"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+	 flux:schemaLocation="https://fluidtypo3.org/schemas/flux-master.xsd"
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 v:schemaLocation="https://fluidtypo3.org/schemas/vhs-master.xsd">
 
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="grid4" options="{useTypoScript: 0, group: 'Grid', Fluidcontent: {sorting: 150}, icon: '{f:uri.resource(path: \'Icons/Content/FourColumn.png\')}'}">
+		<flux:form id="grid4" options="{group: 'Grid', Fluidcontent: {sorting: 150}, icon: '{f:uri.resource(path: \'Icons/Content/FourColumn.png\')}'}">
 			<flux:form.sheet name="colSettings">
 				<flux:field.select name="settings.grid4.split" items="25-25-25-25,more" default="25-25-25-25" requestUpdate="1" />
 				<flux:field.checkbox name="settings.grid4.eqh" default="0" />
