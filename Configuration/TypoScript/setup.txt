@@ -13,7 +13,7 @@ plugin.tx_fluidbootstraptheme.settings {
 
 plugin.tx_vhs.settings.asset{
 	bootstrapcss {
-		path = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css
+		path = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css
 		external = 1
 		group = cdn
 		standalone = 1
@@ -21,7 +21,7 @@ plugin.tx_vhs.settings.asset{
 	}
 
 	bootstrapcore {
-		path = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js
+		path = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js
 		external = 1
 		dependencies = jquery
 		group = cdn
@@ -58,7 +58,7 @@ plugin.tx_vhs.settings.asset{
 	}
 
 	fontawesome {
-		path = http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+		path = http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
 		external = 1
 		group = cdn
 		standalone = 1
