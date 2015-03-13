@@ -1,7 +1,0 @@
-# cat=FLUIDBOOTSTRAPTHEME/settings; type=boolean; label=Use TypoScript settings instead of FlexForm values
-plugin.tx_fluidbootstraptheme.settings.useTypoScript = 0
-
-plugin.tx_fluidbootstraptheme.settings {
-	# cat=FLUIDBOOTSTRAPTHEME CSS/settings; type=string; label = CSS wrapper Classes for Grid Container (comma separated list)
-	colwrap = first, second, third
-}

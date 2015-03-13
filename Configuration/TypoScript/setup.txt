@@ -5,14 +5,12 @@ plugin.tx_fluidbootstraptheme.view {
 	layoutRootPath = {$plugin.tx_fluidbootstraptheme.view.layoutRootPath}
 }
 
+plugin.tx_fluidbootstraptheme.settings.useTypoScript = 0
+
 plugin.tx_fluidbootstraptheme.settings {
-	gridColumns = {$plugin.tx_fluidbootstraptheme.settings.gridColumns}
 	colwrap = {$plugin.tx_fluidbootstraptheme.settings.colwrap}
-	menu {
-		main.entryLevel = 0
-		sub.entryLevel = 1
-	}
 }
+
 plugin.tx_vhs.settings.asset{
 	bootstrapcss {
 		path = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css
