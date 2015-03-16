@@ -503,10 +503,10 @@
 
 			<!-- Row.html -->
 			<trans-unit id="flux.row" xml:space="preserve">
-				<source>Column Row</source>
+				<source>1-12 Multi Column Builder</source>
 			</trans-unit>
 			<trans-unit id="flux.row.description" xml:space="preserve">
-				<source>Adds a wrapper element that lets you define columns of varying widths</source>
+				<source>Build a Grid with X Number of Columns</source>
 			</trans-unit>
 			<trans-unit id="flux.row.fields.settings.fluid" xml:space="preserve">
 				<source>Use "fluid" row type instead of standard row</source>
