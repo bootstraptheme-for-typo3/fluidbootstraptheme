@@ -76,8 +76,8 @@ selection boxes in page properties - configurable with a page template to use fo
 ===
 **Content Elements:**
 
-![image](http://snag.gy/xbWUz.jpg)
+![image](http://snag.gy/CF1Ro.jpg)
 
 ===
 **Grids:**
-![image](http://snag.gy/YMayQ.jpg)
+![image](http://snag.gy/CRPuk.jpg)
