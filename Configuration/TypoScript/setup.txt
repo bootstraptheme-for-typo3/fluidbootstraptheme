@@ -47,9 +47,17 @@ plugin.tx_vhs.settings.asset{
 		type = js
 	}
 
+	matchheight {
+		path = EXT:fluidbootstraptheme/Resources/Public/Javascript/jquery.matchHeight-min.js
+		dependencies = jquery
+		group = JS
+		allowMoveToFooter = 1
+		type = js
+	}
+
 	eqheight {
 		path = EXT:fluidbootstraptheme/Resources/Public/Javascript/eqheight.js
-		dependencies = jquery
+		dependencies = matchheight
 		group = JS
 		allowMoveToFooter = 1
 		type = js
