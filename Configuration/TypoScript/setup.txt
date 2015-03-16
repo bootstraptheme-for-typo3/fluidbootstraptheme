@@ -1,8 +1,8 @@
 [GLOBAL]
 plugin.tx_fluidbootstraptheme.view {
-	templateRootPath = {$plugin.tx_fluidbootstraptheme.view.templateRootPath}
-	partialRootPath = {$plugin.tx_fluidbootstraptheme.view.partialRootPath}
-	layoutRootPath = {$plugin.tx_fluidbootstraptheme.view.layoutRootPath}
+	templateRootPaths.0 = {$plugin.tx_fluidbootstraptheme.view.templateRootPaths.0}
+	partialRootPaths.0 = {$plugin.tx_fluidbootstraptheme.view.partialRootPaths.0}
+	layoutRootPaths.0 = {$plugin.tx_fluidbootstraptheme.view.layoutRootPaths.0}
 }
 
 plugin.tx_fluidbootstraptheme.settings {
