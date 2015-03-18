@@ -11,7 +11,7 @@ plugin.tx_fluidbootstraptheme.settings {
 
 plugin.tx_vhs.settings.asset{
 	bootstrapcss {
-		path = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css
+		path = //maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css
 		external = 1
 		group = cdn
 		standalone = 1
@@ -19,7 +19,7 @@ plugin.tx_vhs.settings.asset{
 	}
 
 	bootstrapcore {
-		path = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js
+		path = //maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js
 		external = 1
 		dependencies = jquery
 		group = cdn
@@ -29,7 +29,7 @@ plugin.tx_vhs.settings.asset{
 	}
 
 	jquery {
-		path = http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+		path = //ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
 		external = 1
 		group = cdn
 		standalone = 1
@@ -38,7 +38,7 @@ plugin.tx_vhs.settings.asset{
 	}
 
 	jqueryuid {
-		path = http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js
+		path = //ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js
 		external = 1
 		dependencies = jquery
 		group = cdn
@@ -64,7 +64,7 @@ plugin.tx_vhs.settings.asset{
 	}
 
 	fontawesome {
-		path = http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
+		path = //maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
 		external = 1
 		group = cdn
 		standalone = 1
