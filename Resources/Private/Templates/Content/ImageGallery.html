@@ -46,27 +46,36 @@
 
 	<f:section name="Main">
 
+		<v:variable.set name="galleryid" value="{v:system.uniqId()}" />
+
 		<v:asset.style name="ImageGalleryCSS">
-			.carousel-control.right,.carousel-control.left {
-			background-image:none;
+			[id^="modal-{galleryid}-"] .carousel-control.right,
+			[id^="modal-{galleryid}-"] .carousel-control.left {
+				background-image:none;
 			}
-			.text-right{
-			overflow:hidden;
-			white-space:nowrap;
+			[id^="modal-{galleryid}-"] .text-right {
+				overflow:hidden;
+				white-space:nowrap;
+			}
+			[id^="modal-{galleryid}-"] .modal-body {
+				padding:0;
+				margin:15px;
+			}
+			[id^="modal-{galleryid}-"] .modal-body img {
+				margin:0 auto;
 			}
 		</v:asset.style>
 
 		<div class="row">
-			<v:variable.set name="galleryid" value="{v:system.uniqId()}" />
 			<v:content.resources.fal field="settings.imgGalleryFalImageItems" as="images">
 				<f:for each="{images}" as="image" iteration="iteration">
 					<div class='col-xs-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowXs)} col-sm-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowSm)}  col-md-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowMd)}  col-lg-{v:math.division(a: 12, fail: 1, b: settings.imgGalleryFalRowLg)} '>
 						<f:if condition="{settings.imgGalleryFalRenderHrefToOriginal}">
 							<f:then>
-								<a href="{image.url}" class="thumbnail fancybox">
+								<a href="{image.url}" class="thumbnail">
 							</f:then>
 							<f:else>
-								<a class="thumbnail fancybox" data-toggle="modal"
+								<a class="thumbnail" data-toggle="modal"
 								   data-target="#modal-{galleryid}-{iteration.index}">
 							</f:else>
 						</f:if>
@@ -100,7 +109,7 @@
 										</h4>
 									</div>
 									<div class="modal-body">
-										<f:image src="{image.url}" width="858"
+										<f:image src="{image.url}" width="868m" height="577m"
 												 alt="{image.alternative}"
 												 title="{image.title}" class="img-responsive" />
 										<f:if condition="{0:settings.imgGalleryFalPrevNextPosition} == {0:'picture'}">
