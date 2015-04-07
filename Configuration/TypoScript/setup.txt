@@ -24,7 +24,7 @@ plugin.tx_vhs.settings.asset{
 		dependencies = jquery
 		group = cdn
 		standalone = 1
-		allowMoveToFooter = 1
+		movable = 1
 		type = js
 	}
 
@@ -33,7 +33,7 @@ plugin.tx_vhs.settings.asset{
 		external = 1
 		group = cdn
 		standalone = 1
-		allowMoveToFooter = 0
+		movable = 0
 		type = js
 	}
 
@@ -43,7 +43,7 @@ plugin.tx_vhs.settings.asset{
 		dependencies = jquery
 		group = cdn
 		standalone = 1
-		allowMoveToFooter = 1
+		movable = 1
 		type = js
 	}
 
@@ -59,7 +59,7 @@ plugin.tx_vhs.settings.asset{
 		path = EXT:fluidbootstraptheme/Resources/Public/Javascript/eqheight.js
 		dependencies = matchheight
 		group = JS
-		allowMoveToFooter = 1
+		movable = 1
 		type = js
 	}
 
