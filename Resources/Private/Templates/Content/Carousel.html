@@ -1,12 +1,12 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="carousel" options="{useTypoScript: 0, group: 'Bootstrap', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Icons/Content/Carousel.png\')}'}">
+		<flux:form id="carousel" options="{group: 'Bootstrap', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Icons/Content/Carousel.png\')}'}">
 			<flux:field.checkbox name="settings.carousel.quickselect" default="1" />
 			<flux:field.select name="settings.carousel.quickselectType" items="{images: 'images', dots: 'dots', numbers: 'numbers'}" />
 			<flux:field.input name="settings.carousel.interval" default="5000" eval="int,trim" />

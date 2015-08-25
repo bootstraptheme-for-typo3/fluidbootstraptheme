@@ -1,12 +1,12 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
-	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
+	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
 
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="accordion" options="{useTypoScript: 0, group: 'Bootstrap', Fluidcontent: {sorting: 300}, icon: '{f:uri.resource(path: \'Icons/Content/Accordion.png\')}'}">
+		<flux:form id="accordion" options="{group: 'Bootstrap', Fluidcontent: {sorting: 300}, icon: '{f:uri.resource(path: \'Icons/Content/Accordion.png\')}'}">
 			<flux:form.sheet name="panels">
 				<flux:form.section name="panels">
 					<flux:form.object name="panel">

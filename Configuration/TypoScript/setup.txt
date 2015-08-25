@@ -1,25 +1,17 @@
 [GLOBAL]
 plugin.tx_fluidbootstraptheme.view {
-	templateRootPath = {$plugin.tx_fluidbootstraptheme.view.templateRootPath}
-	partialRootPath = {$plugin.tx_fluidbootstraptheme.view.partialRootPath}
-	layoutRootPath = {$plugin.tx_fluidbootstraptheme.view.layoutRootPath}
-	widget {
-		Tx_Fluid_ViewHelpers_Widget_PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
-		TYPO3\CMS\Fluid\ViewHelpers\Widget\PaginateViewHelper.templateRootPath < plugin.tx_fluidbootstraptheme.view.templateRootPath
-	}
+	templateRootPaths.0 = {$plugin.tx_fluidbootstraptheme.view.templateRootPaths.0}
+	partialRootPaths.0 = {$plugin.tx_fluidbootstraptheme.view.partialRootPaths.0}
+	layoutRootPaths.0 = {$plugin.tx_fluidbootstraptheme.view.layoutRootPaths.0}
 }
 
 plugin.tx_fluidbootstraptheme.settings {
-	gridColumns = {$plugin.tx_fluidbootstraptheme.settings.gridColumns}
 	colwrap = {$plugin.tx_fluidbootstraptheme.settings.colwrap}
-	menu {
-		main.entryLevel = 0
-		sub.entryLevel = 1
-	}
 }
+
 plugin.tx_vhs.settings.asset{
 	bootstrapcss {
-		path = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css
+		path = //maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css
 		external = 1
 		group = cdn
 		standalone = 1
@@ -27,44 +19,52 @@ plugin.tx_vhs.settings.asset{
 	}
 
 	bootstrapcore {
-		path = https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js
+		path = //maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js
 		external = 1
 		dependencies = jquery
 		group = cdn
 		standalone = 1
-		allowMoveToFooter = 1
+		movable = 1
 		type = js
 	}
 
 	jquery {
-		path = http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
+		path = //ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js
 		external = 1
 		group = cdn
 		standalone = 1
-		allowMoveToFooter = 0
+		movable = 0
 		type = js
 	}
 
 	jqueryuid {
-		path = http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js
+		path = //ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js
 		external = 1
 		dependencies = jquery
 		group = cdn
 		standalone = 1
-		allowMoveToFooter = 1
+		movable = 1
 		type = js
 	}
 
-	eqheight {
-		path = EXT:fluidbootstraptheme/Resources/Public/Javascript/eqheight.js
+	matchheight {
+		path = EXT:fluidbootstraptheme/Resources/Public/Javascript/jquery.matchHeight-min.js
 		dependencies = jquery
 		group = JS
 		allowMoveToFooter = 1
 		type = js
 	}
 
+	eqheight {
+		path = EXT:fluidbootstraptheme/Resources/Public/Javascript/eqheight.js
+		dependencies = matchheight
+		group = JS
+		movable = 1
+		type = js
+	}
+
 	fontawesome {
-		path = http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css
+		path = //maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css
 		external = 1
 		group = cdn
 		standalone = 1
