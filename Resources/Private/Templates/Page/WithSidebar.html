@@ -1,12 +1,12 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 	<f:layout name="WithSideBar" />
 
 	<f:section name="Configuration">
-		<flux:form id="sidebar" icon="{f:uri.resource(path: 'Icons/SidebarPage.png')}">
+		<flux:form id="sidebar" options="{icon: '{f:uri.resource(path: \'Icons/Page/WithSidebar.png\')}'}">
 			{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:variable.set(name: 'settings')}
 			<f:if condition="{settings.useTypoScript} < 1">
 				<flux:field.input name="settings.distribution"
@@ -15,7 +15,7 @@
 				</flux:field.input>
 				<flux:field.select name="settings.position" items="left,right" />
 				<flux:field.checkbox name="settings.enableSearch" default="1" />
-				<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="searchPageUid">
+				<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="settings.searchPageUid">
 					<flux:wizard.list table="pages" />
 				</flux:field.relation>
 				<flux:field.input name="settings.searchFieldName" default="q" />

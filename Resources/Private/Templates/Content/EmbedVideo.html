@@ -1,12 +1,12 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="EmbedVideo" options="{useTypoScript: 0, group: 'Bootstrap', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_008_film.png\')}'}">
+		<flux:form id="EmbedVideo" options="{useTypoScript: 0, group: 'Bootstrap', Fluidcontent: {sorting: 700}, icon: '{f:uri.resource(path: \'Icons/Content/EmbedVideo.png\')}'}">
 			<flux:form.sheet name="EmbedVideo">
 				<flux:field.text name="settings.videoIframe" default="Paste your iFrame here" required="1"
 								 cols="100" rows="10" />

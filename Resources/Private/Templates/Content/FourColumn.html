@@ -1,21 +1,19 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="grid4" options="{useTypoScript: 0, group: 'Grid', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png\')}'}">
+		<flux:form id="grid4" options="{useTypoScript: 0, group: 'Grid', Fluidcontent: {sorting: 150}, icon: '{f:uri.resource(path: \'Icons/Content/FourColumn.png\')}'}">
 			<flux:form.sheet name="colSettings">
 				<flux:field.select name="settings.grid4.split" items="25-25-25-25,more" default="25-25-25-25" requestUpdate="1" />
 				<flux:field.checkbox name="settings.grid4.eqh" default="0" />
 				<f:if condition="{settings.grid4.split}=='more'">
 					<f:then>
 						<flux:field.custom name="grid4Description">
-							<h3>
-								Customize the Column settings:
-							</h3>
+							<h3><v:l key="flux.grid4.label.customize.column.settings"/>:</h3>
 						</flux:field.custom>
 						<f:render section="grid4more" arguments="{_all}" />
 					</f:then>
@@ -34,7 +32,7 @@
 			<flux:form.sheet name="additionalCSS">
 				<v:variable.set name="settings.wrapdropdown"
 								value="{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings.colwrap')}" />
-				<flux:field.select name="settings.grid4.wrapclass" items="none,{settings.wrapdropdown}" label="Choose a Wrap Class" default="none" />
+				<flux:field.select name="settings.grid4.wrapclass" items="none,{settings.wrapdropdown}" default="none" />
 				<flux:field.input name="settings.grid4.rowCSS" size="10" />
 				<flux:field.input name="settings.grid4.col1CSS" size="10" />
 				<flux:field.checkbox name="settings.grid4.col1hide" default="0" />

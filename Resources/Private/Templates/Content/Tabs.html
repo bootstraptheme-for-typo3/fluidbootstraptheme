@@ -1,13 +1,13 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
 		<flux:form id="tabs"
-				   options="{useTypoScript: 0, group: 'Bootstrap', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_440_folder_closed.png\')}'}">
+				   options="{useTypoScript: 0, group: 'Bootstrap', Fluidcontent: {sorting: 250}, icon: '{f:uri.resource(path: \'Icons/Content/Tabs.png\')}'}">
 			<flux:form.sheet name="display">
 				<flux:field.select name="mode" items="tab,pill" requestUpdate="TRUE" />
 				<flux:field.checkbox name="stackable" />
@@ -57,7 +57,7 @@
 			<div class="tab-content">
 				<f:if condition="{tabs}">
 					<f:for each="{tabs}" as="tab" iteration="iteration">
-						<div class="tab-pane {f:if(condition: tab.tab.fade, then: 'fade')} {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active in')} {f:if(condition: tab.tab.class, then: 'tab-pane-{tab.tab.class}')}"
+						<div class="tab-pane {f:if(condition: fade, then: 'fade')} {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'active in')} {f:if(condition: tab.tab.class, then: 'tab-pane-{tab.tab.class}')}"
 							 id="tab-{record.uid}-{iteration.index}">
 							<flux:content.render area="content.{iteration.index}" />
 						</div>

@@ -1,12 +1,12 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="accordion" options="{useTypoScript: 0, group: 'Bootstrap', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_113_justify.png\')}'}">
+		<flux:form id="accordion" options="{useTypoScript: 0, group: 'Bootstrap', Fluidcontent: {sorting: 300}, icon: '{f:uri.resource(path: \'Icons/Content/Accordion.png\')}'}">
 			<flux:form.sheet name="panels">
 				<flux:form.section name="panels">
 					<flux:form.object name="panel">
@@ -32,7 +32,13 @@
 	</f:section>
 
 	<f:section name="Main">
-		<v:variable.set name="activeTabIndex" value="0" />
+		<v:asset.script name="accordion" dependencies="bootstrapcore" allowMoveToFooter="1">
+			$('.panel-collapse').on('shown.bs.collapse', function () {
+			var activepanel = $(this).attr( "id" );
+			window.location.hash=activepanel;
+			})
+		</v:asset.script>
+		<v:variable.set name="activeTabIndex" value="-1" />
 		<f:for each="{panels}" as="panel" iteration="iteration">
 			<f:if condition="{panel.panel.active}">
 				<v:variable.set name="activeTabIndex" value="{iteration.index}" />

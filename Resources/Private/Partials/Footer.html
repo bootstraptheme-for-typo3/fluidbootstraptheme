@@ -1,6 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 	<f:section name="Footer">
 		<!-- footer, optional content elements from colPos 2 (two) -->
@@ -19,29 +19,24 @@
 			<h3 class="header">
 				<span>Site Map</span>
 			</h3>
-			<hr />
+			<hr/>
 			<div class="row">
-				<v:page.menu useShortcutData="TRUE" entryLevel="{settings.entryLevel}">
-					<f:for each="{menu}" as="subPage">
-						<v:page.menu useShortcutData="TRUE" pageUid="{subPage.uid}">
-							<div class="col-sm-2">
-								<div class="lead muted">
-									<f:link.page pageUid="{subPage.uid}" class="muted">{subPage.linktext}</f:link.page>
-								</div>
+				<v:page.menu class="nav footernav" entryLevel="{settings.entryLevel}" expandAll="true">
+					<f:for each="{menu}" as="LevelOne">
+						<div class="col-sm-2">
+							<div class="lead muted"><a class="muted" href="{LevelOne.link}">{LevelOne.linktext}</a>
+							</div>
+							<v:page.menu pageUid="{LevelOne.uid}" class="unstyled">
 								<ul class="unstyled">
-									<f:for each="{menu}" as="submenuPage">
-										<li>
-											<f:link.page pageUid="{submenuPage.uid}" class="muted">{submenuPage.linktext}
-											</f:link.page>
-										</li>
+									<f:for each="{menu}" as="LevelTwo">
+										<li><a class="muted" href="{LevelTwo.link}">{LevelTwo.linktext}</a></li>
 									</f:for>
 								</ul>
-							</div>
-						</v:page.menu>
+							</v:page.menu>
+						</div>
 					</f:for>
 				</v:page.menu>
 			</div>
 		</div>
 	</f:section>
-
 </div>

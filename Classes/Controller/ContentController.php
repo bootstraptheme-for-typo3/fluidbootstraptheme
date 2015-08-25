@@ -194,8 +194,22 @@ class ContentController extends AbstractContentController {
 	/**
 	 * @return string
 	 */
+	public function sixColumnAction() {
+
+	}
+
+	/**
+	 * @return string
+	 */
 	public function imageGalleryAction() {
 
 	}
+
+    /**
+     * @return string
+     */
+    public function thumbnailBoxAction() {
+
+    }
 
 }

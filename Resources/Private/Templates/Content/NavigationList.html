@@ -1,12 +1,12 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="navigationlist" options="{useTypoScript: 0, group: 'Bootstrap', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_072_bookmark.png\')}'}">
+		<flux:form id="navigationlist" options="{useTypoScript: 0, group: 'Navigation', Fluidcontent: {sorting: 50}, icon: '{f:uri.resource(path: \'Icons/Content/NavigationList.png\')}'}">
 			<flux:form.sheet name="display">
 				<flux:field.checkbox name="addWell"/>
 				<flux:field.checkbox name="zeroPadding"/>
@@ -22,10 +22,10 @@
 						<flux:field.input name="text"/>
 						<flux:field.input name="tooltip"/>
 						<flux:field.input name="icon" eval="trim">
-							<flux:wizard.link/>
+							<flux:wizard.link activeTab="file"/>
 						</flux:field.input>
 						<flux:field.input name="target">
-							<flux:wizard.link/>
+							<flux:wizard.link activeTab="page"/>
 						</flux:field.input>
 						<flux:field.input name="class"/>
 					</flux:form.object>
@@ -79,23 +79,14 @@
 							<v:case case="default">
 								<v:variable.set name="icon"
 												value="{v:media.exists(file: object.icon, then: '<img src=\'{object.icon}\' alt=\'\' class=\'icon-blank\' /> ', else: '')}"/>
-								<li class="{f:if(condition: '{contentObject.pid} == {object.target}', then: 'active', else: 'item')}">
-									<f:if condition="{object.target -> v:math.round()} > 0">
-										<f:then>
-											<f:link.page pageUid="{object.target}" class="{object.class}"
-														 rel="{f:if(condition: object.tooltip, then: 'tooltip')}"
-														 title="{object.tooltip}">
-												<f:format.raw>{icon}{object.text}</f:format.raw>
-											</f:link.page>
-										</f:then>
-										<f:else>
-											<a href="{object.target}" class="{object.class}"
-											   rel="{f:if(condition: object.tooltip, then: 'tooltip')}"
-											   title="{object.tooltip}">
-												<f:format.raw>{icon}{object.text}</f:format.raw>
-											</a>
-										</f:else>
-									</f:if>
+								<v:variable.set name="linkTargetObject"
+												value="{v:iterator.explode(content: '{object.target}', glue: ' ')}"/>
+								<li class="{f:if(condition: '{contentObject.pid} == {linkTargetObject.0}', then: 'active', else: 'item')}">
+									<f:link.page pageUid="{linkTargetObject.0}" class="{object.class}" target="{f:if(condition:'{linkTargetObject.1}', then: '{linkTargetObject.1}', else: '')}"
+											 rel="{f:if(condition: object.tooltip, then: 'tooltip')}"
+											 title="{object.tooltip}">
+										<f:format.raw>{icon}{object.text}</f:format.raw>
+									</f:link.page>
 								</li>
 							</v:case>
 						</v:switch>

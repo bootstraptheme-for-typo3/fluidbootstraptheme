@@ -1,25 +1,23 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 	<f:layout name="Content"/>
 
 	<f:section name="Configuration">
-		<flux:form id="grid3" options="{useTypoScript: 0, group: 'Grid', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png\')}'}">
+		<flux:form id="grid3" options="{useTypoScript: 0, group: 'Grid', Fluidcontent: {sorting: 100}, icon: '{f:uri.resource(path: \'Icons/Content/ThreeColumn.png\')}'}">
 			<flux:form.sheet name="colSettings">
 				<flux:field.select name="settings.grid3.split"
-								   items="30-30-30,20-60-20,20-20-60,more"
-								   default="30-30-30"
+								   items="33-33-33,25-50-25,25-25-50,50-25-25,more"
+								   default="33-33-33"
 								   requestUpdate="1">
 				</flux:field.select>
-				<flux:field.checkbox name="settings.grid3.eqh" label="Equal Heigt of Colums" default="0"/>
+				<flux:field.checkbox name="settings.grid3.eqh" default="0"/>
 				<f:if condition="{settings.grid3.split}=='more'">
 					<f:then>
 						<flux:field.custom name="CarouselDescription">
-							<h3>
-								Customize the Column settings:
-							</h3>
+							<h3><v:l key="flux.grid3.label.customize.column.settings"/>:</h3>
 						</flux:field.custom>
 						<f:render section="grid3more" arguments="{_all}"/>
 					</f:then>
@@ -37,7 +35,7 @@
 			<flux:form.sheet name="additionalCSS">
 				<v:variable.set name="settings.wrapdropdown"
 								value="{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings.colwrap')}" />
-				<flux:field.select name="settings.grid3.wrapclass" items="none,{settings.wrapdropdown}" label="Choose a Wrap Class" default="none" />
+				<flux:field.select name="settings.grid3.wrapclass" items="none,{settings.wrapdropdown}" default="none" />
 				<flux:field.input name="settings.grid3.rowCSS" size="10"/>
 				<flux:field.input name="settings.grid3.col1CSS" size="10"/>
 				<flux:field.checkbox name="settings.grid3.col1hide" default="0"/>
@@ -75,13 +73,13 @@
 			<flux:grid.row>
 				<flux:grid.column
 						style="width: 33.333%;border-right: 1px dotted #999;" name="column1"
-						label="Column Left ({settings.grid3.col1width})"/>
+						label="{v:l(key: 'flux.grid3.columns.column1')} ({settings.grid3.col1width})"/>
 				<flux:grid.column
 						style="width: 33.333%;border-right: 1px dotted #999;" name="column2"
-						label="Column Middle ({settings.grid3.col2width})"/>
+						label="{v:l(key: 'flux.grid3.columns.column2')} ({settings.grid3.col2width})"/>
 				<flux:grid.column
 						style="width: 33.333%;" name="column3"
-						label="Column Right ({settings.grid3.col3width})"/>
+						label="{v:l(key: 'flux.grid3.columns.column3')} ({settings.grid3.col3width})"/>
 			</flux:grid.row>
 		</flux:grid>
 	</f:section>
@@ -112,7 +110,52 @@
 			<flux:content.render area="column3"/>
 		</div>
 	</f:section>
+	<f:section name="FE33-33-33">
+		<div class="col-sm-4 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
+			<flux:content.render area="column1"/>
+		</div>
+		<div class="col-sm-4 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:content.render area="column2"/>
+		</div>
+		<div class="col-sm-4 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col3hide, then: 'hidden-xs')}">
+			<flux:content.render area="column3"/>
+		</div>
+	</f:section>
+	<f:section name="FE25-50-25">
+		<div class="col-sm-3 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
+			<flux:content.render area="column1"/>
+		</div>
+		<div class="col-sm-6 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:content.render area="column2"/>
+		</div>
+		<div class="col-sm-3 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col3hide, then: 'hidden-xs')}">
+			<flux:content.render area="column3"/>
+		</div>
+	</f:section>
+	<f:section name="FE25-25-50">
+		<div class="col-sm-3 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
+			<flux:content.render area="column1"/>
+		</div>
+		<div class="col-sm-3 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:content.render area="column2"/>
+		</div>
+		<div class="col-sm-6 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col3hide, then: 'hidden-xs')}">
+			<flux:content.render area="column3"/>
+		</div>
+	</f:section>
+	<f:section name="FE50-25-25">
+		<div class="col-sm-6 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
+			<flux:content.render area="column1"/>
+		</div>
+		<div class="col-sm-3 {settings.grid3.col2CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col2hide, then: 'hidden-xs')}">
+			<flux:content.render area="column2"/>
+		</div>
+		<div class="col-sm-3 {settings.grid3.col3CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col3hide, then: 'hidden-xs')}">
+			<flux:content.render area="column3"/>
+		</div>
+	</f:section>
 	<f:section name="FE30-30-30">
+		<f:comment>30-30-30: Keep this section for compatibility reasons.</f:comment>
 		<div class="col-sm-4 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
 			<flux:content.render area="column1"/>
 		</div>
@@ -124,6 +167,7 @@
 		</div>
 	</f:section>
 	<f:section name="FE20-60-20">
+		<f:comment>20-60-20: Keep this section for compatibility reasons.</f:comment>
 		<div class="col-sm-3 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
 			<flux:content.render area="column1"/>
 		</div>
@@ -135,6 +179,7 @@
 		</div>
 	</f:section>
 	<f:section name="FE20-20-60">
+		<f:comment>20-20-60: Keep this section for compatibility reasons.</f:comment>
 		<div class="col-sm-3 {settings.grid3.col1CSS} {f:if(condition: settings.grid3.eqh, then: 'equal-height')} {f:if(condition: settings.grid3.col1hide, then: 'hidden-xs')}">
 			<flux:content.render area="column1"/>
 		</div>

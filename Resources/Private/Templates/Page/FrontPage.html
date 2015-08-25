@@ -1,19 +1,19 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 	<f:layout name="FrontPage" />
 
 	<f:section name="Configuration">
-		<flux:form id="front" icon="{f:uri.resource(path: 'Icons/FrontPage.png')}">
+		<flux:form id="front" options="{icon: '{f:uri.resource(path: \'Icons/Page/FrontPage.png\')}'}">
 			{v:variable.typoscript(path: 'plugin.tx_fluidbootstraptheme.settings') -> v:variable.set(name: 'settings')}
 			<f:if condition="{settings.useTypoScript} < 1">
 				<flux:field.input name="settings.entryLevel"
 										   eval="int,trim" minimum="0" maximum="6" default="{settings.menu.main.entryLevel}">
 				</flux:field.input>
 				<flux:field.checkbox name="settings.enableSearch" default="1" />
-				<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="searchPageUid">
+				<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="settings.searchPageUid">
 					<flux:wizard.list table="pages" />
 				</flux:field.relation>
 				<flux:field.input name="settings.searchFieldName" />

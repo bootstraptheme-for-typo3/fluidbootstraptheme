@@ -1,7 +1,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
 	 xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
 	 xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers"
-	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+	 xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers">
 
 	<f:layout name="Content" />
 
@@ -9,11 +9,11 @@
 		{v:variable.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:variable.set(name: 'settings')}
 		{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:variable.set(name:
 		'numberOfColumns')}
-		<flux:form id="row" options="{useTypoScript: 0, group: 'Bootstrap', icon: '{f:uri.resource(path: \'Icons/bootstrap/glyphicons_155_show_big_thumbnails.png\')}'}">
+		<flux:form id="row" options="{useTypoScript: 0, group: 'Grid', Fluidcontent: {sorting: 200}, icon: '{f:uri.resource(path: \'Icons/Content/Row.png\')}'}">
 			<flux:form.section name="columns">
 				<flux:form.object name="column">
 					<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
-					-> v:iterator.loop(count: numberOfColumns, iteration: 'iteration', minimum: 1)}" label="Columns: numberOfColumns" />
+					-> v:iterator.loop(count: numberOfColumns, iteration: 'iteration', minimum: 1)}" />
 					<flux:field.checkbox name="addWell" />
 					<flux:field.input name="additionalClass" />
 				</flux:form.object>
@@ -35,8 +35,17 @@
 	<f:section name="Main">
 		<div class="row">
 			<f:for each="{columns}" as="sectionObject" iteration="iteration">
-				<div class="{sectionObject.column.class} {sectionObject.column.additionalClass} {f:if(then: 'well', else: '', condition: '{sectionObject.column.addWell}')}">
-					<flux:content.render area="column{iteration.cycle}" />
+				<div class="{sectionObject.column.class} {sectionObject.column.additionalClass}">
+					 <f:if condition='{sectionObject.column.addWell}'>
+					 	<f:then>
+					 		<div class="well">	
+					 			<flux:content.render area="column{iteration.cycle}" />
+				 			</div>
+					 	</f:then>
+					 	<f:else>
+					 		<flux:content.render area="column{iteration.cycle}" />
+					 	</f:else>
+					 </f:if>
 				</div>
 			</f:for>
 		</div>
