@@ -30,11 +30,6 @@ Download, install the extension and include the static TypoScript template in yo
 
 * CSS Styled Content (css_styled_content)
 * Bootstrap Theme (fluidbootstraptheme)
-* Bootstrap Theme Settings (fluidbootstraptheme)
-
-The template ``Fluid Styled Content (fluidcontent_core)`` must **not** be included, or it would output nothing at all in frontend for all FluidBootstrapTheme elements.
-
-You can use the Constant-Editor to define basic configuration for the extension like Columnwidth etc. If you dont want to use the Constant-Editor to set these globally, you can disable this funktionality by adding `plugin.tx_fluidbootstraptheme.settings.useTypoScript = 0` to your Setup. By doing this, you enable these settings in the properties of each page. 
 
 ===
 
@@ -81,8 +76,8 @@ selection boxes in page properties - configurable with a page template to use fo
 ===
 **Content Elements:**
 
-![image](http://snag.gy/xbWUz.jpg)
+![image](http://snag.gy/CF1Ro.jpg)
 
 ===
 **Grids:**
-![image](http://snag.gy/YMayQ.jpg)
+![image](http://snag.gy/CRPuk.jpg)
