@@ -19,7 +19,7 @@
 				<v:condition.type.isArray value="{panels}">
 					<f:for each="{panels}" as="panel" iteration="iteration">
 						<flux:grid.row>
-							<flux:grid.column name="content.{iteration.index}" label="{f:if(condition: panel.panel.title, then: panel.panel.title, else: 'Content, panel {iteration.cycle}')}" />
+							<flux:grid.column name="content.{panel.panel.id}" label="content.{panel.panel.id}" />
 						</flux:grid.row>
 					 </f:for>
 				</v:condition.type.isArray>
@@ -58,7 +58,7 @@
 					</div>
 					<div id="panel-{record.uid}-{iteration.index}" class="panel-collapse collapse {f:if(condition: '{activeTabIndex} == {iteration.index}', then: 'in')}">
 						<div class="panel-body">
-							<flux:content.render area="content.{iteration.index}" />
+							<flux:content.render area="content.{panel.panel.id}" />
 						</div>
 					</div>
 				</div>
