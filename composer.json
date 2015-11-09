@@ -1,18 +1,26 @@
 {
-	"name": "fluidbt/fluidbootstraptheme",
-	"description": "The fluid_bootstrap package from FluidTYPO3",
-	"require": {
-		"fluidtypo3/flux": "dev-development",
-		"fluidtypo3/fluidcontent": "dev-development",
-		"fluidtypo3/fluidpages": "dev-development",
-		"fluidtypo3/vhs": "dev-development"
-	},
-	"keywords": ["TYPO3 CMS", "templating", "Bootstrap", "FluidTYPO3", "fluid"],
-	"type": "typo3-cms-extension",
-	"version": "2.0.0",
-	"homepage": "http://www.fluidbootstraptheme.net",
-	"license": "GPL-2.0+",
-	"support": {
-		"issues": "https://github.com/bootstraptheme-for-typo3/fluidbootstraptheme/issues"
-	}
+  "name": "fluidbt/fluidbootstraptheme",
+  "type": "typo3-cms-extension",
+  "description": "The fluid_bootstrap package from FluidTYPO3",
+  "homepage": "https://github.com/bootstraptheme-for-typo3/fluidbootstraptheme",
+  "license": [
+    "GPL-2.0+"
+  ],
+  "keywords": [
+    "TYPO3 CMS",
+    "templating",
+    "Bootstrap",
+    "FluidTYPO3",
+    "fluid"
+  ],
+  "support": {
+    "issues": "https://github.com/bootstraptheme-for-typo3/fluidbootstraptheme/issues"
+  },
+  "version": "2.0.0",
+  "require": {
+    "fluidtypo3/flux": "dev-master",
+    "fluidtypo3/fluidcontent": "dev-master",
+    "fluidtypo3/fluidpages": "dev-master",
+    "fluidtypo3/vhs": "dev-master"
+  }
 }
