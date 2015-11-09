@@ -4,6 +4,10 @@
 [![Build Status](https://travis-ci.org/bootstraptheme-for-typo3/fluidbootstraptheme.png?branch=master)](https://travis-ci.org/bootstraptheme-for-typo3/fluidbootstraptheme)
 
 
+## Please notice before you update to Version 2.0 
+
+This Version contains breaking changes!!
+
 ## What is it
 
 A collection of Twitter Bootstrap oriented Fluid Content Elements and Page Templates written for `EXT:fluidcontent` and `EXT:fluidpages` using ViewHelpers from `EXT:vhs`.
