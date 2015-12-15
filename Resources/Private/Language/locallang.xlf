@@ -299,7 +299,7 @@
 				<source>Embed Video Iframe</source>
 			</trans-unit>
 			<trans-unit id="flux.EmbedVideo.sheets.EmbedVideo">
-				<source>EmbedVideo</source>
+				<source>Embed Video</source>
 			</trans-unit>
 			<trans-unit id="flux.EmbedVideo.sheets.additionalCSS">
 				<source>Additional CSS</source>
