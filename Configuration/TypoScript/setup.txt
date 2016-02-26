@@ -51,7 +51,7 @@ plugin.tx_vhs.settings.asset{
 		path = EXT:fluidbootstraptheme/Resources/Public/Javascript/jquery.matchHeight-min.js
 		dependencies = jquery
 		group = JS
-		allowMoveToFooter = 1
+		movable = 1
 		type = js
 	}
 

@@ -32,7 +32,7 @@
 	</f:section>
 
 	<f:section name="Main">
-		<v:asset.script name="accordion" dependencies="bootstrapcore" allowMoveToFooter="1">
+		<v:asset.script name="accordion" dependencies="bootstrapcore" movable="1">
 			$('.panel-collapse').on('shown.bs.collapse', function () {
 			var activepanel = $(this).attr( "id" );
 			window.location.hash=activepanel;
