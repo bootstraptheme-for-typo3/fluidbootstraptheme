@@ -67,16 +67,16 @@
 				<f:for each="{items}" as="itemSectionObjects">
 					<v:variable.set name="icon" value=""/>
 					<f:for each="{itemSectionObjects}" as="object" key="objectType">
-						<v:switch value="{objectType}">
-							<v:case case="header" break="TRUE">
+						<f:switch expression="{objectType}">
+							<f:case value="header">
 								<li class="nav-header {object.class}">
 									<f:format.raw>{icon}{object.text}</f:format.raw>
 								</li>
-							</v:case>
-							<v:case case="divider" break="TRUE">
+							</f:case>
+							<f:case value="divider">
 								<li class="nav-divider {object.class}"></li>
-							</v:case>
-							<v:case case="default">
+							</f:case>
+							<f:case default="true">
 								<v:variable.set name="icon"
 												value="{v:media.exists(file: object.icon, then: '<img src=\'{object.icon}\' alt=\'\' class=\'icon-blank\' /> ', else: '')}"/>
 								<v:variable.set name="linkTargetObject"
@@ -88,8 +88,8 @@
 										<f:format.raw>{icon}{object.text}</f:format.raw>
 									</f:link.page>
 								</li>
-							</v:case>
-						</v:switch>
+							</f:case>
+						</f:switch>
 					</f:for>
 				</f:for>
 			</ul>
