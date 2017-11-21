@@ -38,7 +38,7 @@
 				<div class="{sectionObject.column.class} {sectionObject.column.additionalClass}">
 					 <f:if condition='{sectionObject.column.addWell}'>
 					 	<f:then>
-					 		<div class="well">
+					 		<div class="well">	
 					 			<flux:content.render area="column{iteration.cycle}" />
 				 			</div>
 					 	</f:then>
@@ -49,9 +49,6 @@
 				</div>
 			</f:for>
 		</div>
-	</f:section>
-
-	<f:section name="Preview">
 	</f:section>
 
 	<f:section name="Value">col-md-{iteration.cycle}{f:if(condition: iteration.isLast, else: ',')}</f:section>
