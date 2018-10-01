@@ -19,14 +19,12 @@
   "version": "2.0.0",
   "require": {
     "fluidtypo3/flux": "*",
-    "fluidtypo3/fluidcontent": "*",
     "fluidtypo3/fluidpages": "*",
     "fluidtypo3/vhs": "*"
   },
   "require-dev": {
     "fluidtypo3/development": "*",
     "fluidtypo3/flux": "dev-development",
-    "fluidtypo3/fluidcontent": "dev-development",
     "fluidtypo3/fluidpages": "dev-development",
     "fluidtypo3/vhs": "dev-development"
   }
