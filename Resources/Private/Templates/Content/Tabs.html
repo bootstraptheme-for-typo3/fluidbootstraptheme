@@ -27,7 +27,7 @@
 					<f:if condition="{tabs}">
 						<v:condition.type.isArray value="{tabs}">
 							<f:for each="{tabs}" as="tab" iteration="iteration">
-								<flux:grid.column style="width: {v:math.division(b: '{tabs -> f:count()}', a: 100)}%"
+								<flux:grid.column colPos="1" style="width: {v:math.division(b: '{tabs -> f:count()}', a: 100)}%"
 												  name="content.{iteration.index}" label="{tab.tab.title}" />
 							</f:for>
 						</v:condition.type.isArray>

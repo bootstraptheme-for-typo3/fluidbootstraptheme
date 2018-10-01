@@ -24,9 +24,9 @@
 					<f:else>
 						<flux:grid>
 							<flux:grid.row>
-								<flux:grid.column style="width: 33.333%;border-right: 1px dotted #999;" name="column1"/>
-								<flux:grid.column style="width: 33.333%;border-right: 1px dotted #999;" name="column2"/>
-								<flux:grid.column style="width: 33.333%;" name="column3"/>
+								<flux:grid.column colPos="1" style="width: 33.333%;border-right: 1px dotted #999;" name="column1"/>
+								<flux:grid.column colPos="2" style="width: 33.333%;border-right: 1px dotted #999;" name="column2"/>
+								<flux:grid.column colPos="3" style="width: 33.333%;" name="column3"/>
 							</flux:grid.row>
 						</flux:grid>
 					</f:else>
@@ -72,12 +72,15 @@
 		<flux:grid>
 			<flux:grid.row>
 				<flux:grid.column
+						colPos="1"
 						style="width: 33.333%;border-right: 1px dotted #999;" name="column1"
 						label="{v:l(key: 'flux.grid3.columns.column1')} ({settings.grid3.col1width})"/>
 				<flux:grid.column
+						colPos="2"
 						style="width: 33.333%;border-right: 1px dotted #999;" name="column2"
 						label="{v:l(key: 'flux.grid3.columns.column2')} ({settings.grid3.col2width})"/>
 				<flux:grid.column
+						colPos="3"
 						style="width: 33.333%;" name="column3"
 						label="{v:l(key: 'flux.grid3.columns.column3')} ({settings.grid3.col3width})"/>
 			</flux:grid.row>

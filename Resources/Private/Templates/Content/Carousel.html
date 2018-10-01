@@ -21,7 +21,7 @@
 						<f:for each="{element}" key="elementType" as="elementData">
 							<f:if condition="{0: elementType} == {0: 'content'}">
 								<flux:grid.row>
-									<flux:grid.column name="{elementData.id}" label="{v:l(key: 'flux.carousel.label.grid.column.prefix')}: {elementData.id}" />
+									<flux:grid.column colPos="1" name="{elementData.id}" label="{v:l(key: 'flux.carousel.label.grid.column.prefix')}: {elementData.id}" />
 								</flux:grid.row>
 							</f:if>
 						</f:for>
