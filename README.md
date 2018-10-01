@@ -10,7 +10,7 @@ This Version contains breaking changes!!
 
 ## What is it
 
-A collection of Twitter Bootstrap oriented Fluid Content Elements and Page Templates written for `EXT:fluidcontent` and `EXT:fluidpages` using ViewHelpers from `EXT:vhs`.
+A collection of Twitter Bootstrap oriented Fluid Content Elements and Page Templates written and `EXT:fluidpages` using ViewHelpers from `EXT:vhs`.
 It uses `EXT:flux`
 
 ===
@@ -23,7 +23,7 @@ Provides the template files and TypoScript setup necessary to use the included e
 
 ## How does it do it?
 
-By leveraging the integration logic provided by `EXT:fluidcontent` and `EXT:fluidpages` - enabling use of specially constructed Fluid templates as
+By leveraging the integration logic provided by `EXT:fluidpages` - enabling use of specially constructed Fluid templates as
 content elements, much like the Flexible Content Elements concept from TemplaVoila.
 
 ===
@@ -43,7 +43,6 @@ FluidBootstrapTheme now has a stable release on the TYPO3 Extension Repository (
 <ul>
 <li><code>EXT:flux</code></li>
 <li><code>EXT:vhs</code></li>
-<li><code>EXT:fluidcontent</code></li>
 <li><code>EXT:fluidpages</code></li>
 </ul>
 
@@ -65,7 +64,6 @@ selection boxes in page properties - configurable with a page template to use fo
 
 ## References
 
-* https://github.com/FluidTYPO3/fluidcontent is a dependency - it is the integration necessary to render Fluid Content Elements
 * https://github.com/FluidTYPO3/fluidpages is a dependency - it is the integration necessary to render Fluid Page Templates
 * https://github.com/FluidTYPO3/vhs is dependency providing many ViewHelpers used in the Fluid Content Element and Page templates
 * https://github.com/FluidTYPO3/flux is a dependency and is used to configure how the content template variable are defined.
