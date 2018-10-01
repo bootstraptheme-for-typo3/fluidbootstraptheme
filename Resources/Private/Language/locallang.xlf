@@ -6,6 +6,18 @@
 		<body>
 			<!-- Content -->
 
+			<!-- Group -->
+			<trans-unit id="flux.newContentWizard.Bootstrap" xml:space="preserve">
+				<source>Bootstrap</source>
+			</trans-unit>
+			<trans-unit id="flux.newContentWizard.Grid" xml:space="preserve">
+				<source>Grid</source>
+			</trans-unit>
+			<trans-unit id="flux.newContentWizard.Navigation" xml:space="preserve">
+				<source>Navigation</source>
+			</trans-unit>
+			<!-- /Group -->
+
 			<!-- Accordion.html -->
 			<trans-unit id="flux.accordion" xml:space="preserve">
 				<source>Accordion with Content Elements</source>
