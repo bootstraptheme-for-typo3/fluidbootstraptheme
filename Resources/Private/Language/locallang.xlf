@@ -64,7 +64,7 @@
 			<trans-unit id="flux.alert.fields.isBlock" xml:space="preserve">
 				<source>Add Additional Padding</source>
 			</trans-unit>
-            <trans-unit id="flux.alert.columns.content" xml:space="preserve">
+			<trans-unit id="flux.alert.columns.content" xml:space="preserve">
 				<source>Alert</source>
 			</trans-unit>
 			<!-- /Alert.html -->
@@ -376,7 +376,7 @@
 			<trans-unit id="flux.jumbotron.areas.content" xml:space="preserve">
 				<source>Jumbotron Content</source>
 			</trans-unit>
-            <trans-unit id="flux.jumbotron.columns.content" xml:space="preserve">
+			<trans-unit id="flux.jumbotron.columns.content" xml:space="preserve">
 				<source>Jumbotron</source>
 			</trans-unit>
 			<!-- /Jumbotron.html -->
@@ -719,10 +719,10 @@
 				<source>Equal Height of Columns</source>
 			</trans-unit>
 			<trans-unit id="flux.grid2.grids.column1">
-				<source>Column Left</source>
+				<source>Column 1</source>
 			</trans-unit>
 			<trans-unit id="flux.grid2.grids.column2">
-				<source>Column Right</source>
+				<source>Column 2</source>
 			</trans-unit>
 			<trans-unit id="flux.grid2.fields.settings.grid2.col1width">
 				<source>Bootstrap CSS Class Column 1</source>
@@ -748,12 +748,12 @@
 			<trans-unit id="flux.grid2.fields.settings.grid2.wrapclass">
 				<source>Choose a Wrap Class</source>
 			</trans-unit>
-            <trans-unit id="flux.grid2.columns.column1">
-                <source>Left Column</source>
-            </trans-unit>
-            <trans-unit id="flux.grid2.columns.column2">
-                <source>Right Column</source>
-            </trans-unit>
+			<trans-unit id="flux.grid2.columns.column1">
+				<source>Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid2.columns.column2">
+				<source>Column 2</source>
+			</trans-unit>
 			<trans-unit id="flux.grid2.label.customize.column.settings">
 				<source>Customize the Column settings</source>
 			</trans-unit>
@@ -773,13 +773,13 @@
 				<source>Additional CSS</source>
 			</trans-unit>
 			<trans-unit id="flux.grid3.grids.column1">
-				<source>Column Left</source>
+				<source>Column 1</source>
 			</trans-unit>
 			<trans-unit id="flux.grid3.grids.column2">
-				<source>Column Middle</source>
+				<source>Column 2</source>
 			</trans-unit>
 			<trans-unit id="flux.grid3.grids.column3">
-				<source>Column Right</source>
+				<source>Column 3</source>
 			</trans-unit>
 			<trans-unit id="flux.grid3.fields.settings.grid3.split">
 				<source>Split Possibilities</source>
@@ -820,18 +820,18 @@
 			<trans-unit id="flux.grid3.fields.settings.grid3.wrapclass">
 				<source>Choose a Wrap Class</source>
 			</trans-unit>
-            <trans-unit id="flux.grid3.columns.column1">
-                <source>Left Column</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.columns.column2">
-                <source>Middle Column</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.columns.column3">
-                <source>Right Column</source>
-            </trans-unit>
-            <trans-unit id="flux.grid3.label.customize.column.settings">
-                <source>Customize the Column settings</source>
-            </trans-unit>
+			<trans-unit id="flux.grid3.columns.column1">
+				<source>Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.columns.column2">
+				<source>Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.columns.column3">
+				<source>Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid3.label.customize.column.settings">
+				<source>Customize the Column settings</source>
+			</trans-unit>
 
 			<!-- ThreeColumn.html -->
 
@@ -896,18 +896,18 @@
 			<trans-unit id="flux.grid4.fields.settings.grid4.wrapclass">
 				<source>Choose a Wrap Class</source>
 			</trans-unit>
-            <trans-unit id="flux.grid4.columns.column1">
-                <source>Left Column</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.columns.column2">
-                <source>Middle Left</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.columns.column3">
-                <source>Middle Right</source>
-            </trans-unit>
-            <trans-unit id="flux.grid4.columns.column4">
-                <source>Right Column</source>
-            </trans-unit>
+			<trans-unit id="flux.grid4.columns.column1">
+				<source>Column 1</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.columns.column2">
+				<source>Column 2</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.columns.column3">
+				<source>Column 3</source>
+			</trans-unit>
+			<trans-unit id="flux.grid4.columns.column4">
+				<source>Column 4</source>
+			</trans-unit>
 			<trans-unit id="flux.grid4.label.customize.column.settings">
 				<source>Customize the Column Settings</source>
 			</trans-unit>
