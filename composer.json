@@ -16,7 +16,7 @@
   "support": {
     "issues": "https://github.com/bootstraptheme-for-typo3/fluidbootstraptheme/issues"
   },
-  "version": "2.0.0",
+  "version": "2.1.1",
   "require": {
     "fluidtypo3/flux": "*",
     "fluidtypo3/fluidpages": "*",
