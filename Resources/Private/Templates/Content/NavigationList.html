@@ -6,7 +6,7 @@
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="navigationlist" options="{group: 'Navigation', sorting: 50, icon: '{f:uri.resource(path: \'Icons/Content/NavigationList.png\')}'}">
+		<flux:form id="navigationlist" options="{group: 'Navigation', sorting: 50}">
 			<flux:form.sheet name="display">
 				<flux:field.checkbox name="addWell"/>
 				<flux:field.checkbox name="zeroPadding"/>
@@ -39,7 +39,7 @@
 
 	<f:section name="Preview">
 		<ul>
-			<v:condition.type.isArray value="{items}">
+			<f:if condition="{items -> f:count()} > 0">
 				<f:then>
 					<f:for each="{items}" as="itemSectionObject">
 						<f:for each="{itemSectionObject}" as="object" key="objectType">
@@ -55,8 +55,7 @@
 				<f:else>
 					<b>Please Create a Object in there</b>
 				</f:else>
-			</v:condition.type.isArray>
-
+			</f:if>
 		</ul>
 	</f:section>
 

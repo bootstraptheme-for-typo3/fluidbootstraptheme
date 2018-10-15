@@ -6,7 +6,7 @@
 	<f:layout name="Content"/>
 
 	<f:section name="Configuration">
-		<flux:form id="button" options="{group: 'Bootstrap', sorting: 600, icon: '{f:uri.resource(path: \'Icons/Content/Button.png\')}'}">
+		<flux:form id="button" options="{group: 'Bootstrap', sorting: 600}">
 			<flux:form.sheet name="ButtonSheetOne">
 				<flux:field.select items="xs,sm,default,lg" name="settings.ButtonSize" default="default"/>
 				<flux:field.checkbox name="settings.ButtonBlock" default="0"/>
@@ -29,7 +29,7 @@
 	</f:section>
 
 	<f:section name="Preview">
-		<v:condition.type.isArray value="{ButtonSection}">
+		<f:if condition="{ButtonSection -> f:count()} > 0">
 			<f:then>
 				<f:for each="{ButtonSection}" as="ButtonObjectItem" iteration="iter">
 					<div style="background-color:#efefef; margin-bottom: 10px; padding: 10px;">
@@ -43,7 +43,7 @@
 			<f:else>
 				<b>Please Create a Object in there</b>
 			</f:else>
-		</v:condition.type.isArray>
+		</f:if>
 	</f:section>
 
 	<f:section name="Main">

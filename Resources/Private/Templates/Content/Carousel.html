@@ -6,7 +6,7 @@
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="carousel" options="{group: 'Bootstrap', sorting: 200, icon: '{f:uri.resource(path: \'Icons/Content/Carousel.png\')}'}">
+		<flux:form id="carousel" options="{group: 'Bootstrap', sorting: 200}">
 			<flux:field.checkbox name="settings.carousel.quickselect" default="1" />
 			<flux:field.select name="settings.carousel.quickselectType" items="{images: 'images', dots: 'dots', numbers: 'numbers'}" />
 			<flux:field.input name="settings.carousel.interval" default="5000" eval="int,trim" />
@@ -16,7 +16,7 @@
 			<flux:field.input name="settings.carousel.width" default="1170c" />
 			<flux:field.checkbox name="settings.carousel.autostart" />
 			<flux:grid>
-				<v:condition.type.isArray value="{elements}">
+				<f:if condition="{elements -> f:count()} > 0">
 					<f:for each="{elements}" as="element" iteration="iteration">
 						<f:for each="{element}" key="elementType" as="elementData">
 							<f:if condition="{0: elementType} == {0: 'content'}">
@@ -26,7 +26,7 @@
 							</f:if>
 						</f:for>
 					</f:for>
-				</v:condition.type.isArray>
+				</f:if>
 			</flux:grid>
 			<flux:form.sheet name="elements">
 				<flux:form.section name="elements">

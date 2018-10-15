@@ -7,7 +7,7 @@
 
 	<f:section name="Configuration">
 		<flux:form id="tabs"
-				   options="{group: 'Bootstrap', sorting: 250, icon: '{f:uri.resource(path: \'Icons/Content/Tabs.png\')}'}">
+				   options="{group: 'Bootstrap', sorting: 250}">
 			<flux:form.sheet name="display">
 				<flux:field.select name="mode" items="tab,pill" requestUpdate="TRUE" />
 				<flux:field.checkbox name="stackable" />
@@ -25,12 +25,12 @@
 			<flux:grid>
 				<flux:grid.row>
 					<f:if condition="{tabs}">
-						<v:condition.type.isArray value="{tabs}">
+						<f:if condition="{tabs -> f:count()} > 0">
 							<f:for each="{tabs}" as="tab" iteration="iteration">
 								<flux:grid.column colPos="1" style="width: {v:math.division(b: '{tabs -> f:count()}', a: 100)}%"
 												  name="content.{iteration.index}" label="{tab.tab.title}" />
 							</f:for>
-						</v:condition.type.isArray>
+						</f:if>
 					</f:if>
 				</flux:grid.row>
 			</flux:grid>

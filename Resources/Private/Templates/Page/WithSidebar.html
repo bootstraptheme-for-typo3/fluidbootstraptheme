@@ -6,40 +6,40 @@
 	<f:layout name="WithSideBar" />
 
 	<f:section name="Configuration">
-		<flux:form id="sidebar" options="{icon: '{f:uri.resource(path: \'Icons/Page/WithSidebar.png\')}'}">
-				<flux:field.input name="settings.distribution"
-								  eval="int,trim" minimum="0" maximum="11" default="4">
-					<flux:wizard.slider hideParent="TRUE" step="1" width="100" />
-				</flux:field.input>
-				<flux:field.select name="settings.position" items="left,right" />
-				<flux:field.checkbox name="settings.enableSearch" default="1" />
-				<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="settings.searchPageUid">
-					<flux:wizard.list table="pages" />
-				</flux:field.relation>
-				<flux:field.input name="settings.searchFieldName" default="q" />
-				<flux:field.checkbox name="settings.addWell" />
-				<flux:field.checkbox name="settings.wellSmall" />
-			<flux:grid>
-				<flux:grid.row>
-					<flux:grid.column colPos="1" name="hero" colspan="2" />
-				</flux:grid.row>
-				<flux:grid.row>
-					<f:if condition="{settings.position}=='right'">
-						<f:then>
-							<flux:grid.column colPos="0" name="main" />
-							<flux:grid.column colPos="3" name="sidebar" />
-						</f:then>
-						<f:else>
-							<flux:grid.column colPos="3" name="sidebar" />
-							<flux:grid.column colPos="0" name="main" />
-						</f:else>
-					</f:if>
-				</flux:grid.row>
-				<flux:grid.row>
-					<flux:grid.column colPos="2" name="footer" colspan="2" />
-				</flux:grid.row>
-			</flux:grid>
+		<flux:form id="sidebar">
+			<flux:field.input name="settings.distribution"
+							  eval="int,trim" minimum="0" maximum="11" default="4">
+				<flux:wizard.slider hideParent="TRUE" step="1" width="100" />
+			</flux:field.input>
+			<flux:field.select name="settings.position" items="left,right" />
+			<flux:field.checkbox name="settings.enableSearch" default="1" />
+			<flux:field.relation size="1" minItems="0" table="pages" maxItems="1" name="settings.searchPageUid">
+				<flux:wizard.list table="pages" />
+			</flux:field.relation>
+			<flux:field.input name="settings.searchFieldName" default="q" />
+			<flux:field.checkbox name="settings.addWell" />
+			<flux:field.checkbox name="settings.wellSmall" />
 		</flux:form>
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column colPos="1" name="hero" colspan="2" />
+			</flux:grid.row>
+			<flux:grid.row>
+				<f:if condition="{settings.position}=='right'">
+					<f:then>
+						<flux:grid.column colPos="0" name="main" />
+						<flux:grid.column colPos="3" name="sidebar" />
+					</f:then>
+					<f:else>
+						<flux:grid.column colPos="3" name="sidebar" />
+						<flux:grid.column colPos="0" name="main" />
+					</f:else>
+				</f:if>
+			</flux:grid.row>
+			<flux:grid.row>
+				<flux:grid.column colPos="2" name="footer" colspan="2" />
+			</flux:grid.row>
+		</flux:grid>
 	</f:section>
 
 	<f:section name="Preview">

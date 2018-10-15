@@ -6,7 +6,7 @@
 	<f:layout name="Content" />
 
 	<f:section name="Configuration">
-		<flux:form id="grid4" options="{group: 'Grid', sorting: 150, icon: '{f:uri.resource(path: \'Icons/Content/FourColumn.png\')}'}">
+		<flux:form id="grid4" options="{group: 'Grid', sorting: 150}">
 			<flux:form.sheet name="colSettings">
 				<flux:field.select name="settings.grid4.split" items="25-25-25-25,more" default="25-25-25-25" requestUpdate="1" />
 				<flux:field.checkbox name="settings.grid4.eqh" default="0" />
@@ -66,7 +66,7 @@
 	</f:section>
 
 	<f:section name="FrontendColRenderingGrid4">
-		<div class="row {settings.grid4.rowCSS} {f:if(condition: "{0: settings.grid4.wrapclass} == {0 : 'none'}", else: '{settings.grid4.wrapclass}')} ">
+		<div class="row {settings.grid4.rowCSS} {f:if(condition: '{0: settings.grid4.wrapclass} == {0 : \'none\'}', else: '{settings.grid4.wrapclass}')} ">
 			<f:if condition="{settings.grid4.split}=='more'">
 				<f:then>
 					<div class="{settings.grid4.col1width} {settings.grid4.col1CSS} {f:if(condition: settings.grid4.eqh, then: 'equal-height')} {f:if(condition: settings.grid4.col1hide, then: 'hidden-xs')}">

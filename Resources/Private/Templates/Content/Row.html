@@ -9,7 +9,7 @@
 		{v:variable.typoscript(path: 'plugin.tx_fluidcontentbootstrap.settings') -> v:variable.set(name: 'settings')}
 		{f:if(condition: settings.gridColumns, then: settings.gridColumns, else: 12) -> v:variable.set(name:
 		'numberOfColumns')}
-		<flux:form id="row" options="{group: 'Grid', sorting: 1000, icon: '{f:uri.resource(path: \'Icons/Content/Row.png\')}'}">
+		<flux:form id="row" options="{group: 'Grid', sorting: 1000}">
 			<flux:form.section name="columns">
 				<flux:form.object name="column">
 					<flux:field.select name="class" items="{f:render(section: 'Value', arguments: {iteration: iteration})
@@ -20,13 +20,13 @@
 			</flux:form.section>
 			<flux:grid>
 				<flux:grid.row>
-					<v:condition.type.isArray value="{columns}">
+					<f:if condition="{columns -> f:count()} > 0">
 						<f:for each="{columns}" as="sectionObject" iteration="iteration">
 							<v:variable.set name="width" value="{sectionObject.column.class -> v:format.substring(start: 7)}" />
 							<v:variable.set name="percent" value="{width  -> v:math.division(b: numberOfColumns) -> v:math.product(b: 100) -> v:math.round(decimals: 2)}" />
 							<flux:grid.column colPos="1" style="width: {percent}%" name="column{iteration.cycle}" label="{percent}%" />
 						</f:for>
-					</v:condition.type.isArray>
+					</f:if>
 				</flux:grid.row>
 			</flux:grid>
 		</flux:form>
